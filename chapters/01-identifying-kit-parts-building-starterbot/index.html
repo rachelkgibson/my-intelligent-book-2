@@ -1,244 +1,1403 @@
-<!DOCTYPE html>
-<html lang="en" data-bs-theme="light">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A hands-on introduction where students identify real robot kit hardware and assemble a complete robot before learning any underlying theory.">
+      
+      
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../02-intro-robotics-systems/">
+      
+      
         
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Identifying Kit Parts and Building Your StarterBot - Technology of Robotic Design</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
         
-        
-        <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>1. Identifying Kit Parts and Building Your StarterBot - My Docs</title>
-        <link href="../../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../../css/fontawesome.min.css" rel="stylesheet">
-        <link href="../../css/brands.min.css" rel="stylesheet">
-        <link href="../../css/solid.min.css" rel="stylesheet">
-        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
-        <link href="../../css/base.css" rel="stylesheet">
-        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
-        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-        <script>hljs.highlightAll();</script> 
-    </head>
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
 
-    <body>
-        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
-            <div class="container">
-                <a class="navbar-brand" href="../..">My Docs</a>
-                <!-- Expander button -->
-                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- Expanded navigation -->
-                <div id="navbar-collapse" class="navbar-collapse collapse">
-                        <!-- Main navigation -->
-                        <ul class="nav navbar-nav">
-                            <li class="nav-item">
-                                <a href="../.." class="nav-link">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="../../course-description/" class="nav-link">Course Description</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Chapters</a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../" class="dropdown-item">List of Chapters</a>
-</li>
-                                    
-<li>
-    <a href="./" class="dropdown-item active" aria-current="page">1. Identifying Kit Parts and Building Your StarterBot</a>
-</li>
-                                    
-<li>
-    <a href="../02-intro-robotics-systems/" class="dropdown-item">2. Introduction to Robotics and Systems</a>
-</li>
-                                    
-<li>
-    <a href="../03-programming-fundamentals/" class="dropdown-item">3. Programming Fundamentals</a>
-</li>
-                                    
-<li>
-    <a href="../04-programming-your-robot/" class="dropdown-item">4. Programming Your Robot</a>
-</li>
-                                    
-<li>
-    <a href="../05-designing-building-custom-parts/" class="dropdown-item">5. Designing and Building Custom Parts</a>
-</li>
-                                    
-<li>
-    <a href="../06-electrical-fundamentals/" class="dropdown-item">6. Electrical Fundamentals</a>
-</li>
-                                    
-<li>
-    <a href="../07-electronic-components-circuit-design/" class="dropdown-item">7. Electronic Components and Circuit Design</a>
-</li>
-                                    
-<li>
-    <a href="../08-sensors-and-measurement/" class="dropdown-item">8. Sensors and Measurement</a>
-</li>
-                                    
-<li>
-    <a href="../09-mechanical-systems-simple-machines/" class="dropdown-item">9. Mechanical Systems and Simple Machines</a>
-</li>
-                                    
-<li>
-    <a href="../10-fluid-power-hydraulics-pneumatics/" class="dropdown-item">10. Fluid Power: Hydraulics and Pneumatics</a>
-</li>
-                                    
-<li>
-    <a href="../11-control-systems-feedback-loops/" class="dropdown-item">11. Control Systems and Feedback Loops</a>
-</li>
-                                    
-<li>
-    <a href="../12-digital-logic-computing-fundamentals/" class="dropdown-item">12. Digital Logic and Computing Fundamentals</a>
-</li>
-                                    
-<li>
-    <a href="../13-advanced-robot-programming/" class="dropdown-item">13. Advanced Robot Programming</a>
-</li>
-                                    
-<li>
-    <a href="../14-integrating-testing-maintaining-robotic-system/" class="dropdown-item">14. Integrating, Testing, and Maintaining a Robotic System</a>
-</li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Learning Graph</a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../../learning-graph/" class="dropdown-item">Introduction</a>
-</li>
-                                    
-<li>
-    <a href="../../learning-graph/course-description-assessment/" class="dropdown-item">Course Description Assessment</a>
-</li>
-                                    
-<li>
-    <a href="../../learning-graph/concept-list/" class="dropdown-item">Concept Enumeration</a>
-</li>
-                                    
-<li>
-    <a href="../../learning-graph/quality-metrics/" class="dropdown-item">Graph Quality Analysis</a>
-</li>
-                                    
-<li>
-    <a href="../../learning-graph/concept-taxonomy/" class="dropdown-item">Concept Taxonomy</a>
-</li>
-                                    
-<li>
-    <a href="../../learning-graph/taxonomy-distribution/" class="dropdown-item">Taxonomy Distribution Report</a>
-</li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">MicroSims</a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../../sims/graph-viewer/" class="dropdown-item">Learning Graph Viewer</a>
-</li>
-                                </ul>
-                            </li>
-                        </ul>
-
-                    <ul class="nav navbar-nav ms-md-auto">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> Search
-                            </a>
-                        </li>
-                            <li class="nav-item">
-                                <a rel="prev" href="../" class="nav-link">
-                                    <i class="fa fa-arrow-left"></i> Previous
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a rel="next" href="../02-intro-robotics-systems/" class="nav-link">
-                                    Next <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row">
-                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
-            <span class="fa fa-angle-down"></span>
-        </button>
-    </div>
 
     
-    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
-        <ul class="nav flex-column">
-            
-            <li class="nav-item" data-bs-level="1"><a href="#identifying-kit-parts-and-building-your-starterbot" class="nav-link">Identifying Kit Parts and Building Your StarterBot</a>
-              <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="2"><a href="#summary" class="nav-link">Summary</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#concepts-covered" class="nav-link">Concepts Covered</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#prerequisites" class="nav-link">Prerequisites</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#robot-kit-overview" class="nav-link">Robot Kit Overview</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#kit-parts-identification" class="nav-link">Kit Parts Identification</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#structural-hardware" class="nav-link">Structural Hardware</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#motion-hardware-components" class="nav-link">Motion Hardware Components</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#power-and-motor-components" class="nav-link">Power and Motor Components</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#fasteners-and-hardware" class="nav-link">Fasteners and Hardware</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#assembly-instructions-reading" class="nav-link">Assembly Instructions Reading</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#guided-robot-assembly" class="nav-link">Guided Robot Assembly</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#robot-subassembly-build" class="nav-link">Robot Subassembly Build</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#build-verification-and-troubleshooting" class="nav-link">Build Verification and Troubleshooting</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-              </ul>
-            </li>
-        </ul>
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#identifying-kit-parts-and-building-your-starterbot" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
-</div></div>
-                    <div class="col-md-9" role="main">
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Technology of Robotic Design" class="md-header__button md-logo" aria-label="Technology of Robotic Design" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Technology of Robotic Design
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Identifying Kit Parts and Building Your StarterBot
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Technology of Robotic Design" class="md-nav__button md-logo" aria-label="Technology of Robotic Design" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    Technology of Robotic Design
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Description
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked="">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapters
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Chapters
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Identifying Kit Parts and Building Your StarterBot
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Identifying Kit Parts and Building Your StarterBot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts Covered
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#robot-kit-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Robot Kit Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kit-parts-identification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kit Parts Identification
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Kit Parts Identification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-starterbot-exploded-parts-explorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram: StarterBot Exploded Parts Explorer
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structural-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structural Hardware
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#motion-hardware-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Motion Hardware Components
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#power-and-motor-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Power and Motor Components
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fasteners-and-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fasteners and Hardware
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assembly-instructions-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Assembly Instructions Reading
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Assembly Instructions Reading">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-reading-an-assembly-step-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram: Reading an Assembly Step Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#guided-robot-assembly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Guided Robot Assembly
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#robot-subassembly-build" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Robot Subassembly Build
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Robot Subassembly Build">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-starterbot-subassembly-matching-quiz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram: StarterBot Subassembly Matching Quiz
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-verification-and-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build Verification and Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-intro-robotics-systems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Introduction to Robotics and Systems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-programming-fundamentals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Programming Fundamentals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-programming-your-robot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Programming Your Robot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-designing-building-custom-parts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Designing and Building Custom Parts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-electrical-fundamentals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Electrical Fundamentals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-electronic-components-circuit-design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Electronic Components and Circuit Design
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-sensors-and-measurement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Sensors and Measurement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-mechanical-systems-simple-machines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Mechanical Systems and Simple Machines
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-fluid-power-hydraulics-pneumatics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Fluid Power: Hydraulics and Pneumatics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-control-systems-feedback-loops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Control Systems and Feedback Loops
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-digital-logic-computing-fundamentals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. Digital Logic and Computing Fundamentals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-advanced-robot-programming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. Advanced Robot Programming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-integrating-testing-maintaining-robotic-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14. Integrating, Testing, and Maintaining a Robotic System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning Graph
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../sims/graph-viewer/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MicroSims
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts Covered
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#robot-kit-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Robot Kit Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kit-parts-identification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kit Parts Identification
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Kit Parts Identification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-starterbot-exploded-parts-explorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram: StarterBot Exploded Parts Explorer
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structural-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structural Hardware
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#motion-hardware-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Motion Hardware Components
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#power-and-motor-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Power and Motor Components
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fasteners-and-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fasteners and Hardware
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assembly-instructions-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Assembly Instructions Reading
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Assembly Instructions Reading">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-reading-an-assembly-step-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram: Reading an Assembly Step Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#guided-robot-assembly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Guided Robot Assembly
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#robot-subassembly-build" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Robot Subassembly Build
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Robot Subassembly Build">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-starterbot-subassembly-matching-quiz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram: StarterBot Subassembly Matching Quiz
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-verification-and-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build Verification and Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation">
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
 
 <h1 id="identifying-kit-parts-and-building-your-starterbot">Identifying Kit Parts and Building Your StarterBot</h1>
 <h2 id="summary">Summary</h2>
@@ -259,7 +1418,7 @@
 </ol>
 <h2 id="prerequisites">Prerequisites</h2>
 <p>This chapter assumes only the prerequisites listed in the <a href="../../course-description/">course description</a>.</p>
-<hr />
+<hr>
 <h2 id="robot-kit-overview">Robot Kit Overview</h2>
 <p>Most robotics courses start with theory: circuits, forces, and code, followed months later by a real machine. This course flips that order. Before you learn why a motor spins or how a program controls a servo, you are going to open a box, spread out the parts, and build a real, drivable robot. The theory will make a lot more sense later once your hands already know what a gear, a shaft, and a chassis feel like.</p>
 <p>The kit you will build from is the <strong>goBILDA FTC StarterBot Kit</strong> (SKU 3200-4008-2627), a robotics kit designed for the preseason of FIRST Tech Challenge (FTC), a national robotics competition for middle and high school teams. Unlike a toy kit with a dozen snap-together pieces, the StarterBot Kit ships with hundreds of individual aluminum, plastic, and metal components, along with a 20-page assembly manual that walks you through 40 numbered build steps. When you finish, you will have a rolling robot chassis with a working drivetrain, a battery mount, and an intake mechanism, the same kind of subsystem an FTC team uses as the backbone of a competition robot.</p>
@@ -270,8 +1429,10 @@
 <li><strong>Power and motor components</strong> — the battery, motors, and servos that provide energy and rotational force</li>
 <li><strong>Fasteners and hardware</strong> — the screws, nuts, washers, and hex keys that hold everything together</li>
 </ul>
-<p>!!! tip
-    Don't worry about memorizing every part name today. This chapter builds your vocabulary the same way a mechanic builds theirs: by handling real parts, matching them to a parts list, and using them right away in a real build.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Don't worry about memorizing every part name today. This chapter builds your vocabulary the same way a mechanic builds theirs: by handling real parts, matching them to a parts list, and using them right away in a real build.</p>
+</div>
 <h2 id="kit-parts-identification">Kit Parts Identification</h2>
 <p>Before any assembly manual makes sense, you need to be able to identify parts. Every professional assembly guide, from furniture instructions to aircraft maintenance manuals, begins with a <strong>Bill of Materials (BOM)</strong>, a complete list of every part needed, usually shown with a picture, a part name, and a quantity. The StarterBot Kit's BOM lists every U-channel, shaft, gear, motor, and screw that ships in the box, organized by category.</p>
 <p>Learning to read a BOM is a transferable skill you will use throughout your career in any technical field: you scan the picture, compare it to the part in your hand, check the quantity, and set it aside in a labeled tray or bag. Skipping this step is the single most common reason first-time builders get stuck at step 15 of a manual, only to discover they used the wrong length of shaft back at step 3.</p>
@@ -279,37 +1440,27 @@
 <h4 id="diagram-starterbot-exploded-parts-explorer">Diagram: StarterBot Exploded Parts Explorer</h4>
 <iframe src="../../sims/starterbot-parts-explorer/main.html" width="100%" height="550px" scrolling="no"></iframe>
 
-<details markdown="1">
+<details>
 <summary>StarterBot Exploded Parts Explorer</summary>
-Type: infographic
-**sim-id:** starterbot-parts-explorer<br/>
-**Library:** p5.js<br/>
-**Status:** Specified
-
-Purpose: Help students identify the four hardware categories (structural, motion, power/motor, fasteners) by exploring a labeled, exploded-view illustration of the assembled StarterBot chassis.
-
-Bloom Taxonomy: Remember (L1) and Understand (L2)
-Bloom Taxonomy Verb: identify, locate, classify
-
-Learning objective: Given an exploded view of the StarterBot, students will identify which hardware category each visible component belongs to and recall the specific part name.
-
-Layout: A simplified line-art illustration of the StarterBot chassis rendered in an "exploded" style, with component groups pulled slightly apart from the main frame so each group is individually selectable. Four color-coded regions overlay the drawing: frame/channels (silver), drivetrain/wheels (blue), battery/motors (orange), fasteners (gray).
-
-Interactive elements:
+<p>Type: infographic
+<strong>sim-id:</strong> starterbot-parts-explorer<br>
+<strong>Library:</strong> p5.js<br>
+<strong>Status:</strong> Specified</p>
+<p>Purpose: Help students identify the four hardware categories (structural, motion, power/motor, fasteners) by exploring a labeled, exploded-view illustration of the assembled StarterBot chassis.</p>
+<p>Bloom Taxonomy: Remember (L1) and Understand (L2)
+Bloom Taxonomy Verb: identify, locate, classify</p>
+<p>Learning objective: Given an exploded view of the StarterBot, students will identify which hardware category each visible component belongs to and recall the specific part name.</p>
+<p>Layout: A simplified line-art illustration of the StarterBot chassis rendered in an "exploded" style, with component groups pulled slightly apart from the main frame so each group is individually selectable. Four color-coded regions overlay the drawing: frame/channels (silver), drivetrain/wheels (blue), battery/motors (orange), fasteners (gray).</p>
+<p>Interactive elements:
 - Hovering over any region highlights it and displays the category name in a floating label
 - Clicking a region opens a side panel listing the real part names in that category (for example, clicking the frame region lists "1-Hole U-Channel, 8-Hole U-Channel, 15-Hole U-Channel, Quad Block Mount, Drop-Center Bearing Plate")
 - A "Show All Labels" toggle button reveals every category label simultaneously for review
-- A "Quiz Me" button hides the labels and asks the student to click the region that matches a randomly chosen part name, giving immediate right/wrong feedback
-
-Data to be displayed: Four hardware categories mapped to 6-10 real StarterBot part names each, drawn from the kit's actual Bill of Materials.
-
-Color coding: Silver for structural hardware, blue for motion hardware, orange for power/motor components, gray for fasteners. Legend displayed in the corner of the canvas.
-
-Responsive behavior: Illustration and hit regions scale proportionally to the width of the containing iframe; labels reflow to remain readable on narrower screens.
-
-Implementation: p5.js canvas with an SVG-derived line drawing as a background image, clickable polygon hit-regions defined in an array, and a text panel drawn in the remaining canvas space for the infobox.
+- A "Quiz Me" button hides the labels and asks the student to click the region that matches a randomly chosen part name, giving immediate right/wrong feedback</p>
+<p>Data to be displayed: Four hardware categories mapped to 6-10 real StarterBot part names each, drawn from the kit's actual Bill of Materials.</p>
+<p>Color coding: Silver for structural hardware, blue for motion hardware, orange for power/motor components, gray for fasteners. Legend displayed in the corner of the canvas.</p>
+<p>Responsive behavior: Illustration and hit regions scale proportionally to the width of the containing iframe; labels reflow to remain readable on narrower screens.</p>
+<p>Implementation: p5.js canvas with an SVG-derived line drawing as a background image, clickable polygon hit-regions defined in an array, and a text panel drawn in the remaining canvas space for the infobox.</p>
 </details>
-
 <h2 id="structural-hardware">Structural Hardware</h2>
 <p><strong>Structural hardware</strong> refers to the rigid parts that give the robot its shape and hold every other component in a fixed position relative to the rest of the machine. If motion hardware is the robot's muscles and power components are its energy source, structural hardware is its skeleton.</p>
 <p>The most common piece of structural hardware in the StarterBot Kit is the <strong>U-channel</strong>: a length of extruded aluminum bent into a U-shaped cross-section, with a regular pattern of holes drilled along its length for mounting screws. U-channels are named by how many holes run along their length, which also tells you roughly how long the piece is. A 1-Hole U-Channel is a short stub used as a spacer or bracket, while a 15-Hole U-Channel is long enough to form an entire side rail of the chassis.</p>
@@ -416,44 +1567,37 @@ Implementation: p5.js canvas with an SVG-derived line drawing as a background im
 <li><strong>Washer</strong> — spreads clamping force and protects the aluminum surface</li>
 <li><strong>Hex key</strong> — an L-shaped tool that fits the socket in each screw head; the manual specifies which size hex key to use for each screw</li>
 </ul>
-<p>!!! warning
-    A locknut that spins too easily by hand has lost its nylon grip and should be replaced. A locknut that requires heavy force from the very first turn is being cross-threaded. Both situations are worth stopping to fix before continuing the build.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>A locknut that spins too easily by hand has lost its nylon grip and should be replaced. A locknut that requires heavy force from the very first turn is being cross-threaded. Both situations are worth stopping to fix before continuing the build.</p>
+</div>
 <h2 id="assembly-instructions-reading">Assembly Instructions Reading</h2>
 <p>Now that you can identify every category of part, the next skill is learning to read a technical assembly manual, the same skill an aircraft mechanic, furniture installer, or robotics engineer relies on daily. The StarterBot manual presents 40 numbered steps, each showing an illustration of the parts needed, an arrow or highlight showing where they attach, and a callout list naming each part and how many are required.</p>
 <p>Reading an assembly manual is not the same as reading a paragraph of text top to bottom. Instead, experienced builders repeat a small cycle for every single step, checking their work before moving on rather than plowing ahead and hoping for the best. Because this cycle repeats identically at every one of the 40 steps, it is worth slowing down to see it as its own process, separate from any single step's specific parts.</p>
 <h4 id="diagram-reading-an-assembly-step-workflow">Diagram: Reading an Assembly Step Workflow</h4>
 <iframe src="../../sims/assembly-reading-workflow/main.html" width="100%" height="500px" scrolling="no"></iframe>
 
-<details markdown="1">
+<details>
 <summary>Reading an Assembly Step Workflow</summary>
-Type: workflow
-**sim-id:** assembly-reading-workflow<br/>
-**Library:** Mermaid<br/>
-**Status:** Specified
-
-Purpose: Teach the repeating cycle a builder follows for every numbered step in a technical assembly manual, using the StarterBot manual as the concrete example.
-
-Bloom Taxonomy: Understand (L2) and Apply (L3)
-Bloom Taxonomy Verb: explain, demonstrate, sequence
-
-Learning objective: Students will explain the purpose of each stage in the read-verify cycle and apply it while working through real StarterBot assembly steps.
-
-Visual style: Mermaid flowchart, five process nodes in a loop, rendered top to bottom with an arrow returning from the last node back to the first.
-
-Steps (each is a clickable node with a `click` directive opening an infobox):
+<p>Type: workflow
+<strong>sim-id:</strong> assembly-reading-workflow<br>
+<strong>Library:</strong> Mermaid<br>
+<strong>Status:</strong> Specified</p>
+<p>Purpose: Teach the repeating cycle a builder follows for every numbered step in a technical assembly manual, using the StarterBot manual as the concrete example.</p>
+<p>Bloom Taxonomy: Understand (L2) and Apply (L3)
+Bloom Taxonomy Verb: explain, demonstrate, sequence</p>
+<p>Learning objective: Students will explain the purpose of each stage in the read-verify cycle and apply it while working through real StarterBot assembly steps.</p>
+<p>Visual style: Mermaid flowchart, five process nodes in a loop, rendered top to bottom with an arrow returning from the last node back to the first.</p>
+<p>Steps (each is a clickable node with a <code>click</code> directive opening an infobox):
 1. "Read the Step" — Hover/click text: "Look at the step's illustration and instructions before touching any parts. Note the step number and any orientation arrows."
 2. "Identify Parts" — Hover/click text: "Match each callout in the parts list to a real part in your sorted trays, confirming both the name and the quantity, such as '2x 8-Hole U-Channel.'"
 3. "Gather Tools" — Hover/click text: "Set out the correct hex key size and any other tool the step calls for before starting, rather than searching mid-step."
 4. "Perform the Step" — Hover/click text: "Assemble the parts exactly as shown, matching the illustrated orientation, such as which face of a U-channel points outward."
-5. "Verify" — Hover/click text: "Compare your assembled result to the manual's picture. Check that screws are snug, nothing spins that should be fixed, and nothing is fixed that should spin."
-
-Connections: Step 1 to Step 2 to Step 3 to Step 4 to Step 5, then Step 5 loops back to Step 1 for the next numbered step, with the loop-back arrow labeled "Next Step."
-
-Color coding: Blue for information-gathering steps (Read, Identify, Gather), green for the hands-on step (Perform), gold for the checkpoint step (Verify).
-
-Implementation: Mermaid flowchart syntax with `click` directives bound to a JavaScript function that displays the hover text above in a styled infobox beneath the diagram.
+5. "Verify" — Hover/click text: "Compare your assembled result to the manual's picture. Check that screws are snug, nothing spins that should be fixed, and nothing is fixed that should spin."</p>
+<p>Connections: Step 1 to Step 2 to Step 3 to Step 4 to Step 5, then Step 5 loops back to Step 1 for the next numbered step, with the loop-back arrow labeled "Next Step."</p>
+<p>Color coding: Blue for information-gathering steps (Read, Identify, Gather), green for the hands-on step (Perform), gold for the checkpoint step (Verify).</p>
+<p>Implementation: Mermaid flowchart syntax with <code>click</code> directives bound to a JavaScript function that displays the hover text above in a styled infobox beneath the diagram.</p>
 </details>
-
 <p>Two habits separate a fast, frustration-free build from a slow, error-prone one: reading the entire step before touching a single part, and verifying each step before moving to the next. Skipping verification is how a shim gets left out three steps before it becomes impossible to reach.</p>
 <h2 id="guided-robot-assembly">Guided Robot Assembly</h2>
 <p>With the reading cycle established, the StarterBot manual's 40 steps group naturally into a handful of larger construction phases. Recognizing these phases helps you understand where you are in the build and what the current step is building toward, rather than experiencing the manual as 40 disconnected instructions.</p>
@@ -474,43 +1618,33 @@ Implementation: Mermaid flowchart syntax with `click` directives bound to a Java
 <h4 id="diagram-starterbot-subassembly-matching-quiz">Diagram: StarterBot Subassembly Matching Quiz</h4>
 <iframe src="../../sims/parts-matching-quiz/main.html" width="100%" height="500px" scrolling="no"></iframe>
 
-<details markdown="1">
+<details>
 <summary>StarterBot Subassembly Matching Quiz</summary>
-Type: microsim
-**sim-id:** parts-matching-quiz<br/>
-**Library:** p5.js<br/>
-**Status:** Specified
-
-Purpose: Reinforce the concept of a subassembly by having students drag individual StarterBot part names into the correct subassembly bin.
-
-Bloom Taxonomy: Remember (L1) and Apply (L3)
-Bloom Taxonomy Verb: identify, classify, apply
-
-Learning objective: Given a shuffled list of StarterBot part names, students will correctly group each part into the subassembly it belongs to (shaft-bearing-hub, drivetrain, battery mount, intake roller, or wheel/ServoBlock).
-
-Canvas layout:
+<p>Type: microsim
+<strong>sim-id:</strong> parts-matching-quiz<br>
+<strong>Library:</strong> p5.js<br>
+<strong>Status:</strong> Specified</p>
+<p>Purpose: Reinforce the concept of a subassembly by having students drag individual StarterBot part names into the correct subassembly bin.</p>
+<p>Bloom Taxonomy: Remember (L1) and Apply (L3)
+Bloom Taxonomy Verb: identify, classify, apply</p>
+<p>Learning objective: Given a shuffled list of StarterBot part names, students will correctly group each part into the subassembly it belongs to (shaft-bearing-hub, drivetrain, battery mount, intake roller, or wheel/ServoBlock).</p>
+<p>Canvas layout:
 - Left side (60% width): a shuffled stack of draggable part-name tiles (for example "8mm REX Bearing," "10-Tooth Sprocket," "Battery Strap," "30-Tooth Gear," "Compact ServoBlock")
-- Right side (40% width): five labeled drop bins, one per subassembly, stacked vertically
-
-Interactive controls:
+- Right side (40% width): five labeled drop bins, one per subassembly, stacked vertically</p>
+<p>Interactive controls:
 - Drag-and-drop: each part tile can be dragged from the left stack into any bin on the right
 - "Check My Work" button: highlights correctly placed tiles in green and incorrectly placed tiles in red, and shows the correct bin name for any red tile
 - "Shuffle New Set" button: loads a new randomized set of 8-10 part tiles from a larger pool of StarterBot parts
-- "Reset" button: returns all tiles to the left stack
-
-Default parameters: 8 part tiles shown per round, drawn randomly from a pool of 20 real StarterBot part names spanning all five subassemblies.
-
-Data Visibility Requirements:
+- "Reset" button: returns all tiles to the left stack</p>
+<p>Default parameters: 8 part tiles shown per round, drawn randomly from a pool of 20 real StarterBot part names spanning all five subassemblies.</p>
+<p>Data Visibility Requirements:
   Stage 1: Show the shuffled tiles and empty labeled bins with no scoring yet
   Stage 2: Show each tile as the student drags it, snapping into the nearest bin when released
   Stage 3: After "Check My Work," show a per-tile color result (green/red) and a running score such as "6 of 8 correct"
-  Stage 4: For any red tile, show a one-line explanation of why it belongs in the correct bin, for example "10-Tooth Sprocket drives the chain loop, so it belongs in the Drivetrain subassembly."
-
-Instructional Rationale: A drag-and-drop matching pattern is appropriate for this Remember/Apply objective because it requires students to recall each part's function well enough to place it correctly, while the immediate check-and-explain feedback corrects misconceptions before they carry into the physical build.
-
-Implementation: p5.js canvas with mouse-drag event handling for tile objects, rectangular bin hit-detection, and a scoring routine triggered by the "Check My Work" button.
+  Stage 4: For any red tile, show a one-line explanation of why it belongs in the correct bin, for example "10-Tooth Sprocket drives the chain loop, so it belongs in the Drivetrain subassembly."</p>
+<p>Instructional Rationale: A drag-and-drop matching pattern is appropriate for this Remember/Apply objective because it requires students to recall each part's function well enough to place it correctly, while the immediate check-and-explain feedback corrects misconceptions before they carry into the physical build.</p>
+<p>Implementation: p5.js canvas with mouse-drag event handling for tile objects, rectangular bin hit-detection, and a scoring routine triggered by the "Check My Work" button.</p>
 </details>
-
 <h2 id="build-verification-and-troubleshooting">Build Verification and Troubleshooting</h2>
 <p>The final skill this chapter teaches is knowing how to tell whether a build step, or the finished robot, actually works. <strong>Build verification</strong> means comparing your physical result against the manual's expected outcome, rather than assuming that "it looks about right" is good enough. On a robot, a part that looks correctly placed but is one shim off, or one screw loose, can still cause a wheel to bind or a chain to skip.</p>
 <p>Verification should happen at two levels: after each individual step, as described earlier in the reading cycle, and again after each major phase (frame, drivetrain, battery mount, intake roller, wheels) is complete. At the end of the full 40-step build, spin every wheel by hand, check that the chain loops run smoothly without derailing, and confirm the battery sits securely in its mount.</p>
@@ -556,86 +1690,122 @@ Implementation: p5.js canvas with mouse-drag event handling for tile objects, re
 </tr>
 </tbody>
 </table>
-<p>!!! success
-    If every wheel spins freely by hand, the chain runs without skipping, and the battery is locked into its mount, your StarterBot chassis has passed build verification and is ready for its first test drive.</p>
-<p>??? note "Quick check: Why does a manual have you build subassemblies separately instead of building everything directly on the main frame? Click to reveal the answer."
-    Because it is far easier to spot and fix a mistake in a small group of parts on the workbench, such as a shaft-bearing-hub unit, than to diagnose the same mistake after it is buried inside the fully assembled chassis. Subassemblies also let multiple people build different parts of the robot at the same time.</p>
-<p>You now have a complete, verified StarterBot chassis and a working vocabulary for every category of part it contains: structural hardware, motion hardware, power and motor components, and fasteners. As the goBILDA manual puts it once the build is finished, "Now that the foundation is built, it's time to shift gears into programming, driver practice, and iterative design." The next chapters take that exact hardware you just assembled and explain the electrical, mechanical, and programming theory behind why it works, using the parts sitting in front of you as the running example.</p></div>
-            </div>
-        </div>
-
-        <footer class="col-md-12">
-            <hr>
-            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
-        </footer>
-        <script src="../../js/bootstrap.bundle.min.js"></script>
-        <script>
-            var base_url = "../..",
-                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
-        </script>
-        <script src="../../js/base.js"></script>
-        <script src="../../search/main.js"></script>
-
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="searchModalLabel">Search</h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p>From here you can search these documents. Enter your search terms below.</p>
-                <form>
-                    <div class="form-group">
-                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
-                    </div>
-                </form>
-                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th style="width: 20%;">Keys</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="help shortcut"><kbd>?</kbd></td>
-                    <td>Open this help</td>
-                  </tr>
-                  <tr>
-                    <td class="next shortcut"><kbd>n</kbd></td>
-                    <td>Next page</td>
-                  </tr>
-                  <tr>
-                    <td class="prev shortcut"><kbd>p</kbd></td>
-                    <td>Previous page</td>
-                  </tr>
-                  <tr>
-                    <td class="search shortcut"><kbd>s</kbd></td>
-                    <td>Search</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<p>If every wheel spins freely by hand, the chain runs without skipping, and the battery is locked into its mount, your StarterBot chassis has passed build verification and is ready for its first test drive.</p>
 </div>
+<details class="note">
+<summary>Quick check: Why does a manual have you build subassemblies separately instead of building everything directly on the main frame? Click to reveal the answer.</summary>
+<p>Because it is far easier to spot and fix a mistake in a small group of parts on the workbench, such as a shaft-bearing-hub unit, than to diagnose the same mistake after it is buried inside the fully assembled chassis. Subassemblies also let multiple people build different parts of the robot at the same time.</p>
+</details>
+<p>You now have a complete, verified StarterBot chassis and a working vocabulary for every category of part it contains: structural hardware, motion hardware, power and motor components, and fasteners. As the goBILDA manual puts it once the build is finished, "Now that the foundation is built, it's time to shift gears into programming, driver practice, and iterative design." The next chapters take that exact hardware you just assembled and explain the electrical, mechanical, and programming theory behind why it works, using the parts sitting in front of you as the running example.</p>
 
-    </body>
-</html>
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+          
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: List of Chapters">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                List of Chapters
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../02-intro-robotics-systems/" class="md-footer__link md-footer__link--next" aria-label="Next: 2. Introduction to Robotics and Systems">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                2. Introduction to Robotics and Systems
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

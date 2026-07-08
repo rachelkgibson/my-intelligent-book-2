@@ -1,236 +1,1359 @@
-<!DOCTYPE html>
-<html lang="en" data-bs-theme="light">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="General-purpose programming concepts — algorithms, variables, control structures, functions, and debugging — independent of any specific hardware.">
+      
+      
+      
+      
+        <link rel="prev" href="../02-intro-robotics-systems/">
+      
+      
+        <link rel="next" href="../04-programming-your-robot/">
+      
+      
         
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Programming Fundamentals - Technology of Robotic Design</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
         
-        
-        <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>3. Programming Fundamentals - My Docs</title>
-        <link href="../../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../../css/fontawesome.min.css" rel="stylesheet">
-        <link href="../../css/brands.min.css" rel="stylesheet">
-        <link href="../../css/solid.min.css" rel="stylesheet">
-        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
-        <link href="../../css/base.css" rel="stylesheet">
-        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
-        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-        <script>hljs.highlightAll();</script> 
-    </head>
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
 
-    <body>
-        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
-            <div class="container">
-                <a class="navbar-brand" href="../..">My Docs</a>
-                <!-- Expander button -->
-                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- Expanded navigation -->
-                <div id="navbar-collapse" class="navbar-collapse collapse">
-                        <!-- Main navigation -->
-                        <ul class="nav navbar-nav">
-                            <li class="nav-item">
-                                <a href="../.." class="nav-link">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="../../course-description/" class="nav-link">Course Description</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Chapters</a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../" class="dropdown-item">List of Chapters</a>
-</li>
-                                    
-<li>
-    <a href="../01-identifying-kit-parts-building-starterbot/" class="dropdown-item">1. Identifying Kit Parts and Building Your StarterBot</a>
-</li>
-                                    
-<li>
-    <a href="../02-intro-robotics-systems/" class="dropdown-item">2. Introduction to Robotics and Systems</a>
-</li>
-                                    
-<li>
-    <a href="./" class="dropdown-item active" aria-current="page">3. Programming Fundamentals</a>
-</li>
-                                    
-<li>
-    <a href="../04-programming-your-robot/" class="dropdown-item">4. Programming Your Robot</a>
-</li>
-                                    
-<li>
-    <a href="../05-designing-building-custom-parts/" class="dropdown-item">5. Designing and Building Custom Parts</a>
-</li>
-                                    
-<li>
-    <a href="../06-electrical-fundamentals/" class="dropdown-item">6. Electrical Fundamentals</a>
-</li>
-                                    
-<li>
-    <a href="../07-electronic-components-circuit-design/" class="dropdown-item">7. Electronic Components and Circuit Design</a>
-</li>
-                                    
-<li>
-    <a href="../08-sensors-and-measurement/" class="dropdown-item">8. Sensors and Measurement</a>
-</li>
-                                    
-<li>
-    <a href="../09-mechanical-systems-simple-machines/" class="dropdown-item">9. Mechanical Systems and Simple Machines</a>
-</li>
-                                    
-<li>
-    <a href="../10-fluid-power-hydraulics-pneumatics/" class="dropdown-item">10. Fluid Power: Hydraulics and Pneumatics</a>
-</li>
-                                    
-<li>
-    <a href="../11-control-systems-feedback-loops/" class="dropdown-item">11. Control Systems and Feedback Loops</a>
-</li>
-                                    
-<li>
-    <a href="../12-digital-logic-computing-fundamentals/" class="dropdown-item">12. Digital Logic and Computing Fundamentals</a>
-</li>
-                                    
-<li>
-    <a href="../13-advanced-robot-programming/" class="dropdown-item">13. Advanced Robot Programming</a>
-</li>
-                                    
-<li>
-    <a href="../14-integrating-testing-maintaining-robotic-system/" class="dropdown-item">14. Integrating, Testing, and Maintaining a Robotic System</a>
-</li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Learning Graph</a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../../learning-graph/" class="dropdown-item">Introduction</a>
-</li>
-                                    
-<li>
-    <a href="../../learning-graph/course-description-assessment/" class="dropdown-item">Course Description Assessment</a>
-</li>
-                                    
-<li>
-    <a href="../../learning-graph/concept-list/" class="dropdown-item">Concept Enumeration</a>
-</li>
-                                    
-<li>
-    <a href="../../learning-graph/quality-metrics/" class="dropdown-item">Graph Quality Analysis</a>
-</li>
-                                    
-<li>
-    <a href="../../learning-graph/concept-taxonomy/" class="dropdown-item">Concept Taxonomy</a>
-</li>
-                                    
-<li>
-    <a href="../../learning-graph/taxonomy-distribution/" class="dropdown-item">Taxonomy Distribution Report</a>
-</li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">MicroSims</a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../../sims/graph-viewer/" class="dropdown-item">Learning Graph Viewer</a>
-</li>
-                                </ul>
-                            </li>
-                        </ul>
-
-                    <ul class="nav navbar-nav ms-md-auto">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> Search
-                            </a>
-                        </li>
-                            <li class="nav-item">
-                                <a rel="prev" href="../02-intro-robotics-systems/" class="nav-link">
-                                    <i class="fa fa-arrow-left"></i> Previous
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a rel="next" href="../04-programming-your-robot/" class="nav-link">
-                                    Next <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row">
-                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
-            <span class="fa fa-angle-down"></span>
-        </button>
-    </div>
 
     
-    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
-        <ul class="nav flex-column">
-            
-            <li class="nav-item" data-bs-level="1"><a href="#programming-fundamentals" class="nav-link">Programming Fundamentals</a>
-              <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="2"><a href="#summary" class="nav-link">Summary</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#concepts-covered" class="nav-link">Concepts Covered</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#prerequisites" class="nav-link">Prerequisites</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#thinking-like-a-programmer-what-is-an-algorithm" class="nav-link">Thinking Like a Programmer: What Is an Algorithm?</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#expressing-algorithms-before-writing-code-pseudocode-and-flowcharts" class="nav-link">Expressing Algorithms Before Writing Code: Pseudocode and Flowcharts</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#from-plan-to-code-programming-languages-and-syntax" class="nav-link">From Plan to Code: Programming Languages and Syntax</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#storing-information-variables-and-data-types" class="nav-link">Storing Information: Variables and Data Types</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#controlling-the-flow-conditional-statements-and-loop-structures" class="nav-link">Controlling the Flow: Conditional Statements and Loop Structures</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#organizing-code-functions" class="nav-link">Organizing Code: Functions</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#where-you-write-code-programming-platforms-and-ides" class="nav-link">Where You Write Code: Programming Platforms and IDEs</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#making-sure-code-works-debugging-testing-and-security" class="nav-link">Making Sure Code Works: Debugging, Testing, and Security</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-              </ul>
-            </li>
-        </ul>
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#programming-fundamentals" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
-</div></div>
-                    <div class="col-md-9" role="main">
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Technology of Robotic Design" class="md-header__button md-logo" aria-label="Technology of Robotic Design" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Technology of Robotic Design
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Programming Fundamentals
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Technology of Robotic Design" class="md-nav__button md-logo" aria-label="Technology of Robotic Design" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    Technology of Robotic Design
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Description
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked="">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapters
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Chapters
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-identifying-kit-parts-building-starterbot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Identifying Kit Parts and Building Your StarterBot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-intro-robotics-systems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Introduction to Robotics and Systems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Programming Fundamentals
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Programming Fundamentals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts Covered
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thinking-like-a-programmer-what-is-an-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Thinking Like a Programmer: What Is an Algorithm?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expressing-algorithms-before-writing-code-pseudocode-and-flowcharts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Expressing Algorithms Before Writing Code: Pseudocode and Flowcharts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Expressing Algorithms Before Writing Code: Pseudocode and Flowcharts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-anatomy-of-a-flowchart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram: Anatomy of a Flowchart
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-plan-to-code-programming-languages-and-syntax" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        From Plan to Code: Programming Languages and Syntax
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#storing-information-variables-and-data-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Storing Information: Variables and Data Types
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#controlling-the-flow-conditional-statements-and-loop-structures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Controlling the Flow: Conditional Statements and Loop Structures
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Controlling the Flow: Conditional Statements and Loop Structures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-algorithm-block-builder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram: Algorithm Block Builder
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#organizing-code-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Organizing Code: Functions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-you-write-code-programming-platforms-and-ides" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where You Write Code: Programming Platforms and IDEs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#making-sure-code-works-debugging-testing-and-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Making Sure Code Works: Debugging, Testing, and Security
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Making Sure Code Works: Debugging, Testing, and Security">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-spot-the-bug" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram: Spot the Bug
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-programming-your-robot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Programming Your Robot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-designing-building-custom-parts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Designing and Building Custom Parts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-electrical-fundamentals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Electrical Fundamentals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-electronic-components-circuit-design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Electronic Components and Circuit Design
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-sensors-and-measurement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Sensors and Measurement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-mechanical-systems-simple-machines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Mechanical Systems and Simple Machines
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-fluid-power-hydraulics-pneumatics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Fluid Power: Hydraulics and Pneumatics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-control-systems-feedback-loops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Control Systems and Feedback Loops
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-digital-logic-computing-fundamentals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. Digital Logic and Computing Fundamentals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-advanced-robot-programming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. Advanced Robot Programming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-integrating-testing-maintaining-robotic-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14. Integrating, Testing, and Maintaining a Robotic System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning Graph
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../sims/graph-viewer/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MicroSims
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts Covered
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thinking-like-a-programmer-what-is-an-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Thinking Like a Programmer: What Is an Algorithm?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expressing-algorithms-before-writing-code-pseudocode-and-flowcharts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Expressing Algorithms Before Writing Code: Pseudocode and Flowcharts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Expressing Algorithms Before Writing Code: Pseudocode and Flowcharts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-anatomy-of-a-flowchart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram: Anatomy of a Flowchart
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-plan-to-code-programming-languages-and-syntax" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        From Plan to Code: Programming Languages and Syntax
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#storing-information-variables-and-data-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Storing Information: Variables and Data Types
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#controlling-the-flow-conditional-statements-and-loop-structures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Controlling the Flow: Conditional Statements and Loop Structures
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Controlling the Flow: Conditional Statements and Loop Structures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-algorithm-block-builder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram: Algorithm Block Builder
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#organizing-code-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Organizing Code: Functions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-you-write-code-programming-platforms-and-ides" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where You Write Code: Programming Platforms and IDEs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#making-sure-code-works-debugging-testing-and-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Making Sure Code Works: Debugging, Testing, and Security
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Making Sure Code Works: Debugging, Testing, and Security">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-spot-the-bug" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram: Spot the Bug
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation">
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
 
 <h1 id="programming-fundamentals">Programming Fundamentals</h1>
 <h2 id="summary">Summary</h2>
@@ -256,7 +1379,7 @@
 </ol>
 <h2 id="prerequisites">Prerequisites</h2>
 <p>This chapter assumes only the prerequisites listed in the <a href="../../course-description/">course description</a>.</p>
-<hr />
+<hr>
 <h2 id="thinking-like-a-programmer-what-is-an-algorithm">Thinking Like a Programmer: What Is an Algorithm?</h2>
 <p>Before you write a single line of code, you need a plan. An <strong>algorithm</strong> is a finite, ordered sequence of precise steps that solves a problem or completes a task, taking some starting information as input and producing a predictable result as output. Notice that this definition does not mention computers at all, because algorithms exist everywhere in daily life, not just inside a program.</p>
 <p>Consider a recipe for making a peanut butter and jelly sandwich. It has a clear starting point (two slices of bread and a knife), a clear sequence of steps (open the jars, spread the peanut butter, spread the jelly, put the slices together), and a clear ending point (a finished sandwich). A computer program's algorithm works the same way, except the "ingredients" are data and the "steps" are instructions a computer can carry out.</p>
@@ -272,52 +1395,49 @@
 <p>Programmers rarely jump straight from an idea to finished code. Instead, they first sketch the algorithm in a form that is easy to think through and easy to change, before worrying about the strict rules of any particular programming language. Two of the most common tools for this planning stage are pseudocode and flowcharts.</p>
 <p><strong>Pseudocode</strong> is a way of describing an algorithm's steps using structured, plain language that resembles real code but does not follow the exact syntax rules of any specific programming language. Pseudocode lets you focus entirely on the logic of a solution, the order of decisions and repeated steps, without getting distracted by punctuation, spelling of commands, or which language you eventually plan to use.</p>
 <p>The pseudocode below describes the even-or-odd algorithm introduced earlier. Read it as a numbered set of plain-language instructions: it takes a number, divides it by 2, and checks whether anything is left over.</p>
-<pre><code>GET the number from the user
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>GET the number from the user
 CALCULATE the remainder when the number is divided by 2
 IF the remainder equals 0 THEN
-    DISPLAY &quot;The number is even&quot;
+    DISPLAY "The number is even"
 ELSE
-    DISPLAY &quot;The number is odd&quot;
+    DISPLAY "The number is odd"
 END IF
-</code></pre>
+</code></pre></div></td></tr></tbody></table></div>
 <p>Notice that this pseudocode reads almost like an ordinary sentence, yet it is precise enough that any programmer, regardless of which programming language they prefer, could translate it into working code. That translatability is exactly why pseudocode is such a valuable planning tool.</p>
 <p>A <strong>flowchart</strong> is a diagram that represents an algorithm visually, using a small set of standardized shapes connected by arrows to show the exact order in which operations occur. Flowcharts use ovals for start and end points, rectangles for process steps (an action the algorithm performs), diamonds for decision points (a yes/no or true/false question that branches the flow), and arrows to connect everything in sequence. Because a flowchart is visual, it often reveals the branching structure of an algorithm, especially one full of decisions, more clearly than a written list of steps can.</p>
 <p>Rather than only reading about what each flowchart shape means, explore the interactive diagram below, which lets you click each shape and each connecting arrow to see how it maps onto the even-or-odd algorithm you just read as pseudocode.</p>
 <h4 id="diagram-anatomy-of-a-flowchart">Diagram: Anatomy of a Flowchart</h4>
 <iframe src="../../sims/flowchart-anatomy/main.html" width="100%" height="500px" scrolling="no"></iframe>
 
-<details markdown="1">
+<details>
 <summary>Anatomy of a Flowchart</summary>
-Type: diagram
-**sim-id:** flowchart-anatomy<br/>
-**Library:** Mermaid<br/>
-**Status:** Specified
-
-Purpose: Teach the four core flowchart shapes (start/end oval, process rectangle, decision diamond, connecting arrow) by mapping each one onto the even-or-odd algorithm introduced in this section's pseudocode.
-
-Bloom Taxonomy: Understand (L2)
-Bloom Taxonomy Verb: identify, explain, classify
-
-Learning objective: Given an unfamiliar flowchart, students will identify each shape by name, explain its purpose, and classify each step of the even-or-odd algorithm as a start/end, process, or decision shape.
-
-Visual style: Mermaid flowchart (`graph TD`) laid out top-to-bottom, mirroring the pseudocode's step order exactly.
-
-Nodes (each node clickable with a `click` directive opening an infobox):
+<p>Type: diagram
+<strong>sim-id:</strong> flowchart-anatomy<br>
+<strong>Library:</strong> Mermaid<br>
+<strong>Status:</strong> Specified</p>
+<p>Purpose: Teach the four core flowchart shapes (start/end oval, process rectangle, decision diamond, connecting arrow) by mapping each one onto the even-or-odd algorithm introduced in this section's pseudocode.</p>
+<p>Bloom Taxonomy: Understand (L2)
+Bloom Taxonomy Verb: identify, explain, classify</p>
+<p>Learning objective: Given an unfamiliar flowchart, students will identify each shape by name, explain its purpose, and classify each step of the even-or-odd algorithm as a start/end, process, or decision shape.</p>
+<p>Visual style: Mermaid flowchart (<code>graph TD</code>) laid out top-to-bottom, mirroring the pseudocode's step order exactly.</p>
+<p>Nodes (each node clickable with a <code>click</code> directive opening an infobox):
 1. Start oval: "Start" — click text: "The oval shape marks where an algorithm begins. Every flowchart has exactly one start shape."
 2. Process rectangle: "Get the number from the user" — click text: "A rectangle represents a process step: an action the algorithm performs, with no decision involved."
 3. Process rectangle: "Calculate remainder (number divided by 2)" — click text: "Another process step. Process shapes can perform calculations, not just input/output actions."
 4. Decision diamond: "Remainder equals 0?" — click text: "A diamond represents a decision point: a yes/no question that sends the flow down one of two different paths."
 5. Process rectangle (Yes branch): "Display 'even'" — click text: "This process step only runs if the decision above was answered Yes."
 6. Process rectangle (No branch): "Display 'odd'" — click text: "This process step only runs if the decision above was answered No."
-7. End oval: "End" — click text: "The oval shape also marks where an algorithm finishes. Both branches lead back to a single end shape."
-
-Connections: Start to Get-Number to Calculate-Remainder to the Decision diamond, which splits into a Yes arrow (labeled "Yes") to Display-Even and a No arrow (labeled "No") to Display-Odd; both branches merge into the single End oval.
-
-Color coding: Green for the start/end ovals, blue for process rectangles, gold for the decision diamond, with the Yes arrow shown in green and the No arrow shown in orange.
-
-Implementation: Mermaid flowchart syntax with `click` directives bound to a JavaScript function that displays each shape's explanatory text in a styled infobox beneath the diagram.
+7. End oval: "End" — click text: "The oval shape also marks where an algorithm finishes. Both branches lead back to a single end shape."</p>
+<p>Connections: Start to Get-Number to Calculate-Remainder to the Decision diamond, which splits into a Yes arrow (labeled "Yes") to Display-Even and a No arrow (labeled "No") to Display-Odd; both branches merge into the single End oval.</p>
+<p>Color coding: Green for the start/end ovals, blue for process rectangles, gold for the decision diamond, with the Yes arrow shown in green and the No arrow shown in orange.</p>
+<p>Implementation: Mermaid flowchart syntax with <code>click</code> directives bound to a JavaScript function that displays each shape's explanatory text in a styled infobox beneath the diagram.</p>
 </details>
-
 <p>Pseudocode and flowcharts describe the exact same algorithm in two different formats, one written and one visual, and many programmers move back and forth between them while planning. Once the logic in either format feels solid, it is time to translate it into an actual programming language.</p>
 <h2 id="from-plan-to-code-programming-languages-and-syntax">From Plan to Code: Programming Languages and Syntax</h2>
 <p>A <strong>programming language</strong> is a formal language with a defined vocabulary and grammar that a person uses to write instructions a computer can eventually carry out. Unlike the flexible plain language used in pseudocode, a programming language must follow strict, exact rules, because a computer cannot guess what a programmer "probably meant" the way a human reader often can.</p>
@@ -346,8 +1466,10 @@ Implementation: Mermaid flowchart syntax with `click` directives bound to a Java
 </tbody>
 </table>
 <p>This strict set of rules that a language enforces, exactly how symbols, punctuation, spacing, and keywords must be arranged for a program to be considered valid, is called <strong>code syntax</strong>. Every programming language has its own syntax: Python requires a colon and consistent indentation after an <code>if</code>, while other languages require curly braces <code>{ }</code> instead. A program that violates its language's syntax will not run at all, regardless of how correct its underlying algorithm is.</p>
-<p>!!! tip
-    Almost every beginning programmer's first frustration is a syntax error, a missing colon, an extra parenthesis, a misspelled keyword. This is completely normal. Learning a programming language's syntax is a lot like learning the grammar rules of a new spoken language: frustrating at first, automatic with practice.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Almost every beginning programmer's first frustration is a syntax error, a missing colon, an extra parenthesis, a misspelled keyword. This is completely normal. Learning a programming language's syntax is a lot like learning the grammar rules of a new spoken language: frustrating at first, automatic with practice.</p>
+</div>
 <h2 id="storing-information-variables-and-data-types">Storing Information: Variables and Data Types</h2>
 <p>Every useful program needs somewhere to keep track of information while it runs, whether that is a number a user typed in, a score, or a sensor reading you will meet in the next chapter. A <strong>variable</strong> is a named storage location in a program's memory that holds a value, and that value can change while the program runs, which is exactly why it is called "variable" rather than "constant."</p>
 <p>Returning to the even-or-odd example, the number a user provides needs somewhere to live while the program works with it. A programmer might create a variable named <code>number</code> to hold that value, and a second variable named <code>remainder</code> to hold the result of dividing by 2. Giving variables clear, descriptive names, <code>number</code> rather than a meaningless label like <code>x1</code>, makes code dramatically easier for other programmers, or your future self, to read and understand later.</p>
@@ -397,79 +1519,82 @@ Implementation: Mermaid flowchart syntax with `click` directives bound to a Java
 <p>A <strong>conditional statement</strong> is an instruction that tells a program to execute certain steps only if a specified condition is true, and optionally execute different steps if that condition is false. The even-or-odd pseudocode you read earlier already contains one: the <code>IF the remainder equals 0 THEN ... ELSE ...</code> structure is a conditional statement, branching the program down one of two paths depending on the result of a calculation.</p>
 <p>A <strong>loop structure</strong> is an instruction that repeats a set of steps multiple times, either a fixed number of times or for as long as a specified condition remains true. Suppose you wanted to check every number from 1 through 10 for even or odd, instead of just one number typed in by a user. Repeating the entire even-or-odd conditional ten separate times by hand would be tedious and error-prone; a loop structure lets the algorithm repeat the same logic automatically.</p>
 <p>The pseudocode below combines a loop structure and a conditional statement to check ten numbers in a row. Read it as: repeat the following steps once for each number from 1 to 10, and within each repetition, make the same even/odd decision as before.</p>
-<pre><code>FOR each number from 1 to 10
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>FOR each number from 1 to 10
     CALCULATE the remainder when the number is divided by 2
     IF the remainder equals 0 THEN
-        DISPLAY number, &quot;is even&quot;
+        DISPLAY number, "is even"
     ELSE
-        DISPLAY number, &quot;is odd&quot;
+        DISPLAY number, "is odd"
     END IF
 END FOR
-</code></pre>
+</code></pre></div></td></tr></tbody></table></div>
 <p>Notice that the conditional statement inside this loop is identical to the one from the single-number version; the loop structure is simply what allows that same decision-making logic to run automatically ten times instead of once. This pattern, a loop that contains a conditional statement, is one of the most common building blocks in programming.</p>
 <p>Rather than only reading pseudocode, it helps to physically arrange these building blocks yourself and watch the resulting algorithm run step by step. The MicroSim below lets you drag conditional and loop blocks into a workspace, connect them in order, and press "Run" to see the resulting algorithm execute visually.</p>
 <h4 id="diagram-algorithm-block-builder">Diagram: Algorithm Block Builder</h4>
 <iframe src="../../sims/algorithm-block-builder/main.html" width="100%" height="600px" scrolling="no"></iframe>
 
-<details markdown="1">
+<details>
 <summary>Algorithm Block Builder</summary>
-Type: microsim
-**sim-id:** algorithm-block-builder<br/>
-**Library:** p5.js<br/>
-**Status:** Specified
-
-Purpose: Let students construct a simple algorithm by dragging and connecting conditional and loop blocks, then watch the assembled algorithm execute step by step against a small list of numbers.
-
-Bloom Taxonomy: Create (L6) and Apply (L3)
-Bloom Taxonomy Verb: construct, arrange, execute, demonstrate
-
-Learning objective: Students will arrange loop and conditional blocks into a working sequence that correctly classifies a list of numbers as even or odd, and will trace execution to demonstrate how a loop structure repeats a conditional statement.
-
-Canvas layout:
+<p>Type: microsim
+<strong>sim-id:</strong> algorithm-block-builder<br>
+<strong>Library:</strong> p5.js<br>
+<strong>Status:</strong> Specified</p>
+<p>Purpose: Let students construct a simple algorithm by dragging and connecting conditional and loop blocks, then watch the assembled algorithm execute step by step against a small list of numbers.</p>
+<p>Bloom Taxonomy: Create (L6) and Apply (L3)
+Bloom Taxonomy Verb: construct, arrange, execute, demonstrate</p>
+<p>Learning objective: Students will arrange loop and conditional blocks into a working sequence that correctly classifies a list of numbers as even or odd, and will trace execution to demonstrate how a loop structure repeats a conditional statement.</p>
+<p>Canvas layout:
 - Left side (60% width): a palette of draggable blocks: "Start Loop (repeat for each number in list)," "If remainder = 0," "Display 'even'," "Display 'odd'," "End If," "End Loop"
-- Right side (40% width): a workspace where dragged blocks snap into a vertical sequence, plus a "Run" button, a "Reset" button, and a small output console
-
-Interactive controls:
+- Right side (40% width): a workspace where dragged blocks snap into a vertical sequence, plus a "Run" button, a "Reset" button, and a small output console</p>
+<p>Interactive controls:
 - Drag-and-drop: blocks can be dragged from the palette into the workspace and reordered
 - Dropdown: choose the input list (default: the numbers 1 through 5)
 - Button: "Run" — executes the assembled block sequence one step at a time
 - Button: "Step" — advances execution by a single instruction, highlighting the active block
-- Button: "Reset" — clears the workspace back to an empty sequence
-
-Default parameters:
+- Button: "Reset" — clears the workspace back to an empty sequence</p>
+<p>Default parameters:
 - Input list: [1, 2, 3, 4, 5]
-- Palette blocks start unplaced; a "Load Example" button can populate a correct default sequence for first-time users
-
-Data Visibility Requirements:
+- Palette blocks start unplaced; a "Load Example" button can populate a correct default sequence for first-time users</p>
+<p>Data Visibility Requirements:
   Stage 1: Show the current number being processed from the input list, highlighted in the console
   Stage 2: Show the calculated remainder for that number
   Stage 3: Show which branch (even/odd display block) executed, with that block highlighted in the workspace
   Stage 4: Show the accumulated output console listing every number processed so far and its classification
-  Final: Show the completed output list matching all numbers in the input list
-
-Behavior:
+  Final: Show the completed output list matching all numbers in the input list</p>
+<p>Behavior:
 - If blocks are assembled correctly (loop containing a complete if/else/end-if inside a start-loop/end-loop pair), "Run" animates through the list, highlighting the active block and updating the console after each step
 - If blocks are missing a required piece (for example, no "End If"), clicking "Run" displays an infobox explaining which structural piece is missing, without crashing
-- Correct assembly is confirmed with a green checkmark and a message: "Your loop successfully repeated the conditional check for every number in the list."
-
-Instructional Rationale: A Create-level objective requires students to actively construct a working sequence rather than passively view one. Drag-and-drop block assembly, paired with step-through execution showing concrete data at each stage, lets students build understanding of how a loop structure repeats a conditional statement without requiring them to know any language's exact code syntax yet.
-
-Implementation: p5.js for canvas rendering and drag-and-drop detection; blocks stored as an array of typed objects; a simple step-based interpreter executes the array against the input list and reports state after each step.
+- Correct assembly is confirmed with a green checkmark and a message: "Your loop successfully repeated the conditional check for every number in the list."</p>
+<p>Instructional Rationale: A Create-level objective requires students to actively construct a working sequence rather than passively view one. Drag-and-drop block assembly, paired with step-through execution showing concrete data at each stage, lets students build understanding of how a loop structure repeats a conditional statement without requiring them to know any language's exact code syntax yet.</p>
+<p>Implementation: p5.js for canvas rendering and drag-and-drop detection; blocks stored as an array of typed objects; a simple step-based interpreter executes the array against the input list and reports state after each step.</p>
 </details>
-
 <p>Conditional statements and loop structures are two of the most powerful tools in any programmer's toolkit, precisely because so many real-world problems boil down to "make a decision" and "repeat something," combined in different arrangements.</p>
 <h2 id="organizing-code-functions">Organizing Code: Functions</h2>
 <p>As algorithms grow larger, repeating the same block of logic by copying and pasting it everywhere becomes messy and hard to maintain. A <strong>function</strong> is a named, reusable block of code that performs a specific task, can accept input values called parameters, and can return a result, and can be called from other parts of a program whenever that task needs to happen again.</p>
 <p>The even-or-odd logic used throughout this chapter is a perfect candidate to become a function, since it might be needed in many different places within a larger program. The pseudocode below wraps that logic inside a function named <code>checkEvenOdd</code>, which accepts one input (a number) and displays whether it is even or odd.</p>
-<pre><code>FUNCTION checkEvenOdd(number)
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>FUNCTION checkEvenOdd(number)
     CALCULATE the remainder when number is divided by 2
     IF the remainder equals 0 THEN
-        RETURN &quot;even&quot;
+        RETURN "even"
     ELSE
-        RETURN &quot;odd&quot;
+        RETURN "odd"
     END IF
 END FUNCTION
-</code></pre>
+</code></pre></div></td></tr></tbody></table></div>
 <p>Once defined, this function can be called, or invoked, from anywhere else in the program simply by name, for example <code>checkEvenOdd(7)</code>, without rewriting the underlying logic each time. Functions offer several concrete benefits to a program's design:</p>
 <ul>
 <li><strong>Reuse</strong> — the same logic can be called many times from different places without duplicating code</li>
@@ -526,53 +1651,48 @@ END FUNCTION
 <h4 id="diagram-spot-the-bug">Diagram: Spot the Bug</h4>
 <iframe src="../../sims/spot-the-bug-even-odd/main.html" width="100%" height="500px" scrolling="no"></iframe>
 
-<details markdown="1">
+<details>
 <summary>Spot the Bug</summary>
-Type: infographic
-**sim-id:** spot-the-bug-even-odd<br/>
-**Library:** p5.js<br/>
-**Status:** Specified
-
-Purpose: Build debugging skill by presenting a broken version of the chapter's running even-or-odd function and letting students judge what is wrong before the fix is revealed.
-
-Bloom Taxonomy: Evaluate (L5)
-Bloom Taxonomy Verb: judge, critique, justify, assess
-
-Learning objective: Given a short block of pseudocode containing a single logic error, students will judge which line is incorrect, justify why it produces the wrong output, and assess the corrected version against the original algorithm's intent.
-
-Layout: A code panel on the left displaying the buggy pseudocode with line numbers; a control and infobox panel on the right.
-
-Buggy code shown (line 3 highlighted in red by default):
-
-<pre><code>FUNCTION checkEvenOdd(number)
+<p>Type: infographic
+<strong>sim-id:</strong> spot-the-bug-even-odd<br>
+<strong>Library:</strong> p5.js<br>
+<strong>Status:</strong> Specified</p>
+<p>Purpose: Build debugging skill by presenting a broken version of the chapter's running even-or-odd function and letting students judge what is wrong before the fix is revealed.</p>
+<p>Bloom Taxonomy: Evaluate (L5)
+Bloom Taxonomy Verb: judge, critique, justify, assess</p>
+<p>Learning objective: Given a short block of pseudocode containing a single logic error, students will judge which line is incorrect, justify why it produces the wrong output, and assess the corrected version against the original algorithm's intent.</p>
+<p>Layout: A code panel on the left displaying the buggy pseudocode with line numbers; a control and infobox panel on the right.</p>
+<p>Buggy code shown (line 3 highlighted in red by default):
+</p><div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>FUNCTION checkEvenOdd(number)
     CALCULATE the remainder when number is divided by 2
     IF the remainder equals 1 THEN
-        RETURN &quot;even&quot;
+        RETURN "even"
     ELSE
-        RETURN &quot;odd&quot;
+        RETURN "odd"
     END IF
 END FUNCTION
-</code></pre>
-
-
-Interactive elements:
+</code></pre></div></td></tr></tbody></table></div><p></p>
+<p>Interactive elements:
 - Students click any line number to submit a guess for where the bug is located
 - Clicking the correct line (line 3) reveals an infobox: "Bug found: the condition checks 'remainder equals 1' but a remainder of 1 means the number is ODD, not even. The comparison value should be 0, matching the original algorithm's definition of an even number."
 - Clicking an incorrect line reveals an infobox explaining why that line is actually correct, reinforcing understanding of the surrounding code rather than only confirming wrong answers
 - A "Show Fixed Version" button reveals the corrected pseudocode side by side with the original for comparison
-- A "Test It" panel lets students enter a sample number and see what the buggy version outputs versus what the corrected version outputs, making the consequence of the bug concrete
-
-Data Visibility Requirements:
+- A "Test It" panel lets students enter a sample number and see what the buggy version outputs versus what the corrected version outputs, making the consequence of the bug concrete</p>
+<p>Data Visibility Requirements:
   Stage 1: Show the buggy code as-is, with no annotations, so students form their own judgment first
   Stage 2: After a guess, show the infobox explanation tied to the clicked line
   Stage 3: Show the corrected code alongside the original for direct comparison
-  Stage 4: Show a worked test case, for example input 4, producing "odd" from the buggy version and "even" from the corrected version
-
-Instructional Rationale: An Evaluate-level objective requires students to critique and justify, not just passively observe a fix. Requiring a guess before any explanation is revealed forces active judgment, and showing feedback for both correct and incorrect line guesses reinforces understanding of the whole function rather than only the single bug.
-
-Implementation: p5.js for the code panel rendering and clickable line numbers; a small interpreter evaluates both the buggy and corrected pseudocode against a student-entered test number for the "Test It" panel.
+  Stage 4: Show a worked test case, for example input 4, producing "odd" from the buggy version and "even" from the corrected version</p>
+<p>Instructional Rationale: An Evaluate-level objective requires students to critique and justify, not just passively observe a fix. Requiring a guess before any explanation is revealed forces active judgment, and showing feedback for both correct and incorrect line guesses reinforces understanding of the whole function rather than only the single bug.</p>
+<p>Implementation: p5.js for the code panel rendering and clickable line numbers; a small interpreter evaluates both the buggy and corrected pseudocode against a student-entered test number for the "Test It" panel.</p>
 </details>
-
 <p>Finding and fixing one bug, however, does not guarantee a program is fully correct. <strong>Program testing</strong> is the practice of deliberately running a program with a variety of inputs, including unusual or extreme edge cases, to verify it produces the correct expected output before it is trusted or put into real use. A thorough tester of the even-or-odd function would not stop after trying the number 4; a complete test plan checks several different kinds of input:</p>
 <ul>
 <li><strong>Typical cases</strong> — ordinary numbers such as 4 or 7, to confirm the basic logic works</li>
@@ -581,87 +1701,123 @@ Implementation: p5.js for the code panel rendering and clickable line numbers; a
 </ul>
 <p>Skipping edge cases and invalid input is one of the most common reasons real programs fail unexpectedly once actual users, or in a future chapter, sensors and real-world conditions, start providing input the programmer never anticipated during initial testing.</p>
 <p>Beyond correctness, a finished program must also be trustworthy in a different sense. <strong>Program security</strong> refers to the practices and design choices that protect a program and its data from unintended misuse, unauthorized access, or malicious attack. Even a simple program that checks even or odd could be poorly secured if, for example, it crashed or behaved unpredictably whenever it received unexpected input, since predictable failure is itself a basic security concern.</p>
-<p>!!! warning
-    Two beginner-friendly security habits are worth building now, long before you work with any sensitive data: never assume input will arrive in the exact form you expect, and always double-check any input before your program acts on it. A program that carefully validates its inputs, confirming a value really is a number before dividing it, is already practicing a basic form of program security.</p>
-<p>Debugging, program testing, and program security are not separate, one-time chores performed after "real" programming is finished. They are ongoing habits woven throughout the entire process of building any algorithm, from its first pseudocode sketch through its final, working code.</p>
-<p>??? note "Quick check: A loop repeats a decision-making step ten times, but the program only ever prints 'even.' What kind of concept from this chapter is most likely broken? Click to reveal the answer."
-    Most likely a bug in the conditional statement, for example comparing the remainder to the wrong value or always following the same branch regardless of the calculated remainder. This is exactly the kind of mistake the "Spot the Bug" exercise in this chapter trained you to look for: a program that runs without crashing but still produces the wrong output.</p>
-<p>You now have a complete, hardware-independent toolkit for thinking like a programmer: algorithms, pseudocode, and flowcharts for planning; programming languages, syntax, variables, and data types for expressing a plan precisely; conditional statements, loop structures, and functions for controlling and organizing that logic; and programming platforms, IDEs, debugging, testing, and security for actually building and trusting real, working programs. In the next chapter, "Programming Your Robot," every one of these concepts returns, applied directly to the StarterBot sitting on your workbench.</p></div>
-            </div>
-        </div>
-
-        <footer class="col-md-12">
-            <hr>
-            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
-        </footer>
-        <script src="../../js/bootstrap.bundle.min.js"></script>
-        <script>
-            var base_url = "../..",
-                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
-        </script>
-        <script src="../../js/base.js"></script>
-        <script src="../../search/main.js"></script>
-
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="searchModalLabel">Search</h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p>From here you can search these documents. Enter your search terms below.</p>
-                <form>
-                    <div class="form-group">
-                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
-                    </div>
-                </form>
-                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th style="width: 20%;">Keys</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="help shortcut"><kbd>?</kbd></td>
-                    <td>Open this help</td>
-                  </tr>
-                  <tr>
-                    <td class="next shortcut"><kbd>n</kbd></td>
-                    <td>Next page</td>
-                  </tr>
-                  <tr>
-                    <td class="prev shortcut"><kbd>p</kbd></td>
-                    <td>Previous page</td>
-                  </tr>
-                  <tr>
-                    <td class="search shortcut"><kbd>s</kbd></td>
-                    <td>Search</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Two beginner-friendly security habits are worth building now, long before you work with any sensitive data: never assume input will arrive in the exact form you expect, and always double-check any input before your program acts on it. A program that carefully validates its inputs, confirming a value really is a number before dividing it, is already practicing a basic form of program security.</p>
 </div>
+<p>Debugging, program testing, and program security are not separate, one-time chores performed after "real" programming is finished. They are ongoing habits woven throughout the entire process of building any algorithm, from its first pseudocode sketch through its final, working code.</p>
+<details class="note">
+<summary>Quick check: A loop repeats a decision-making step ten times, but the program only ever prints 'even.' What kind of concept from this chapter is most likely broken? Click to reveal the answer.</summary>
+<p>Most likely a bug in the conditional statement, for example comparing the remainder to the wrong value or always following the same branch regardless of the calculated remainder. This is exactly the kind of mistake the "Spot the Bug" exercise in this chapter trained you to look for: a program that runs without crashing but still produces the wrong output.</p>
+</details>
+<p>You now have a complete, hardware-independent toolkit for thinking like a programmer: algorithms, pseudocode, and flowcharts for planning; programming languages, syntax, variables, and data types for expressing a plan precisely; conditional statements, loop structures, and functions for controlling and organizing that logic; and programming platforms, IDEs, debugging, testing, and security for actually building and trusting real, working programs. In the next chapter, "Programming Your Robot," every one of these concepts returns, applied directly to the StarterBot sitting on your workbench.</p>
 
-    </body>
-</html>
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+          
+          <a href="../02-intro-robotics-systems/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 2. Introduction to Robotics and Systems">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                2. Introduction to Robotics and Systems
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../04-programming-your-robot/" class="md-footer__link md-footer__link--next" aria-label="Next: 4. Programming Your Robot">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                4. Programming Your Robot
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

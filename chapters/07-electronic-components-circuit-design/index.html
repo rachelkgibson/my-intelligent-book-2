@@ -1,248 +1,1459 @@
-<!DOCTYPE html>
-<html lang="en" data-bs-theme="light">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Physical electronic components and circuit-building skills used to build and modify robot electronics.">
+      
+      
+      
+      
+        <link rel="prev" href="../06-electrical-fundamentals/">
+      
+      
+        <link rel="next" href="../08-sensors-and-measurement/">
+      
+      
         
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Electronic Components and Circuit Design - Technology of Robotic Design</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
         
-        
-        <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>7. Electronic Components and Circuit Design - My Docs</title>
-        <link href="../../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../../css/fontawesome.min.css" rel="stylesheet">
-        <link href="../../css/brands.min.css" rel="stylesheet">
-        <link href="../../css/solid.min.css" rel="stylesheet">
-        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
-        <link href="../../css/base.css" rel="stylesheet">
-        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
-        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-        <script>hljs.highlightAll();</script> 
-    </head>
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
 
-    <body>
-        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
-            <div class="container">
-                <a class="navbar-brand" href="../..">My Docs</a>
-                <!-- Expander button -->
-                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- Expanded navigation -->
-                <div id="navbar-collapse" class="navbar-collapse collapse">
-                        <!-- Main navigation -->
-                        <ul class="nav navbar-nav">
-                            <li class="nav-item">
-                                <a href="../.." class="nav-link">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="../../course-description/" class="nav-link">Course Description</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Chapters</a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../" class="dropdown-item">List of Chapters</a>
-</li>
-                                    
-<li>
-    <a href="../01-identifying-kit-parts-building-starterbot/" class="dropdown-item">1. Identifying Kit Parts and Building Your StarterBot</a>
-</li>
-                                    
-<li>
-    <a href="../02-intro-robotics-systems/" class="dropdown-item">2. Introduction to Robotics and Systems</a>
-</li>
-                                    
-<li>
-    <a href="../03-programming-fundamentals/" class="dropdown-item">3. Programming Fundamentals</a>
-</li>
-                                    
-<li>
-    <a href="../04-programming-your-robot/" class="dropdown-item">4. Programming Your Robot</a>
-</li>
-                                    
-<li>
-    <a href="../05-designing-building-custom-parts/" class="dropdown-item">5. Designing and Building Custom Parts</a>
-</li>
-                                    
-<li>
-    <a href="../06-electrical-fundamentals/" class="dropdown-item">6. Electrical Fundamentals</a>
-</li>
-                                    
-<li>
-    <a href="./" class="dropdown-item active" aria-current="page">7. Electronic Components and Circuit Design</a>
-</li>
-                                    
-<li>
-    <a href="../08-sensors-and-measurement/" class="dropdown-item">8. Sensors and Measurement</a>
-</li>
-                                    
-<li>
-    <a href="../09-mechanical-systems-simple-machines/" class="dropdown-item">9. Mechanical Systems and Simple Machines</a>
-</li>
-                                    
-<li>
-    <a href="../10-fluid-power-hydraulics-pneumatics/" class="dropdown-item">10. Fluid Power: Hydraulics and Pneumatics</a>
-</li>
-                                    
-<li>
-    <a href="../11-control-systems-feedback-loops/" class="dropdown-item">11. Control Systems and Feedback Loops</a>
-</li>
-                                    
-<li>
-    <a href="../12-digital-logic-computing-fundamentals/" class="dropdown-item">12. Digital Logic and Computing Fundamentals</a>
-</li>
-                                    
-<li>
-    <a href="../13-advanced-robot-programming/" class="dropdown-item">13. Advanced Robot Programming</a>
-</li>
-                                    
-<li>
-    <a href="../14-integrating-testing-maintaining-robotic-system/" class="dropdown-item">14. Integrating, Testing, and Maintaining a Robotic System</a>
-</li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Learning Graph</a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../../learning-graph/" class="dropdown-item">Introduction</a>
-</li>
-                                    
-<li>
-    <a href="../../learning-graph/course-description-assessment/" class="dropdown-item">Course Description Assessment</a>
-</li>
-                                    
-<li>
-    <a href="../../learning-graph/concept-list/" class="dropdown-item">Concept Enumeration</a>
-</li>
-                                    
-<li>
-    <a href="../../learning-graph/quality-metrics/" class="dropdown-item">Graph Quality Analysis</a>
-</li>
-                                    
-<li>
-    <a href="../../learning-graph/concept-taxonomy/" class="dropdown-item">Concept Taxonomy</a>
-</li>
-                                    
-<li>
-    <a href="../../learning-graph/taxonomy-distribution/" class="dropdown-item">Taxonomy Distribution Report</a>
-</li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">MicroSims</a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../../sims/graph-viewer/" class="dropdown-item">Learning Graph Viewer</a>
-</li>
-                                </ul>
-                            </li>
-                        </ul>
-
-                    <ul class="nav navbar-nav ms-md-auto">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> Search
-                            </a>
-                        </li>
-                            <li class="nav-item">
-                                <a rel="prev" href="../06-electrical-fundamentals/" class="nav-link">
-                                    <i class="fa fa-arrow-left"></i> Previous
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a rel="next" href="../08-sensors-and-measurement/" class="nav-link">
-                                    Next <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row">
-                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
-            <span class="fa fa-angle-down"></span>
-        </button>
-    </div>
 
     
-    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
-        <ul class="nav flex-column">
-            
-            <li class="nav-item" data-bs-level="1"><a href="#electronic-components-and-circuit-design" class="nav-link">Electronic Components and Circuit Design</a>
-              <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="2"><a href="#summary" class="nav-link">Summary</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#concepts-covered" class="nav-link">Concepts Covered</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#prerequisites" class="nav-link">Prerequisites</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#from-theory-to-practice" class="nav-link">From Theory to Practice</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#circuit-diagram-the-blueprint-of-a-circuit" class="nav-link">Circuit Diagram: The Blueprint of a Circuit</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#the-core-components-symbols-and-functions" class="nav-link">The Core Components: Symbols and Functions</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#powering-the-circuit-battery-and-power-supply" class="nav-link">Powering the Circuit: Battery and Power Supply</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#controlling-the-flow-switch-and-relay" class="nav-link">Controlling the Flow: Switch and Relay</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#breadboard-prototyping-without-solder" class="nav-link">Breadboard: Prototyping Without Solder</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#soldering-making-permanent-connections" class="nav-link">Soldering: Making Permanent Connections</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#multimeter-measuring-and-testing" class="nav-link">Multimeter: Measuring and Testing</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#printed-circuit-board" class="nav-link">Printed Circuit Board</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#motor-driver-controlling-the-starterbots-motors" class="nav-link">Motor Driver: Controlling the StarterBot's Motors</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#circuit-simulation-and-circuit-design" class="nav-link">Circuit Simulation and Circuit Design</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-              </ul>
-            </li>
-        </ul>
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#electronic-components-and-circuit-design" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
-</div></div>
-                    <div class="col-md-9" role="main">
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Technology of Robotic Design" class="md-header__button md-logo" aria-label="Technology of Robotic Design" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Technology of Robotic Design
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Electronic Components and Circuit Design
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Technology of Robotic Design" class="md-nav__button md-logo" aria-label="Technology of Robotic Design" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    Technology of Robotic Design
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Description
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked="">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapters
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Chapters
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-identifying-kit-parts-building-starterbot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Identifying Kit Parts and Building Your StarterBot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-intro-robotics-systems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Introduction to Robotics and Systems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-programming-fundamentals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Programming Fundamentals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-programming-your-robot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Programming Your Robot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-designing-building-custom-parts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Designing and Building Custom Parts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-electrical-fundamentals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Electrical Fundamentals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Electronic Components and Circuit Design
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Electronic Components and Circuit Design
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts Covered
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-theory-to-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        From Theory to Practice
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#circuit-diagram-the-blueprint-of-a-circuit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Circuit Diagram: The Blueprint of a Circuit
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Circuit Diagram: The Blueprint of a Circuit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-reading-a-simple-led-circuit-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram: Reading a Simple LED Circuit Diagram
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-core-components-symbols-and-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Core Components: Symbols and Functions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Core Components: Symbols and Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-circuit-symbol-matching-infographic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram: Circuit Symbol Matching Infographic
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#powering-the-circuit-battery-and-power-supply" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Powering the Circuit: Battery and Power Supply
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#controlling-the-flow-switch-and-relay" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Controlling the Flow: Switch and Relay
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#breadboard-prototyping-without-solder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Breadboard: Prototyping Without Solder
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Breadboard: Prototyping Without Solder">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-virtual-breadboard-circuit-builder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram: Virtual Breadboard Circuit Builder
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#soldering-making-permanent-connections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Soldering: Making Permanent Connections
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multimeter-measuring-and-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multimeter: Measuring and Testing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#printed-circuit-board" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Printed Circuit Board
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#motor-driver-controlling-the-starterbots-motors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Motor Driver: Controlling the StarterBot's Motors
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#circuit-simulation-and-circuit-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Circuit Simulation and Circuit Design
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Circuit Simulation and Circuit Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-led-circuit-design-and-simulation-studio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram: LED Circuit Design and Simulation Studio
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-sensors-and-measurement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Sensors and Measurement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-mechanical-systems-simple-machines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Mechanical Systems and Simple Machines
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-fluid-power-hydraulics-pneumatics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Fluid Power: Hydraulics and Pneumatics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-control-systems-feedback-loops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Control Systems and Feedback Loops
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-digital-logic-computing-fundamentals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. Digital Logic and Computing Fundamentals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-advanced-robot-programming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. Advanced Robot Programming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-integrating-testing-maintaining-robotic-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14. Integrating, Testing, and Maintaining a Robotic System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning Graph
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../sims/graph-viewer/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MicroSims
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts Covered
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-theory-to-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        From Theory to Practice
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#circuit-diagram-the-blueprint-of-a-circuit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Circuit Diagram: The Blueprint of a Circuit
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Circuit Diagram: The Blueprint of a Circuit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-reading-a-simple-led-circuit-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram: Reading a Simple LED Circuit Diagram
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-core-components-symbols-and-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Core Components: Symbols and Functions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Core Components: Symbols and Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-circuit-symbol-matching-infographic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram: Circuit Symbol Matching Infographic
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#powering-the-circuit-battery-and-power-supply" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Powering the Circuit: Battery and Power Supply
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#controlling-the-flow-switch-and-relay" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Controlling the Flow: Switch and Relay
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#breadboard-prototyping-without-solder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Breadboard: Prototyping Without Solder
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Breadboard: Prototyping Without Solder">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-virtual-breadboard-circuit-builder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram: Virtual Breadboard Circuit Builder
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#soldering-making-permanent-connections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Soldering: Making Permanent Connections
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multimeter-measuring-and-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multimeter: Measuring and Testing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#printed-circuit-board" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Printed Circuit Board
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#motor-driver-controlling-the-starterbots-motors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Motor Driver: Controlling the StarterBot's Motors
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#circuit-simulation-and-circuit-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Circuit Simulation and Circuit Design
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Circuit Simulation and Circuit Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-led-circuit-design-and-simulation-studio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram: LED Circuit Design and Simulation Studio
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation">
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
 
 <h1 id="electronic-components-and-circuit-design">Electronic Components and Circuit Design</h1>
 <h2 id="summary">Summary</h2>
@@ -273,7 +1484,7 @@
 <ul>
 <li><a href="../06-electrical-fundamentals/">Chapter 6: Electrical Fundamentals</a></li>
 </ul>
-<hr />
+<hr>
 <h2 id="from-theory-to-practice">From Theory to Practice</h2>
 <p>Chapter 6 gave you the vocabulary of electricity: voltage, current, resistance, Ohm's Law, series and parallel circuits, and the safety habits that keep a lab bench safe. That vocabulary was necessary, but abstract. You calculated current with a formula; you did not yet hold the part current flows through in your hand. This chapter closes that gap, teaching you to identify the physical components in every StarterBot circuit, read the diagrams describing how they connect, and practice hands-on skills—breadboarding, soldering, and multimeter use—that turn a diagram into a working circuit.</p>
 <p>By the end of the chapter, you will be able to look at a real circuit board, name most of what is on it, and explain why each part is there. You will also design and simulate a simple circuit of your own before ever touching a soldering iron, which is exactly how professional engineers work: think first, build second.</p>
@@ -290,37 +1501,28 @@
 <h4 id="diagram-reading-a-simple-led-circuit-diagram">Diagram: Reading a Simple LED Circuit Diagram</h4>
 <iframe src="../../sims/reading-led-circuit-diagram/main.html" width="100%" height="520px" scrolling="no"></iframe>
 
-<details markdown="1">
+<details>
 <summary>Reading a Simple LED Circuit Diagram</summary>
-Type: diagram
-**sim-id:** reading-led-circuit-diagram<br/>
-**Library:** p5.js<br/>
-**Status:** Specified
-
-Bloom Taxonomy: Understand<br/>
-Bloom Taxonomy Verb: interpret, identify
-
-Learning objective: Given a complete schematic of a simple battery-resistor-LED-switch circuit, students will interpret each symbol and trace the current path around the loop.
-
-Components to show: A single closed-loop schematic containing a battery symbol (two parallel lines, long/short), a single-pole switch symbol, a resistor symbol (zig-zag or rectangle), an LED symbol (diode triangle-and-bar with two small arrows), and connecting wires drawn as straight lines with right-angle corners.
-
-Connections: All four components are wired in a single series loop: battery positive terminal to switch, switch to resistor, resistor to LED anode, LED cathode back to battery negative terminal.
-
-Interactive elements:
+<p>Type: diagram
+<strong>sim-id:</strong> reading-led-circuit-diagram<br>
+<strong>Library:</strong> p5.js<br>
+<strong>Status:</strong> Specified</p>
+<p>Bloom Taxonomy: Understand<br>
+Bloom Taxonomy Verb: interpret, identify</p>
+<p>Learning objective: Given a complete schematic of a simple battery-resistor-LED-switch circuit, students will interpret each symbol and trace the current path around the loop.</p>
+<p>Components to show: A single closed-loop schematic containing a battery symbol (two parallel lines, long/short), a single-pole switch symbol, a resistor symbol (zig-zag or rectangle), an LED symbol (diode triangle-and-bar with two small arrows), and connecting wires drawn as straight lines with right-angle corners.</p>
+<p>Connections: All four components are wired in a single series loop: battery positive terminal to switch, switch to resistor, resistor to LED anode, LED cathode back to battery negative terminal.</p>
+<p>Interactive elements:
 - Clicking the battery symbol reveals: "Battery: the energy source. The long line is the positive terminal, the short line is the negative terminal."
 - Clicking the switch symbol reveals: "Switch: an open gap in the wire that closes to complete the circuit."
 - Clicking the resistor symbol reveals: "Resistor: limits current flow to protect the LED from too much current."
 - Clicking the LED symbol reveals: "LED: the arrow direction shows current can only flow one way, from anode to cathode, and light is emitted when it does."
 - Clicking any wire segment highlights the full current path from positive terminal back to negative terminal in yellow
-- A "Toggle Switch" button animates a dot traveling around the loop when the switch is closed, and freezes it at the open gap when the switch is open
-
-Visual style: Clean schematic line drawing on a white background, standard IEEE-style symbols, thick black lines for wires
-
-Color scheme: Black symbols and wires by default; clicked symbol and its infobox highlighted in blue; active current path highlighted in yellow when the switch is closed
-
-Implementation: p5.js canvas with clickable bounding regions over each symbol, a state variable for switch position, and a simple animated dot along a predefined path array when current is flowing.
+- A "Toggle Switch" button animates a dot traveling around the loop when the switch is closed, and freezes it at the open gap when the switch is open</p>
+<p>Visual style: Clean schematic line drawing on a white background, standard IEEE-style symbols, thick black lines for wires</p>
+<p>Color scheme: Black symbols and wires by default; clicked symbol and its infobox highlighted in blue; active current path highlighted in yellow when the switch is closed</p>
+<p>Implementation: p5.js canvas with clickable bounding regions over each symbol, a state variable for switch position, and a simple animated dot along a predefined path array when current is flowing.</p>
 </details>
-
 <h2 id="the-core-components-symbols-and-functions">The Core Components: Symbols and Functions</h2>
 <p>Every circuit, no matter how complex, is built from a small number of fundamental component types. This section introduces five of them: the resistor, capacitor, diode, transistor, and LED. Each has its own schematic symbol, its own job, and its own reason for appearing in the StarterBot's electronics.</p>
 <p>A <strong>resistor</strong> is a component that opposes the flow of current by a fixed, known amount, measured in ohms, and used to limit current or divide voltage in a circuit. You already used resistance conceptually in Chapter 6's Ohm's Law calculations; a resistor is simply a physical part manufactured to provide a specific, reliable resistance value. Resistors are color-coded with bands of paint indicating value and tolerance, letting you identify a resistor's value without a multimeter once you learn the code.</p>
@@ -359,37 +1561,27 @@ Implementation: p5.js canvas with clickable bounding regions over each symbol, a
 <h4 id="diagram-circuit-symbol-matching-infographic">Diagram: Circuit Symbol Matching Infographic</h4>
 <iframe src="../../sims/circuit-symbol-matching/main.html" width="100%" height="540px" scrolling="no"></iframe>
 
-<details markdown="1">
+<details>
 <summary>Circuit Symbol Matching Infographic</summary>
-Type: infographic
-**sim-id:** circuit-symbol-matching<br/>
-**Library:** p5.js<br/>
-**Status:** Specified
-
-Bloom Taxonomy: Remember<br/>
-Bloom Taxonomy Verb: identify, recognize, recall
-
-Purpose: Help students recognize the standard schematic symbol for each of eight core components and recall its one-line function, reinforcing the vocabulary introduced in this chapter and Chapter 6.
-
-Layout: A grid of 8 symbol tiles arranged 4 columns by 2 rows (2 columns by 4 rows on narrow screens): resistor, capacitor, diode, transistor, LED, battery, switch, relay. Each tile shows only the schematic symbol with no label.
-
-Interactive elements:
+<p>Type: infographic
+<strong>sim-id:</strong> circuit-symbol-matching<br>
+<strong>Library:</strong> p5.js<br>
+<strong>Status:</strong> Specified</p>
+<p>Bloom Taxonomy: Remember<br>
+Bloom Taxonomy Verb: identify, recognize, recall</p>
+<p>Purpose: Help students recognize the standard schematic symbol for each of eight core components and recall its one-line function, reinforcing the vocabulary introduced in this chapter and Chapter 6.</p>
+<p>Layout: A grid of 8 symbol tiles arranged 4 columns by 2 rows (2 columns by 4 rows on narrow screens): resistor, capacitor, diode, transistor, LED, battery, switch, relay. Each tile shows only the schematic symbol with no label.</p>
+<p>Interactive elements:
 - Clicking a tile flips it over to reveal the component's name and a one-sentence function ("Resistor: limits current flow to a fixed, known amount")
 - A "Shuffle" button rearranges the tiles into a new random order
 - A "Quiz Me" mode hides all names and asks the learner to click the tile matching a spoken/displayed component name, tracking correct-on-first-try score out of 8
-- Hovering an un-flipped tile in normal mode shows a faint outline highlight only, with no text, to encourage active recall before clicking
-
-Data to be displayed: 8 component names, their schematic symbols, and one-sentence function descriptions matching the definitions given in this chapter and in Chapter 6 (battery, switch, relay recur from earlier sections)
-
-Color coding: Neutral gray tile backs; flipped tiles colored by component family (passive components—resistor, capacitor—in blue; semiconductor components—diode, transistor, LED—in green; power and control components—battery, switch, relay—in orange)
-
-Responsive behavior: Grid reflows from 4x2 to 2x4 on narrow screens, tiles remain square
-
-Instructional Rationale: This is a Remember-level recall objective, so a flashcard-style matching interaction with immediate reveal is appropriate; a continuous animation or complex simulation would add no value at this level and would distract from simple symbol-to-name recall.
-
-Implementation: p5.js canvas with an array of tile objects (symbol, name, function, family color), a flip-state boolean per tile, and click detection to toggle flip state; quiz mode swaps the click handler to score matching instead of flipping.
+- Hovering an un-flipped tile in normal mode shows a faint outline highlight only, with no text, to encourage active recall before clicking</p>
+<p>Data to be displayed: 8 component names, their schematic symbols, and one-sentence function descriptions matching the definitions given in this chapter and in Chapter 6 (battery, switch, relay recur from earlier sections)</p>
+<p>Color coding: Neutral gray tile backs; flipped tiles colored by component family (passive components—resistor, capacitor—in blue; semiconductor components—diode, transistor, LED—in green; power and control components—battery, switch, relay—in orange)</p>
+<p>Responsive behavior: Grid reflows from 4x2 to 2x4 on narrow screens, tiles remain square</p>
+<p>Instructional Rationale: This is a Remember-level recall objective, so a flashcard-style matching interaction with immediate reveal is appropriate; a continuous animation or complex simulation would add no value at this level and would distract from simple symbol-to-name recall.</p>
+<p>Implementation: p5.js canvas with an array of tile objects (symbol, name, function, family color), a flip-state boolean per tile, and click detection to toggle flip state; quiz mode swaps the click handler to score matching instead of flipping.</p>
 </details>
-
 <h2 id="powering-the-circuit-battery-and-power-supply">Powering the Circuit: Battery and Power Supply</h2>
 <p>Every circuit needs an energy source, and robotics projects typically draw on one of two kinds: a battery or a power supply. A <strong>battery</strong> is a device that stores chemical energy and converts it to electrical energy on demand, delivering a roughly steady voltage until its stored energy runs low. The StarterBot's single 12V battery, introduced in Chapter 1 and referenced throughout Chapter 6, is a rechargeable battery pack built from multiple cells connected internally to reach 12 volts.</p>
 <p>A <strong>power supply</strong> is a device that converts electrical energy from one form or voltage to another, usually converting a wall outlet's alternating current into the steady direct current voltage a circuit requires. Unlike a battery, a power supply does not store its own energy; it depends on being plugged into an external source and simply transforms that source's voltage and current into a usable form. Many robotics workbenches use a benchtop power supply during testing, since it can supply a precise, adjustable voltage without draining a battery, and it can be switched off instantly if something goes wrong.</p>
@@ -446,45 +1638,35 @@ Implementation: p5.js canvas with an array of tile objects (symbol, name, functi
 <h4 id="diagram-virtual-breadboard-circuit-builder">Diagram: Virtual Breadboard Circuit Builder</h4>
 <iframe src="../../sims/virtual-breadboard-builder/main.html" width="100%" height="560px" scrolling="no"></iframe>
 
-<details markdown="1">
+<details>
 <summary>Virtual Breadboard Circuit Builder</summary>
-Type: microsim
-**sim-id:** virtual-breadboard-builder<br/>
-**Library:** p5.js<br/>
-**Status:** Specified
-
-Bloom Taxonomy: Apply<br/>
-Bloom Taxonomy Verb: implement, demonstrate, construct
-
-Learning objective: Students will apply their knowledge of series circuits, resistors, LEDs, and battery polarity by dragging components onto a virtual breadboard and wiring a circuit that successfully lights the LED.
-
-Canvas layout:
+<p>Type: microsim
+<strong>sim-id:</strong> virtual-breadboard-builder<br>
+<strong>Library:</strong> p5.js<br>
+<strong>Status:</strong> Specified</p>
+<p>Bloom Taxonomy: Apply<br>
+Bloom Taxonomy Verb: implement, demonstrate, construct</p>
+<p>Learning objective: Students will apply their knowledge of series circuits, resistors, LEDs, and battery polarity by dragging components onto a virtual breadboard and wiring a circuit that successfully lights the LED.</p>
+<p>Canvas layout:
 - Left/center (650px): A drawn breadboard grid with labeled power rails (red +, blue -) and numbered rows
-- Right (250px): A parts bin showing a battery, a resistor, an LED, and jumper wires, plus a status panel
-
-Visual elements:
+- Right (250px): A parts bin showing a battery, a resistor, an LED, and jumper wires, plus a status panel</p>
+<p>Visual elements:
 - Realistic breadboard grid drawn as rows and columns of small circles, with power rails along top and bottom
 - Draggable component icons: battery pack, resistor, LED (with visibly longer anode leg and shorter cathode leg), and wire segments
-- Status light: red "Circuit Incomplete" or green "Circuit Complete — LED Lit!" indicator in the status panel
-
-Interactive controls:
+- Status light: red "Circuit Incomplete" or green "Circuit Complete — LED Lit!" indicator in the status panel</p>
+<p>Interactive controls:
 - Drag-and-drop placement of battery, resistor, LED, and wires onto specific breadboard holes
 - Button: "Check Circuit" evaluates whether current can flow from battery positive, through the resistor, through the LED in the correct polarity (anode before cathode), and back to battery negative
 - Button: "Reset Breadboard" clears all placed components
-- Toggle: "Reverse LED" lets the learner intentionally place the LED backward to observe that it does not light
-
-Default parameters: Empty breadboard, battery pre-placed connected to the power rails, resistor and LED value fixed (220 ohm resistor, standard red LED) to keep focus on wiring topology rather than value calculation
-
-Behavior:
+- Toggle: "Reverse LED" lets the learner intentionally place the LED backward to observe that it does not light</p>
+<p>Default parameters: Empty breadboard, battery pre-placed connected to the power rails, resistor and LED value fixed (220 ohm resistor, standard red LED) to keep focus on wiring topology rather than value calculation</p>
+<p>Behavior:
 - If the LED is missing the series resistor, wired directly across the battery rails, the sim shows the LED flashing red with a warning: "No resistor — this connection would damage a real LED with too much current."
 - If the LED is inserted backward, the sim shows the LED staying dark with an infobox: "Current cannot flow this direction through a diode. Try flipping the LED so the longer leg (anode) faces the resistor."
-- If wired correctly (resistor in series, LED in correct polarity, loop closed from positive rail back to negative rail), the LED icon lights up yellow and the status panel turns green
-
-Instructional Rationale: This is an Apply-level objective requiring learners to construct a working circuit from components they can now identify, so a drag-and-drop builder with clear pass/fail feedback is appropriate; a passive diagram would not let students test their own understanding of series wiring and polarity the way hands-on placement does.
-
-Implementation: p5.js canvas with a data structure representing breadboard hole connectivity (which holes are electrically joined), drag events for each component, and a simple circuit-continuity check that traces from the positive rail to the negative rail through placed components.
+- If wired correctly (resistor in series, LED in correct polarity, loop closed from positive rail back to negative rail), the LED icon lights up yellow and the status panel turns green</p>
+<p>Instructional Rationale: This is an Apply-level objective requiring learners to construct a working circuit from components they can now identify, so a drag-and-drop builder with clear pass/fail feedback is appropriate; a passive diagram would not let students test their own understanding of series wiring and polarity the way hands-on placement does.</p>
+<p>Implementation: p5.js canvas with a data structure representing breadboard hole connectivity (which holes are electrically joined), drag events for each component, and a simple circuit-continuity check that traces from the positive rail to the negative rail through placed components.</p>
 </details>
-
 <h2 id="soldering-making-permanent-connections">Soldering: Making Permanent Connections</h2>
 <p>A breadboard is perfect for testing, but its spring-loaded connections can loosen with vibration, which is a real concern on a robot that drives, bumps, and vibrates during operation. <strong>Soldering</strong> is the process of joining two metal parts, typically a component lead and a circuit board pad, by melting a metal alloy (solder) that cools into a strong, permanent electrical and mechanical connection. Once a circuit design has been tested and confirmed on a breadboard, soldering is how that design becomes a durable, vibration-resistant part of the finished robot.</p>
 <p>A basic soldering procedure follows a consistent sequence:</p>
@@ -496,8 +1678,10 @@ Implementation: p5.js canvas with a data structure representing breadboard hole 
 <li>Remove the solder and then the iron, and let the joint cool undisturbed for several seconds.</li>
 <li>Inspect the finished joint: it should look shiny and shaped like a small volcano, not dull, cracked, or blobby.</li>
 </ol>
-<p>!!! danger "Soldering iron safety"
-    A soldering iron tip reaches temperatures well above the boiling point of water and stays hot for minutes after being unplugged. Always return the iron to its stand when not actively soldering, keep the cord clear of the tip, and never test whether the iron is hot by touching it directly.</p>
+<div class="admonition danger">
+<p class="admonition-title">Soldering iron safety</p>
+<p>A soldering iron tip reaches temperatures well above the boiling point of water and stays hot for minutes after being unplugged. Always return the iron to its stand when not actively soldering, keep the cord clear of the tip, and never test whether the iron is hot by touching it directly.</p>
+</div>
 <h2 id="multimeter-measuring-and-testing">Multimeter: Measuring and Testing</h2>
 <p>Whether a circuit lives on a breadboard or has been soldered permanently, you eventually need a way to confirm it is actually behaving the way your diagram predicted. A <strong>multimeter</strong> is a handheld instrument that measures multiple electrical properties, typically voltage, current, and resistance, selectable by a mode dial or button, used to test and troubleshoot circuits. A multimeter is the primary diagnostic tool for verifying the calculations you practiced in Chapter 6 against a real, physical circuit.</p>
 <p>Each mode on a multimeter measures a different quantity and requires a different connection technique:</p>
@@ -537,8 +1721,10 @@ Implementation: p5.js canvas with a data structure representing breadboard hole 
 </tr>
 </tbody>
 </table>
-<p>!!! warning "Never measure current like you measure voltage"
-    Voltage mode is connected in parallel and current mode is connected in series, and confusing the two is one of the most common multimeter mistakes. Placing a multimeter in current mode directly across a battery's terminals, the way you would for a voltage reading, creates a near-zero-resistance path through the meter itself and can blow the meter's internal fuse or damage the battery.</p>
+<div class="admonition warning">
+<p class="admonition-title">Never measure current like you measure voltage</p>
+<p>Voltage mode is connected in parallel and current mode is connected in series, and confusing the two is one of the most common multimeter mistakes. Placing a multimeter in current mode directly across a battery's terminals, the way you would for a voltage reading, creates a near-zero-resistance path through the meter itself and can blow the meter's internal fuse or damage the battery.</p>
+</div>
 <h2 id="printed-circuit-board">Printed Circuit Board</h2>
 <p>Breadboards and hand-soldered connections both work well for one-off projects and classroom prototypes, but neither scales well to a product built many times over. A <strong>printed circuit board (PCB)</strong> is a flat board made of insulating material with thin copper traces etched onto its surface, replacing individual wires with permanent, precisely placed conductive paths that connect components soldered onto the board. Where a breadboard's connections live in reusable spring clips and a hand-soldered protoboard relies on point-to-point wires, a PCB's traces are designed in software ahead of time and manufactured identically every time.</p>
 <p>The tradeoffs among these three approaches to physically realizing a circuit follow a clear pattern:</p>
@@ -598,127 +1784,148 @@ Implementation: p5.js canvas with a data structure representing breadboard hole 
 <h4 id="diagram-led-circuit-design-and-simulation-studio">Diagram: LED Circuit Design and Simulation Studio</h4>
 <iframe src="../../sims/led-circuit-design-studio/main.html" width="100%" height="580px" scrolling="no"></iframe>
 
-<details markdown="1">
+<details>
 <summary>LED Circuit Design and Simulation Studio</summary>
-Type: microsim
-**sim-id:** led-circuit-design-studio<br/>
-**Library:** p5.js<br/>
-**Status:** Specified
-
-Bloom Taxonomy: Analyze, Create<br/>
-Bloom Taxonomy Verb: examine, justify, design, formulate
-
-Learning objective: Students will design a safe LED circuit by selecting a resistor value for a given battery voltage and LED forward voltage, analyzing the resulting current with Ohm's Law before virtually building and simulating the circuit.
-
-Canvas layout:
+<p>Type: microsim
+<strong>sim-id:</strong> led-circuit-design-studio<br>
+<strong>Library:</strong> p5.js<br>
+<strong>Status:</strong> Specified</p>
+<p>Bloom Taxonomy: Analyze, Create<br>
+Bloom Taxonomy Verb: examine, justify, design, formulate</p>
+<p>Learning objective: Students will design a safe LED circuit by selecting a resistor value for a given battery voltage and LED forward voltage, analyzing the resulting current with Ohm's Law before virtually building and simulating the circuit.</p>
+<p>Canvas layout:
 - Top (300px): A live schematic of a battery, resistor, and LED in series, redrawn as parameter sliders change
-- Bottom (200px): Calculation panel and pass/fail status readout
-
-Visual elements:
+- Bottom (200px): Calculation panel and pass/fail status readout</p>
+<p>Visual elements:
 - Schematic showing battery, resistor, and LED symbols matching the style from the "Reading a Simple LED Circuit Diagram" diagram earlier in this chapter
 - Live numeric readout of calculated current in milliamps, updating as sliders move
-- LED icon that visually brightens, glows normally, or flashes a burnout warning depending on calculated current
-
-Interactive controls:
+- LED icon that visually brightens, glows normally, or flashes a burnout warning depending on calculated current</p>
+<p>Interactive controls:
 - Slider: Battery voltage (3V to 12V, default 12V, matching the StarterBot's battery)
 - Slider: Resistor value (10 ohms to 1000 ohms, default 100 ohms)
 - Fixed display value: LED forward voltage (2.0V, a typical red LED) and safe current range (15–20 mA typical, danger above 30 mA)
-- Button: "Run Simulation" locks in current slider values and displays the calculated result with a pass/fail judgment
-
-Default parameters: Battery voltage 12V, resistor 100 ohms, LED forward voltage fixed at 2.0V
-
-Data Visibility Requirements:
+- Button: "Run Simulation" locks in current slider values and displays the calculated result with a pass/fail judgment</p>
+<p>Default parameters: Battery voltage 12V, resistor 100 ohms, LED forward voltage fixed at 2.0V</p>
+<p>Data Visibility Requirements:
   Stage 1: Show the circuit's known values: battery voltage, LED forward voltage, and the chosen resistor value
   Stage 2: Show the voltage drop calculation across the resistor (battery voltage minus LED forward voltage)
   Stage 3: Show the current calculation using Ohm's Law (resistor voltage drop divided by resistor value)
-  Stage 4: Show the final current result compared against the LED's safe operating range, with a clear pass ("LED lit safely") or fail ("Current too high — LED would burn out" or "Current too low — LED will appear dim") message
-
-Behavior:
+  Stage 4: Show the final current result compared against the LED's safe operating range, with a clear pass ("LED lit safely") or fail ("Current too high — LED would burn out" or "Current too low — LED will appear dim") message</p>
+<p>Behavior:
 - As the resistor slider decreases toward 10 ohms, calculated current rises past the safe range and the LED icon flashes red with "burnout" warning text
 - As the resistor slider increases toward 1000 ohms, calculated current falls very low and the LED icon dims to barely visible
-- A highlighted "safe zone" band on the resistor slider shows the range of values that keep current within 15–20 mA for the current battery voltage setting
-
-Instructional Rationale: This is an Analyze-and-Create objective, since students must examine the relationship between voltage, resistance, and current to justify a resistor choice and formulate a working design; a parameter-exploration pattern with visible, stepwise calculations is appropriate so learners see exactly how changing one value changes the outcome, rather than only observing a final animation.
-
-Implementation: p5.js canvas with two slider inputs, a recalculation function applying Ohm's Law on every slider change, and a schematic redraw function that updates LED brightness based on the calculated current relative to the safe range.
+- A highlighted "safe zone" band on the resistor slider shows the range of values that keep current within 15–20 mA for the current battery voltage setting</p>
+<p>Instructional Rationale: This is an Analyze-and-Create objective, since students must examine the relationship between voltage, resistance, and current to justify a resistor choice and formulate a working design; a parameter-exploration pattern with visible, stepwise calculations is appropriate so learners see exactly how changing one value changes the outcome, rather than only observing a final animation.</p>
+<p>Implementation: p5.js canvas with two slider inputs, a recalculation function applying Ohm's Law on every slider change, and a schematic redraw function that updates LED brightness based on the calculated current relative to the safe range.</p>
 </details>
+<p>This design-simulate-build-test cycle is the one you will return to for the rest of this course, whether the circuit ahead lights a single LED or drives every motor on a finished robot. You now have the vocabulary, from resistor to relay, and the practical skills, from breadboarding to multimeter testing, to move confidently between a circuit diagram on a screen and a working circuit on your bench.</p>
 
-<p>This design-simulate-build-test cycle is the one you will return to for the rest of this course, whether the circuit ahead lights a single LED or drives every motor on a finished robot. You now have the vocabulary, from resistor to relay, and the practical skills, from breadboarding to multimeter testing, to move confidently between a circuit diagram on a screen and a working circuit on your bench.</p></div>
-            </div>
-        </div>
 
-        <footer class="col-md-12">
-            <hr>
-            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
-        </footer>
-        <script src="../../js/bootstrap.bundle.min.js"></script>
-        <script>
-            var base_url = "../..",
-                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
-        </script>
-        <script src="../../js/base.js"></script>
-        <script src="../../search/main.js"></script>
 
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="searchModalLabel">Search</h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
             </div>
-            <div class="modal-body">
-                <p>From here you can search these documents. Enter your search terms below.</p>
-                <form>
-                    <div class="form-group">
-                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
-                    </div>
-                </form>
-                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
-            </div>
-            <div class="modal-footer">
-            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
-    </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+          
+          <a href="../06-electrical-fundamentals/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 6. Electrical Fundamentals">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
             </div>
-            <div class="modal-body">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th style="width: 20%;">Keys</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="help shortcut"><kbd>?</kbd></td>
-                    <td>Open this help</td>
-                  </tr>
-                  <tr>
-                    <td class="next shortcut"><kbd>n</kbd></td>
-                    <td>Next page</td>
-                  </tr>
-                  <tr>
-                    <td class="prev shortcut"><kbd>p</kbd></td>
-                    <td>Previous page</td>
-                  </tr>
-                  <tr>
-                    <td class="search shortcut"><kbd>s</kbd></td>
-                    <td>Search</td>
-                  </tr>
-                </tbody>
-              </table>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                6. Electrical Fundamentals
+              </div>
             </div>
-            <div class="modal-footer">
+          </a>
+        
+        
+          
+          <a href="../08-sensors-and-measurement/" class="md-footer__link md-footer__link--next" aria-label="Next: 8. Sensors and Measurement">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                8. Sensors and Measurement
+              </div>
             </div>
-        </div>
-    </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
 </div>
-
-    </body>
-</html>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

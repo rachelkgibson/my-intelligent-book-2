@@ -1,236 +1,1459 @@
-<!DOCTYPE html>
-<html lang="en" data-bs-theme="light">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Hydraulic and pneumatic systems — fluid pressure, cylinders, valves, pumps, and fluid power system design.">
+      
+      
+      
+      
+        <link rel="prev" href="../09-mechanical-systems-simple-machines/">
+      
+      
+        <link rel="next" href="../11-control-systems-feedback-loops/">
+      
+      
         
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Fluid Power: Hydraulics and Pneumatics - Technology of Robotic Design</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
         
-        
-        <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>10. Fluid Power: Hydraulics and Pneumatics - My Docs</title>
-        <link href="../../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../../css/fontawesome.min.css" rel="stylesheet">
-        <link href="../../css/brands.min.css" rel="stylesheet">
-        <link href="../../css/solid.min.css" rel="stylesheet">
-        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
-        <link href="../../css/base.css" rel="stylesheet">
-        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
-        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-        <script>hljs.highlightAll();</script> 
-    </head>
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
 
-    <body>
-        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
-            <div class="container">
-                <a class="navbar-brand" href="../..">My Docs</a>
-                <!-- Expander button -->
-                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- Expanded navigation -->
-                <div id="navbar-collapse" class="navbar-collapse collapse">
-                        <!-- Main navigation -->
-                        <ul class="nav navbar-nav">
-                            <li class="nav-item">
-                                <a href="../.." class="nav-link">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="../../course-description/" class="nav-link">Course Description</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Chapters</a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../" class="dropdown-item">List of Chapters</a>
-</li>
-                                    
-<li>
-    <a href="../01-identifying-kit-parts-building-starterbot/" class="dropdown-item">1. Identifying Kit Parts and Building Your StarterBot</a>
-</li>
-                                    
-<li>
-    <a href="../02-intro-robotics-systems/" class="dropdown-item">2. Introduction to Robotics and Systems</a>
-</li>
-                                    
-<li>
-    <a href="../03-programming-fundamentals/" class="dropdown-item">3. Programming Fundamentals</a>
-</li>
-                                    
-<li>
-    <a href="../04-programming-your-robot/" class="dropdown-item">4. Programming Your Robot</a>
-</li>
-                                    
-<li>
-    <a href="../05-designing-building-custom-parts/" class="dropdown-item">5. Designing and Building Custom Parts</a>
-</li>
-                                    
-<li>
-    <a href="../06-electrical-fundamentals/" class="dropdown-item">6. Electrical Fundamentals</a>
-</li>
-                                    
-<li>
-    <a href="../07-electronic-components-circuit-design/" class="dropdown-item">7. Electronic Components and Circuit Design</a>
-</li>
-                                    
-<li>
-    <a href="../08-sensors-and-measurement/" class="dropdown-item">8. Sensors and Measurement</a>
-</li>
-                                    
-<li>
-    <a href="../09-mechanical-systems-simple-machines/" class="dropdown-item">9. Mechanical Systems and Simple Machines</a>
-</li>
-                                    
-<li>
-    <a href="./" class="dropdown-item active" aria-current="page">10. Fluid Power: Hydraulics and Pneumatics</a>
-</li>
-                                    
-<li>
-    <a href="../11-control-systems-feedback-loops/" class="dropdown-item">11. Control Systems and Feedback Loops</a>
-</li>
-                                    
-<li>
-    <a href="../12-digital-logic-computing-fundamentals/" class="dropdown-item">12. Digital Logic and Computing Fundamentals</a>
-</li>
-                                    
-<li>
-    <a href="../13-advanced-robot-programming/" class="dropdown-item">13. Advanced Robot Programming</a>
-</li>
-                                    
-<li>
-    <a href="../14-integrating-testing-maintaining-robotic-system/" class="dropdown-item">14. Integrating, Testing, and Maintaining a Robotic System</a>
-</li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Learning Graph</a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../../learning-graph/" class="dropdown-item">Introduction</a>
-</li>
-                                    
-<li>
-    <a href="../../learning-graph/course-description-assessment/" class="dropdown-item">Course Description Assessment</a>
-</li>
-                                    
-<li>
-    <a href="../../learning-graph/concept-list/" class="dropdown-item">Concept Enumeration</a>
-</li>
-                                    
-<li>
-    <a href="../../learning-graph/quality-metrics/" class="dropdown-item">Graph Quality Analysis</a>
-</li>
-                                    
-<li>
-    <a href="../../learning-graph/concept-taxonomy/" class="dropdown-item">Concept Taxonomy</a>
-</li>
-                                    
-<li>
-    <a href="../../learning-graph/taxonomy-distribution/" class="dropdown-item">Taxonomy Distribution Report</a>
-</li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">MicroSims</a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../../sims/graph-viewer/" class="dropdown-item">Learning Graph Viewer</a>
-</li>
-                                </ul>
-                            </li>
-                        </ul>
-
-                    <ul class="nav navbar-nav ms-md-auto">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> Search
-                            </a>
-                        </li>
-                            <li class="nav-item">
-                                <a rel="prev" href="../09-mechanical-systems-simple-machines/" class="nav-link">
-                                    <i class="fa fa-arrow-left"></i> Previous
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a rel="next" href="../11-control-systems-feedback-loops/" class="nav-link">
-                                    Next <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row">
-                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
-            <span class="fa fa-angle-down"></span>
-        </button>
-    </div>
 
     
-    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
-        <ul class="nav flex-column">
-            
-            <li class="nav-item" data-bs-level="1"><a href="#fluid-power-hydraulics-and-pneumatics" class="nav-link">Fluid Power: Hydraulics and Pneumatics</a>
-              <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="2"><a href="#summary" class="nav-link">Summary</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#concepts-covered" class="nav-link">Concepts Covered</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#prerequisites" class="nav-link">Prerequisites</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#beyond-gears-and-chains-what-is-fluid-power" class="nav-link">Beyond Gears and Chains: What Is Fluid Power?</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#two-kinds-of-fluid-power-hydraulics-and-pneumatics" class="nav-link">Two Kinds of Fluid Power: Hydraulics and Pneumatics</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#fluid-pressure-the-physics-behind-the-push" class="nav-link">Fluid Pressure: The Physics Behind the Push</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#the-core-components-of-a-fluid-power-system" class="nav-link">The Core Components of a Fluid Power System</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#reading-a-fluid-power-diagram" class="nav-link">Reading a Fluid Power Diagram</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#fluid-power-safety" class="nav-link">Fluid Power Safety</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#fluid-power-applications" class="nav-link">Fluid Power Applications</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#fluid-power-system-design" class="nav-link">Fluid Power System Design</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-              </ul>
-            </li>
-        </ul>
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#fluid-power-hydraulics-and-pneumatics" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
-</div></div>
-                    <div class="col-md-9" role="main">
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Technology of Robotic Design" class="md-header__button md-logo" aria-label="Technology of Robotic Design" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Technology of Robotic Design
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Fluid Power: Hydraulics and Pneumatics
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Technology of Robotic Design" class="md-nav__button md-logo" aria-label="Technology of Robotic Design" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    Technology of Robotic Design
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Description
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked="">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapters
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Chapters
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-identifying-kit-parts-building-starterbot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Identifying Kit Parts and Building Your StarterBot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-intro-robotics-systems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Introduction to Robotics and Systems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-programming-fundamentals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Programming Fundamentals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-programming-your-robot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Programming Your Robot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-designing-building-custom-parts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Designing and Building Custom Parts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-electrical-fundamentals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Electrical Fundamentals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-electronic-components-circuit-design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Electronic Components and Circuit Design
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-sensors-and-measurement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Sensors and Measurement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-mechanical-systems-simple-machines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Mechanical Systems and Simple Machines
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Fluid Power: Hydraulics and Pneumatics
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Fluid Power: Hydraulics and Pneumatics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts Covered
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beyond-gears-and-chains-what-is-fluid-power" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beyond Gears and Chains: What Is Fluid Power?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#two-kinds-of-fluid-power-hydraulics-and-pneumatics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Two Kinds of Fluid Power: Hydraulics and Pneumatics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Two Kinds of Fluid Power: Hydraulics and Pneumatics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-hydraulics-vs-pneumatics-application-explorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram: Hydraulics vs. Pneumatics Application Explorer
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fluid-pressure-the-physics-behind-the-push" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fluid Pressure: The Physics Behind the Push
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fluid Pressure: The Physics Behind the Push">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-pascals-principle-force-multiplier" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram: Pascal's Principle Force Multiplier
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-core-components-of-a-fluid-power-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Core Components of a Fluid Power System
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Core Components of a Fluid Power System">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cylinder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cylinder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#valve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Valve
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pump" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pump
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compressor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compressor
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reading-a-fluid-power-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reading a Fluid Power Diagram
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reading a Fluid Power Diagram">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-basic-hydraulic-circuit-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram: Basic Hydraulic Circuit Diagram
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fluid-power-safety" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fluid Power Safety
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fluid-power-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fluid Power Applications
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fluid-power-system-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fluid Power System Design
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-control-systems-feedback-loops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Control Systems and Feedback Loops
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-digital-logic-computing-fundamentals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. Digital Logic and Computing Fundamentals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-advanced-robot-programming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. Advanced Robot Programming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-integrating-testing-maintaining-robotic-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14. Integrating, Testing, and Maintaining a Robotic System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning Graph
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../sims/graph-viewer/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MicroSims
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts Covered
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beyond-gears-and-chains-what-is-fluid-power" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beyond Gears and Chains: What Is Fluid Power?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#two-kinds-of-fluid-power-hydraulics-and-pneumatics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Two Kinds of Fluid Power: Hydraulics and Pneumatics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Two Kinds of Fluid Power: Hydraulics and Pneumatics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-hydraulics-vs-pneumatics-application-explorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram: Hydraulics vs. Pneumatics Application Explorer
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fluid-pressure-the-physics-behind-the-push" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fluid Pressure: The Physics Behind the Push
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fluid Pressure: The Physics Behind the Push">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-pascals-principle-force-multiplier" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram: Pascal's Principle Force Multiplier
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-core-components-of-a-fluid-power-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Core Components of a Fluid Power System
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Core Components of a Fluid Power System">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cylinder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cylinder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#valve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Valve
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pump" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pump
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compressor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compressor
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reading-a-fluid-power-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reading a Fluid Power Diagram
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reading a Fluid Power Diagram">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-basic-hydraulic-circuit-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram: Basic Hydraulic Circuit Diagram
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fluid-power-safety" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fluid Power Safety
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fluid-power-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fluid Power Applications
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fluid-power-system-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fluid Power System Design
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation">
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
 
 <h1 id="fluid-power-hydraulics-and-pneumatics">Fluid Power: Hydraulics and Pneumatics</h1>
 <h2 id="summary">Summary</h2>
@@ -256,7 +1479,7 @@
 <ul>
 <li><a href="../09-mechanical-systems-simple-machines/">Chapter 9: Mechanical Systems and Simple Machines</a></li>
 </ul>
-<hr />
+<hr>
 <h2 id="beyond-gears-and-chains-what-is-fluid-power">Beyond Gears and Chains: What Is Fluid Power?</h2>
 <p>When you assembled the StarterBot in Chapter 1, you built a drivetrain that transmits force through solid parts: a motor shaft, sprockets, a chain loop, and gears, each part passing motion mechanically to the next one in line. Chapter 9 explained the physics behind that transmission—torque, gear ratio, mechanical advantage—all of it built on rigid components pushing or pulling directly against each other. But your StarterBot's gears and chains are not the only way a machine can move. An excavator digs with an arm far stronger than any chain drive could survive without breaking. A factory robot welds car frames with force delivered not by a spinning motor shaft, but by a sealed tube of pressurized liquid. Beyond your StarterBot's gears and chains, some robots and machines use a completely different way to move: fluid power.</p>
 <p><strong>Fluid power</strong> is the transmission and control of force and motion through a pressurized fluid—either a liquid or a gas—confined within pipes, hoses, and cylinders, rather than through solid mechanical parts like gears, shafts, and chains. Instead of one rigid part pushing directly on another, fluid power uses a fluid as the "middleman": a pump or compressor pressurizes the fluid at one end of a system, and that pressure travels through hoses to do useful work—lifting, gripping, pushing, or clamping—at the other end. This chapter takes fluid power apart the same way Chapter 9 took apart mechanical systems: piece by piece, starting with the big idea and ending with a complete system you design yourself.</p>
@@ -282,47 +1505,36 @@
 <h4 id="diagram-hydraulics-vs-pneumatics-application-explorer">Diagram: Hydraulics vs. Pneumatics Application Explorer</h4>
 <iframe src="../../sims/hydraulics-vs-pneumatics-explorer/main.html" width="100%" height="540px" scrolling="no"></iframe>
 
-<details markdown="1">
+<details>
 <summary>Hydraulics vs. Pneumatics Application Explorer</summary>
-Type: infographic
-**sim-id:** hydraulics-vs-pneumatics-explorer<br/>
-**Library:** p5.js<br/>
-**Status:** Specified
-
-Bloom Taxonomy: Understand<br/>
-Bloom Taxonomy Verb: compare, contrast, classify
-
-Learning objective: Given a real-world machine, students will classify it as hydraulic or pneumatic and explain the trade-off (force, speed, cleanliness, cost) that drove the engineering choice.
-
-Purpose: Reinforce the hydraulics-versus-pneumatics distinction from the text by letting students click through real-world examples and see, side by side, why one machine uses liquid and another uses gas.
-
-Layout: A left/right split screen. The left panel is labeled "Hydraulics" with an oil-drop icon; the right panel is labeled "Pneumatics" with an air-bubble icon. Below the split, a row of five clickable application icons: excavator, car lift, pneumatic nail gun, factory pick-and-place arm, log splitter.
-
-Interactive elements:
+<p>Type: infographic
+<strong>sim-id:</strong> hydraulics-vs-pneumatics-explorer<br>
+<strong>Library:</strong> p5.js<br>
+<strong>Status:</strong> Specified</p>
+<p>Bloom Taxonomy: Understand<br>
+Bloom Taxonomy Verb: compare, contrast, classify</p>
+<p>Learning objective: Given a real-world machine, students will classify it as hydraulic or pneumatic and explain the trade-off (force, speed, cleanliness, cost) that drove the engineering choice.</p>
+<p>Purpose: Reinforce the hydraulics-versus-pneumatics distinction from the text by letting students click through real-world examples and see, side by side, why one machine uses liquid and another uses gas.</p>
+<p>Layout: A left/right split screen. The left panel is labeled "Hydraulics" with an oil-drop icon; the right panel is labeled "Pneumatics" with an air-bubble icon. Below the split, a row of five clickable application icons: excavator, car lift, pneumatic nail gun, factory pick-and-place arm, log splitter.</p>
+<p>Interactive elements:
 - Clicking an application icon slides it into the correct panel (hydraulics or pneumatics) and reveals a short caption explaining which fluid it uses and why
 - A toggle switch at the top lets students flip between "Force," "Speed," "Cleanliness," and "Cost" comparison views, each of which relabels the two panels with a simple low/medium/high indicator instead of captions
-- Hovering any application icon, without clicking, shows just its name as a tooltip
-
-Data to display per application:
+- Hovering any application icon, without clicking, shows just its name as a tooltip</p>
+<p>Data to display per application:
 - Excavator: Hydraulics; high force needed to move tons of soil and rock; oil's incompressibility transmits that force efficiently
 - Car lift: Hydraulics; must hold a heavy, stationary load safely with no drift over time
 - Pneumatic nail gun: Pneumatics; needs a very fast burst of force rather than sustained heavy force; compressed air responds quickly
 - Factory pick-and-place arm: Pneumatics; needs fast, repeatable, clean motion with no oil leaks near products
-- Log splitter: Hydraulics; needs sustained high force delivered over a slow, controlled stroke
-
-Comparison view data (low/medium/high indicators):
+- Log splitter: Hydraulics; needs sustained high force delivered over a slow, controlled stroke</p>
+<p>Comparison view data (low/medium/high indicators):
 - Force capability: Hydraulics = high, Pneumatics = medium
 - Speed of response: Hydraulics = medium, Pneumatics = high
 - Cleanliness (leak risk): Hydraulics = lower (leaked oil stains and contaminates), Pneumatics = higher (leaked air is harmless)
-- System cost/complexity: Hydraulics = higher (pumps, seals, reservoirs, oil disposal), Pneumatics = lower (simpler components, air is free)
-
-Color coding: Hydraulics panel in amber/gold (suggesting oil), Pneumatics panel in sky blue (suggesting air), consistent with later diagrams in this chapter.
-
-Responsive behavior: Split panels stack vertically on narrow screens; the application icon row wraps to two rows below 500px width.
-
-Implementation: p5.js canvas with two panel regions and five clickable icon sprites; the comparison-view toggle re-renders panel content from a small internal data table on each state change.
+- System cost/complexity: Hydraulics = higher (pumps, seals, reservoirs, oil disposal), Pneumatics = lower (simpler components, air is free)</p>
+<p>Color coding: Hydraulics panel in amber/gold (suggesting oil), Pneumatics panel in sky blue (suggesting air), consistent with later diagrams in this chapter.</p>
+<p>Responsive behavior: Split panels stack vertically on narrow screens; the application icon row wraps to two rows below 500px width.</p>
+<p>Implementation: p5.js canvas with two panel regions and five clickable icon sprites; the comparison-view toggle re-renders panel content from a small internal data table on each state change.</p>
 </details>
-
 <h2 id="fluid-pressure-the-physics-behind-the-push">Fluid Pressure: The Physics Behind the Push</h2>
 <p>Every fluid power system, hydraulic or pneumatic, works because of a single physical quantity that connects force to the fluid carrying it.</p>
 <p><strong>Fluid pressure</strong> is the force a fluid exerts per unit of area on the walls of its container or on any surface it contacts, calculated as:</p>
@@ -335,52 +1547,42 @@ Implementation: p5.js canvas with two panel regions and five clickable icon spri
 <h4 id="diagram-pascals-principle-force-multiplier">Diagram: Pascal's Principle Force Multiplier</h4>
 <iframe src="../../sims/pascal-principle-force-multiplier/main.html" width="100%" height="560px" scrolling="no"></iframe>
 
-<details markdown="1">
+<details>
 <summary>Pascal's Principle Force Multiplier</summary>
-Type: microsim
-**sim-id:** pascal-principle-force-multiplier<br/>
-**Library:** p5.js<br/>
-**Status:** Specified
-
-Bloom Taxonomy: Apply<br/>
-Bloom Taxonomy Verb: calculate, demonstrate, apply
-
-Learning objective: Given an input piston area, an output piston area, and an input force, students will calculate the resulting output force and output distance, and observe the force-distance trade-off predicted by Pascal's principle.
-
-Canvas layout:
+<p>Type: microsim
+<strong>sim-id:</strong> pascal-principle-force-multiplier<br>
+<strong>Library:</strong> p5.js<br>
+<strong>Status:</strong> Specified</p>
+<p>Bloom Taxonomy: Apply<br>
+Bloom Taxonomy Verb: calculate, demonstrate, apply</p>
+<p>Learning objective: Given an input piston area, an output piston area, and an input force, students will calculate the resulting output force and output distance, and observe the force-distance trade-off predicted by Pascal's principle.</p>
+<p>Canvas layout:
 - Left side (450px): drawing of two connected cylinders of different diameters, joined by a fluid-filled pipe
-- Right side (250px): control panel and numeric readout panel
-
-Visual elements:
+- Right side (250px): control panel and numeric readout panel</p>
+<p>Visual elements:
 - A small input piston with a downward force arrow, labeled with its area
 - A large output piston with an upward force arrow, labeled with its area
 - Fluid shown as a blue-filled pipe and both cylinder chambers
 - A pressure readout showing the same pressure value at both pistons
-- Distance markers showing how far each piston travels when the input piston is pushed
-
-Interactive controls:
+- Distance markers showing how far each piston travels when the input piston is pushed</p>
+<p>Interactive controls:
 - Slider: Input piston area A1 (1-10 square inches)
 - Slider: Output piston area A2 (1-50 square inches)
 - Slider: Input force F1 (10-200 lb)
 - Button: "Push" animates the input piston moving down a fixed distance while the output piston rises proportionally less
-- Button: "Reset"
-
-Default parameters:
+- Button: "Reset"</p>
+<p>Default parameters:
 - A1 = 2 sq in
 - A2 = 20 sq in
-- F1 = 50 lb (a 10:1 area ratio)
-
-Data Visibility Requirements:
-  Stage 1: Show the pressure calculation \\( P = F_1 / A_1 \\) with the actual numbers substituted
-  Stage 2: Show the output force calculation \\( F_2 = P \\times A_2 \\) with the actual numbers substituted
-  Stage 3: Show the output distance as input distance multiplied by \\( A_1 / A_2 \\)
-  Final: Show a side-by-side readout comparing input force/distance to output force/distance, highlighting that output force is larger while output distance is smaller
-
-Instructional Rationale: An Apply-level parameter-exploration pattern is appropriate because the learning objective requires students to calculate results for different area ratios and predict outcomes, not merely watch one fixed demonstration. Letting students set their own piston areas ties the abstract Pascal's-principle formula directly to a concrete, adjustable machine.
-
-Implementation: p5.js canvas with two piston shapes whose radii scale with the selected areas; piston travel computed from the area ratio each frame; pressure, force, and distance readouts recalculated whenever a slider changes.
+- F1 = 50 lb (a 10:1 area ratio)</p>
+<p>Data Visibility Requirements:
+  Stage 1: Show the pressure calculation \( P = F_1 / A_1 \) with the actual numbers substituted
+  Stage 2: Show the output force calculation \( F_2 = P \times A_2 \) with the actual numbers substituted
+  Stage 3: Show the output distance as input distance multiplied by \( A_1 / A_2 \)
+  Final: Show a side-by-side readout comparing input force/distance to output force/distance, highlighting that output force is larger while output distance is smaller</p>
+<p>Instructional Rationale: An Apply-level parameter-exploration pattern is appropriate because the learning objective requires students to calculate results for different area ratios and predict outcomes, not merely watch one fixed demonstration. Letting students set their own piston areas ties the abstract Pascal's-principle formula directly to a concrete, adjustable machine.</p>
+<p>Implementation: p5.js canvas with two piston shapes whose radii scale with the selected areas; piston travel computed from the area ratio each frame; pressure, force, and distance readouts recalculated whenever a slider changes.</p>
 </details>
-
 <h2 id="the-core-components-of-a-fluid-power-system">The Core Components of a Fluid Power System</h2>
 <p>Four kinds of hardware appear in almost every fluid power system, hydraulic or pneumatic: the cylinder, the valve, and either a pump or a compressor to supply pressure.</p>
 <h3 id="cylinder">Cylinder</h3>
@@ -400,8 +1602,10 @@ Implementation: p5.js canvas with two piston shapes whose radii scale with the s
 <p>Without a directional control valve, a cylinder could only move in whichever direction its plumbing happened to favor. Without a pressure relief valve, a blocked or overloaded system could rupture a hose or burst a seal instead of simply stopping.</p>
 <h3 id="pump">Pump</h3>
 <p>A <strong>pump</strong> is the component that supplies a hydraulic system with pressurized fluid, converting the mechanical energy of a spinning motor shaft into fluid flow. A pump does not, by itself, create pressure—pressure only builds once that flow meets resistance, such as a valve holding fluid back or a cylinder pushing against a load.</p>
-<p>!!! tip
-    Remember the pump as the source of <em>motion</em>, not the source of <em>pressure</em>. Pressure only appears once flow meets resistance somewhere downstream—the same way water only builds pressure in a garden hose once you pinch the nozzle closed.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Remember the pump as the source of <em>motion</em>, not the source of <em>pressure</em>. Pressure only appears once flow meets resistance somewhere downstream—the same way water only builds pressure in a garden hose once you pinch the nozzle closed.</p>
+</div>
 <h3 id="compressor">Compressor</h3>
 <p>A <strong>compressor</strong> is the pneumatic equivalent of a pump: it supplies a pneumatic system with pressurized gas, typically by mechanically squeezing air into a smaller volume and storing it in a tank until needed. Because a compressor must physically shrink the volume of a gas rather than simply move an already-incompressible liquid, compressors generally require more energy per unit of pressure than an equivalent hydraulic pump—one more trade-off behind the hydraulics-versus-pneumatics comparison covered earlier in this chapter.</p>
 <p>The table below reinforces how a pump and a compressor differ, now that both have been defined.</p>
@@ -436,48 +1640,38 @@ Implementation: p5.js canvas with two piston shapes whose radii scale with the s
 <h4 id="diagram-basic-hydraulic-circuit-diagram">Diagram: Basic Hydraulic Circuit Diagram</h4>
 <iframe src="../../sims/basic-hydraulic-circuit-diagram/main.html" width="100%" height="520px" scrolling="no"></iframe>
 
-<details markdown="1">
+<details>
 <summary>Basic Hydraulic Circuit Diagram</summary>
-Type: diagram
-**sim-id:** basic-hydraulic-circuit-diagram<br/>
-**Library:** vis-network<br/>
-**Status:** Specified
-
-Bloom Taxonomy: Understand<br/>
-Bloom Taxonomy Verb: explain, interpret, summarize
-
-Learning objective: Given a labeled hydraulic circuit diagram, students will explain the function of the pump, valve, cylinder, and reservoir, and trace the path fluid takes as the cylinder extends and retracts.
-
-Purpose: Reinforce the vocabulary from this chapter (pump, valve, cylinder, fluid pressure) by letting students click each symbol in a real circuit and see its definition and role, rather than memorizing symbols in isolation.
-
-Node types to show:
+<p>Type: diagram
+<strong>sim-id:</strong> basic-hydraulic-circuit-diagram<br>
+<strong>Library:</strong> vis-network<br>
+<strong>Status:</strong> Specified</p>
+<p>Bloom Taxonomy: Understand<br>
+Bloom Taxonomy Verb: explain, interpret, summarize</p>
+<p>Learning objective: Given a labeled hydraulic circuit diagram, students will explain the function of the pump, valve, cylinder, and reservoir, and trace the path fluid takes as the cylinder extends and retracts.</p>
+<p>Purpose: Reinforce the vocabulary from this chapter (pump, valve, cylinder, fluid pressure) by letting students click each symbol in a real circuit and see its definition and role, rather than memorizing symbols in isolation.</p>
+<p>Node types to show:
 - Reservoir (tank symbol) — holds unpressurized fluid, gray
 - Pump (circle with drive-shaft symbol) — pressurizes fluid drawn from the reservoir, gold
 - Directional control valve (rectangle with sliding sections) — routes flow to either side of the cylinder, blue
 - Pressure relief valve (small spring-loaded symbol) — diverts flow back to the reservoir if pressure exceeds a set limit, red
-- Cylinder (piston inside a rectangle) — converts fluid pressure into a pushing or pulling motion, green
-
-Edges (directed, with arrowheads showing flow direction):
+- Cylinder (piston inside a rectangle) — converts fluid pressure into a pushing or pulling motion, green</p>
+<p>Edges (directed, with arrowheads showing flow direction):
 - Reservoir → Pump: fluid drawn in
 - Pump → Directional Control Valve: pressurized fluid supply line
 - Directional Control Valve → Cylinder (extend side): fluid pushes piston out
 - Cylinder (retract side) → Directional Control Valve → Reservoir: return line
-- Pump supply line → Pressure Relief Valve → Reservoir: safety bypass line, shown as a dashed edge
-
-Interactive features:
+- Pump supply line → Pressure Relief Valve → Reservoir: safety bypass line, shown as a dashed edge</p>
+<p>Interactive features:
 - Clicking any node opens an infobox with the component's name, its definition from this chapter, and its function in this specific circuit
 - Clicking any edge opens an infobox describing what is flowing through that line and in which direction
 - Hovering a node highlights every edge connected to it, showing the full flow path at a glance
 - A "Toggle Valve Position" button switches the directional control valve between "Extend" and "Retract," which re-highlights the active flow path (extend line lit, retract line dimmed, or vice versa) and animates small moving dots along the active path to represent flowing fluid
-- Standard vis-network zoom (mouse wheel) and pan (click-and-drag background) are enabled
-
-Layout: Hierarchical, left to right, following the physical flow order: Reservoir, Pump, Directional Control Valve, Cylinder, with the Pressure Relief Valve branching off between the Pump and the Directional Control Valve.
-
-Legend: A fixed key in the corner explaining node colors (gray = reservoir, gold = pump, blue = directional control valve, red = pressure relief valve, green = cylinder) and edge styles (solid = active supply/return line, dashed = safety bypass line).
-
-Implementation: vis-network with a small fixed dataset of five nodes and five edges; click and hover event listeners attached to nodes and edges; animated dots along the active edge implemented by updating edge dash offsets or overlay markers on a timer while "Extend" or "Retract" is active.
+- Standard vis-network zoom (mouse wheel) and pan (click-and-drag background) are enabled</p>
+<p>Layout: Hierarchical, left to right, following the physical flow order: Reservoir, Pump, Directional Control Valve, Cylinder, with the Pressure Relief Valve branching off between the Pump and the Directional Control Valve.</p>
+<p>Legend: A fixed key in the corner explaining node colors (gray = reservoir, gold = pump, blue = directional control valve, red = pressure relief valve, green = cylinder) and edge styles (solid = active supply/return line, dashed = safety bypass line).</p>
+<p>Implementation: vis-network with a small fixed dataset of five nodes and five edges; click and hover event listeners attached to nodes and edges; animated dots along the active edge implemented by updating edge dash offsets or overlay markers on a timer while "Extend" or "Retract" is active.</p>
 </details>
-
 <h2 id="fluid-power-safety">Fluid Power Safety</h2>
 <p>Fluid power systems store enormous energy in a small, pressurized space, and that stored energy makes them uniquely dangerous when handled carelessly.</p>
 <p><strong>Fluid power safety</strong> is the set of practices and precautions required to work safely around pressurized hydraulic and pneumatic systems, addressing hazards that are easy to underestimate because the danger is invisible until something fails. Every rule below exists because someone, at some point, learned the hazard the hard way.</p>
@@ -488,8 +1682,10 @@ Implementation: vis-network with a small fixed dataset of five nodes and five ed
 <li>Inspect hoses and fittings regularly for wear or bulging, since a hose that fails under pressure can fail suddenly and violently</li>
 <li>Never exceed a component's rated pressure, and never bypass or disable a pressure relief valve to "get more force" out of a system</li>
 </ul>
-<p>!!! danger
-    A high-pressure fluid leak that is invisible or barely visible to the eye can inject hydraulic oil under the skin in a fraction of a second. This is a genuine medical emergency requiring immediate surgery, even when the injury looks minor from the outside. Treat every pressurized hydraulic line as if it could cause this kind of injury, and never search for a leak with your bare hand.</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>A high-pressure fluid leak that is invisible or barely visible to the eye can inject hydraulic oil under the skin in a fraction of a second. This is a genuine medical emergency requiring immediate surgery, even when the injury looks minor from the outside. Treat every pressurized hydraulic line as if it could cause this kind of injury, and never search for a leak with your bare hand.</p>
+</div>
 <h2 id="fluid-power-applications">Fluid Power Applications</h2>
 <p><strong>Fluid power applications</strong> are the real-world tasks and industries where hydraulic or pneumatic systems are chosen over a purely mechanical, gear-and-shaft solution—usually because the task demands more force, more precise control, or a lighter and more compact actuator than gears alone can provide.</p>
 <p>The table below gathers several applications introduced earlier in this chapter alongside a few new ones, connecting each back to the fluid power type and reasoning behind the engineering choice.</p>
@@ -547,84 +1743,118 @@ Implementation: vis-network with a small fixed dataset of five nodes and five ed
 <li>Apply fluid power safety practices throughout the build: rated components, a working relief valve, and appropriate protective equipment</li>
 </ol>
 <p>Consider a simple worked example: designing a pneumatic system to raise a lightweight parking-lot gate arm that requires 40 lb of force to lift. If the shop's compressed air supply provides 80 psi, the required piston area follows directly from \( A = F / P \), giving \( 40 \div 80 = 0.5 \) square inches—a small, single-acting cylinder would be more than sufficient, since gravity alone can lower such a lightweight arm once the air pressure is released through the directional control valve. A hydraulic system would work too, but it would be needless complexity and cost for a task this light, which is exactly the kind of judgment call step 2 above is meant to force every time.</p>
-<p>??? note "Check yourself: A cylinder must produce 200 lb of force, and the available system pressure is 100 psi. What minimum piston area is required, and would hydraulics or pneumatics more likely supply that pressure? — Click to expand"
-    Using \( A = F / P \), the required area is \( 200 \div 100 = 2 \) square inches. A system pressure of 100 psi is well within the normal working range for pneumatics, but 200 lb of force from only a 2-square-inch piston is also easily within reach of hydraulics—so either could work at this pressure and force level, and the final choice would depend on other factors like required speed, cleanliness, and cost, exactly as the Hydraulics vs. Pneumatics Application Explorer illustrated earlier in this chapter.</p>
-<p>With fluid power now understood as a complete alternative to the gears and chains covered in Chapter 9, you have two fundamentally different toolkits for transmitting force in a robot: rigid mechanical parts, and pressurized fluid confined in cylinders, valves, pumps, and compressors. Every future mechanism you design will start with the same first question this chapter raised: should this motion be produced mechanically, or with fluid power?</p></div>
-            </div>
-        </div>
+<details class="note">
+<summary>Check yourself: A cylinder must produce 200 lb of force, and the available system pressure is 100 psi. What minimum piston area is required, and would hydraulics or pneumatics more likely supply that pressure? — Click to expand</summary>
+<p>Using \( A = F / P \), the required area is \( 200 \div 100 = 2 \) square inches. A system pressure of 100 psi is well within the normal working range for pneumatics, but 200 lb of force from only a 2-square-inch piston is also easily within reach of hydraulics—so either could work at this pressure and force level, and the final choice would depend on other factors like required speed, cleanliness, and cost, exactly as the Hydraulics vs. Pneumatics Application Explorer illustrated earlier in this chapter.</p>
+</details>
+<p>With fluid power now understood as a complete alternative to the gears and chains covered in Chapter 9, you have two fundamentally different toolkits for transmitting force in a robot: rigid mechanical parts, and pressurized fluid confined in cylinders, valves, pumps, and compressors. Every future mechanism you design will start with the same first question this chapter raised: should this motion be produced mechanically, or with fluid power?</p>
 
-        <footer class="col-md-12">
-            <hr>
-            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
-        </footer>
-        <script src="../../js/bootstrap.bundle.min.js"></script>
-        <script>
-            var base_url = "../..",
-                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
-        </script>
-        <script src="../../js/base.js"></script>
-        <script src="../../search/main.js"></script>
 
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="searchModalLabel">Search</h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
             </div>
-            <div class="modal-body">
-                <p>From here you can search these documents. Enter your search terms below.</p>
-                <form>
-                    <div class="form-group">
-                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
-                    </div>
-                </form>
-                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
-            </div>
-            <div class="modal-footer">
-            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
-    </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+          
+          <a href="../09-mechanical-systems-simple-machines/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 9. Mechanical Systems and Simple Machines">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
             </div>
-            <div class="modal-body">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th style="width: 20%;">Keys</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="help shortcut"><kbd>?</kbd></td>
-                    <td>Open this help</td>
-                  </tr>
-                  <tr>
-                    <td class="next shortcut"><kbd>n</kbd></td>
-                    <td>Next page</td>
-                  </tr>
-                  <tr>
-                    <td class="prev shortcut"><kbd>p</kbd></td>
-                    <td>Previous page</td>
-                  </tr>
-                  <tr>
-                    <td class="search shortcut"><kbd>s</kbd></td>
-                    <td>Search</td>
-                  </tr>
-                </tbody>
-              </table>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                9. Mechanical Systems and Simple Machines
+              </div>
             </div>
-            <div class="modal-footer">
+          </a>
+        
+        
+          
+          <a href="../11-control-systems-feedback-loops/" class="md-footer__link md-footer__link--next" aria-label="Next: 11. Control Systems and Feedback Loops">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                11. Control Systems and Feedback Loops
+              </div>
             </div>
-        </div>
-    </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
 </div>
-
-    </body>
-</html>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

@@ -1,252 +1,1447 @@
-<!DOCTYPE html>
-<html lang="en" data-bs-theme="light">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The engineering design process applied to manufacturing custom robot parts via additive manufacturing and 3D printing.">
+      
+      
+      
+      
+        <link rel="prev" href="../04-programming-your-robot/">
+      
+      
+        <link rel="next" href="../06-electrical-fundamentals/">
+      
+      
         
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Designing and Building Custom Parts - Technology of Robotic Design</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
         
-        
-        <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>5. Designing and Building Custom Parts - My Docs</title>
-        <link href="../../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../../css/fontawesome.min.css" rel="stylesheet">
-        <link href="../../css/brands.min.css" rel="stylesheet">
-        <link href="../../css/solid.min.css" rel="stylesheet">
-        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
-        <link href="../../css/base.css" rel="stylesheet">
-        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
-        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-        <script>hljs.highlightAll();</script> 
-    </head>
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
 
-    <body>
-        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
-            <div class="container">
-                <a class="navbar-brand" href="../..">My Docs</a>
-                <!-- Expander button -->
-                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- Expanded navigation -->
-                <div id="navbar-collapse" class="navbar-collapse collapse">
-                        <!-- Main navigation -->
-                        <ul class="nav navbar-nav">
-                            <li class="nav-item">
-                                <a href="../.." class="nav-link">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="../../course-description/" class="nav-link">Course Description</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Chapters</a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../" class="dropdown-item">List of Chapters</a>
-</li>
-                                    
-<li>
-    <a href="../01-identifying-kit-parts-building-starterbot/" class="dropdown-item">1. Identifying Kit Parts and Building Your StarterBot</a>
-</li>
-                                    
-<li>
-    <a href="../02-intro-robotics-systems/" class="dropdown-item">2. Introduction to Robotics and Systems</a>
-</li>
-                                    
-<li>
-    <a href="../03-programming-fundamentals/" class="dropdown-item">3. Programming Fundamentals</a>
-</li>
-                                    
-<li>
-    <a href="../04-programming-your-robot/" class="dropdown-item">4. Programming Your Robot</a>
-</li>
-                                    
-<li>
-    <a href="./" class="dropdown-item active" aria-current="page">5. Designing and Building Custom Parts</a>
-</li>
-                                    
-<li>
-    <a href="../06-electrical-fundamentals/" class="dropdown-item">6. Electrical Fundamentals</a>
-</li>
-                                    
-<li>
-    <a href="../07-electronic-components-circuit-design/" class="dropdown-item">7. Electronic Components and Circuit Design</a>
-</li>
-                                    
-<li>
-    <a href="../08-sensors-and-measurement/" class="dropdown-item">8. Sensors and Measurement</a>
-</li>
-                                    
-<li>
-    <a href="../09-mechanical-systems-simple-machines/" class="dropdown-item">9. Mechanical Systems and Simple Machines</a>
-</li>
-                                    
-<li>
-    <a href="../10-fluid-power-hydraulics-pneumatics/" class="dropdown-item">10. Fluid Power: Hydraulics and Pneumatics</a>
-</li>
-                                    
-<li>
-    <a href="../11-control-systems-feedback-loops/" class="dropdown-item">11. Control Systems and Feedback Loops</a>
-</li>
-                                    
-<li>
-    <a href="../12-digital-logic-computing-fundamentals/" class="dropdown-item">12. Digital Logic and Computing Fundamentals</a>
-</li>
-                                    
-<li>
-    <a href="../13-advanced-robot-programming/" class="dropdown-item">13. Advanced Robot Programming</a>
-</li>
-                                    
-<li>
-    <a href="../14-integrating-testing-maintaining-robotic-system/" class="dropdown-item">14. Integrating, Testing, and Maintaining a Robotic System</a>
-</li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Learning Graph</a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../../learning-graph/" class="dropdown-item">Introduction</a>
-</li>
-                                    
-<li>
-    <a href="../../learning-graph/course-description-assessment/" class="dropdown-item">Course Description Assessment</a>
-</li>
-                                    
-<li>
-    <a href="../../learning-graph/concept-list/" class="dropdown-item">Concept Enumeration</a>
-</li>
-                                    
-<li>
-    <a href="../../learning-graph/quality-metrics/" class="dropdown-item">Graph Quality Analysis</a>
-</li>
-                                    
-<li>
-    <a href="../../learning-graph/concept-taxonomy/" class="dropdown-item">Concept Taxonomy</a>
-</li>
-                                    
-<li>
-    <a href="../../learning-graph/taxonomy-distribution/" class="dropdown-item">Taxonomy Distribution Report</a>
-</li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">MicroSims</a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../../sims/graph-viewer/" class="dropdown-item">Learning Graph Viewer</a>
-</li>
-                                </ul>
-                            </li>
-                        </ul>
-
-                    <ul class="nav navbar-nav ms-md-auto">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> Search
-                            </a>
-                        </li>
-                            <li class="nav-item">
-                                <a rel="prev" href="../04-programming-your-robot/" class="nav-link">
-                                    <i class="fa fa-arrow-left"></i> Previous
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a rel="next" href="../06-electrical-fundamentals/" class="nav-link">
-                                    Next <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row">
-                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
-            <span class="fa fa-angle-down"></span>
-        </button>
-    </div>
 
     
-    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
-        <ul class="nav flex-column">
-            
-            <li class="nav-item" data-bs-level="1"><a href="#designing-and-building-custom-parts" class="nav-link">Designing and Building Custom Parts</a>
-              <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="2"><a href="#summary" class="nav-link">Summary</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#concepts-covered" class="nav-link">Concepts Covered</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#prerequisites" class="nav-link">Prerequisites</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#the-engineering-design-process" class="nav-link">The Engineering Design Process</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#problem-definition" class="nav-link">Problem Definition</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#design-constraints-and-design-criteria" class="nav-link">Design Constraints and Design Criteria</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#brainstorming-and-concept-sketching" class="nav-link">Brainstorming and Concept Sketching</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#prototyping" class="nav-link">Prototyping</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#design-iteration-and-design-testing" class="nav-link">Design Iteration and Design Testing</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#trade-off-analysis-and-reverse-engineering" class="nav-link">Trade-Off Analysis and Reverse Engineering</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#design-specifications-and-bill-of-materials" class="nav-link">Design Specifications and Bill of Materials</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#design-documentation-and-the-engineering-notebook" class="nav-link">Design Documentation and the Engineering Notebook</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#team-based-design" class="nav-link">Team-Based Design</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#manufacturing-process" class="nav-link">Manufacturing Process</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#additive-manufacturing-and-3d-printing" class="nav-link">Additive Manufacturing and 3D Printing</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-              </ul>
-            </li>
-        </ul>
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#designing-and-building-custom-parts" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
-</div></div>
-                    <div class="col-md-9" role="main">
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Technology of Robotic Design" class="md-header__button md-logo" aria-label="Technology of Robotic Design" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Technology of Robotic Design
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Designing and Building Custom Parts
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Technology of Robotic Design" class="md-nav__button md-logo" aria-label="Technology of Robotic Design" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    Technology of Robotic Design
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Description
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked="">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapters
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Chapters
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-identifying-kit-parts-building-starterbot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Identifying Kit Parts and Building Your StarterBot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-intro-robotics-systems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Introduction to Robotics and Systems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-programming-fundamentals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Programming Fundamentals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-programming-your-robot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Programming Your Robot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Designing and Building Custom Parts
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Designing and Building Custom Parts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts Covered
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-engineering-design-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Engineering Design Process
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Engineering Design Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-engineering-design-process-cycle-explorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram: Engineering Design Process Cycle Explorer
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problem-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem Definition
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-constraints-and-design-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Design Constraints and Design Criteria
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#brainstorming-and-concept-sketching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Brainstorming and Concept Sketching
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prototyping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prototyping
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-iteration-and-design-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Design Iteration and Design Testing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trade-off-analysis-and-reverse-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trade-Off Analysis and Reverse Engineering
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-specifications-and-bill-of-materials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Design Specifications and Bill of Materials
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-documentation-and-the-engineering-notebook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Design Documentation and the Engineering Notebook
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#team-based-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Team-Based Design
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manufacturing-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manufacturing Process
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Manufacturing Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-additive-vs-subtractive-manufacturing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram: Additive vs. Subtractive Manufacturing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additive-manufacturing-and-3d-printing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additive Manufacturing and 3D Printing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Additive Manufacturing and 3D Printing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-3d-print-settings-explorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram: 3D Print Settings Explorer
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-electrical-fundamentals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Electrical Fundamentals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-electronic-components-circuit-design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Electronic Components and Circuit Design
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-sensors-and-measurement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Sensors and Measurement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-mechanical-systems-simple-machines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Mechanical Systems and Simple Machines
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-fluid-power-hydraulics-pneumatics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Fluid Power: Hydraulics and Pneumatics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-control-systems-feedback-loops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Control Systems and Feedback Loops
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-digital-logic-computing-fundamentals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. Digital Logic and Computing Fundamentals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-advanced-robot-programming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. Advanced Robot Programming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-integrating-testing-maintaining-robotic-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14. Integrating, Testing, and Maintaining a Robotic System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning Graph
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../sims/graph-viewer/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MicroSims
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts Covered
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-engineering-design-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Engineering Design Process
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Engineering Design Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-engineering-design-process-cycle-explorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram: Engineering Design Process Cycle Explorer
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problem-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem Definition
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-constraints-and-design-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Design Constraints and Design Criteria
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#brainstorming-and-concept-sketching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Brainstorming and Concept Sketching
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prototyping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prototyping
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-iteration-and-design-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Design Iteration and Design Testing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trade-off-analysis-and-reverse-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trade-Off Analysis and Reverse Engineering
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-specifications-and-bill-of-materials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Design Specifications and Bill of Materials
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-documentation-and-the-engineering-notebook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Design Documentation and the Engineering Notebook
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#team-based-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Team-Based Design
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manufacturing-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manufacturing Process
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Manufacturing Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-additive-vs-subtractive-manufacturing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram: Additive vs. Subtractive Manufacturing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additive-manufacturing-and-3d-printing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additive Manufacturing and 3D Printing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Additive Manufacturing and 3D Printing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-3d-print-settings-explorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram: 3D Print Settings Explorer
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation">
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
 
 <h1 id="designing-and-building-custom-parts">Designing and Building Custom Parts</h1>
 <h2 id="summary">Summary</h2>
@@ -276,7 +1471,7 @@
 </ol>
 <h2 id="prerequisites">Prerequisites</h2>
 <p>This chapter assumes only the prerequisites listed in the <a href="../../course-description/">course description</a>.</p>
-<hr />
+<hr>
 <h2 id="the-engineering-design-process">The Engineering Design Process</h2>
 <p>Every custom part on a competition robot starts as a problem, not a drawing. The <strong>engineering design process</strong> is a repeatable, structured cycle that engineers use to move from a problem statement to a working solution, then loop back around as they learn more. Unlike a single flash of inspiration, the process is deliberately iterative: it expects you to revisit earlier steps as new information appears, instead of marching through a fixed sequence one time and declaring victory.</p>
 <p>Picture a real problem that will run through this entire chapter. Your FTC team has been driving the goBILDA StarterBot you assembled in Chapter 1 and programmed in Chapter 4, and two things keep going wrong during practice matches. Game pieces bounce off the front of the intake instead of feeding into the rollers, and the distance sensor your team zip-tied near the intake keeps twisting out of alignment after every match. Nothing in the stock StarterBot kit solves either problem, so your team decides to design and 3D print a custom part: a combined intake guide and sensor mount you will call the <strong>Guide-Mount</strong> for the rest of this chapter.</p>
@@ -295,37 +1490,27 @@
 <h4 id="diagram-engineering-design-process-cycle-explorer">Diagram: Engineering Design Process Cycle Explorer</h4>
 <iframe src="../../sims/engineering-design-cycle-explorer/main.html" width="100%" height="550px" scrolling="no"></iframe>
 
-<details markdown="1">
+<details>
 <summary>Engineering Design Process Cycle Explorer</summary>
-Type: workflow
-**sim-id:** engineering-design-cycle-explorer<br/>
-**Library:** p5.js<br/>
-**Status:** Specified
-
-Purpose: Give students a big-picture mental map of the engineering design process before each stage is studied in depth, using the running Guide-Mount bracket example.
-
-Bloom Taxonomy: Understand (L2)
-Bloom Taxonomy Verb: explain, summarize, interpret
-
-Learning objective: Given the eight stages of the engineering design process arranged in a circular workflow, students will explain what happens at each stage and identify which stages loop back to earlier ones.
-
-Layout: Eight labeled nodes arranged in a circle in the order Define Problem, Set Constraints/Criteria, Brainstorm, Sketch, Prototype, Test, Iterate, Document. Curved arrows connect each node to the next going clockwise. Two additional curved "return" arrows, drawn in a different color, loop from Iterate back to Brainstorm and from Test back to Prototype, visually showing that the process is not strictly linear.
-
-Interactive elements:
+<p>Type: workflow
+<strong>sim-id:</strong> engineering-design-cycle-explorer<br>
+<strong>Library:</strong> p5.js<br>
+<strong>Status:</strong> Specified</p>
+<p>Purpose: Give students a big-picture mental map of the engineering design process before each stage is studied in depth, using the running Guide-Mount bracket example.</p>
+<p>Bloom Taxonomy: Understand (L2)
+Bloom Taxonomy Verb: explain, summarize, interpret</p>
+<p>Learning objective: Given the eight stages of the engineering design process arranged in a circular workflow, students will explain what happens at each stage and identify which stages loop back to earlier ones.</p>
+<p>Layout: Eight labeled nodes arranged in a circle in the order Define Problem, Set Constraints/Criteria, Brainstorm, Sketch, Prototype, Test, Iterate, Document. Curved arrows connect each node to the next going clockwise. Two additional curved "return" arrows, drawn in a different color, loop from Iterate back to Brainstorm and from Test back to Prototype, visually showing that the process is not strictly linear.</p>
+<p>Interactive elements:
 - Clicking any node opens an infobox describing what the team does at that stage, written using the Guide-Mount bracket example (for example, clicking "Test" shows: "The team mounts the printed Guide-Mount prototype on the StarterBot and runs ten practice intake cycles, recording how many game pieces feed cleanly into the rollers.")
 - Hovering a return arrow displays a short tooltip explaining why the loop exists (for example, hovering the Test-to-Prototype arrow shows "A failed test sends the team back to revise and reprint the prototype, not back to square one.")
 - A "Play Walkthrough" button auto-advances through all eight nodes in order, pausing two seconds on each with its infobox open, so students can watch one full pass of the cycle
-- A "Reset" button closes all infoboxes and returns to the unclicked state
-
-Data to be displayed: Eight stage names, one Guide-Mount-specific description per stage, and two loop-back explanations.
-
-Color scheme: Forward-progress arrows in blue, return/loop arrows in orange, active node highlighted in gold when its infobox is open.
-
-Responsive behavior: Circular layout recalculates node positions and radius based on the iframe's current width so labels remain legible on narrow screens.
-
-Implementation: p5.js canvas with node positions computed from a fixed angular step, arrow curves drawn with bezier control points, and a text infobox drawn below the circle that updates based on which node was last clicked.
+- A "Reset" button closes all infoboxes and returns to the unclicked state</p>
+<p>Data to be displayed: Eight stage names, one Guide-Mount-specific description per stage, and two loop-back explanations.</p>
+<p>Color scheme: Forward-progress arrows in blue, return/loop arrows in orange, active node highlighted in gold when its infobox is open.</p>
+<p>Responsive behavior: Circular layout recalculates node positions and radius based on the iframe's current width so labels remain legible on narrow screens.</p>
+<p>Implementation: p5.js canvas with node positions computed from a fixed angular step, arrow curves drawn with bezier control points, and a text infobox drawn below the circle that updates based on which node was last clicked.</p>
 </details>
-
 <h2 id="problem-definition">Problem Definition</h2>
 <p>The first stage of the process, <strong>problem definition</strong>, means writing a clear, specific statement of exactly what needs to be solved before anyone sketches a single idea. A vague complaint like "the intake doesn't work very well" is not a problem definition; it describes a symptom, not the actual problem an engineer can design against. A strong problem definition names the specific failure, the conditions under which it happens, and why it matters.</p>
 <p>Your team's problem definition for this chapter might read: "During competition matches, roughly one in three game pieces that touch the front bumper bounce away instead of entering the intake rollers, and the zip-tied distance sensor loses its aim after contact, causing missed detections." Notice how specific this is compared to "the intake needs work." A precise problem definition keeps the whole team focused on the same target and prevents wasted effort brainstorming solutions to the wrong problem.</p>
@@ -501,8 +1686,10 @@ Implementation: p5.js canvas with node positions computed from a fixed angular s
 <li>Data collected, such as test results or measurements</li>
 <li>Decisions made and the reasoning behind them</li>
 </ul>
-<p>!!! tip
-    Record failed prototypes and rejected ideas in the notebook too, not only successes. Judges reviewing an FTC engineering notebook are often more interested in how a team responded to a failed test than in a design that worked perfectly on the first try.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Record failed prototypes and rejected ideas in the notebook too, not only successes. Judges reviewing an FTC engineering notebook are often more interested in how a team responded to a failed test than in a design that worked perfectly on the first try.</p>
+</div>
 <h2 id="team-based-design">Team-Based Design</h2>
 <p>None of the stages above happen in isolation on a real FTC team; they happen through <strong>team-based design</strong>, where multiple students share responsibility across roles, communicate constantly, and reach decisions together rather than leaving every choice to a single member. Brainstorming benefits from a range of perspectives, trade-off analysis benefits from multiple people scoring options independently before comparing notes, and documentation benefits from someone specifically responsible for keeping the notebook current.</p>
 <p>A team working on the Guide-Mount might divide responsibilities roughly as follows:</p>
@@ -519,161 +1706,175 @@ Implementation: p5.js canvas with node positions computed from a fixed angular s
 <h4 id="diagram-additive-vs-subtractive-manufacturing">Diagram: Additive vs. Subtractive Manufacturing</h4>
 <iframe src="../../sims/additive-vs-subtractive-manufacturing/main.html" width="100%" height="500px" scrolling="no"></iframe>
 
-<details markdown="1">
+<details>
 <summary>Additive vs. Subtractive Manufacturing</summary>
-Type: workflow
-**sim-id:** additive-vs-subtractive-manufacturing<br/>
-**Library:** Mermaid<br/>
-**Status:** Specified
-
-Purpose: Help students distinguish additive from subtractive manufacturing by contrasting how each family of processes would produce the same Guide-Mount bracket.
-
-Bloom Taxonomy: Analyze (L4)
-Bloom Taxonomy Verb: differentiate, compare, contrast
-
-Learning objective: Given the same target part, students will differentiate the additive and subtractive manufacturing workflows and explain why additive manufacturing is well suited to a one-off custom bracket like the Guide-Mount.
-
-Diagram type: Mermaid flowchart with two parallel swimlane-style branches from a shared starting node
-
-Nodes (all nodes must be clickable, each opening an infobox with the listed text):
+<p>Type: workflow
+<strong>sim-id:</strong> additive-vs-subtractive-manufacturing<br>
+<strong>Library:</strong> Mermaid<br>
+<strong>Status:</strong> Specified</p>
+<p>Purpose: Help students distinguish additive from subtractive manufacturing by contrasting how each family of processes would produce the same Guide-Mount bracket.</p>
+<p>Bloom Taxonomy: Analyze (L4)
+Bloom Taxonomy Verb: differentiate, compare, contrast</p>
+<p>Learning objective: Given the same target part, students will differentiate the additive and subtractive manufacturing workflows and explain why additive manufacturing is well suited to a one-off custom bracket like the Guide-Mount.</p>
+<p>Diagram type: Mermaid flowchart with two parallel swimlane-style branches from a shared starting node</p>
+<p>Nodes (all nodes must be clickable, each opening an infobox with the listed text):
 - Start node: "Digital Design File" — infobox: "The 3D CAD model of the Guide-Mount, created after specifications were finalized."
 - Subtractive branch node 1: "Solid PLA/Aluminum Block" — infobox: "Manufacturing starts with more material than the final part needs."
 - Subtractive branch node 2: "CNC Mill Removes Material" — infobox: "A rotating cutting tool removes material path by path until the bracket shape remains."
 - Subtractive branch node 3: "Finished Bracket + Scrap Material" — infobox: "Leftover material is waste; complex internal shapes may be impossible to reach with a cutting tool."
 - Additive branch node 1: "Sliced Layer Data" — infobox: "Slicing software divides the 3D model into thin horizontal layers, typically 0.1-0.3mm thick."
 - Additive branch node 2: "3D Printer Deposits Material Layer by Layer" — infobox: "Material is added only where the design calls for it, one thin layer at a time, from the bottom up."
-- Additive branch node 3: "Finished Bracket, Minimal Waste" — infobox: "Complex internal shapes, like the sensor pocket, print in one piece with very little wasted material."
-
-Edges: Start node branches into both the subtractive chain and the additive chain; each chain flows through its three nodes in order. Click directives required on every node per the interactivity rule (`click NodeId call showInfo("...")` style handlers).
-
-Color coding: Subtractive branch nodes shaded gray/silver (evoking metal removal), additive branch nodes shaded blue/teal (evoking printed plastic layers).
-
-Implementation: Mermaid flowchart syntax rendered client-side, with JavaScript click handlers registered on each node id to open a shared infobox panel below the diagram.
+- Additive branch node 3: "Finished Bracket, Minimal Waste" — infobox: "Complex internal shapes, like the sensor pocket, print in one piece with very little wasted material."</p>
+<p>Edges: Start node branches into both the subtractive chain and the additive chain; each chain flows through its three nodes in order. Click directives required on every node per the interactivity rule (<code>click NodeId call showInfo("...")</code> style handlers).</p>
+<p>Color coding: Subtractive branch nodes shaded gray/silver (evoking metal removal), additive branch nodes shaded blue/teal (evoking printed plastic layers).</p>
+<p>Implementation: Mermaid flowchart syntax rendered client-side, with JavaScript click handlers registered on each node id to open a shared infobox panel below the diagram.</p>
 </details>
-
 <h2 id="additive-manufacturing-and-3d-printing">Additive Manufacturing and 3D Printing</h2>
 <p><strong>Additive manufacturing</strong> is the broad family of manufacturing processes that build a physical object by adding material layer by layer from a digital 3D model, rather than removing it from a larger block. Several distinct technologies fall under this umbrella. Stereolithography (SLA) cures liquid resin with a laser, and Selective Laser Sintering (SLS) fuses powdered material layer by layer, both common in industrial and professional settings. The version most accessible to FTC teams, schools, and hobbyists is <strong>3D printing</strong>, specifically a process called Fused Deposition Modeling (FDM), which melts a plastic filament and extrudes it through a heated nozzle, tracing each layer before moving up to print the next one directly on top of it.</p>
 <p>Turning the Guide-Mount's finished CAD model into a physical part requires slicing software, a program that converts the 3D model into a set of printer instructions (G-code) and lets the team choose print settings that affect the final part's strength, weight, and print time. Two of the most important settings are <strong>layer height</strong>, the thickness of each printed layer, and <strong>infill percentage</strong>, how solid or hollow the interior of the part is filled with a repeating support pattern. Thinner layers and higher infill generally produce stronger, heavier, slower-to-print parts, while thicker layers and lower infill print faster and lighter but weaker. Explore how these two settings trade off against each other in the interactive tool below before your own team chooses settings for its first Guide-Mount print.</p>
 <h4 id="diagram-3d-print-settings-explorer">Diagram: 3D Print Settings Explorer</h4>
 <iframe src="../../sims/print-settings-explorer/main.html" width="100%" height="520px" scrolling="no"></iframe>
 
-<details markdown="1">
+<details>
 <summary>3D Print Settings Explorer</summary>
-Type: microsim
-**sim-id:** print-settings-explorer<br/>
-**Library:** p5.js<br/>
-**Status:** Specified
-
-Purpose: Let students explore how layer height and infill percentage affect estimated part strength, weight, and print time for a 3D-printed bracket like the Guide-Mount.
-
-Bloom Taxonomy: Apply (L3)
-Bloom Taxonomy Verb: apply, predict, calculate
-
-Learning objective: Given target values for print time, weight, and strength, students will adjust layer height and infill percentage sliders to produce a print setting combination that satisfies a stated design constraint, applying the relationship between print settings and outcomes.
-
-Canvas layout:
+<p>Type: microsim
+<strong>sim-id:</strong> print-settings-explorer<br>
+<strong>Library:</strong> p5.js<br>
+<strong>Status:</strong> Specified</p>
+<p>Purpose: Let students explore how layer height and infill percentage affect estimated part strength, weight, and print time for a 3D-printed bracket like the Guide-Mount.</p>
+<p>Bloom Taxonomy: Apply (L3)
+Bloom Taxonomy Verb: apply, predict, calculate</p>
+<p>Learning objective: Given target values for print time, weight, and strength, students will adjust layer height and infill percentage sliders to produce a print setting combination that satisfies a stated design constraint, applying the relationship between print settings and outcomes.</p>
+<p>Canvas layout:
 - Left side (60% width): A simplified cross-section illustration of the Guide-Mount bracket showing visible print layers (thicker or thinner based on the layer height slider) and an internal lattice pattern (denser or sparser based on the infill slider)
-- Right side (40% width): Two sliders and three live-updating output readouts
-
-Interactive controls:
+- Right side (40% width): Two sliders and three live-updating output readouts</p>
+<p>Interactive controls:
 - Slider: Layer height, range 0.1mm to 0.3mm, step 0.05mm
 - Slider: Infill percentage, range 10% to 100%, step 5%
 - Button: "Try Guide-Mount Preset" loads the team's final chosen settings (0.2mm layer height, 35% infill)
-- Button: "Reset to Default"
-
-Default parameters: Layer height 0.2mm, infill 20%
-
-Data Visibility Requirements:
+- Button: "Reset to Default"</p>
+<p>Default parameters: Layer height 0.2mm, infill 20%</p>
+<p>Data Visibility Requirements:
   Stage 1 (defaults): Show estimated print time ("52 minutes"), estimated part weight ("14 grams"), and a qualitative strength rating bar ("Moderate") for the default settings
   Stage 2 (learner moves infill slider up): Recalculate and display new print time, weight, and strength rating live, e.g. moving infill from 20% to 60% increases weight from 14g to roughly 24g, increases print time from 52 to roughly 75 minutes, and raises the strength bar from "Moderate" to "High"
   Stage 3 (learner moves layer height slider up): Recalculate live, e.g. increasing layer height from 0.2mm to 0.3mm at fixed infill decreases print time by roughly 30% but lowers the strength rating one notch and visibly reduces the number of drawn layer lines in the cross-section
-  Final: Learner is challenged with a target readout ("Match: under 60 minutes print time AND at least 'High' strength") and must find a slider combination that satisfies both
-
-Interaction: Direct manipulation via sliders with immediate, continuous readout updates (no animation/particle effects); this is a parameter-exploration tool, not a step-through narrative
-
-Instructional Rationale: An Apply-level objective calling for students to find settings meeting a constraint is best served by direct parameter manipulation with instant, concrete numeric feedback, rather than animation, so students can form and test their own hypotheses about the relationship between print settings and outcomes.
-
-Implementation: p5.js canvas with two slider UI elements, a cross-section drawn as a stack of rectangles whose count and thickness respond to the layer height value, a dot-grid lattice pattern whose density responds to the infill value, and a simple formula-based estimate (not a physics simulation) driving the three output readouts.
+  Final: Learner is challenged with a target readout ("Match: under 60 minutes print time AND at least 'High' strength") and must find a slider combination that satisfies both</p>
+<p>Interaction: Direct manipulation via sliders with immediate, continuous readout updates (no animation/particle effects); this is a parameter-exploration tool, not a step-through narrative</p>
+<p>Instructional Rationale: An Apply-level objective calling for students to find settings meeting a constraint is best served by direct parameter manipulation with instant, concrete numeric feedback, rather than animation, so students can form and test their own hypotheses about the relationship between print settings and outcomes.</p>
+<p>Implementation: p5.js canvas with two slider UI elements, a cross-section drawn as a stack of rectangles whose count and thickness respond to the layer height value, a dot-grid lattice pattern whose density responds to the infill value, and a simple formula-based estimate (not a physics simulation) driving the three output readouts.</p>
+</details>
+<p>With print settings chosen, the team slices the final Guide-Mount model, sends the resulting file to the school's 3D printer, and roughly an hour later removes a finished bracket that bolts directly onto the StarterBot's existing channel holes. The distance sensor sits in its rigid pocket instead of a zip tie, and the ramp guides game pieces into the intake rollers instead of letting them bounce away. The part exists because the team walked the entire engineering design process end to end: a defined problem, clear constraints and criteria, a wide brainstorm narrowed by sketching, a cardboard prototype that became a printed one, two rounds of testing and iteration, a trade-off analysis that settled the final shape, and a notebook documenting every step along the way. The same cycle you just walked through for one bracket is exactly what real FTC teams repeat, part after part, all season long.</p>
+<details class="note">
+<summary>Quick check: The Guide-Mount's Round 1 prototype only fed 6 of 10 game pieces cleanly into the rollers. Was this a wasted attempt, and which two concepts from this chapter describe what the team did next? Click to reveal the answer.</summary>
+<p>No, it was not wasted. Round 1 supplied the data needed for <strong>design testing</strong> to succeed, and the team used that data to perform <strong>design iteration</strong>, revising the ramp angle and adding a sensor pocket before testing again. A "failed" prototype that produces useful test data is a normal, expected part of the engineering design process, not a sign to abandon the project.</p>
 </details>
 
-<p>With print settings chosen, the team slices the final Guide-Mount model, sends the resulting file to the school's 3D printer, and roughly an hour later removes a finished bracket that bolts directly onto the StarterBot's existing channel holes. The distance sensor sits in its rigid pocket instead of a zip tie, and the ramp guides game pieces into the intake rollers instead of letting them bounce away. The part exists because the team walked the entire engineering design process end to end: a defined problem, clear constraints and criteria, a wide brainstorm narrowed by sketching, a cardboard prototype that became a printed one, two rounds of testing and iteration, a trade-off analysis that settled the final shape, and a notebook documenting every step along the way. The same cycle you just walked through for one bracket is exactly what real FTC teams repeat, part after part, all season long.</p>
-<p>??? note "Quick check: The Guide-Mount's Round 1 prototype only fed 6 of 10 game pieces cleanly into the rollers. Was this a wasted attempt, and which two concepts from this chapter describe what the team did next? Click to reveal the answer."
-    No, it was not wasted. Round 1 supplied the data needed for <strong>design testing</strong> to succeed, and the team used that data to perform <strong>design iteration</strong>, revising the ramp angle and adding a sensor pocket before testing again. A "failed" prototype that produces useful test data is a normal, expected part of the engineering design process, not a sign to abandon the project.</p></div>
-            </div>
-        </div>
 
-        <footer class="col-md-12">
-            <hr>
-            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
-        </footer>
-        <script src="../../js/bootstrap.bundle.min.js"></script>
-        <script>
-            var base_url = "../..",
-                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
-        </script>
-        <script src="../../js/base.js"></script>
-        <script src="../../search/main.js"></script>
 
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="searchModalLabel">Search</h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
             </div>
-            <div class="modal-body">
-                <p>From here you can search these documents. Enter your search terms below.</p>
-                <form>
-                    <div class="form-group">
-                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
-                    </div>
-                </form>
-                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
-            </div>
-            <div class="modal-footer">
-            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
-    </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+          
+          <a href="../04-programming-your-robot/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 4. Programming Your Robot">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
             </div>
-            <div class="modal-body">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th style="width: 20%;">Keys</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="help shortcut"><kbd>?</kbd></td>
-                    <td>Open this help</td>
-                  </tr>
-                  <tr>
-                    <td class="next shortcut"><kbd>n</kbd></td>
-                    <td>Next page</td>
-                  </tr>
-                  <tr>
-                    <td class="prev shortcut"><kbd>p</kbd></td>
-                    <td>Previous page</td>
-                  </tr>
-                  <tr>
-                    <td class="search shortcut"><kbd>s</kbd></td>
-                    <td>Search</td>
-                  </tr>
-                </tbody>
-              </table>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                4. Programming Your Robot
+              </div>
             </div>
-            <div class="modal-footer">
+          </a>
+        
+        
+          
+          <a href="../06-electrical-fundamentals/" class="md-footer__link md-footer__link--next" aria-label="Next: 6. Electrical Fundamentals">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                6. Electrical Fundamentals
+              </div>
             </div>
-        </div>
-    </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
 </div>
-
-    </body>
-</html>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

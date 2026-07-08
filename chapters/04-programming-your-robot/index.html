@@ -1,236 +1,1393 @@
-<!DOCTYPE html>
-<html lang="en" data-bs-theme="light">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Applying programming fundamentals directly to the StarterBot — microcontrollers, sensors, actuators, and basic control loops.">
+      
+      
+      
+      
+        <link rel="prev" href="../03-programming-fundamentals/">
+      
+      
+        <link rel="next" href="../05-designing-building-custom-parts/">
+      
+      
         
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Programming Your Robot - Technology of Robotic Design</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
         
-        
-        <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>4. Programming Your Robot - My Docs</title>
-        <link href="../../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../../css/fontawesome.min.css" rel="stylesheet">
-        <link href="../../css/brands.min.css" rel="stylesheet">
-        <link href="../../css/solid.min.css" rel="stylesheet">
-        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
-        <link href="../../css/base.css" rel="stylesheet">
-        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
-        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-        <script>hljs.highlightAll();</script> 
-    </head>
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
 
-    <body>
-        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
-            <div class="container">
-                <a class="navbar-brand" href="../..">My Docs</a>
-                <!-- Expander button -->
-                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- Expanded navigation -->
-                <div id="navbar-collapse" class="navbar-collapse collapse">
-                        <!-- Main navigation -->
-                        <ul class="nav navbar-nav">
-                            <li class="nav-item">
-                                <a href="../.." class="nav-link">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="../../course-description/" class="nav-link">Course Description</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Chapters</a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../" class="dropdown-item">List of Chapters</a>
-</li>
-                                    
-<li>
-    <a href="../01-identifying-kit-parts-building-starterbot/" class="dropdown-item">1. Identifying Kit Parts and Building Your StarterBot</a>
-</li>
-                                    
-<li>
-    <a href="../02-intro-robotics-systems/" class="dropdown-item">2. Introduction to Robotics and Systems</a>
-</li>
-                                    
-<li>
-    <a href="../03-programming-fundamentals/" class="dropdown-item">3. Programming Fundamentals</a>
-</li>
-                                    
-<li>
-    <a href="./" class="dropdown-item active" aria-current="page">4. Programming Your Robot</a>
-</li>
-                                    
-<li>
-    <a href="../05-designing-building-custom-parts/" class="dropdown-item">5. Designing and Building Custom Parts</a>
-</li>
-                                    
-<li>
-    <a href="../06-electrical-fundamentals/" class="dropdown-item">6. Electrical Fundamentals</a>
-</li>
-                                    
-<li>
-    <a href="../07-electronic-components-circuit-design/" class="dropdown-item">7. Electronic Components and Circuit Design</a>
-</li>
-                                    
-<li>
-    <a href="../08-sensors-and-measurement/" class="dropdown-item">8. Sensors and Measurement</a>
-</li>
-                                    
-<li>
-    <a href="../09-mechanical-systems-simple-machines/" class="dropdown-item">9. Mechanical Systems and Simple Machines</a>
-</li>
-                                    
-<li>
-    <a href="../10-fluid-power-hydraulics-pneumatics/" class="dropdown-item">10. Fluid Power: Hydraulics and Pneumatics</a>
-</li>
-                                    
-<li>
-    <a href="../11-control-systems-feedback-loops/" class="dropdown-item">11. Control Systems and Feedback Loops</a>
-</li>
-                                    
-<li>
-    <a href="../12-digital-logic-computing-fundamentals/" class="dropdown-item">12. Digital Logic and Computing Fundamentals</a>
-</li>
-                                    
-<li>
-    <a href="../13-advanced-robot-programming/" class="dropdown-item">13. Advanced Robot Programming</a>
-</li>
-                                    
-<li>
-    <a href="../14-integrating-testing-maintaining-robotic-system/" class="dropdown-item">14. Integrating, Testing, and Maintaining a Robotic System</a>
-</li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Learning Graph</a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../../learning-graph/" class="dropdown-item">Introduction</a>
-</li>
-                                    
-<li>
-    <a href="../../learning-graph/course-description-assessment/" class="dropdown-item">Course Description Assessment</a>
-</li>
-                                    
-<li>
-    <a href="../../learning-graph/concept-list/" class="dropdown-item">Concept Enumeration</a>
-</li>
-                                    
-<li>
-    <a href="../../learning-graph/quality-metrics/" class="dropdown-item">Graph Quality Analysis</a>
-</li>
-                                    
-<li>
-    <a href="../../learning-graph/concept-taxonomy/" class="dropdown-item">Concept Taxonomy</a>
-</li>
-                                    
-<li>
-    <a href="../../learning-graph/taxonomy-distribution/" class="dropdown-item">Taxonomy Distribution Report</a>
-</li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">MicroSims</a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../../sims/graph-viewer/" class="dropdown-item">Learning Graph Viewer</a>
-</li>
-                                </ul>
-                            </li>
-                        </ul>
-
-                    <ul class="nav navbar-nav ms-md-auto">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> Search
-                            </a>
-                        </li>
-                            <li class="nav-item">
-                                <a rel="prev" href="../03-programming-fundamentals/" class="nav-link">
-                                    <i class="fa fa-arrow-left"></i> Previous
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a rel="next" href="../05-designing-building-custom-parts/" class="nav-link">
-                                    Next <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row">
-                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
-            <span class="fa fa-angle-down"></span>
-        </button>
-    </div>
 
     
-    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
-        <ul class="nav flex-column">
-            
-            <li class="nav-item" data-bs-level="1"><a href="#programming-your-robot" class="nav-link">Programming Your Robot</a>
-              <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="2"><a href="#summary" class="nav-link">Summary</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#concepts-covered" class="nav-link">Concepts Covered</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#prerequisites" class="nav-link">Prerequisites</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#microcontroller-your-robots-onboard-computer" class="nav-link">Microcontroller: Your Robot's Onboard Computer</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#sensors-and-actuators-how-the-robot-senses-and-acts" class="nav-link">Sensors and Actuators: How the Robot Senses and Acts</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#robot-programming-applying-code-to-real-hardware" class="nav-link">Robot Programming: Applying Code to Real Hardware</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#sensor-input-programming-reading-the-real-world" class="nav-link">Sensor Input Programming: Reading the Real World</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#actuator-output-programming-commanding-motors-and-servos" class="nav-link">Actuator Output Programming: Commanding Motors and Servos</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#open-loop-control-vs-closed-loop-control" class="nav-link">Open-Loop Control vs. Closed-Loop Control</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#feedback-loops-and-control-loops-sensing-and-acting-together" class="nav-link">Feedback Loops and Control Loops: Sensing and Acting Together</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#the-robot-control-loop-and-autonomous-behavior" class="nav-link">The Robot Control Loop and Autonomous Behavior</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-              </ul>
-            </li>
-        </ul>
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#programming-your-robot" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
-</div></div>
-                    <div class="col-md-9" role="main">
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Technology of Robotic Design" class="md-header__button md-logo" aria-label="Technology of Robotic Design" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Technology of Robotic Design
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Programming Your Robot
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Technology of Robotic Design" class="md-nav__button md-logo" aria-label="Technology of Robotic Design" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    Technology of Robotic Design
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Description
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked="">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapters
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Chapters
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-identifying-kit-parts-building-starterbot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Identifying Kit Parts and Building Your StarterBot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-intro-robotics-systems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Introduction to Robotics and Systems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-programming-fundamentals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Programming Fundamentals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Programming Your Robot
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Programming Your Robot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts Covered
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#microcontroller-your-robots-onboard-computer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Microcontroller: Your Robot's Onboard Computer
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sensors-and-actuators-how-the-robot-senses-and-acts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sensors and Actuators: How the Robot Senses and Acts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sensors and Actuators: How the Robot Senses and Acts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-sensors-and-actuators-on-the-starterbot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram: Sensors and Actuators on the StarterBot
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#robot-programming-applying-code-to-real-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Robot Programming: Applying Code to Real Hardware
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sensor-input-programming-reading-the-real-world" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sensor Input Programming: Reading the Real World
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actuator-output-programming-commanding-motors-and-servos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Actuator Output Programming: Commanding Motors and Servos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-loop-control-vs-closed-loop-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Open-Loop Control vs. Closed-Loop Control
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Open-Loop Control vs. Closed-Loop Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-open-loop-vs-closed-loop-control-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram: Open-Loop vs. Closed-Loop Control Comparison
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feedback-loops-and-control-loops-sensing-and-acting-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feedback Loops and Control Loops: Sensing and Acting Together
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Feedback Loops and Control Loops: Sensing and Acting Together">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-sense-decide-act-control-loop-cycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram: Sense-Decide-Act Control Loop Cycle
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-robot-control-loop-and-autonomous-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Robot Control Loop and Autonomous Behavior
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Robot Control Loop and Autonomous Behavior">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-approaching-the-wall-closed-loop-distance-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram: Approaching the Wall: Closed-Loop Distance Control
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-designing-building-custom-parts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Designing and Building Custom Parts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-electrical-fundamentals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Electrical Fundamentals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-electronic-components-circuit-design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Electronic Components and Circuit Design
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-sensors-and-measurement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Sensors and Measurement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-mechanical-systems-simple-machines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Mechanical Systems and Simple Machines
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-fluid-power-hydraulics-pneumatics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Fluid Power: Hydraulics and Pneumatics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-control-systems-feedback-loops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Control Systems and Feedback Loops
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-digital-logic-computing-fundamentals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. Digital Logic and Computing Fundamentals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-advanced-robot-programming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. Advanced Robot Programming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-integrating-testing-maintaining-robotic-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14. Integrating, Testing, and Maintaining a Robotic System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning Graph
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../sims/graph-viewer/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MicroSims
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts Covered
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#microcontroller-your-robots-onboard-computer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Microcontroller: Your Robot's Onboard Computer
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sensors-and-actuators-how-the-robot-senses-and-acts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sensors and Actuators: How the Robot Senses and Acts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sensors and Actuators: How the Robot Senses and Acts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-sensors-and-actuators-on-the-starterbot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram: Sensors and Actuators on the StarterBot
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#robot-programming-applying-code-to-real-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Robot Programming: Applying Code to Real Hardware
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sensor-input-programming-reading-the-real-world" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sensor Input Programming: Reading the Real World
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actuator-output-programming-commanding-motors-and-servos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Actuator Output Programming: Commanding Motors and Servos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-loop-control-vs-closed-loop-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Open-Loop Control vs. Closed-Loop Control
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Open-Loop Control vs. Closed-Loop Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-open-loop-vs-closed-loop-control-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram: Open-Loop vs. Closed-Loop Control Comparison
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feedback-loops-and-control-loops-sensing-and-acting-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feedback Loops and Control Loops: Sensing and Acting Together
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Feedback Loops and Control Loops: Sensing and Acting Together">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-sense-decide-act-control-loop-cycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram: Sense-Decide-Act Control Loop Cycle
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-robot-control-loop-and-autonomous-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Robot Control Loop and Autonomous Behavior
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Robot Control Loop and Autonomous Behavior">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-approaching-the-wall-closed-loop-distance-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram: Approaching the Wall: Closed-Loop Distance Control
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation">
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
 
 <h1 id="programming-your-robot">Programming Your Robot</h1>
 <h2 id="summary">Summary</h2>
@@ -257,7 +1414,7 @@
 <li><a href="../02-intro-robotics-systems/">Chapter 2: Introduction to Robotics and Systems</a></li>
 <li><a href="../03-programming-fundamentals/">Chapter 3: Programming Fundamentals</a></li>
 </ul>
-<hr />
+<hr>
 <h2 id="microcontroller-your-robots-onboard-computer">Microcontroller: Your Robot's Onboard Computer</h2>
 <p>Every program you wrote in the last chapter, the even-or-odd checker included, ran on a laptop or desktop computer with a keyboard, a screen, and someone typing input by hand. A robot has none of those things sitting on its chassis, yet it still needs somewhere to run a program. That job belongs to a <strong>microcontroller</strong>: a small onboard computer, built directly into the robot, that loads your program, runs it continuously while the robot operates, and connects out to the robot's motors and sensors through wired ports.</p>
 <p>Think of the microcontroller as the StarterBot's brain, in the same practical sense that the chassis you assembled in Chapter 1 is its skeleton. In FTC robotics, this role is filled by a microcontroller-based control system, such as a REV Control Hub, mounted directly on the robot. Once you load your program onto it, the control system no longer needs a laptop connected to keep running; it executes your code on its own, reading sensors and driving motors in real time, the whole time your robot is powered on and competing.</p>
@@ -314,37 +1471,27 @@
 <h4 id="diagram-sensors-and-actuators-on-the-starterbot">Diagram: Sensors and Actuators on the StarterBot</h4>
 <iframe src="../../sims/starterbot-sensors-actuators-map/main.html" width="100%" height="520px" scrolling="no"></iframe>
 
-<details markdown="1">
+<details>
 <summary>Sensors and Actuators on the StarterBot</summary>
-Type: infographic
-**sim-id:** starterbot-sensors-actuators-map<br/>
-**Library:** p5.js<br/>
-**Status:** Specified
-
-Purpose: Reinforce the sensor/actuator distinction by mapping both categories onto a simplified illustration of the StarterBot chassis, showing the actuators already installed from Chapter 1 and the sensor mounting points used in later builds.
-
-Bloom Taxonomy: Remember (L1) and Understand (L2)
-Bloom Taxonomy Verb: identify, locate, classify, explain
-
-Learning objective: Given a labeled illustration of the StarterBot, students will identify which components are actuators versus sensors and explain the direction information flows for each.
-
-Layout: A simplified top-down line illustration of the StarterBot chassis with four highlighted regions: the drive gearmotors, the intake gearmotor, the Speed Servo/Gecko wheel assemblies, and two dashed "future sensor mount" outlines near the front bumper and intake opening.
-
-Interactive elements:
+<p>Type: infographic
+<strong>sim-id:</strong> starterbot-sensors-actuators-map<br>
+<strong>Library:</strong> p5.js<br>
+<strong>Status:</strong> Specified</p>
+<p>Purpose: Reinforce the sensor/actuator distinction by mapping both categories onto a simplified illustration of the StarterBot chassis, showing the actuators already installed from Chapter 1 and the sensor mounting points used in later builds.</p>
+<p>Bloom Taxonomy: Remember (L1) and Understand (L2)
+Bloom Taxonomy Verb: identify, locate, classify, explain</p>
+<p>Learning objective: Given a labeled illustration of the StarterBot, students will identify which components are actuators versus sensors and explain the direction information flows for each.</p>
+<p>Layout: A simplified top-down line illustration of the StarterBot chassis with four highlighted regions: the drive gearmotors, the intake gearmotor, the Speed Servo/Gecko wheel assemblies, and two dashed "future sensor mount" outlines near the front bumper and intake opening.</p>
+<p>Interactive elements:
 - Hovering over an actuator region highlights it in orange and displays "Actuator: program sends a command out to this part"
 - Hovering over a dashed sensor-mount region highlights it in blue and displays "Sensor location (added in a later build): this part sends a reading into the program"
 - Clicking any region opens a side panel with the specific part name, its category, and a one-sentence description of what it does
-- A toggle switch labeled "Show Information Flow Arrows" draws small arrows on the actuator regions pointing outward from the microcontroller and on the sensor regions pointing inward toward the microcontroller
-
-Data to be displayed: Four actuator regions (19.2:1 drive gearmotors, 50.9:1 intake gearmotor, Speed Servo/Gecko wheel assemblies, second drive assembly) and two sensor-mount regions (front bumper, intake opening) with example sensor types listed for each.
-
-Color coding: Orange for actuators (output), blue for sensors (input), gray for structural chassis outline.
-
-Responsive behavior: Illustration and hit regions scale proportionally to the iframe width; the side panel stacks below the illustration on narrow screens.
-
-Implementation: p5.js canvas with a simplified line-drawing background, an array of clickable/hoverable polygon regions, and a text panel rendered in the remaining canvas space.
+- A toggle switch labeled "Show Information Flow Arrows" draws small arrows on the actuator regions pointing outward from the microcontroller and on the sensor regions pointing inward toward the microcontroller</p>
+<p>Data to be displayed: Four actuator regions (19.2:1 drive gearmotors, 50.9:1 intake gearmotor, Speed Servo/Gecko wheel assemblies, second drive assembly) and two sensor-mount regions (front bumper, intake opening) with example sensor types listed for each.</p>
+<p>Color coding: Orange for actuators (output), blue for sensors (input), gray for structural chassis outline.</p>
+<p>Responsive behavior: Illustration and hit regions scale proportionally to the iframe width; the side panel stacks below the illustration on narrow screens.</p>
+<p>Implementation: p5.js canvas with a simplified line-drawing background, an array of clickable/hoverable polygon regions, and a text panel rendered in the remaining canvas space.</p>
 </details>
-
 <h2 id="robot-programming-applying-code-to-real-hardware">Robot Programming: Applying Code to Real Hardware</h2>
 <p><strong>Robot programming</strong> is the practice of writing code that controls physical hardware, sensors and actuators, through a microcontroller, rather than only manipulating numbers and text on a screen. Every tool from Chapter 3, variables, conditional statements, loop structures, and functions, still applies directly. What changes is what the code is connected to and how it behaves once it is running.</p>
 <p>Three practical differences separate robot programming from the general-purpose programming you practiced in the last chapter:</p>
@@ -357,9 +1504,10 @@ Implementation: p5.js canvas with a simplified line-drawing background, an array
 <h2 id="sensor-input-programming-reading-the-real-world">Sensor Input Programming: Reading the Real World</h2>
 <p><strong>Sensor input programming</strong> is the specific skill of writing code that requests a current reading from a sensor and stores that reading in a variable so the rest of the program can use it. Just as <code>GET the number from the user</code> pulled a value into the even-or-odd program in Chapter 3, a robot program pulls a value in from a physical sensor instead of a keyboard.</p>
 <p>The pseudocode below reads a value from a distance sensor mounted on a future StarterBot build and stores it in a variable named <code>distance_value</code>, following the same plain-language pseudocode style used throughout Chapter 3. Read it as: ask the sensor for its current measurement, save that measurement, and then display it.</p>
-<pre><code>READ distance_value FROM the distance sensor
-DISPLAY &quot;Distance reading: &quot;, distance_value, &quot;cm&quot;
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>READ distance_value FROM the distance sensor
+DISPLAY "Distance reading: ", distance_value, "cm"
+</code></pre></div></td></tr></tbody></table></div>
 <p>Notice that this pseudocode looks almost identical in structure to <code>GET the number from the user</code> from Chapter 3, except the source of the value is a physical sensor instead of a person typing at a keyboard. That similarity is intentional: sensor input programming reuses the exact same variable-and-input pattern you already learned, applied to a new kind of input source.</p>
 <p>A single sensor reading is rarely useful on its own; robot programs typically compare a sensor value against some meaningful number to decide what to do next. The list below gives a few concrete examples of comparisons a StarterBot program might make once a sensor is installed.</p>
 <ul>
@@ -392,18 +1540,22 @@ DISPLAY &quot;Distance reading: &quot;, distance_value, &quot;cm&quot;
 </tbody>
 </table>
 <p>The pseudocode below commands both actuator types found on the StarterBot: a drive gearmotor set to a power level, and a Gecko wheel servo set to a target angle. Read it as two separate, direct commands sent out to two different physical parts.</p>
-<pre><code>SET drive_power TO 0.6
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>SET drive_power TO 0.6
 COMMAND left_drive_motor TO RUN AT drive_power
 COMMAND wheel_servo TO MOVE TO ANGLE 90
-</code></pre>
+</code></pre></div></td></tr></tbody></table></div>
 <p>Sensor input programming and actuator output programming are the two building blocks every robot program is constructed from. On their own, though, they describe two separate, disconnected actions. The next two sections explain what happens once those building blocks are combined, and why that combination is the single most important idea in this chapter.</p>
 <h2 id="open-loop-control-vs-closed-loop-control">Open-Loop Control vs. Closed-Loop Control</h2>
 <p><strong>Open-loop control</strong> is a control strategy in which the program sends a command to an actuator without ever checking the actuator's actual result against a sensor. The command is sent, and the program moves on, regardless of what actually happens in the physical world. <strong>Closed-loop control</strong> is a control strategy in which the program continuously checks a sensor's reading and adjusts its actuator commands based on that reading, correcting its behavior as conditions change.</p>
 <p>An open-loop drive command might look like the pseudocode below: drive forward at a fixed power for a fixed amount of time, with no sensor involved at all.</p>
-<pre><code>COMMAND drive_motor TO RUN AT 0.5
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>COMMAND drive_motor TO RUN AT 0.5
 WAIT 3 seconds
 COMMAND drive_motor TO RUN AT 0
-</code></pre>
+</code></pre></div></td></tr></tbody></table></div>
 <p>This open-loop code has an obvious weakness: it has no way of knowing whether the robot actually traveled the intended distance, or whether it stopped early after hitting a wall, or drifted off course because one wheel slipped on the floor. A closed-loop version of the same task would instead check a distance sensor while driving and stop only once the sensor reports the robot is close enough to its target, adjusting automatically to real conditions instead of blindly trusting a fixed time delay.</p>
 <p>The following table summarizes the practical trade-off between the two strategies, since a StarterBot program will use both approaches at different times depending on whether a relevant sensor is available.</p>
 <table>
@@ -434,44 +1586,36 @@ COMMAND drive_motor TO RUN AT 0
 <h4 id="diagram-open-loop-vs-closed-loop-control-comparison">Diagram: Open-Loop vs. Closed-Loop Control Comparison</h4>
 <iframe src="../../sims/open-loop-vs-closed-loop-control/main.html" width="100%" height="520px" scrolling="no"></iframe>
 
-<details markdown="1">
+<details>
 <summary>Open-Loop vs. Closed-Loop Control Comparison</summary>
-Type: diagram
-**sim-id:** open-loop-vs-closed-loop-control<br/>
-**Library:** p5.js<br/>
-**Status:** Specified
-
-Purpose: Let students directly compare the signal-flow structure of open-loop control (command only, no feedback path) against closed-loop control (command plus a returning sensor-feedback path) using the StarterBot drive system as the concrete example.
-
-Bloom Taxonomy: Understand (L2) and Analyze (L4)
-Bloom Taxonomy Verb: compare, contrast, differentiate, distinguish
-
-Learning objective: Given a labeled diagram of each control strategy, students will differentiate open-loop from closed-loop control by identifying the presence or absence of a feedback path and explain why closed-loop control adapts to real-world conditions.
-
-Components to show: A "Program" box, a "Drive Motor" actuator box, and a "Distance Sensor" box, arranged so command arrows and feedback arrows can be toggled on or off between them.
-
-Interactive elements:
+<p>Type: diagram
+<strong>sim-id:</strong> open-loop-vs-closed-loop-control<br>
+<strong>Library:</strong> p5.js<br>
+<strong>Status:</strong> Specified</p>
+<p>Purpose: Let students directly compare the signal-flow structure of open-loop control (command only, no feedback path) against closed-loop control (command plus a returning sensor-feedback path) using the StarterBot drive system as the concrete example.</p>
+<p>Bloom Taxonomy: Understand (L2) and Analyze (L4)
+Bloom Taxonomy Verb: compare, contrast, differentiate, distinguish</p>
+<p>Learning objective: Given a labeled diagram of each control strategy, students will differentiate open-loop from closed-loop control by identifying the presence or absence of a feedback path and explain why closed-loop control adapts to real-world conditions.</p>
+<p>Components to show: A "Program" box, a "Drive Motor" actuator box, and a "Distance Sensor" box, arranged so command arrows and feedback arrows can be toggled on or off between them.</p>
+<p>Interactive elements:
 - Two mode buttons, "Open-Loop" and "Closed-Loop," switch which diagram is displayed
 - In Open-Loop mode, an animated arrow travels once from Program to Drive Motor labeled "Command: run at 0.5 power," and no arrow returns; a small infobox reads "No sensor is checked. The program cannot tell whether the robot actually reached its target."
 - In Closed-Loop mode, the same command arrow appears from Program to Drive Motor, plus a second animated arrow looping back from Distance Sensor to Program labeled "Feedback: 12cm remaining," which then updates the next command arrow; an infobox reads "The sensor reading loops back and changes the next command, letting the program adapt."
 - Clicking the Program, Drive Motor, or Distance Sensor box in either mode reveals a short definition of that component's role
-- A "Step Through" button animates one full cycle at a time in Closed-Loop mode, so students can watch command, sensor reading, and adjusted command occur in sequence rather than all at once
-
-Data Visibility Requirements:
+- A "Step Through" button animates one full cycle at a time in Closed-Loop mode, so students can watch command, sensor reading, and adjusted command occur in sequence rather than all at once</p>
+<p>Data Visibility Requirements:
   Stage 1: Show the initial command sent from Program to Drive Motor with its power value
   Stage 2 (Closed-Loop only): Show the Distance Sensor's current reading traveling back to Program
   Stage 3 (Closed-Loop only): Show the next command recalculated using that reading, with the new power value displayed
-  Final: Show a side-by-side summary line: "Open-loop: 1 command, no adjustment. Closed-loop: command, reading, adjustment, repeating."
-
-Instructional Rationale: A step-through animation with visible data at each stage is appropriate for this Understand/Analyze objective because students need to trace exactly where a feedback path exists and where it is missing, rather than watch a continuous, unlabeled animation that would obscure the structural difference between the two modes.
-
-Color scheme: Blue for the Program box, orange for the Drive Motor (actuator) box, green for the Distance Sensor box, with feedback arrows drawn in green to visually tie them to the sensor.
-
-Implementation: p5.js canvas with two pre-defined diagram layouts (open-loop and closed-loop), a mode toggle controlling which layout and arrows are drawn, and a simple step counter driving the "Step Through" animation.
+  Final: Show a side-by-side summary line: "Open-loop: 1 command, no adjustment. Closed-loop: command, reading, adjustment, repeating."</p>
+<p>Instructional Rationale: A step-through animation with visible data at each stage is appropriate for this Understand/Analyze objective because students need to trace exactly where a feedback path exists and where it is missing, rather than watch a continuous, unlabeled animation that would obscure the structural difference between the two modes.</p>
+<p>Color scheme: Blue for the Program box, orange for the Drive Motor (actuator) box, green for the Distance Sensor box, with feedback arrows drawn in green to visually tie them to the sensor.</p>
+<p>Implementation: p5.js canvas with two pre-defined diagram layouts (open-loop and closed-loop), a mode toggle controlling which layout and arrows are drawn, and a simple step counter driving the "Step Through" animation.</p>
 </details>
-
-<p>!!! tip
-    Open-loop control is not automatically "wrong." Turning on an intake roller for a fixed match duration, with no sensor involved, is a perfectly reasonable open-loop design. Closed-loop control earns its added complexity specifically when a task's outcome depends on unpredictable real-world conditions, such as exactly how far away a wall happens to be.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Open-loop control is not automatically "wrong." Turning on an intake roller for a fixed match duration, with no sensor involved, is a perfectly reasonable open-loop design. Closed-loop control earns its added complexity specifically when a task's outcome depends on unpredictable real-world conditions, such as exactly how far away a wall happens to be.</p>
+</div>
 <h2 id="feedback-loops-and-control-loops-sensing-and-acting-together">Feedback Loops and Control Loops: Sensing and Acting Together</h2>
 <p>The closed-loop example above depends on a specific pattern repeating over and over: read a sensor, decide what to do, act, and then read the sensor again to see the effect of that action. This repeating pattern has its own name at two related levels of description.</p>
 <p>A <strong>feedback loop</strong> is the general cycle in which the outcome of an action is measured and that measurement is used to influence the next action, a concept that applies far beyond robotics, from a thermostat adjusting a furnace to a driver steering a car based on where the road appears to be heading. A <strong>control loop</strong> is the specific, repeating sequence of steps, typically sense, decide, and act, that a program executes over and over to implement a feedback loop in software. In short: a feedback loop is the underlying idea, and a control loop is how a program actually carries that idea out, one repetition at a time.</p>
@@ -479,39 +1623,38 @@ Implementation: p5.js canvas with two pre-defined diagram layouts (open-loop and
 <h4 id="diagram-sense-decide-act-control-loop-cycle">Diagram: Sense-Decide-Act Control Loop Cycle</h4>
 <iframe src="../../sims/sense-decide-act-loop/main.html" width="100%" height="480px" scrolling="no"></iframe>
 
-<details markdown="1">
+<details>
 <summary>Sense-Decide-Act Control Loop Cycle</summary>
-Type: diagram
-**sim-id:** sense-decide-act-loop<br/>
-**Library:** Mermaid<br/>
-**Status:** Specified
-
-Purpose: Teach the three-stage sense-decide-act cycle that every control loop repeats, reinforcing the feedback loop and control loop definitions introduced just above.
-
-Bloom Taxonomy: Understand (L2)
-Bloom Taxonomy Verb: explain, describe, sequence
-
-Learning objective: Given the sense-decide-act cycle diagram, students will explain the purpose of each stage and describe why the cycle must return to its starting stage rather than stopping after one pass.
-
-Visual style: Mermaid flowchart (`graph TD`) with three nodes arranged in a triangular loop, and a labeled arrow returning from the third node back to the first.
-
-Nodes (each node clickable with a `click` directive opening an infobox):
+<p>Type: diagram
+<strong>sim-id:</strong> sense-decide-act-loop<br>
+<strong>Library:</strong> Mermaid<br>
+<strong>Status:</strong> Specified</p>
+<p>Purpose: Teach the three-stage sense-decide-act cycle that every control loop repeats, reinforcing the feedback loop and control loop definitions introduced just above.</p>
+<p>Bloom Taxonomy: Understand (L2)
+Bloom Taxonomy Verb: explain, describe, sequence</p>
+<p>Learning objective: Given the sense-decide-act cycle diagram, students will explain the purpose of each stage and describe why the cycle must return to its starting stage rather than stopping after one pass.</p>
+<p>Visual style: Mermaid flowchart (<code>graph TD</code>) with three nodes arranged in a triangular loop, and a labeled arrow returning from the third node back to the first.</p>
+<p>Nodes (each node clickable with a <code>click</code> directive opening an infobox):
 1. "Sense" — click text: "Read the current value from a sensor, such as a distance sensor reporting how far away the nearest wall is. This is sensor input programming."
 2. "Decide" — click text: "Use a conditional statement to compare the sensor reading against a target or threshold, deciding what the actuator should do next."
-3. "Act" — click text: "Send a command to an actuator based on the decision just made. This is actuator output programming."
-
-Connections: Sense to Decide, Decide to Act, and Act back to Sense, with the returning arrow labeled "Repeat" to emphasize that a control loop does not stop after one pass.
-
-Color coding: Green for the Sense node (matches the sensor color used in the earlier open-loop/closed-loop diagram), gold for the Decide node, orange for the Act node (matches the actuator color used earlier), with the "Repeat" arrow drawn in blue.
-
-Implementation: Mermaid flowchart syntax with `click` directives bound to a JavaScript function that displays each node's explanatory text in a styled infobox beneath the diagram.
+3. "Act" — click text: "Send a command to an actuator based on the decision just made. This is actuator output programming."</p>
+<p>Connections: Sense to Decide, Decide to Act, and Act back to Sense, with the returning arrow labeled "Repeat" to emphasize that a control loop does not stop after one pass.</p>
+<p>Color coding: Green for the Sense node (matches the sensor color used in the earlier open-loop/closed-loop diagram), gold for the Decide node, orange for the Act node (matches the actuator color used earlier), with the "Repeat" arrow drawn in blue.</p>
+<p>Implementation: Mermaid flowchart syntax with <code>click</code> directives bound to a JavaScript function that displays each node's explanatory text in a styled infobox beneath the diagram.</p>
 </details>
-
 <p>Notice that the "Decide" stage in this cycle is nothing more than a conditional statement, and the entire cycle repeating "over and over" is nothing more than a loop structure, both concepts you already practiced thoroughly in Chapter 3. A control loop is simply a loop structure whose body contains a sensor read, a conditional decision, and an actuator command, applied specifically to robot hardware.</p>
 <h2 id="the-robot-control-loop-and-autonomous-behavior">The Robot Control Loop and Autonomous Behavior</h2>
 <p>Everything in this chapter comes together in one final concept. A <strong>robot control loop</strong> is the specific control loop that runs continuously on a robot's microcontroller while it operates, combining sensor input programming, a decision step, and actuator output programming into one repeating cycle written directly in the robot's program. Where "control loop" describes the general sense-decide-act pattern, "robot control loop" refers to that same pattern implemented as real, running code on a specific robot's microcontroller.</p>
 <p>The pseudocode below implements a robot control loop for a StarterBot equipped with a distance sensor, using a loop structure and conditional statement in exactly the style you practiced in Chapter 3. Read it as: keep repeating this cycle while the robot is active, checking distance on every pass and adjusting the drive motor accordingly.</p>
-<pre><code>SET stop_threshold TO 15
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>SET stop_threshold TO 15
 WHILE autonomous_period_active
     READ distance_value FROM the distance sensor
     IF distance_value &gt; stop_threshold THEN
@@ -520,147 +1663,171 @@ WHILE autonomous_period_active
         COMMAND drive_motor TO RUN AT 0
     END IF
 END WHILE
-</code></pre>
+</code></pre></div></td></tr></tbody></table></div>
 <p>This robot control loop drives the robot forward as long as the wall ahead is farther away than the 15-centimeter threshold, and stops the drive motor the moment the sensor reports the robot has gotten close enough. Every pass through the <code>WHILE</code> loop repeats the same sense-decide-act cycle from the diagram above: read the sensor, decide with the <code>IF</code> statement, and act with the <code>COMMAND</code>.</p>
 <p>A robot control loop like this one is also what makes <strong>autonomous behavior</strong> possible. Autonomous behavior is a robot's ability to sense its surroundings and choose its own actions using its program's control loop, without a human operator continuously steering it in real time. This stands in direct contrast to driver-controlled operation, where a person continuously sends commands, for example through a joystick, and the robot has no need to decide anything for itself. In FTC competition, this distinction matters enough that matches are split into a short autonomous period, where robots run their own control loop with no driver input, and a longer driver-controlled period afterward.</p>
 <p>To see a robot control loop's sense-decide-act cycle play out continuously rather than as a single static block of pseudocode, experiment with the simulation below. It models a simple StarterBot approaching a wall and lets you adjust the same <code>stop_threshold</code> value from the pseudocode above to see how it changes the robot's autonomous behavior.</p>
 <h4 id="diagram-approaching-the-wall-closed-loop-distance-control">Diagram: Approaching the Wall: Closed-Loop Distance Control</h4>
 <iframe src="../../sims/wall-approach-control-sim/main.html" width="100%" height="600px" scrolling="no"></iframe>
 
-<details markdown="1">
+<details>
 <summary>Approaching the Wall: Closed-Loop Distance Control</summary>
-Type: microsim
-**sim-id:** wall-approach-control-sim<br/>
-**Library:** p5.js<br/>
-**Status:** Specified
-
-Purpose: Let students experiment with a StarterBot's robot control loop by adjusting the stop-distance threshold and observing how the robot's autonomous behavior changes in response to live sensor readings.
-
-Bloom Taxonomy: Apply (L3) and Analyze (L4)
-Bloom Taxonomy Verb: use, demonstrate, examine, distinguish
-
-Learning objective: Given a simulated distance sensor and adjustable threshold, students will apply the robot control loop pseudocode to predict and demonstrate the robot's stopping behavior, and will distinguish the resulting motion from an open-loop, fixed-time alternative.
-
-Canvas layout:
+<p>Type: microsim
+<strong>sim-id:</strong> wall-approach-control-sim<br>
+<strong>Library:</strong> p5.js<br>
+<strong>Status:</strong> Specified</p>
+<p>Purpose: Let students experiment with a StarterBot's robot control loop by adjusting the stop-distance threshold and observing how the robot's autonomous behavior changes in response to live sensor readings.</p>
+<p>Bloom Taxonomy: Apply (L3) and Analyze (L4)
+Bloom Taxonomy Verb: use, demonstrate, examine, distinguish</p>
+<p>Learning objective: Given a simulated distance sensor and adjustable threshold, students will apply the robot control loop pseudocode to predict and demonstrate the robot's stopping behavior, and will distinguish the resulting motion from an open-loop, fixed-time alternative.</p>
+<p>Canvas layout:
 - Top area (70% height): a side-view drawing area showing a simple robot icon on a floor, a wall on the right, and a live distance readout between them
-- Bottom area (30% height): control panel with sliders, buttons, and a small pseudocode panel highlighting the currently executing line
-
-Visual elements:
+- Bottom area (30% height): control panel with sliders, buttons, and a small pseudocode panel highlighting the currently executing line</p>
+<p>Visual elements:
 - Robot icon (blue rectangle with wheels) positioned on the left, able to move right toward the wall
 - Wall (gray rectangle) fixed on the right edge of the drawing area
-- A dashed vertical line marking the current `stop_threshold` distance from the wall
-- Live numeric readout of `distance_value` updating every animation frame
-- A pseudocode panel showing the robot control loop from this section, with the currently executing line highlighted as the simulation runs
-
-Interactive controls:
-- Slider: `stop_threshold`, adjustable from 5cm to 40cm, default 15cm
+- A dashed vertical line marking the current <code>stop_threshold</code> distance from the wall
+- Live numeric readout of <code>distance_value</code> updating every animation frame
+- A pseudocode panel showing the robot control loop from this section, with the currently executing line highlighted as the simulation runs</p>
+<p>Interactive controls:
+- Slider: <code>stop_threshold</code>, adjustable from 5cm to 40cm, default 15cm
 - Button: "Run Closed-Loop" — starts the robot moving using the robot control loop pseudocode shown above
 - Button: "Run Open-Loop (3s Timer)" — starts the robot moving using the open-loop pseudocode from the earlier section, ignoring the sensor entirely, for direct comparison
 - Button: "Reset" — returns the robot to its starting position
-- Checkbox: "Slow Motion" — reduces simulation speed so individual loop iterations are easier to observe
-
-Default parameters:
+- Checkbox: "Slow Motion" — reduces simulation speed so individual loop iterations are easier to observe</p>
+<p>Default parameters:
 - stop_threshold: 15cm
 - Robot starting distance from wall: 200cm (simulated units)
-- Drive power when moving: 0.5
-
-Data Visibility Requirements:
+- Drive power when moving: 0.5</p>
+<p>Data Visibility Requirements:
   Stage 1: Show the robot at its starting position with the initial distance_value displayed and no motion yet
   Stage 2: Show the robot moving, with distance_value counting down each frame and the corresponding pseudocode line highlighted
   Stage 3: Show the moment distance_value crosses the stop_threshold line, with the robot decelerating to a stop
   Stage 4 (Open-Loop mode only): Show the robot continuing to move, and potentially colliding with or overshooting the wall, since no sensor check occurs
-  Final: Show a summary comparing final stopping distance in Closed-Loop mode (always near the threshold) versus Open-Loop mode (varies or overshoots, since it depends only on a fixed time)
-
-Behavior:
-- In Closed-Loop mode, the robot always stops at approximately the slider's `stop_threshold` value, regardless of starting distance, since the control loop re-checks the sensor every frame
+  Final: Show a summary comparing final stopping distance in Closed-Loop mode (always near the threshold) versus Open-Loop mode (varies or overshoots, since it depends only on a fixed time)</p>
+<p>Behavior:
+- In Closed-Loop mode, the robot always stops at approximately the slider's <code>stop_threshold</code> value, regardless of starting distance, since the control loop re-checks the sensor every frame
 - In Open-Loop mode, the robot always runs for a fixed simulated time regardless of the slider value, which the simulation highlights by graying out the threshold line during this mode
-- Moving the `stop_threshold` slider mid-run in Closed-Loop mode immediately changes where the robot stops on its next check, visually demonstrating that the control loop is reading a live value rather than a value baked in at the start
-
-Instructional Rationale: An Apply/Analyze objective calling for prediction and comparison is best served by parameter exploration paired with a directly contrastable open-loop mode, rather than a single fixed animation. Letting students change the threshold and immediately see the consequence, and then compare against an open-loop run of the same task, makes the abstract sense-decide-act cycle concrete and lets students distinguish adaptive from non-adaptive control by observation rather than by definition alone.
-
-Implementation: p5.js for canvas rendering and the animation loop; robot position updated each frame based on the selected mode's logic; a synchronized text panel re-renders the active pseudocode line using the same variable names shown in this section's control loop example.
+- Moving the <code>stop_threshold</code> slider mid-run in Closed-Loop mode immediately changes where the robot stops on its next check, visually demonstrating that the control loop is reading a live value rather than a value baked in at the start</p>
+<p>Instructional Rationale: An Apply/Analyze objective calling for prediction and comparison is best served by parameter exploration paired with a directly contrastable open-loop mode, rather than a single fixed animation. Letting students change the threshold and immediately see the consequence, and then compare against an open-loop run of the same task, makes the abstract sense-decide-act cycle concrete and lets students distinguish adaptive from non-adaptive control by observation rather than by definition alone.</p>
+<p>Implementation: p5.js for canvas rendering and the animation loop; robot position updated each frame based on the selected mode's logic; a synchronized text panel re-renders the active pseudocode line using the same variable names shown in this section's control loop example.</p>
 </details>
-
-<p>!!! success
-    Once you can write a robot control loop, you have everything you need for basic autonomous behavior: a sensor reading feeding a decision, and a decision driving an actuator, repeating on its own without a driver's joystick. Every later chapter on sensors, control systems, and advanced robot programming builds directly on this one repeating pattern.</p>
-<p>??? note "Quick check: A student writes a program that commands the drive motor to run for exactly 3 seconds and never reads any sensor. Is this open-loop or closed-loop control, and what concept from this chapter would you add to make it closed-loop? Click to reveal the answer."
-    This is open-loop control, since the command is sent without ever checking a sensor's reading, and the robot has no way to adjust if conditions differ from what was expected. To make it closed-loop, you would add sensor input programming, for example reading a distance sensor, and wrap the motor command in a conditional statement inside a loop structure that keeps checking the sensor and adjusts or stops the motor based on its reading, forming a robot control loop.</p>
-<p>You now have a working vocabulary and pseudocode pattern for programming a real robot: the microcontroller that runs your code, sensors and actuators as the two categories of hardware it connects to, the sensor input and actuator output programming skills that read and command that hardware, and the open-loop, closed-loop, feedback loop, and control loop concepts that describe how a program can react to the world instead of only acting on it blindly. The robot control loop and autonomous behavior introduced at the end of this chapter are the exact building blocks every later chapter on sensors, control systems, and advanced robot programming will expand on, using the same StarterBot sitting on your workbench.</p></div>
-            </div>
-        </div>
-
-        <footer class="col-md-12">
-            <hr>
-            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
-        </footer>
-        <script src="../../js/bootstrap.bundle.min.js"></script>
-        <script>
-            var base_url = "../..",
-                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
-        </script>
-        <script src="../../js/base.js"></script>
-        <script src="../../search/main.js"></script>
-
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="searchModalLabel">Search</h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p>From here you can search these documents. Enter your search terms below.</p>
-                <form>
-                    <div class="form-group">
-                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
-                    </div>
-                </form>
-                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th style="width: 20%;">Keys</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="help shortcut"><kbd>?</kbd></td>
-                    <td>Open this help</td>
-                  </tr>
-                  <tr>
-                    <td class="next shortcut"><kbd>n</kbd></td>
-                    <td>Next page</td>
-                  </tr>
-                  <tr>
-                    <td class="prev shortcut"><kbd>p</kbd></td>
-                    <td>Previous page</td>
-                  </tr>
-                  <tr>
-                    <td class="search shortcut"><kbd>s</kbd></td>
-                    <td>Search</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<p>Once you can write a robot control loop, you have everything you need for basic autonomous behavior: a sensor reading feeding a decision, and a decision driving an actuator, repeating on its own without a driver's joystick. Every later chapter on sensors, control systems, and advanced robot programming builds directly on this one repeating pattern.</p>
 </div>
+<details class="note">
+<summary>Quick check: A student writes a program that commands the drive motor to run for exactly 3 seconds and never reads any sensor. Is this open-loop or closed-loop control, and what concept from this chapter would you add to make it closed-loop? Click to reveal the answer.</summary>
+<p>This is open-loop control, since the command is sent without ever checking a sensor's reading, and the robot has no way to adjust if conditions differ from what was expected. To make it closed-loop, you would add sensor input programming, for example reading a distance sensor, and wrap the motor command in a conditional statement inside a loop structure that keeps checking the sensor and adjusts or stops the motor based on its reading, forming a robot control loop.</p>
+</details>
+<p>You now have a working vocabulary and pseudocode pattern for programming a real robot: the microcontroller that runs your code, sensors and actuators as the two categories of hardware it connects to, the sensor input and actuator output programming skills that read and command that hardware, and the open-loop, closed-loop, feedback loop, and control loop concepts that describe how a program can react to the world instead of only acting on it blindly. The robot control loop and autonomous behavior introduced at the end of this chapter are the exact building blocks every later chapter on sensors, control systems, and advanced robot programming will expand on, using the same StarterBot sitting on your workbench.</p>
 
-    </body>
-</html>
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+          
+          <a href="../03-programming-fundamentals/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 3. Programming Fundamentals">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                3. Programming Fundamentals
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../05-designing-building-custom-parts/" class="md-footer__link md-footer__link--next" aria-label="Next: 5. Designing and Building Custom Parts">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                5. Designing and Building Custom Parts
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
