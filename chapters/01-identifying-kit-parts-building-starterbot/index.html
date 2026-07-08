@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>1. Identifying Kit Parts and Building Your StarterBot - My Docs</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../course-description/" class="nav-link">Course Description</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Chapters</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../" class="dropdown-item">List of Chapters</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">1. Identifying Kit Parts and Building Your StarterBot</a>
+</li>
+                                    
+<li>
+    <a href="../02-intro-robotics-systems/" class="dropdown-item">2. Introduction to Robotics and Systems</a>
+</li>
+                                    
+<li>
+    <a href="../03-programming-fundamentals/" class="dropdown-item">3. Programming Fundamentals</a>
+</li>
+                                    
+<li>
+    <a href="../04-programming-your-robot/" class="dropdown-item">4. Programming Your Robot</a>
+</li>
+                                    
+<li>
+    <a href="../05-designing-building-custom-parts/" class="dropdown-item">5. Designing and Building Custom Parts</a>
+</li>
+                                    
+<li>
+    <a href="../06-electrical-fundamentals/" class="dropdown-item">6. Electrical Fundamentals</a>
+</li>
+                                    
+<li>
+    <a href="../07-electronic-components-circuit-design/" class="dropdown-item">7. Electronic Components and Circuit Design</a>
+</li>
+                                    
+<li>
+    <a href="../08-sensors-and-measurement/" class="dropdown-item">8. Sensors and Measurement</a>
+</li>
+                                    
+<li>
+    <a href="../09-mechanical-systems-simple-machines/" class="dropdown-item">9. Mechanical Systems and Simple Machines</a>
+</li>
+                                    
+<li>
+    <a href="../10-fluid-power-hydraulics-pneumatics/" class="dropdown-item">10. Fluid Power: Hydraulics and Pneumatics</a>
+</li>
+                                    
+<li>
+    <a href="../11-control-systems-feedback-loops/" class="dropdown-item">11. Control Systems and Feedback Loops</a>
+</li>
+                                    
+<li>
+    <a href="../12-digital-logic-computing-fundamentals/" class="dropdown-item">12. Digital Logic and Computing Fundamentals</a>
+</li>
+                                    
+<li>
+    <a href="../13-advanced-robot-programming/" class="dropdown-item">13. Advanced Robot Programming</a>
+</li>
+                                    
+<li>
+    <a href="../14-integrating-testing-maintaining-robotic-system/" class="dropdown-item">14. Integrating, Testing, and Maintaining a Robotic System</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Learning Graph</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../learning-graph/" class="dropdown-item">Introduction</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/course-description-assessment/" class="dropdown-item">Course Description Assessment</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/concept-list/" class="dropdown-item">Concept Enumeration</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/quality-metrics/" class="dropdown-item">Graph Quality Analysis</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/concept-taxonomy/" class="dropdown-item">Concept Taxonomy</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/taxonomy-distribution/" class="dropdown-item">Taxonomy Distribution Report</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">MicroSims</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../sims/graph-viewer/" class="dropdown-item">Learning Graph Viewer</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../02-intro-robotics-systems/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#identifying-kit-parts-and-building-your-starterbot" class="nav-link">Identifying Kit Parts and Building Your StarterBot</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#summary" class="nav-link">Summary</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#concepts-covered" class="nav-link">Concepts Covered</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#prerequisites" class="nav-link">Prerequisites</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#robot-kit-overview" class="nav-link">Robot Kit Overview</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#kit-parts-identification" class="nav-link">Kit Parts Identification</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#structural-hardware" class="nav-link">Structural Hardware</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#motion-hardware-components" class="nav-link">Motion Hardware Components</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#power-and-motor-components" class="nav-link">Power and Motor Components</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#fasteners-and-hardware" class="nav-link">Fasteners and Hardware</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#assembly-instructions-reading" class="nav-link">Assembly Instructions Reading</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#guided-robot-assembly" class="nav-link">Guided Robot Assembly</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#robot-subassembly-build" class="nav-link">Robot Subassembly Build</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#build-verification-and-troubleshooting" class="nav-link">Build Verification and Troubleshooting</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="identifying-kit-parts-and-building-your-starterbot">Identifying Kit Parts and Building Your StarterBot</h1>
+<h2 id="summary">Summary</h2>
+<p>This chapter opens the course with a real robot kit in hand: the goBILDA FTC StarterBot Kit. Students first learn to identify the structural hardware, motion components, power/motor parts, and fasteners that make up the kit, then read and follow a guided assembly manual to build a complete robot. By the end of this chapter, students will have a working robot chassis in front of them and firsthand experience with the vocabulary and physical components that every later chapter builds on.</p>
+<h2 id="concepts-covered">Concepts Covered</h2>
+<p>This chapter covers the following 10 concepts from the learning graph:</p>
+<ol>
+<li>Robot Kit Overview</li>
+<li>Kit Parts Identification</li>
+<li>Structural Hardware</li>
+<li>Motion Hardware Components</li>
+<li>Power And Motor Components</li>
+<li>Fasteners And Hardware</li>
+<li>Assembly Instructions Reading</li>
+<li>Guided Robot Assembly</li>
+<li>Robot Subassembly Build</li>
+<li>Build Verification And Troubleshooting</li>
+</ol>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>This chapter assumes only the prerequisites listed in the <a href="../../course-description/">course description</a>.</p>
+<hr />
+<h2 id="robot-kit-overview">Robot Kit Overview</h2>
+<p>Most robotics courses start with theory: circuits, forces, and code, followed months later by a real machine. This course flips that order. Before you learn why a motor spins or how a program controls a servo, you are going to open a box, spread out the parts, and build a real, drivable robot. The theory will make a lot more sense later once your hands already know what a gear, a shaft, and a chassis feel like.</p>
+<p>The kit you will build from is the <strong>goBILDA FTC StarterBot Kit</strong> (SKU 3200-4008-2627), a robotics kit designed for the preseason of FIRST Tech Challenge (FTC), a national robotics competition for middle and high school teams. Unlike a toy kit with a dozen snap-together pieces, the StarterBot Kit ships with hundreds of individual aluminum, plastic, and metal components, along with a 20-page assembly manual that walks you through 40 numbered build steps. When you finish, you will have a rolling robot chassis with a working drivetrain, a battery mount, and an intake mechanism, the same kind of subsystem an FTC team uses as the backbone of a competition robot.</p>
+<p>Every part in the kit falls into one of four broad categories, and learning to sort parts into these categories is the very first skill this chapter teaches:</p>
+<ul>
+<li><strong>Structural hardware</strong> — the aluminum channels, mounts, and plates that form the robot's frame, or "skeleton"</li>
+<li><strong>Motion hardware</strong> — the shafts, hubs, bearings, gears, sprockets, chain, and wheels that let the robot move</li>
+<li><strong>Power and motor components</strong> — the battery, motors, and servos that provide energy and rotational force</li>
+<li><strong>Fasteners and hardware</strong> — the screws, nuts, washers, and hex keys that hold everything together</li>
+</ul>
+<p>!!! tip
+    Don't worry about memorizing every part name today. This chapter builds your vocabulary the same way a mechanic builds theirs: by handling real parts, matching them to a parts list, and using them right away in a real build.</p>
+<h2 id="kit-parts-identification">Kit Parts Identification</h2>
+<p>Before any assembly manual makes sense, you need to be able to identify parts. Every professional assembly guide, from furniture instructions to aircraft maintenance manuals, begins with a <strong>Bill of Materials (BOM)</strong>, a complete list of every part needed, usually shown with a picture, a part name, and a quantity. The StarterBot Kit's BOM lists every U-channel, shaft, gear, motor, and screw that ships in the box, organized by category.</p>
+<p>Learning to read a BOM is a transferable skill you will use throughout your career in any technical field: you scan the picture, compare it to the part in your hand, check the quantity, and set it aside in a labeled tray or bag. Skipping this step is the single most common reason first-time builders get stuck at step 15 of a manual, only to discover they used the wrong length of shaft back at step 3.</p>
+<p>Instead of memorizing the whole BOM from a page of tiny thumbnail images, it helps to explore an exploded view of the finished robot, where each region of the machine is linked back to its hardware category. Clicking through this kind of exploded diagram lets you build a mental map of "where does this type of part usually go" before you ever pick up a screwdriver.</p>
+<h4 id="diagram-starterbot-exploded-parts-explorer">Diagram: StarterBot Exploded Parts Explorer</h4>
+<iframe src="../../sims/starterbot-parts-explorer/main.html" width="100%" height="550px" scrolling="no"></iframe>
+
+<details markdown="1">
+<summary>StarterBot Exploded Parts Explorer</summary>
+Type: infographic
+**sim-id:** starterbot-parts-explorer<br/>
+**Library:** p5.js<br/>
+**Status:** Specified
+
+Purpose: Help students identify the four hardware categories (structural, motion, power/motor, fasteners) by exploring a labeled, exploded-view illustration of the assembled StarterBot chassis.
+
+Bloom Taxonomy: Remember (L1) and Understand (L2)
+Bloom Taxonomy Verb: identify, locate, classify
+
+Learning objective: Given an exploded view of the StarterBot, students will identify which hardware category each visible component belongs to and recall the specific part name.
+
+Layout: A simplified line-art illustration of the StarterBot chassis rendered in an "exploded" style, with component groups pulled slightly apart from the main frame so each group is individually selectable. Four color-coded regions overlay the drawing: frame/channels (silver), drivetrain/wheels (blue), battery/motors (orange), fasteners (gray).
+
+Interactive elements:
+- Hovering over any region highlights it and displays the category name in a floating label
+- Clicking a region opens a side panel listing the real part names in that category (for example, clicking the frame region lists "1-Hole U-Channel, 8-Hole U-Channel, 15-Hole U-Channel, Quad Block Mount, Drop-Center Bearing Plate")
+- A "Show All Labels" toggle button reveals every category label simultaneously for review
+- A "Quiz Me" button hides the labels and asks the student to click the region that matches a randomly chosen part name, giving immediate right/wrong feedback
+
+Data to be displayed: Four hardware categories mapped to 6-10 real StarterBot part names each, drawn from the kit's actual Bill of Materials.
+
+Color coding: Silver for structural hardware, blue for motion hardware, orange for power/motor components, gray for fasteners. Legend displayed in the corner of the canvas.
+
+Responsive behavior: Illustration and hit regions scale proportionally to the width of the containing iframe; labels reflow to remain readable on narrower screens.
+
+Implementation: p5.js canvas with an SVG-derived line drawing as a background image, clickable polygon hit-regions defined in an array, and a text panel drawn in the remaining canvas space for the infobox.
+</details>
+
+<h2 id="structural-hardware">Structural Hardware</h2>
+<p><strong>Structural hardware</strong> refers to the rigid parts that give the robot its shape and hold every other component in a fixed position relative to the rest of the machine. If motion hardware is the robot's muscles and power components are its energy source, structural hardware is its skeleton.</p>
+<p>The most common piece of structural hardware in the StarterBot Kit is the <strong>U-channel</strong>: a length of extruded aluminum bent into a U-shaped cross-section, with a regular pattern of holes drilled along its length for mounting screws. U-channels are named by how many holes run along their length, which also tells you roughly how long the piece is. A 1-Hole U-Channel is a short stub used as a spacer or bracket, while a 15-Hole U-Channel is long enough to form an entire side rail of the chassis.</p>
+<p>The following table lists the U-channel sizes used in the StarterBot build, since recognizing these by hole count is a skill you will rely on for every future robotics project, not just this kit.</p>
+<table>
+<thead>
+<tr>
+<th>U-Channel Type</th>
+<th>Approx. Length</th>
+<th>Typical Use in the Build</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1-Hole U-Channel</td>
+<td>Shortest</td>
+<td>Small brackets and spacers</td>
+</tr>
+<tr>
+<td>1-Hole Low U-Channel</td>
+<td>Shortest, shallower profile</td>
+<td>Tight-clearance brackets</td>
+</tr>
+<tr>
+<td>3-Hole Mini U-Channel</td>
+<td>Short</td>
+<td>Small mounting brackets</td>
+</tr>
+<tr>
+<td>8-Hole U-Channel</td>
+<td>Medium</td>
+<td>Cross braces and short rails</td>
+</tr>
+<tr>
+<td>10-Hole Low U-Channel</td>
+<td>Medium, shallower profile</td>
+<td>Low-profile chassis rails</td>
+</tr>
+<tr>
+<td>15-Hole U-Channel</td>
+<td>Longest</td>
+<td>Main chassis side rails</td>
+</tr>
+</tbody>
+</table>
+<p>Beyond U-channels, the kit includes other structural parts that connect channels to one another or to motion hardware:</p>
+<ul>
+<li><strong>Quad Block Mount</strong> — a block with four screw points, used to join two U-channels at a corner or to mount a bearing</li>
+<li><strong>Dual Block Mount</strong> — a smaller block with two screw points, used for lighter connections</li>
+<li><strong>Drop-Center Bearing Plate</strong> — a flat plate with a lowered center section that holds a bearing in perfect alignment with a shaft passing through the frame</li>
+</ul>
+<p>Because structural hardware carries no moving parts of its own, it is the easiest category to identify: if a part is solid aluminum, has a repeating hole pattern, and does not spin or roll, it is almost certainly structural hardware.</p>
+<h2 id="motion-hardware-components">Motion Hardware Components</h2>
+<p><strong>Motion hardware</strong> is the collection of parts that transmits rotational force from a motor to the wheels, or otherwise allows a part of the robot to move. This is the most mechanically complex category in the kit, because motion hardware parts must fit together with very tight tolerances to spin freely without wobbling.</p>
+<p>At the center of the StarterBot's motion system is the <strong>8mm REX Shaft</strong>, a precision-ground steel shaft available in several lengths that passes through the frame and carries rotating parts along its length. A shaft alone cannot transmit force to anything; it needs a way to grip a wheel, sprocket, or gear so the two rotate together. That job belongs to <strong>hubs</strong>: the <strong>8mm REX Sonic Hub</strong> and <strong>8mm REX Hyper Hub</strong> both clamp onto the shaft and provide a mounting pattern that other motion parts bolt onto.</p>
+<p>For a shaft to spin freely through a hole in a U-channel or bearing plate without grinding against the aluminum, it passes through an <strong>8mm REX Bearing</strong>, a ring of hardened steel with an inner race that lets the shaft rotate with almost no friction. Builders also use thin <strong>0.5mm shims</strong> to fine-tune the spacing between parts on a shaft, and <strong>collars</strong> to lock a part's exact position on the shaft so it cannot slide side to side.</p>
+<p>Once a shaft is supported by bearings and fitted with hubs, it can drive a wheel directly, or it can drive another shaft through a chain-and-sprocket or gear-and-gear connection. The StarterBot Kit uses both approaches:</p>
+<ol>
+<li><strong>Chain-and-sprocket drivetrain</strong> — a <strong>10-Tooth Sprocket</strong> on the motor's output shaft is connected by <strong>plastic chain</strong> (snapped together from individual links into a closed loop) to a larger sprocket on the wheel shaft, multiplying torque while reducing speed.</li>
+<li><strong>Gear-driven mechanisms</strong> — the <strong>30-Tooth Gear</strong>, <strong>20-Tooth Gear</strong>, and <strong>100-Tooth Gear</strong> mesh directly, tooth to tooth, to transmit rotation between shafts without the flexibility of a chain, which is useful in the kit's intake roller mechanism.</li>
+<li><strong>Wheels</strong> — the finished drivetrain rolls on a mix of wheel types: <strong>72mm and 48mm GripForce Gecko Wheels</strong> for high-traction driving, <strong>Omni Wheels</strong> that roll freely sideways for smooth turning, and <strong>Hogback Wheels</strong> that support the frame without adding drive traction.</li>
+</ol>
+<p>Notice the pattern in every motion assembly: a shaft is supported by bearings, positioned with shims and collars, and driven by a hub, gear, or sprocket. Once you can recognize that pattern, every motion subassembly in the manual, and in future robots you build, will look familiar rather than overwhelming.</p>
+<h2 id="power-and-motor-components">Power and Motor Components</h2>
+<p>Structural and motion hardware only matter once something makes them move. <strong>Power and motor components</strong> are the parts that store and convert electrical energy into rotational force. The StarterBot Kit runs on a single <strong>12V battery</strong>, held in place by a <strong>Battery Mount</strong> and secured with a <strong>Battery Strap</strong> so it cannot shift during a match or a bumpy test drive.</p>
+<p>The kit includes two models of <strong>Yellow Jacket motor</strong>, a type of DC gearmotor that combines an electric motor with an internal gearbox. The gearbox trades rotational speed for torque (twisting force), and the two ratios included in the kit sit at opposite ends of that trade-off.</p>
+<table>
+<thead>
+<tr>
+<th>Motor</th>
+<th>Gear Ratio</th>
+<th>Speed</th>
+<th>Torque</th>
+<th>Typical Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Yellow Jacket 19.2:1</td>
+<td>Lower ratio</td>
+<td>Faster rotation</td>
+<td>Lower torque</td>
+<td>Driving wheels for quick movement</td>
+</tr>
+<tr>
+<td>Yellow Jacket 50.9:1</td>
+<td>Higher ratio</td>
+<td>Slower rotation</td>
+<td>Higher torque</td>
+<td>Mechanisms needing more twisting force, like an intake roller</td>
+</tr>
+</tbody>
+</table>
+<p>In addition to the two DC motors, the kit includes <strong>Speed Servos</strong>, a different kind of motor that rotates to a specific commanded angle rather than spinning continuously. Servos mount inside a <strong>Compact ServoBlock</strong>, a housing that also holds a wheel hub, so the servo can be geared to drive a wheel directly. You will meet servos again in a later chapter on control systems, but for now it is enough to recognize a servo as the small, boxy motor bolted inside its own block housing, distinct from the larger cylindrical Yellow Jacket gearmotors.</p>
+<h2 id="fasteners-and-hardware">Fasteners and Hardware</h2>
+<p>Every structural and motion part in the kit stays together because of <strong>fasteners</strong>: the screws, nuts, and washers that clamp parts to one another. Fasteners are easy to overlook because they are small, but a build with the wrong fastener in the wrong hole will fail, either falling apart during a match or binding so tightly that a shaft cannot spin.</p>
+<p>The StarterBot Kit uses three sizes of <strong>socket head screw</strong> (8mm, 10mm, and 12mm), named for the length of the screw's shaft, and driven with a hex key that fits into a hexagonal socket in the screw's head. Paired with each screw is typically a <strong>locknut</strong>, a nut with a nylon insert that grips the screw's threads so vibration cannot loosen it over time, and often a <strong>washer</strong>, a flat disc that spreads the clamping force over a wider area so the aluminum channel is not dented or cracked.</p>
+<p>Here is a quick reference for matching each fastener to its role in the build:</p>
+<ul>
+<li><strong>8mm socket head screw</strong> — shortest length, used to join thin stacks of parts such as two U-channels</li>
+<li><strong>10mm socket head screw</strong> — medium length, used for block mounts and bearing plates</li>
+<li><strong>12mm socket head screw</strong> — longest length, used where several parts stack together, such as a motor mount plus a channel</li>
+<li><strong>Locknut</strong> — threads onto a screw and resists loosening from vibration</li>
+<li><strong>Washer</strong> — spreads clamping force and protects the aluminum surface</li>
+<li><strong>Hex key</strong> — an L-shaped tool that fits the socket in each screw head; the manual specifies which size hex key to use for each screw</li>
+</ul>
+<p>!!! warning
+    A locknut that spins too easily by hand has lost its nylon grip and should be replaced. A locknut that requires heavy force from the very first turn is being cross-threaded. Both situations are worth stopping to fix before continuing the build.</p>
+<h2 id="assembly-instructions-reading">Assembly Instructions Reading</h2>
+<p>Now that you can identify every category of part, the next skill is learning to read a technical assembly manual, the same skill an aircraft mechanic, furniture installer, or robotics engineer relies on daily. The StarterBot manual presents 40 numbered steps, each showing an illustration of the parts needed, an arrow or highlight showing where they attach, and a callout list naming each part and how many are required.</p>
+<p>Reading an assembly manual is not the same as reading a paragraph of text top to bottom. Instead, experienced builders repeat a small cycle for every single step, checking their work before moving on rather than plowing ahead and hoping for the best. Because this cycle repeats identically at every one of the 40 steps, it is worth slowing down to see it as its own process, separate from any single step's specific parts.</p>
+<h4 id="diagram-reading-an-assembly-step-workflow">Diagram: Reading an Assembly Step Workflow</h4>
+<iframe src="../../sims/assembly-reading-workflow/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+<details markdown="1">
+<summary>Reading an Assembly Step Workflow</summary>
+Type: workflow
+**sim-id:** assembly-reading-workflow<br/>
+**Library:** Mermaid<br/>
+**Status:** Specified
+
+Purpose: Teach the repeating cycle a builder follows for every numbered step in a technical assembly manual, using the StarterBot manual as the concrete example.
+
+Bloom Taxonomy: Understand (L2) and Apply (L3)
+Bloom Taxonomy Verb: explain, demonstrate, sequence
+
+Learning objective: Students will explain the purpose of each stage in the read-verify cycle and apply it while working through real StarterBot assembly steps.
+
+Visual style: Mermaid flowchart, five process nodes in a loop, rendered top to bottom with an arrow returning from the last node back to the first.
+
+Steps (each is a clickable node with a `click` directive opening an infobox):
+1. "Read the Step" — Hover/click text: "Look at the step's illustration and instructions before touching any parts. Note the step number and any orientation arrows."
+2. "Identify Parts" — Hover/click text: "Match each callout in the parts list to a real part in your sorted trays, confirming both the name and the quantity, such as '2x 8-Hole U-Channel.'"
+3. "Gather Tools" — Hover/click text: "Set out the correct hex key size and any other tool the step calls for before starting, rather than searching mid-step."
+4. "Perform the Step" — Hover/click text: "Assemble the parts exactly as shown, matching the illustrated orientation, such as which face of a U-channel points outward."
+5. "Verify" — Hover/click text: "Compare your assembled result to the manual's picture. Check that screws are snug, nothing spins that should be fixed, and nothing is fixed that should spin."
+
+Connections: Step 1 to Step 2 to Step 3 to Step 4 to Step 5, then Step 5 loops back to Step 1 for the next numbered step, with the loop-back arrow labeled "Next Step."
+
+Color coding: Blue for information-gathering steps (Read, Identify, Gather), green for the hands-on step (Perform), gold for the checkpoint step (Verify).
+
+Implementation: Mermaid flowchart syntax with `click` directives bound to a JavaScript function that displays the hover text above in a styled infobox beneath the diagram.
+</details>
+
+<p>Two habits separate a fast, frustration-free build from a slow, error-prone one: reading the entire step before touching a single part, and verifying each step before moving to the next. Skipping verification is how a shim gets left out three steps before it becomes impossible to reach.</p>
+<h2 id="guided-robot-assembly">Guided Robot Assembly</h2>
+<p>With the reading cycle established, the StarterBot manual's 40 steps group naturally into a handful of larger construction phases. Recognizing these phases helps you understand where you are in the build and what the current step is building toward, rather than experiencing the manual as 40 disconnected instructions.</p>
+<ol>
+<li><strong>Frame construction</strong> — U-channels are joined using block mounts and standoffs to form the rectangular base and side rails of the chassis, establishing the skeleton every other part attaches to.</li>
+<li><strong>Shaft and bearing subassemblies</strong> — 8mm REX Shafts are threaded through bearings pressed into the frame, with shims and collars used to set exact spacing, and hubs added to prepare each shaft to receive a wheel, gear, or sprocket.</li>
+<li><strong>Chain-and-sprocket and gear drivetrain</strong> — sprockets and gears are bolted to the hubs on their shafts, plastic chain links are snapped into closed loops, and the loops are looped over paired sprockets to transmit motor rotation to the wheels.</li>
+<li><strong>Drop-center bearing plates</strong> — these plates are bolted across the frame to hold the drivetrain shafts in precise alignment so nothing binds or wobbles once the frame is closed up.</li>
+<li><strong>Battery mount</strong> — the Battery Mount and Battery Strap are installed in a protected, centrally balanced location on the chassis.</li>
+<li><strong>Intake roller mechanism</strong> — a gear-driven roller subassembly is built separately and then bolted onto the front of the chassis.</li>
+<li><strong>Wheels</strong> — Gecko Wheels are mounted through servo-driven Compact ServoBlocks, and Omni Wheels and Hogback Wheels are bolted onto their prepared shafts, completing the rolling chassis.</li>
+</ol>
+<p>Notice that phases 2 through 4 all revolve around getting shafts to spin smoothly and stay aligned: this is the mechanical heart of the robot, and it is worth double-checking spacing and tightness in these steps even if the manual does not explicitly say to pause and verify.</p>
+<h2 id="robot-subassembly-build">Robot Subassembly Build</h2>
+<p>A <strong>subassembly</strong> is a smaller group of parts built and tested as its own unit before it is attached to the main chassis. Manuals for anything mechanically complex, from furniture to aircraft to robots, rely heavily on subassemblies because it is far easier to fix a mistake in a small group of six parts sitting on a workbench than to fix the same mistake after it has been buried inside a fully assembled machine.</p>
+<p>The StarterBot manual has you build several subassemblies before they ever touch the main frame: a shaft-bearing-hub subassembly, a sprocket-and-chain drivetrain subassembly, a battery mount subassembly, an intake roller subassembly, and a wheel-and-ServoBlock subassembly for each Gecko wheel. Recognizing which parts belong together as a subassembly, before the manual tells you explicitly, is a skill that becomes more valuable as robots grow more complex in later chapters.</p>
+<p>To check how well you can sort real StarterBot parts into their correct subassembly group, work through the matching activity below. It reuses the same part names from the Bill of Materials you explored earlier in this chapter, but now asks you to group them by subassembly rather than by hardware category.</p>
+<h4 id="diagram-starterbot-subassembly-matching-quiz">Diagram: StarterBot Subassembly Matching Quiz</h4>
+<iframe src="../../sims/parts-matching-quiz/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+<details markdown="1">
+<summary>StarterBot Subassembly Matching Quiz</summary>
+Type: microsim
+**sim-id:** parts-matching-quiz<br/>
+**Library:** p5.js<br/>
+**Status:** Specified
+
+Purpose: Reinforce the concept of a subassembly by having students drag individual StarterBot part names into the correct subassembly bin.
+
+Bloom Taxonomy: Remember (L1) and Apply (L3)
+Bloom Taxonomy Verb: identify, classify, apply
+
+Learning objective: Given a shuffled list of StarterBot part names, students will correctly group each part into the subassembly it belongs to (shaft-bearing-hub, drivetrain, battery mount, intake roller, or wheel/ServoBlock).
+
+Canvas layout:
+- Left side (60% width): a shuffled stack of draggable part-name tiles (for example "8mm REX Bearing," "10-Tooth Sprocket," "Battery Strap," "30-Tooth Gear," "Compact ServoBlock")
+- Right side (40% width): five labeled drop bins, one per subassembly, stacked vertically
+
+Interactive controls:
+- Drag-and-drop: each part tile can be dragged from the left stack into any bin on the right
+- "Check My Work" button: highlights correctly placed tiles in green and incorrectly placed tiles in red, and shows the correct bin name for any red tile
+- "Shuffle New Set" button: loads a new randomized set of 8-10 part tiles from a larger pool of StarterBot parts
+- "Reset" button: returns all tiles to the left stack
+
+Default parameters: 8 part tiles shown per round, drawn randomly from a pool of 20 real StarterBot part names spanning all five subassemblies.
+
+Data Visibility Requirements:
+  Stage 1: Show the shuffled tiles and empty labeled bins with no scoring yet
+  Stage 2: Show each tile as the student drags it, snapping into the nearest bin when released
+  Stage 3: After "Check My Work," show a per-tile color result (green/red) and a running score such as "6 of 8 correct"
+  Stage 4: For any red tile, show a one-line explanation of why it belongs in the correct bin, for example "10-Tooth Sprocket drives the chain loop, so it belongs in the Drivetrain subassembly."
+
+Instructional Rationale: A drag-and-drop matching pattern is appropriate for this Remember/Apply objective because it requires students to recall each part's function well enough to place it correctly, while the immediate check-and-explain feedback corrects misconceptions before they carry into the physical build.
+
+Implementation: p5.js canvas with mouse-drag event handling for tile objects, rectangular bin hit-detection, and a scoring routine triggered by the "Check My Work" button.
+</details>
+
+<h2 id="build-verification-and-troubleshooting">Build Verification and Troubleshooting</h2>
+<p>The final skill this chapter teaches is knowing how to tell whether a build step, or the finished robot, actually works. <strong>Build verification</strong> means comparing your physical result against the manual's expected outcome, rather than assuming that "it looks about right" is good enough. On a robot, a part that looks correctly placed but is one shim off, or one screw loose, can still cause a wheel to bind or a chain to skip.</p>
+<p>Verification should happen at two levels: after each individual step, as described earlier in the reading cycle, and again after each major phase (frame, drivetrain, battery mount, intake roller, wheels) is complete. At the end of the full 40-step build, spin every wheel by hand, check that the chain loops run smoothly without derailing, and confirm the battery sits securely in its mount.</p>
+<p>When something does not work as expected, troubleshooting is the structured process of tracing a symptom back to its likely cause. The table below lists common issues builders encounter on a StarterBot chassis, paired with the most likely cause and fix, since recognizing these patterns quickly will save you from re-checking every single screw in the robot.</p>
+<table>
+<thead>
+<tr>
+<th>Symptom</th>
+<th>Likely Cause</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wheel does not spin freely</td>
+<td>Bearing misaligned or shaft over-tightened by a collar</td>
+<td>Loosen the nearest collar, re-center the bearing, and re-tighten gradually</td>
+</tr>
+<tr>
+<td>Chain slips or derails</td>
+<td>Sprockets not aligned on parallel shafts, or chain loop too loose</td>
+<td>Check that both sprockets sit at the same height, and shorten the chain loop by one link if needed</td>
+</tr>
+<tr>
+<td>Screw will not tighten</td>
+<td>Wrong hex key size, or threads cross-threaded</td>
+<td>Confirm the hex key size matches the screw head; back the screw out fully and restart the threads</td>
+</tr>
+<tr>
+<td>Locknut spins freely with no resistance</td>
+<td>Nylon insert worn out or wrong-size locknut used</td>
+<td>Replace with a new locknut of the correct thread size</td>
+</tr>
+<tr>
+<td>Frame flexes or racks out of square</td>
+<td>A structural joint is missing a screw, or block mount is loose</td>
+<td>Recheck every screw at that joint against the manual's callout list</td>
+</tr>
+<tr>
+<td>Battery shifts during handling</td>
+<td>Battery Strap not fully tightened</td>
+<td>Re-tighten the strap and confirm the Battery Mount is bolted to the frame, not just resting in place</td>
+</tr>
+</tbody>
+</table>
+<p>!!! success
+    If every wheel spins freely by hand, the chain runs without skipping, and the battery is locked into its mount, your StarterBot chassis has passed build verification and is ready for its first test drive.</p>
+<p>??? note "Quick check: Why does a manual have you build subassemblies separately instead of building everything directly on the main frame? Click to reveal the answer."
+    Because it is far easier to spot and fix a mistake in a small group of parts on the workbench, such as a shaft-bearing-hub unit, than to diagnose the same mistake after it is buried inside the fully assembled chassis. Subassemblies also let multiple people build different parts of the robot at the same time.</p>
+<p>You now have a complete, verified StarterBot chassis and a working vocabulary for every category of part it contains: structural hardware, motion hardware, power and motor components, and fasteners. As the goBILDA manual puts it once the build is finished, "Now that the foundation is built, it's time to shift gears into programming, driver practice, and iterative design." The next chapters take that exact hardware you just assembled and explain the electrical, mechanical, and programming theory behind why it works, using the parts sitting in front of you as the running example.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

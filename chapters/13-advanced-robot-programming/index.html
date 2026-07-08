@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>13. Advanced Robot Programming - My Docs</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../course-description/" class="nav-link">Course Description</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Chapters</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../" class="dropdown-item">List of Chapters</a>
+</li>
+                                    
+<li>
+    <a href="../01-identifying-kit-parts-building-starterbot/" class="dropdown-item">1. Identifying Kit Parts and Building Your StarterBot</a>
+</li>
+                                    
+<li>
+    <a href="../02-intro-robotics-systems/" class="dropdown-item">2. Introduction to Robotics and Systems</a>
+</li>
+                                    
+<li>
+    <a href="../03-programming-fundamentals/" class="dropdown-item">3. Programming Fundamentals</a>
+</li>
+                                    
+<li>
+    <a href="../04-programming-your-robot/" class="dropdown-item">4. Programming Your Robot</a>
+</li>
+                                    
+<li>
+    <a href="../05-designing-building-custom-parts/" class="dropdown-item">5. Designing and Building Custom Parts</a>
+</li>
+                                    
+<li>
+    <a href="../06-electrical-fundamentals/" class="dropdown-item">6. Electrical Fundamentals</a>
+</li>
+                                    
+<li>
+    <a href="../07-electronic-components-circuit-design/" class="dropdown-item">7. Electronic Components and Circuit Design</a>
+</li>
+                                    
+<li>
+    <a href="../08-sensors-and-measurement/" class="dropdown-item">8. Sensors and Measurement</a>
+</li>
+                                    
+<li>
+    <a href="../09-mechanical-systems-simple-machines/" class="dropdown-item">9. Mechanical Systems and Simple Machines</a>
+</li>
+                                    
+<li>
+    <a href="../10-fluid-power-hydraulics-pneumatics/" class="dropdown-item">10. Fluid Power: Hydraulics and Pneumatics</a>
+</li>
+                                    
+<li>
+    <a href="../11-control-systems-feedback-loops/" class="dropdown-item">11. Control Systems and Feedback Loops</a>
+</li>
+                                    
+<li>
+    <a href="../12-digital-logic-computing-fundamentals/" class="dropdown-item">12. Digital Logic and Computing Fundamentals</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">13. Advanced Robot Programming</a>
+</li>
+                                    
+<li>
+    <a href="../14-integrating-testing-maintaining-robotic-system/" class="dropdown-item">14. Integrating, Testing, and Maintaining a Robotic System</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Learning Graph</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../learning-graph/" class="dropdown-item">Introduction</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/course-description-assessment/" class="dropdown-item">Course Description Assessment</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/concept-list/" class="dropdown-item">Concept Enumeration</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/quality-metrics/" class="dropdown-item">Graph Quality Analysis</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/concept-taxonomy/" class="dropdown-item">Concept Taxonomy</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/taxonomy-distribution/" class="dropdown-item">Taxonomy Distribution Report</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">MicroSims</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../sims/graph-viewer/" class="dropdown-item">Learning Graph Viewer</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../12-digital-logic-computing-fundamentals/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../14-integrating-testing-maintaining-robotic-system/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#advanced-robot-programming" class="nav-link">Advanced Robot Programming</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#summary" class="nav-link">Summary</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#concepts-covered" class="nav-link">Concepts Covered</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#prerequisites" class="nav-link">Prerequisites</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#from-drivers-seat-to-autonomous-control-why-this-chapter-comes-now" class="nav-link">From Driver's Seat to Autonomous Control: Why This Chapter Comes Now</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#teleoperation-programming-for-a-human-in-the-loop" class="nav-link">Teleoperation: Programming for a Human in the Loop</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#robot-interface-the-bridge-between-driver-and-machine" class="nav-link">Robot Interface: The Bridge Between Driver and Machine</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#robot-motion-programming-moving-without-a-human-at-the-wheel" class="nav-link">Robot Motion Programming: Moving Without a Human at the Wheel</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#path-planning-deciding-a-route-before-moving" class="nav-link">Path Planning: Deciding a Route Before Moving</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#wheeled-robot-control-steering-the-drivetrain" class="nav-link">Wheeled Robot Control: Steering the Drivetrain</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#robotic-arm-control-commanding-multiple-joints-together" class="nav-link">Robotic Arm Control: Commanding Multiple Joints Together</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#robot-calibration-making-sensor-values-match-reality" class="nav-link">Robot Calibration: Making Sensor Values Match Reality</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#robot-troubleshooting-diagnosing-what-went-wrong" class="nav-link">Robot Troubleshooting: Diagnosing What Went Wrong</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#robot-safety-programming-designing-programs-that-fail-safely" class="nav-link">Robot Safety Programming: Designing Programs That Fail Safely</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="advanced-robot-programming">Advanced Robot Programming</h1>
+<h2 id="summary">Summary</h2>
+<p>With deeper knowledge of sensors, control theory, and computing now in place, students return to robot programming for advanced techniques: teleoperation, robot motion programming, and path planning. The chapter covers control strategies for both robotic arms and wheeled robots, along with the practical skills of robot calibration, troubleshooting, and writing safety-conscious robot programs.</p>
+<h2 id="concepts-covered">Concepts Covered</h2>
+<p>This chapter covers the following 9 concepts from the learning graph:</p>
+<ol>
+<li>Teleoperation</li>
+<li>Robot Motion Programming</li>
+<li>Path Planning</li>
+<li>Robot Interface</li>
+<li>Robotic Arm Control</li>
+<li>Wheeled Robot Control</li>
+<li>Robot Calibration</li>
+<li>Robot Troubleshooting</li>
+<li>Robot Safety Programming</li>
+</ol>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>This chapter builds on concepts from:</p>
+<ul>
+<li><a href="../03-programming-fundamentals/">Chapter 3: Programming Fundamentals</a></li>
+<li><a href="../04-programming-your-robot/">Chapter 4: Programming Your Robot</a></li>
+<li><a href="../06-electrical-fundamentals/">Chapter 6: Electrical Fundamentals</a></li>
+<li><a href="../08-sensors-and-measurement/">Chapter 8: Sensors and Measurement</a></li>
+<li><a href="../11-control-systems-feedback-loops/">Chapter 11: Control Systems and Feedback Loops</a></li>
+<li><a href="../12-digital-logic-computing-fundamentals/">Chapter 12: Digital Logic and Computing Fundamentals</a></li>
+</ul>
+<hr />
+<h2 id="from-drivers-seat-to-autonomous-control-why-this-chapter-comes-now">From Driver's Seat to Autonomous Control: Why This Chapter Comes Now</h2>
+<p>Now that you understand control loops in depth from <a href="../11-control-systems-feedback-loops/">Chapter 11: Control Systems and Feedback Loops</a>, and know what is happening inside your microcontroller from <a href="../12-digital-logic-computing-fundamentals/">Chapter 12: Digital Logic and Computing Fundamentals</a>, it is time to put that knowledge to work in more sophisticated robot programs. Back in <a href="../04-programming-your-robot/">Chapter 4: Programming Your Robot</a>, your programs were short scripts written before you understood setpoints, error signals, or the PID math that makes a real feedback loop stable. This chapter revisits robot programming with all of that theory already in hand.</p>
+<p>A real FTC competition match is split into two very different programming problems, and that split organizes this entire chapter. During the <strong>autonomous period</strong>, a fixed thirty-second window at the start of a match, the robot runs entirely on pre-written code with no human input at all. During the <strong>driver-controlled period</strong> that follows, a human operator steers the robot in real time using a gamepad, and the robot's program exists mainly to translate those button presses and joystick movements into motor commands. Every concept in this chapter falls on one side of that divide or the other, or bridges between them:</p>
+<ul>
+<li><strong>Human-controlled side:</strong> teleoperation and the robot interface that carries a driver's commands to the robot</li>
+<li><strong>Autonomous side:</strong> robot motion programming and path planning, which let the robot decide and execute its own movement</li>
+<li><strong>Shared, cross-cutting skills:</strong> wheeled and arm control strategies, calibration, troubleshooting, and safety programming apply to both halves of a match equally</li>
+</ul>
+<h2 id="teleoperation-programming-for-a-human-in-the-loop">Teleoperation: Programming for a Human in the Loop</h2>
+<p><strong>Teleoperation</strong> is the practice of controlling a robot in real time from a distance, using a human operator's input device to command the robot's actuators moment by moment. In FTC, teleoperation happens during the driver-controlled period, when a student driver holds a gamepad and a program on the robot continuously reads that gamepad's state and converts it into motor and servo commands. Unlike the autonomous programs you will meet later in this chapter, a teleoperation program never decides on its own what the robot should do next; it simply repeats a fast, faithful translation loop for as long as the match clock runs.</p>
+<p>That translation loop follows a predictable pattern in almost every teleoperation program, regardless of what specific robot it controls:</p>
+<ol>
+<li>Read the current state of every input device (joystick positions, button presses, trigger values)</li>
+<li>Convert each raw input value into a meaningful command, such as a motor power level or a servo angle</li>
+<li>Send that command out to the appropriate actuator</li>
+<li>Repeat the entire cycle again immediately, often thirty to sixty times per second</li>
+</ol>
+<p>Notice how closely this mirrors the sense-decide-act cycle from Chapter 4's control loops, except the "decide" step has been handed almost entirely to the human driver. The program's real job is translation and safety-checking, not decision-making, which is exactly why teleoperation code tends to be shorter and more predictable than the autonomous code you will study next.</p>
+<h2 id="robot-interface-the-bridge-between-driver-and-machine">Robot Interface: The Bridge Between Driver and Machine</h2>
+<p>A <strong>robot interface</strong> is the combination of hardware and software that carries commands from a human operator's input device to the robot's microcontroller, and often carries status information back the other way. In FTC, the robot interface includes a wireless connection between a Driver Station tablet and the robot's control hub, a gamepad plugged into that Driver Station, and the software layer on the robot that reads gamepad values by name, such as <code>gamepad1.left_stick_y</code> for the left joystick's vertical position.</p>
+<p>A well-designed robot interface does more than pass raw numbers through unchanged. It maps physical inputs to logical robot actions in ways that make the robot predictable and comfortable to drive. The table below reinforces this mapping using vocabulary already introduced above, showing how one common gamepad layout might be assigned to a robot's actuators.</p>
+<table>
+<thead>
+<tr>
+<th>Gamepad Input</th>
+<th>Raw Value Range</th>
+<th>Mapped Robot Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Left stick (vertical)</td>
+<td>-1.0 to 1.0</td>
+<td>Forward/backward drive power</td>
+</tr>
+<tr>
+<td>Right stick (horizontal)</td>
+<td>-1.0 to 1.0</td>
+<td>Turning rate</td>
+</tr>
+<tr>
+<td>Right trigger</td>
+<td>0.0 to 1.0</td>
+<td>Intake roller speed</td>
+</tr>
+<tr>
+<td>A button</td>
+<td>Pressed / not pressed</td>
+<td>Toggle arm servo between two preset angles</td>
+</tr>
+</tbody>
+</table>
+<p>Robot interface design also includes decisions about <strong>deadzone</strong>, a small range of raw joystick values near zero that the program treats as exactly zero, so a joystick that is not perfectly centered does not cause the robot to creep forward on its own. Building a deadzone into the interface layer is a small piece of code with an outsized effect on how controllable a robot feels to its driver.</p>
+<h2 id="robot-motion-programming-moving-without-a-human-at-the-wheel">Robot Motion Programming: Moving Without a Human at the Wheel</h2>
+<p><strong>Robot motion programming</strong> is the practice of writing code that plans and executes robot movement without a human continuously supplying input, the defining skill of FTC's autonomous period. Where teleoperation translates a driver's joystick into motor commands moment by moment, robot motion programming must decide, entirely in advance or through sensor feedback alone, exactly how far to drive, when to turn, and when to stop.</p>
+<p>This distinction is important enough that it is worth seeing the two control flows side by side before moving further into either one. The interactive diagram below lets you toggle between FTC's teleop and autonomous periods and watch how the flow of information changes completely, even though the same drive motors and the same microcontroller are involved in both.</p>
+<h4 id="diagram-teleop-vs-autonomous-control-flow">Diagram: Teleop vs. Autonomous Control Flow</h4>
+<iframe src="../../sims/teleop-vs-autonomous-flow/main.html" width="100%" height="520px" scrolling="no"></iframe>
+
+<details markdown="1">
+<summary>Teleop vs. Autonomous Control Flow</summary>
+Type: diagram
+**sim-id:** teleop-vs-autonomous-flow<br/>
+**Library:** p5.js<br/>
+**Status:** Specified
+
+Purpose: Help students distinguish teleoperation from robot motion programming by contrasting where the "decide" step happens in each control flow.
+
+Bloom Taxonomy: Understand (L2)
+Bloom Taxonomy Verb: explain, compare, contrast, interpret
+
+Learning objective: Given a toggle between FTC's teleop and autonomous periods, students will contrast the control flow of driver-issued commands with the control flow of a self-directed motion program.
+
+Components to show:
+- A "Driver / Gamepad" box (visible only in Teleop mode)
+- A "Pre-Written Motion Program" box (visible only in Autonomous mode)
+- A shared "Microcontroller" box in the center
+- A "Drive Motors" box and a "Servos" box on the right
+- A "Sensors" box feeding back into the center box
+
+Connections:
+- Teleop mode: an animated arrow travels repeatedly from Driver/Gamepad to Microcontroller labeled "Joystick + button state, ~50 times/sec," then onward to Drive Motors and Servos; the Sensors box is grayed out to show it is optional and rarely consulted
+- Autonomous mode: an animated arrow travels from Pre-Written Motion Program to Microcontroller labeled "Next planned step," then onward to Drive Motors and Servos; a second arrow loops from Sensors back into the Microcontroller labeled "Feedback used to confirm each step," shown active and highlighted
+
+Interactive controls:
+- Toggle button: "Teleop Period" / "Autonomous Period," switches the entire diagram's active boxes and arrows
+- Clicking any box (Driver/Gamepad, Pre-Written Motion Program, Microcontroller, Drive Motors, Servos, Sensors) opens an infobox with that component's role in the currently selected mode
+
+Style: Simple block diagram with animated flow arrows, redrawn per mode rather than shown simultaneously
+
+Labels: "Teleop Period" and "Autonomous Period" as large mode headers above the diagram
+
+Color scheme: Blue arrows and boxes for Teleop mode, green arrows and boxes for Autonomous mode, gray for inactive components
+
+Implementation: p5.js, using a mode variable to control which boxes and arrows are drawn and animated; infoboxes rendered as a side panel that updates on click
+</details>
+
+<p>Robot motion programming commonly relies on <strong>odometry</strong>, the technique of estimating a robot's position and heading by tracking wheel rotations over time, since an autonomous robot has no driver watching to correct its course. A basic autonomous motion program might command the robot to drive forward until an encoder reports 24 inches traveled, then turn 90 degrees, then drive forward again, chaining together simple moves into a complete routine.</p>
+<h2 id="path-planning-deciding-a-route-before-moving">Path Planning: Deciding a Route Before Moving</h2>
+<p><strong>Path planning</strong> is the process of computing a sequence of positions or moves that will get a robot from its current location to a goal location, ideally while avoiding known obstacles. Robot motion programming, introduced above, focuses on executing a single planned move accurately; path planning operates one level higher, deciding what the full sequence of moves should be in the first place, especially when obstacles stand between a robot and its goal.</p>
+<p>A simple approach to path planning treats the robot's field as a grid of cells, some of which are blocked by obstacles, and searches for a connected sequence of open cells linking the start cell to the goal cell. The MicroSim below lets you experiment with exactly this kind of grid-based path planning yourself, placing a start point, a goal, and obstacles, and watching a simple search algorithm find a route around them.</p>
+<h4 id="diagram-grid-path-planner">Diagram: Grid Path Planner</h4>
+<iframe src="../../sims/grid-path-planner/main.html" width="100%" height="560px" scrolling="no"></iframe>
+
+<details markdown="1">
+<summary>Grid Path Planner</summary>
+Type: microsim
+**sim-id:** grid-path-planner<br/>
+**Library:** p5.js<br/>
+**Status:** Specified
+
+Purpose: Let students apply the concept of grid-based path planning by placing a start cell, a goal cell, and obstacle cells, then running a search algorithm and observing the resulting path.
+
+Bloom Taxonomy: Apply (L3)
+Bloom Taxonomy Verb: apply, demonstrate, practice, solve
+
+Learning objective: Given a blank grid, students will place a start point, goal point, and obstacles, then apply a path-finding algorithm to produce and evaluate a valid obstacle-avoiding path.
+
+Canvas layout:
+- Left (75% width): a 12x12 grid of clickable square cells
+- Right (25% width): control panel with mode buttons and a status readout
+
+Visual elements:
+- Empty cells (white/light gray)
+- Obstacle cells (dark gray, set by clicking in "Place Obstacle" mode)
+- Start cell (green)
+- Goal cell (red)
+- Computed path cells (highlighted in blue after search runs)
+
+Interactive controls:
+- Mode buttons: "Place Start," "Place Goal," "Place Obstacle," "Erase"
+- Button: "Find Path" — runs a breadth-first search from start to goal on the current grid
+- Button: "Clear Grid"
+- Status readout: number of steps in the found path, or "No path found" if the goal is fully walled off
+
+Default parameters:
+- Grid: empty except a default start (bottom-left) and goal (top-right)
+- Mode: "Place Obstacle" selected by default
+
+Behavior:
+- Clicking a cell in the current mode sets that cell's type
+- Clicking "Find Path" runs breadth-first search treating each open cell as a node connected to its four neighbors, then animates the discovered path one cell at a time
+- If obstacles fully block every route, the status readout reports "No path found" instead of drawing a path
+- Clicking "Clear Grid" resets all cells to empty except the default start and goal
+
+Instructional Rationale: An Apply-level, parameter-exploration pattern is appropriate here because path planning is best understood by manipulating obstacles directly and observing how the computed route changes, rather than by watching a single fixed example.
+
+Implementation: p5.js, storing the grid as a 2D array and implementing breadth-first search with a queue; animate the final path by revealing one cell per short interval
+</details>
+
+<p>Real FTC autonomous routines rarely need a full search algorithm like the one above, since most fields have only a few known obstacles. Even so, the underlying idea, planning several moves ahead rather than reacting one step at a time, is exactly what separates a fragile autonomous program from a robust one.</p>
+<h2 id="wheeled-robot-control-steering-the-drivetrain">Wheeled Robot Control: Steering the Drivetrain</h2>
+<p><strong>Wheeled robot control</strong> is the set of programming techniques used to command a robot's drive motors so the whole chassis moves and turns as intended. The StarterBot chassis you built in Chapter 1 uses a drivetrain of Yellow Jacket gearmotors driving Gecko wheels, and the specific wiring of that drivetrain determines exactly which control technique applies.</p>
+<p>Two wheeled drive layouts appear most often in FTC robots, and each demands a different piece of control code. The comparison below reinforces terms already defined above and in Chapter 1, rather than introducing brand-new vocabulary.</p>
+<table>
+<thead>
+<tr>
+<th>Drive Layout</th>
+<th>Wheel Arrangement</th>
+<th>Turning Method</th>
+<th>Can Strafe Sideways?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Differential (tank) drive</td>
+<td>Left-side and right-side wheel pairs, each pair driven together</td>
+<td>Left and right sides run at different powers or opposite directions</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Holonomic (mecanum) drive</td>
+<td>Four mecanum wheels, each with angled rollers</td>
+<td>Combining four independent wheel powers in different ratios</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<p>Differential drive is the simpler of the two to program: driving straight means commanding both sides to the same power, and turning in place means commanding the two sides to opposite powers. Holonomic drive trades that simplicity for maneuverability, since a program must calculate four separate wheel powers from just two joystick axes and a rotation input, but the payoff is a robot that can slide sideways without first turning to face a new direction. Whichever layout a robot uses, wheeled robot control code sits directly beneath both teleoperation and robot motion programming, translating whatever "move this way" command comes from above into the specific power sent to each wheel motor.</p>
+<h2 id="robotic-arm-control-commanding-multiple-joints-together">Robotic Arm Control: Commanding Multiple Joints Together</h2>
+<p><strong>Robotic arm control</strong> is the set of programming techniques used to command a multi-jointed arm so its end effector, the tool or gripper at the arm's tip, reaches a specific position and orientation. Unlike a single drive motor that only needs a power level, an arm typically has several joints, each usually driven by its own servo or gearmotor, and all of those joints must be coordinated together to produce useful motion.</p>
+<p>Arm control programs typically work at one of two levels of abstraction, and recognizing the difference helps explain why some robot arm code looks far more mathematical than drivetrain code:</p>
+<ul>
+<li><strong>Joint-space control</strong> — the program commands each joint's angle directly, such as "set the shoulder joint to 45 degrees and the elbow joint to 90 degrees," leaving it to the programmer to know what combination of angles produces a useful arm position</li>
+<li><strong>Task-space control</strong> — the program specifies where the end effector should end up in real-world coordinates, such as "move the gripper to 30 centimeters forward and 20 centimeters up," and the code calculates the joint angles needed to get there using <strong>inverse kinematics</strong>, the mathematical process of working backward from a desired end-effector position to the joint angles that produce it</li>
+</ul>
+<p>Most classroom and early-competition FTC arms use joint-space control because it requires no extra math beyond commanding individual servos, the same basic servo-angle skill from Chapter 11's actuator control section. Task-space control and inverse kinematics become valuable once an arm has enough joints, or the required precision is high enough, that reasoning about individual angles by hand becomes impractical.</p>
+<p>!!! tip "Why Arm Control Feels Harder Than Drive Control"
+    A drivetrain has one goal at a time: a speed and a direction. An arm often has several joints that all affect the end effector's final position simultaneously, so a small change to one joint's angle can require compensating changes in the others. This is exactly why robotic arm control is usually taught after wheeled robot control rather than before it.</p>
+<h2 id="robot-calibration-making-sensor-values-match-reality">Robot Calibration: Making Sensor Values Match Reality</h2>
+<p><strong>Robot calibration</strong> is the process of adjusting a robot's software so that its sensor readings and actuator commands correspond accurately to real-world physical values. A distance sensor fresh out of the box might report a value that is close to, but not exactly, the true distance in centimeters, and a drive motor commanded to "full power" on one robot might spin noticeably faster or slower than the identical motor on a teammate's robot due to manufacturing variation, wheel wear, or battery voltage.</p>
+<p>Calibration typically happens through a short, deliberate procedure before a robot's normal program runs, following a repeatable pattern:</p>
+<ol>
+<li>Place the robot or sensor in a known, measured condition (for example, exactly 20 centimeters from a wall)</li>
+<li>Record what the sensor actually reports in that known condition</li>
+<li>Calculate a correction factor or offset that converts the raw reading into an accurate real-world value</li>
+<li>Store that correction factor in the program so every future reading is automatically adjusted</li>
+</ol>
+<p>Skipping calibration does not necessarily make a robot's program crash, which is precisely what makes uncalibrated robots so frustrating to debug: the code runs without errors, yet the robot consistently stops two centimeters short of a wall or turns a few degrees past its intended heading, because every uncorrected reading carries the same small, silent error into every decision that program makes.</p>
+<h2 id="robot-troubleshooting-diagnosing-what-went-wrong">Robot Troubleshooting: Diagnosing What Went Wrong</h2>
+<p><strong>Robot troubleshooting</strong> is the systematic process of identifying why a robot is not behaving as its program intends, and narrowing down whether the root cause is in the code, the wiring, the mechanism, or the calibration. Because a robot combines software, electronics, and moving mechanical parts, the same visible symptom, such as "the arm doesn't move," can trace back to causes in any one of those three domains.</p>
+<p>Effective troubleshooting follows a decision-tree pattern: start from an observed symptom, ask a series of narrowing questions, and arrive at a likely cause and fix rather than guessing randomly. The clickable diagram below walks through exactly that process for several common FTC robot symptoms.</p>
+<h4 id="diagram-robot-troubleshooting-decision-tree">Diagram: Robot Troubleshooting Decision Tree</h4>
+<iframe src="../../sims/robot-troubleshooting-decision-tree/main.html" width="100%" height="600px" scrolling="no"></iframe>
+
+<details markdown="1">
+<summary>Robot Troubleshooting Decision Tree</summary>
+Type: workflow
+**sim-id:** robot-troubleshooting-decision-tree<br/>
+**Library:** Mermaid<br/>
+**Status:** Specified
+
+Purpose: Guide students through a systematic troubleshooting process for common robot failure symptoms, reinforcing that the same symptom can trace to code, wiring, mechanical, or calibration causes.
+
+Bloom Taxonomy: Analyze (L4)
+Bloom Taxonomy Verb: differentiate, examine, distinguish, organize
+
+Learning objective: Given a described robot symptom, students will analyze a chain of diagnostic questions to distinguish among code, wiring, mechanical, and calibration causes and identify the corresponding fix.
+
+Visual style: Mermaid flowchart, top-down, with decision diamonds and rectangular outcome nodes
+
+Steps:
+1. Start: "Symptom: Motor does not move at all"
+   Hover text: "The commanded actuator produces no motion whatsoever."
+2. Decision: "Does the motor spin when tested directly on the Driver Station's motor test screen?"
+   Hover text: "Isolates whether the problem is electrical/mechanical versus in your program's logic."
+3. Branch "No" leads to: "Check wiring and power" (outcome)
+   Hover text: "A motor that will not spin under direct test likely has a loose connector, blown fuse, or wiring fault, not a code problem."
+4. Branch "Yes" leads to Decision: "Is the motor referenced with the correct configuration name in code?"
+   Hover text: "FTC robot configurations must match the name used in your program exactly, or the command silently fails."
+5. Branch "No" leads to: "Fix configuration name mismatch" (outcome)
+   Hover text: "Rename the motor in code or in the Driver Station configuration file so both match."
+6. Branch "Yes" leads to Decision: "Is the commanded power value actually non-zero at that point in the program?"
+   Hover text: "A logic bug, such as a condition that is never true, can prevent the command from ever being sent."
+7. Branch "Yes, non-zero power is sent" leads to: "Check for a robot calibration or mechanical jam issue" (outcome)
+   Hover text: "If a nonzero command is truly being sent and the motor still does not move, suspect a mechanical jam or a calibration offset masking real motion."
+8. Branch "No, power is always zero" leads to: "Fix the program logic" (outcome)
+   Hover text: "Trace the conditional statements and variables controlling that motor command to find why it never receives a nonzero value."
+
+Color coding:
+- Blue: symptom start node
+- Yellow: decision diamonds
+- Green: outcome/fix nodes
+
+Interactive features: Every node includes a `click` directive calling an infobox function that displays that node's hover text; clicking a decision diamond additionally highlights the branch path taken to reach it
+
+Implementation: Mermaid flowchart syntax with `click NodeId call showInfo("nodeId")` directives on every node, paired with a small JavaScript infobox panel below the diagram
+</details>
+
+<p>Notice that the decision tree above never jumps straight from a symptom to a fix; it always passes through at least one narrowing question first. This mirrors how experienced roboticists actually troubleshoot: they isolate variables one at a time, exactly as a scientist isolates variables in a controlled experiment, rather than replacing parts at random until something works.</p>
+<h2 id="robot-safety-programming-designing-programs-that-fail-safely">Robot Safety Programming: Designing Programs That Fail Safely</h2>
+<p><strong>Robot safety programming</strong> is the practice of writing robot code so that it behaves predictably and avoids harm even when sensors fail, communication drops, or an operator makes a mistake, rather than only handling the case where everything works perfectly. Every technique covered earlier in this chapter, teleoperation, motion programming, path planning, arm and wheeled control, calibration, and troubleshooting, becomes safer when it is written with this mindset from the start.</p>
+<p>A few safety programming practices show up repeatedly across FTC robots and industrial robots alike:</p>
+<ul>
+<li><strong>Timeouts</strong> — if an expected sensor reading or communication signal never arrives, the program stops the robot instead of waiting forever or assuming a default value</li>
+<li><strong>Range limiting</strong> — arm and servo commands are clamped to a safe range of angles in code, so a bug elsewhere in the program cannot command a joint past its physical limit</li>
+<li><strong>Emergency stop handling</strong> — the program checks for a stop signal on every loop pass, not just at specific points, so the robot can be halted immediately at any moment</li>
+<li><strong>Fail-safe defaults</strong> — if a control signal is lost mid-match, actuators default to a safe, stopped state rather than continuing their last command indefinitely</li>
+</ul>
+<p>!!! warning "Untested Code Is Not Safe Code"
+    A robotic arm that has never been tested near its full range of motion, or a drivetrain that has never been tested with a dead battery mid-command, has not actually been proven safe. Safety programming is validated through deliberate testing of failure conditions, not assumed from code that merely compiles.</p>
+<p>Robot safety programming is a fitting closing topic for this chapter precisely because it is not a separate skill practiced in isolation. It is a discipline applied on top of teleoperation, motion programming, path planning, arm and wheeled control, calibration, and troubleshooting alike, and the strongest FTC programs are the ones where every one of those techniques was written with failure, not just success, in mind from the very first line of code.</p>
+<p>??? note "Quick check: A student's autonomous path-planning routine finds a valid path around every obstacle on the field, but the student has never tested what happens if a wheel encoder wire comes loose mid-match. Which concept from this chapter is missing? Click to reveal the answer."
+    Robot safety programming is missing. A correct path plan only describes the intended route; it says nothing about how the program should behave if a sensor it depends on fails partway through execution. A safety-conscious version of the same program would include a timeout or fail-safe default so a lost encoder signal stops the robot safely instead of driving on blind, incorrect assumptions.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

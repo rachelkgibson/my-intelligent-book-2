@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>9. Mechanical Systems and Simple Machines - My Docs</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../course-description/" class="nav-link">Course Description</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Chapters</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../" class="dropdown-item">List of Chapters</a>
+</li>
+                                    
+<li>
+    <a href="../01-identifying-kit-parts-building-starterbot/" class="dropdown-item">1. Identifying Kit Parts and Building Your StarterBot</a>
+</li>
+                                    
+<li>
+    <a href="../02-intro-robotics-systems/" class="dropdown-item">2. Introduction to Robotics and Systems</a>
+</li>
+                                    
+<li>
+    <a href="../03-programming-fundamentals/" class="dropdown-item">3. Programming Fundamentals</a>
+</li>
+                                    
+<li>
+    <a href="../04-programming-your-robot/" class="dropdown-item">4. Programming Your Robot</a>
+</li>
+                                    
+<li>
+    <a href="../05-designing-building-custom-parts/" class="dropdown-item">5. Designing and Building Custom Parts</a>
+</li>
+                                    
+<li>
+    <a href="../06-electrical-fundamentals/" class="dropdown-item">6. Electrical Fundamentals</a>
+</li>
+                                    
+<li>
+    <a href="../07-electronic-components-circuit-design/" class="dropdown-item">7. Electronic Components and Circuit Design</a>
+</li>
+                                    
+<li>
+    <a href="../08-sensors-and-measurement/" class="dropdown-item">8. Sensors and Measurement</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">9. Mechanical Systems and Simple Machines</a>
+</li>
+                                    
+<li>
+    <a href="../10-fluid-power-hydraulics-pneumatics/" class="dropdown-item">10. Fluid Power: Hydraulics and Pneumatics</a>
+</li>
+                                    
+<li>
+    <a href="../11-control-systems-feedback-loops/" class="dropdown-item">11. Control Systems and Feedback Loops</a>
+</li>
+                                    
+<li>
+    <a href="../12-digital-logic-computing-fundamentals/" class="dropdown-item">12. Digital Logic and Computing Fundamentals</a>
+</li>
+                                    
+<li>
+    <a href="../13-advanced-robot-programming/" class="dropdown-item">13. Advanced Robot Programming</a>
+</li>
+                                    
+<li>
+    <a href="../14-integrating-testing-maintaining-robotic-system/" class="dropdown-item">14. Integrating, Testing, and Maintaining a Robotic System</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Learning Graph</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../learning-graph/" class="dropdown-item">Introduction</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/course-description-assessment/" class="dropdown-item">Course Description Assessment</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/concept-list/" class="dropdown-item">Concept Enumeration</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/quality-metrics/" class="dropdown-item">Graph Quality Analysis</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/concept-taxonomy/" class="dropdown-item">Concept Taxonomy</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/taxonomy-distribution/" class="dropdown-item">Taxonomy Distribution Report</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">MicroSims</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../sims/graph-viewer/" class="dropdown-item">Learning Graph Viewer</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../08-sensors-and-measurement/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../10-fluid-power-hydraulics-pneumatics/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#mechanical-systems-and-simple-machines" class="nav-link">Mechanical Systems and Simple Machines</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#summary" class="nav-link">Summary</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#concepts-covered" class="nav-link">Concepts Covered</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#prerequisites" class="nav-link">Prerequisites</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#seeing-the-whole-machine-what-is-a-mechanical-system" class="nav-link">Seeing the Whole Machine: What Is a Mechanical System?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#simple-machines-the-building-blocks-of-every-mechanism" class="nav-link">Simple Machines: The Building Blocks of Every Mechanism</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#gear-ratio-trading-speed-for-torque" class="nav-link">Gear Ratio: Trading Speed for Torque</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#torque-and-friction-the-forces-at-play" class="nav-link">Torque and Friction: The Forces at Play</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#mechanical-advantage-why-simple-machines-help" class="nav-link">Mechanical Advantage: Why Simple Machines Help</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#bearings-and-fasteners-the-hardware-that-holds-it-together" class="nav-link">Bearings and Fasteners: The Hardware That Holds It Together</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#structural-materials-and-chassis-design" class="nav-link">Structural Materials and Chassis Design</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#mechanical-design-putting-it-all-together" class="nav-link">Mechanical Design: Putting It All Together</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="mechanical-systems-and-simple-machines">Mechanical Systems and Simple Machines</h1>
+<h2 id="summary">Summary</h2>
+<p>This chapter explains the mechanical principles behind the hardware students assembled in Chapter 1. Topics include the six simple machines (levers, pulleys, gears, wheel and axle, inclined planes, and linkages), along with bearings, fasteners, torque, friction, and mechanical advantage. The chapter concludes with structural materials and chassis design, the foundation for designing a robot frame that can withstand real-world use.</p>
+<h2 id="concepts-covered">Concepts Covered</h2>
+<p>This chapter covers the following 17 concepts from the learning graph:</p>
+<ol>
+<li>Mechanical System</li>
+<li>Simple Machine</li>
+<li>Lever</li>
+<li>Pulley</li>
+<li>Gear</li>
+<li>Gear Ratio</li>
+<li>Wheel And Axle</li>
+<li>Inclined Plane</li>
+<li>Linkage</li>
+<li>Bearing</li>
+<li>Fastener</li>
+<li>Torque</li>
+<li>Friction</li>
+<li>Mechanical Advantage</li>
+<li>Chassis Design</li>
+<li>Structural Materials</li>
+<li>Mechanical Design</li>
+</ol>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>This chapter assumes only the prerequisites listed in the <a href="../../course-description/">course description</a>.</p>
+<hr />
+<h2 id="seeing-the-whole-machine-what-is-a-mechanical-system">Seeing the Whole Machine: What Is a Mechanical System?</h2>
+<p>When you built the goBILDA FTC StarterBot in Chapter 1, you turned a box of aluminum channels, shafts, gears, and screws into a rolling robot. That finished chassis is a <strong>mechanical system</strong>: a collection of connected physical parts, arranged so that a force applied at one point produces a predictable motion or force somewhere else. The StarterBot's drivetrain is a mechanical system in miniature—a motor turns a shaft, the shaft drives a sprocket, the sprocket pulls a chain loop, and the chain loop spins the wheels—each part passing motion to the next in a deliberate, engineered sequence.</p>
+<p>Every mechanical system, no matter how complex, is built from a small number of basic parts performing one of three jobs:</p>
+<ul>
+<li><strong>Support</strong> — holding parts in the correct position relative to one another, the job done by the StarterBot's U-channels and bearing plates</li>
+<li><strong>Transmission</strong> — carrying force or motion from one location to another, the job done by shafts, gears, chains, and sprockets</li>
+<li><strong>Conversion</strong> — changing the type, direction, speed, or strength of motion, the job done by the simple machines this chapter examines in detail</li>
+</ul>
+<p>This chapter takes the StarterBot chassis apart conceptually, piece by piece, to explain the mechanical theory behind hardware your hands already recognize. By the end, the shaft, gear, and chain you assembled in Chapter 1 will make sense not just as parts you snapped together, but as engineered solutions to specific mechanical problems.</p>
+<h2 id="simple-machines-the-building-blocks-of-every-mechanism">Simple Machines: The Building Blocks of Every Mechanism</h2>
+<p>A <strong>simple machine</strong> is a device with few or no moving parts that changes the direction or magnitude of a force to make a task easier to perform. Engineers have relied on simple machines since antiquity, and every complex mechanism ever built—from a bicycle to a space telescope—is ultimately an arrangement of simple machines working together. This chapter groups six simple machines that appear directly in the StarterBot Kit or in robotics mechanisms you will design later: the lever, the pulley, the gear, the wheel and axle, the inclined plane, and the linkage.</p>
+<p>Two of these deserve a quick note before you meet them individually. A <strong>gear</strong> is often treated as a specialized wheel and axle whose rim carries interlocking teeth instead of a smooth surface, and a <strong>linkage</strong> is a modern engineering extension of the lever—a connected chain of levers working together rather than a single rigid bar. Grouping them this way reflects how they actually show up in robotics: gears and linkages are everywhere in the StarterBot's drivetrain and future custom mechanisms, so they earn full treatment alongside the four classical machines.</p>
+<h3 id="lever">Lever</h3>
+<p>A <strong>lever</strong> is a rigid bar that pivots around a fixed point, called a <strong>fulcrum</strong>, so that a force applied at one point (the effort) moves a load at another point. Levers are classified by where the fulcrum sits relative to the effort and the load: a first-class lever places the fulcrum between the two (like a seesaw), a second-class lever places the load between the fulcrum and the effort (like a wheelbarrow), and a third-class lever places the effort between the fulcrum and the load (like a fishing rod, or a robot arm's forearm segment). Any rigid StarterBot component that pivots around a shaft to lift or push something—an arm mechanism you might design in a later chapter—is functioning as a lever.</p>
+<h3 id="pulley">Pulley</h3>
+<p>A <strong>pulley</strong> is a wheel with a grooved rim that carries a rope, cable, or belt, redirecting the direction of a pulling force or, when combined into a block-and-tackle system, multiplying it. A <strong>fixed pulley</strong> only changes the direction of the force, while a <strong>movable pulley</strong> (one attached to the load itself) also reduces the effort needed to lift that load. The StarterBot Kit does not include a rope-and-pulley system, but its chain-and-sprocket drivetrain is a close mechanical cousin: instead of a smooth wheel and a flexible rope, it uses a toothed wheel (the sprocket) and a flexible chain, gaining the same benefit of transmitting motion between shafts that are not directly connected—along with a guarantee against slipping, which a smooth pulley and belt cannot offer.</p>
+<h3 id="gear">Gear</h3>
+<p>A <strong>gear</strong> is a rotating wheel with teeth cut around its rim, designed to mesh with the teeth of another gear so the two rotate together without slipping. When two gears mesh directly, tooth to tooth, they always spin in opposite directions; when a chain or an idler gear sits between them, they spin the same direction instead. The StarterBot Kit's intake roller mechanism uses exactly this principle, meshing a <strong>30-Tooth Gear</strong>, a <strong>20-Tooth Gear</strong>, and a <strong>100-Tooth Gear</strong> directly against one another to transmit rotation between shafts without the flexibility—or the possibility of slack—that a chain introduces. Because the number of teeth on each gear controls how fast it turns relative to its partner, gears deserve their own deeper look later in this chapter under Gear Ratio.</p>
+<h3 id="wheel-and-axle">Wheel and Axle</h3>
+<p>A <strong>wheel and axle</strong> is a simple machine made of a large-diameter wheel rigidly attached to a smaller-diameter axle (shaft) so that the two must rotate together. Turning the wheel with a small effort produces a large force at the axle, or turning the axle produces a large motion at the rim of the wheel—the exact trade-off depends on which part receives the input force. Every wheel on the StarterBot is a wheel and axle: the wheel's larger radius, compared to the 8mm REX Shaft it is mounted on, is what lets a relatively small twisting force from the motor produce enough push at the ground to move the whole robot forward.</p>
+<h3 id="inclined-plane">Inclined Plane</h3>
+<p>An <strong>inclined plane</strong> is a flat surface set at an angle between two different heights, allowing a load to be raised using less force than lifting it straight up, at the cost of moving it a longer distance. A wheelchair ramp and a loading dock ramp are everyday inclined planes. Two other simple machines are, geometrically, an inclined plane in disguise: a wedge is an inclined plane that moves through material to split it apart, and a screw is an inclined plane wrapped around a cylinder—which is exactly why the threads on every socket head screw in the StarterBot Kit look like a spiral ramp when viewed up close. That connection resurfaces later in this chapter, when fasteners get their own detailed treatment.</p>
+<h3 id="linkage">Linkage</h3>
+<p>A <strong>linkage</strong> is a system of rigid links connected at joints, arranged so that moving one link produces a predictable, coordinated motion in the others. Where a single lever only rotates around one fixed fulcrum, a linkage's joints are often not fixed to the frame at all, which lets a well-designed linkage trace complex paths, convert rotating motion into straight-line motion, or amplify a small input motion into a larger output motion at the far end of the chain. Robot arms, walking-leg mechanisms, and the four-bar linkages common in custom robotics designs (a topic revisited in the chapter on designing and building custom parts) are all built from linkages.</p>
+<p>The interactive explorer below lets you click through all six simple machines side by side, review a concrete example of each, and see the formula used to calculate its mechanical advantage—the topic covered in full later in this chapter.</p>
+<h4 id="diagram-six-simple-machines-explorer">Diagram: Six Simple Machines Explorer</h4>
+<iframe src="../../sims/six-simple-machines-explorer/main.html" width="100%" height="560px" scrolling="no"></iframe>
+
+<details markdown="1">
+<summary>Six Simple Machines Explorer</summary>
+Type: infographic
+**sim-id:** six-simple-machines-explorer<br/>
+**Library:** p5.js<br/>
+**Status:** Specified
+
+Bloom Taxonomy: Understand<br/>
+Bloom Taxonomy Verb: classify, exemplify, compare
+
+Learning objective: Given an icon for each of the six simple machines covered in this chapter, students will classify each machine by its defining feature, identify a StarterBot or everyday example, and recall its mechanical advantage formula.
+
+Purpose: Provide a single-screen reference that lets students click any simple-machine icon to review its definition, a labeled example diagram, and its mechanical advantage formula, reinforcing the six definitions above before gear ratio and mechanical advantage are covered in depth.
+
+Layout: A horizontal row of six labeled icons (a seesaw for Lever, a grooved wheel with rope for Pulley, two meshing toothed circles for Gear, a wheel with a visible center axle for Wheel and Axle, a ramp with a box for Inclined Plane, and a four-bar chain of rigid segments for Linkage), above an information panel that starts empty.
+
+Interactive elements:
+- Clicking or tapping any icon populates the panel below with: the machine's one-sentence definition, a small labeled line drawing of the everyday or StarterBot example named in the text, and its mechanical advantage formula
+- Hovering an icon (without clicking) shows just the machine's name as a tooltip
+- A "Show StarterBot Example Only" toggle filters the panel to display only the robotics-specific example (chain-and-sprocket for Pulley, intake gears for Gear, drive wheels for Wheel and Axle, screw threads for Inclined Plane) rather than the generic everyday example
+
+Data to display per machine:
+- Lever: pivots around a fulcrum; example: a robot arm forearm segment; \\( MA = d_{effort} / d_{load} \\)
+- Pulley: redirects or multiplies a pulling force; example: chain-and-sprocket drivetrain; \\( MA = \\) number of supporting rope segments (or, for a sprocket pair, driven teeth / driving teeth)
+- Gear: meshing toothed wheels transmit rotation without slipping; example: 30-Tooth, 20-Tooth, and 100-Tooth intake gears; \\( MA = \\) teeth driven / teeth driving
+- Wheel and Axle: large wheel and small axle rotate together; example: StarterBot drive wheel on its 8mm REX Shaft; \\( MA = \\) radius of wheel / radius of axle
+- Inclined Plane: ramp trades distance for reduced force; example: threads of a socket head screw; \\( MA = \\) length of slope / height of slope
+- Linkage: connected rigid links produce coordinated motion; example: four-bar linkage in a robot arm; MA varies with link lengths and joint angles at a given instant
+
+Color coding: Each icon and its panel use a distinct accent color (lever: red, pulley: blue, gear: gold, wheel and axle: green, inclined plane: purple, linkage: teal), consistent with later diagrams in this chapter.
+
+Responsive behavior: Icons wrap to two rows on narrow screens; info panel remains below the icon row at all widths.
+
+Implementation: p5.js canvas with six clickable icon regions; info panel and formula rendered as a text/LaTeX-style block within the same canvas, redrawn on click or hover events.
+</details>
+
+<h2 id="gear-ratio-trading-speed-for-torque">Gear Ratio: Trading Speed for Torque</h2>
+<p>Gears rarely work alone—they mesh in pairs or chains of pairs, and the ratio between their tooth counts controls exactly how much speed is traded for how much twisting force. The <strong>gear ratio</strong> is the ratio of teeth on the driven gear to teeth on the driving gear:</p>
+<p>\[ \text{Gear Ratio} = \frac{\text{teeth on driven gear}}{\text{teeth on driving gear}} \]</p>
+<p>The same ratio applies to a chain-and-sprocket drivetrain like the StarterBot's, where the "driving" sprocket is mounted on the motor's output shaft and the "driven" sprocket is mounted on the wheel shaft. If the StarterBot's <strong>10-Tooth Sprocket</strong> on the motor shaft drives a larger 30-tooth sprocket on the wheel shaft through a closed loop of plastic chain, the gear ratio is \( 30 \div 10 = 3 \), meaning the wheel shaft turns once for every three turns of the motor shaft.</p>
+<p>A gear ratio greater than 1 (a small driving gear turning a larger driven gear) always produces this trade-off:</p>
+<ul>
+<li>Output <strong>speed decreases</strong> by the same factor the ratio increases</li>
+<li>Output <strong>torque increases</strong> by that same factor, assuming no energy is lost to friction</li>
+</ul>
+<p>A gear ratio less than 1 (a large driving gear turning a smaller driven gear) produces the opposite trade-off: higher output speed, lower output torque. This is exactly the pattern behind the two Yellow Jacket motor options from Chapter 1, reproduced below as a reminder of how gear ratio shows up in a component you have already handled.</p>
+<table>
+<thead>
+<tr>
+<th>Gear ratio (internal gearbox)</th>
+<th>Output speed</th>
+<th>Output torque</th>
+<th>Typical StarterBot use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>19.2:1</td>
+<td>Faster rotation</td>
+<td>Lower torque</td>
+<td>Driving wheels for quick movement</td>
+</tr>
+<tr>
+<td>50.9:1</td>
+<td>Slower rotation</td>
+<td>Higher torque</td>
+<td>Mechanisms needing more twisting force, like the intake roller</td>
+</tr>
+</tbody>
+</table>
+<p>Notice that the internal gearbox ratio inside each Yellow Jacket motor works by exactly the same rule as the external 30-Tooth Gear, 20-Tooth Gear, and 100-Tooth Gear meshing in the intake mechanism, or the 10-Tooth Sprocket driving a larger sprocket through the chain loop: more teeth on the driven side always means slower and stronger, fewer teeth on the driven side always means faster and weaker. The MicroSim below lets you test that rule directly using the StarterBot's own gear and sprocket tooth counts.</p>
+<h4 id="diagram-starterbot-gear-ratio-simulator">Diagram: StarterBot Gear Ratio Simulator</h4>
+<iframe src="../../sims/starterbot-gear-ratio-simulator/main.html" width="100%" height="560px" scrolling="no"></iframe>
+
+<details markdown="1">
+<summary>StarterBot Gear Ratio Simulator</summary>
+Type: microsim
+**sim-id:** starterbot-gear-ratio-simulator<br/>
+**Library:** p5.js<br/>
+**Status:** Specified
+
+Bloom Taxonomy: Apply<br/>
+Bloom Taxonomy Verb: calculate, demonstrate, apply
+
+Learning objective: Given driving and driven tooth counts drawn from real StarterBot parts, students will calculate the resulting gear ratio and predict whether output speed or output torque increases.
+
+Canvas layout:
+- Left side (450px): Animated drawing area showing a driving gear/sprocket meshing (or chain-linked) with a driven gear/sprocket
+- Right side (250px): Control panel and numeric readout panel
+
+Visual elements:
+- Two circles sized proportionally to their tooth count, one labeled "Driving" (motor side) and one labeled "Driven" (wheel or mechanism side)
+- Small tick marks around each circle's rim representing teeth, counted to match the selected tooth count
+- A rotating radial line on each circle so students can visually compare rotational speed between driving and driven
+- A chain-loop rendering mode (toggled automatically when the 10-Tooth Sprocket is selected) showing a looped chain connecting the two circles instead of direct meshing
+
+Interactive controls:
+- Dropdown: "Driving part" with StarterBot options: 10-Tooth Sprocket, 20-Tooth Gear, 30-Tooth Gear
+- Dropdown: "Driven part" with StarterBot options: 10-Tooth Sprocket, 20-Tooth Gear, 30-Tooth Gear, 100-Tooth Gear
+- Slider: "Motor input speed" (0-200 RPM)
+- Button: "Apply Load" (adds a resisting torque to the driven side to visually slow rotation and highlight the torque increase)
+- Numeric readout: Gear Ratio, Output Speed (RPM), relative Output Torque (shown as a multiplier, e.g., "3x input torque")
+
+Default parameters:
+- Driving part: 10-Tooth Sprocket
+- Driven part: 30-Tooth Gear (illustrating the chain-and-sprocket example from the text, gear ratio 3:1)
+- Motor input speed: 100 RPM
+
+Data Visibility Requirements:
+  Stage 1: Show the two selected parts with tooth counts labeled directly on the drawing
+  Stage 2: Show the calculated Gear Ratio using the formula from the text, with the actual numbers substituted (e.g., "30 ÷ 10 = 3")
+  Stage 3: Show Output Speed recalculated live as Motor Input Speed / Gear Ratio
+  Stage 4: Show relative Output Torque as a multiplier equal to the Gear Ratio
+  Final: When "Apply Load" is clicked, visually slow the driven circle's rotation slightly to represent the mechanical work being done, while the numeric torque multiplier stays constant, reinforcing that torque increase is a property of the gearing, not of the load
+
+Instructional Rationale: An Apply-level parameter-exploration pattern is appropriate because the learning objective requires students to calculate ratios and predict outcomes for different tooth-count combinations, not merely watch a single animation. Restricting the dropdown choices to the StarterBot's actual gear and sprocket part numbers ties the abstract ratio formula directly back to hardware students have already handled.
+
+Implementation: p5.js canvas with two circles whose radii and tick-mark counts scale with selected tooth counts; rotation angle updated each frame proportional to RPM; gear ratio, output speed, and torque multiplier recalculated whenever a dropdown or slider changes.
+</details>
+
+<h2 id="torque-and-friction-the-forces-at-play">Torque and Friction: The Forces at Play</h2>
+<p>Every mechanical system ultimately does its work through two forces that show up in nearly every StarterBot subassembly: torque and friction.</p>
+<h3 id="torque">Torque</h3>
+<p><strong>Torque</strong> is a twisting force that tends to cause rotation around an axis, calculated as the applied force multiplied by the distance from the axis at which that force is applied:</p>
+<p>\[ \tau = F \times d \]</p>
+<p>where \( \tau \) (tau) is torque, \( F \) is the applied force, and \( d \) is the distance from the pivot or axis to the point where the force is applied. This is exactly why a longer wrench makes a stuck bolt easier to turn: the force you apply stays the same, but a longer handle increases \( d \), which increases the torque delivered to the bolt. A Yellow Jacket motor's datasheet torque rating describes the same quantity—the twisting force it can deliver at its output shaft—and it is precisely this torque that the gear ratio in the previous section multiplies or divides as it passes through the drivetrain.</p>
+<h3 id="friction">Friction</h3>
+<p><strong>Friction</strong> is a force that resists the relative sliding or rolling motion between two surfaces in contact, acting opposite to the direction of motion (or attempted motion). Two categories matter for the StarterBot:</p>
+<ul>
+<li><strong>Static friction</strong> resists the start of motion between surfaces that are not yet sliding, such as a locknut gripping a screw's threads tightly enough that vibration cannot loosen it</li>
+<li><strong>Kinetic friction</strong> resists motion that is already happening, such as an 8mm REX Shaft turning inside a bearing</li>
+</ul>
+<p>Friction is not purely a nuisance—the StarterBot's wheels depend on friction against the ground to convert rotation into forward motion, and a locknut depends on friction to stay tight. But friction inside a mechanism, such as a shaft rubbing directly against an aluminum U-channel with no bearing installed, wastes energy as heat and wears down parts. That trade-off is exactly why the StarterBot Kit places an 8mm REX Bearing at every point where a shaft passes through the frame, a component covered in detail later in this chapter.</p>
+<p>!!! tip
+    A quick way to remember the difference: static friction has to be overcome to <em>start</em> something moving, and it is almost always slightly stronger than kinetic friction, which only has to be overcome to <em>keep</em> something moving. That is why a stalled shaft can feel "stuck" for a moment before it begins turning smoothly.</p>
+<h2 id="mechanical-advantage-why-simple-machines-help">Mechanical Advantage: Why Simple Machines Help</h2>
+<p><strong>Mechanical advantage</strong> is the ratio of the output force a machine produces to the input force applied to it, and it is the single number that explains why every simple machine in this chapter is worth using in the first place:</p>
+<p>\[ \text{Mechanical Advantage} = \frac{\text{output force}}{\text{input force}} \]</p>
+<p>A mechanical advantage greater than 1 means the machine multiplies force, at the cost of requiring the input to move a greater distance than the output—energy is never created for free, only traded between force and distance. A mechanical advantage less than 1 does the opposite: it trades force for speed or distance, which is exactly the case for the StarterBot's 19.2:1 Yellow Jacket motor driving a wheel meant to move quickly rather than push hard.</p>
+<p>The table below reinforces the mechanical advantage formula for each simple machine introduced earlier in this chapter, now gathered in one place for comparison.</p>
+<table>
+<thead>
+<tr>
+<th>Simple Machine</th>
+<th>Mechanical Advantage Formula</th>
+<th>StarterBot / Everyday Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lever</td>
+<td>effort arm length ÷ load arm length</td>
+<td>Robot arm forearm segment</td>
+</tr>
+<tr>
+<td>Pulley (or sprocket pair)</td>
+<td>number of supporting ropes, or driven teeth ÷ driving teeth</td>
+<td>Chain-and-sprocket drivetrain</td>
+</tr>
+<tr>
+<td>Gear</td>
+<td>teeth on driven gear ÷ teeth on driving gear</td>
+<td>30-Tooth Gear driven by 20-Tooth Gear</td>
+</tr>
+<tr>
+<td>Wheel and Axle</td>
+<td>radius of wheel ÷ radius of axle</td>
+<td>Drive wheel on 8mm REX Shaft</td>
+</tr>
+<tr>
+<td>Inclined Plane</td>
+<td>length of slope ÷ height of slope</td>
+<td>Threads on a socket head screw</td>
+</tr>
+<tr>
+<td>Linkage</td>
+<td>varies continuously with link angles</td>
+<td>Four-bar robot arm linkage</td>
+</tr>
+</tbody>
+</table>
+<p>Real mechanisms never reach their theoretical mechanical advantage exactly, because friction consumes some of the input force before it ever reaches the load. Engineers distinguish between <strong>ideal mechanical advantage (IMA)</strong>, calculated from a machine's geometry alone (tooth counts, arm lengths, ramp dimensions), and <strong>actual mechanical advantage (AMA)</strong>, measured from real output and input forces after friction losses are included. A well-lubricated, properly supported shaft—one running through an 8mm REX Bearing rather than grinding directly against aluminum—keeps AMA as close to IMA as possible.</p>
+<h2 id="bearings-and-fasteners-the-hardware-that-holds-it-together">Bearings and Fasteners: The Hardware That Holds It Together</h2>
+<p>Simple machines only work reliably when the hardware supporting them is chosen correctly. Two categories of hardware do that job throughout the StarterBot Kit: bearings and fasteners.</p>
+<h3 id="bearing">Bearing</h3>
+<p>A <strong>bearing</strong> is a component that supports a rotating shaft while minimizing friction between the shaft and its surrounding structure, typically by replacing sliding contact with rolling contact or a low-friction sleeve. The StarterBot's <strong>8mm REX Bearing</strong> is a ring of hardened steel with an inner race that lets a shaft spin with almost no resistance, mounted wherever a shaft passes through a U-channel or a Drop-Center Bearing Plate. Without a bearing, a spinning shaft would grind directly against the aluminum frame, generating friction, heat, and wear with every rotation—exactly the kinetic friction problem described earlier in this chapter.</p>
+<h3 id="fastener">Fastener</h3>
+<p>A <strong>fastener</strong> is a hardware component used to mechanically join two or more parts together, typically by clamping them with friction or a mechanical interlock rather than permanently bonding them. The StarterBot Kit relies on three main types working as a team:</p>
+<ol>
+<li><strong>Socket head screws</strong> (8mm, 10mm, and 12mm lengths) provide the clamping force, driven by a hex key into a hexagonal socket in the screw head</li>
+<li><strong>Locknuts</strong> thread onto a screw and use a nylon insert to grip its threads tightly, resisting the vibration that would otherwise back a plain nut off over time</li>
+<li><strong>Washers</strong> spread the clamping force of a screw and locknut over a wider area, preventing the aluminum U-channel from denting or cracking under concentrated pressure</li>
+</ol>
+<p>Recall from the Inclined Plane discussion earlier in this chapter that a screw's threads are, geometrically, an inclined plane wrapped around a cylinder. That is precisely why turning a screw with modest effort produces a large clamping force: the screw's threads give it a very large mechanical advantage, trading a long rotational travel distance for a strong, concentrated squeeze.</p>
+<h2 id="structural-materials-and-chassis-design">Structural Materials and Chassis Design</h2>
+<h3 id="structural-materials">Structural Materials</h3>
+<p><strong>Structural materials</strong> are the materials chosen to form the load-bearing skeleton of a mechanical system, selected based on properties like strength (resistance to breaking), stiffness (resistance to bending), and strength-to-weight ratio (how much load a material can bear per unit of its own weight). The StarterBot's U-channels are extruded aluminum, a material chosen specifically because it combines high stiffness and strength with low weight—a critical trade-off for any robot that needs to move quickly without wasting motor torque simply hauling around its own frame.</p>
+<p>Different robotics and engineering applications call for different structural materials, each suited to a different trade-off:</p>
+<ul>
+<li><strong>Aluminum</strong> — excellent strength-to-weight ratio, easy to machine and drill, used for the StarterBot's U-channels and bearing plates</li>
+<li><strong>Steel</strong> — higher strength and stiffness than aluminum but significantly heavier, used for the StarterBot's 8mm REX Shafts, where wear resistance and rigidity under load matter more than saving weight</li>
+<li><strong>Plastic (nylon or similar polymers)</strong> — lightweight and low-friction, used for the StarterBot's chain links, where flexibility and smooth sliding matter more than raw strength</li>
+<li><strong>Carbon fiber</strong> — exceptional strength-to-weight ratio at a much higher cost, common in competition-grade robotics but not included in an introductory kit like the StarterBot</li>
+</ul>
+<h3 id="chassis-design">Chassis Design</h3>
+<p><strong>Chassis design</strong> is the engineering process of arranging structural materials into a frame that supports every other subsystem of a robot—drivetrain, sensors, battery, and any custom mechanisms—while withstanding the forces of driving, collisions, and vibration. The StarterBot's chassis demonstrates several chassis design principles you will reuse in later custom-part design: side rails built from long U-channels for rigidity, cross braces from shorter U-channels to resist twisting, Quad Block Mounts at corners to distribute joint stress, and Drop-Center Bearing Plates positioned precisely so drivetrain shafts stay parallel and aligned.</p>
+<p>The clickable diagram below revisits the StarterBot chassis you assembled in Chapter 1, this time asking you to identify the structural role each component plays rather than simply naming the part.</p>
+<h4 id="diagram-starterbot-chassis-structural-explorer">Diagram: StarterBot Chassis Structural Explorer</h4>
+<iframe src="../../sims/starterbot-chassis-explorer/main.html" width="100%" height="550px" scrolling="no"></iframe>
+
+<details markdown="1">
+<summary>StarterBot Chassis Structural Explorer</summary>
+Type: diagram
+**sim-id:** starterbot-chassis-explorer<br/>
+**Library:** p5.js<br/>
+**Status:** Specified
+
+Bloom Taxonomy: Analyze<br/>
+Bloom Taxonomy Verb: examine, differentiate, attribute
+
+Learning objective: Given a labeled illustration of the assembled StarterBot chassis, students will attribute each structural component to its mechanical function (support, alignment, force transmission, or vibration resistance).
+
+Purpose: Reinforce the chassis design principles described in the text by letting students click individual structural components and see the specific mechanical job each one performs, connecting Chapter 1's hands-on assembly to this chapter's theory.
+
+Components to show: A simplified line-art top/side view of the assembled StarterBot chassis with the following clickable regions: 15-Hole U-Channel side rails, 8-Hole U-Channel cross braces, Quad Block Mount corners, Drop-Center Bearing Plates, 8mm REX Bearings at each shaft pass-through, 8mm REX Shafts, socket head screws with locknuts at joint points.
+
+Interactive elements:
+- Clicking any component highlights it in the drawing and opens an info panel with: the component's name, its structural material, and its specific mechanical function
+- Hovering (without clicking) shows just the component name as a tooltip
+- A "Show Function Category" toggle recolors all components by function group (support: silver, alignment: blue, force transmission: gold, vibration resistance: gray) so students can see how functions are distributed across the frame
+
+Data to display per component:
+- 15-Hole U-Channel side rail: Aluminum; function: primary support, forms the rigid backbone of the chassis
+- 8-Hole U-Channel cross brace: Aluminum; function: support, resists the frame twisting out of square
+- Quad Block Mount: Aluminum; function: support, distributes stress where two channels meet at a corner
+- Drop-Center Bearing Plate: Aluminum; function: alignment, holds a bearing in precise position so a shaft stays parallel to its partner shaft
+- 8mm REX Bearing: Hardened steel; function: alignment and friction reduction, lets a shaft spin freely without grinding against the frame
+- 8mm REX Shaft: Steel; function: force transmission, carries rotation from a gear or sprocket to a wheel
+- Socket head screw + locknut: Steel; function: vibration resistance, clamps parts together and resists loosening from repeated motion
+
+Color coding: Silver for support components, blue for alignment components, gold for force-transmission components, gray for vibration-resistance components; consistent with the function-category toggle described above.
+
+Responsive behavior: Diagram scales to container width; info panel remains below or beside the diagram depending on available width, stacking vertically below 600px.
+
+Implementation: p5.js canvas with clickable polygon regions overlaid on a drawn chassis illustration; info panel rendered as a text block within the same canvas, updated on click events.
+</details>
+
+<h2 id="mechanical-design-putting-it-all-together">Mechanical Design: Putting It All Together</h2>
+<p><strong>Mechanical design</strong> is the engineering discipline of selecting, sizing, and arranging simple machines, materials, and hardware into a system that reliably performs a specific mechanical task. It is the capstone concept of this chapter because it is not a single part you can point to—it is the <em>process</em> that produced every part you have studied so far. Designing the StarterBot's drivetrain meant choosing a gear ratio that balanced speed against torque, selecting aluminum for the frame to save weight without sacrificing stiffness, specifying bearings everywhere friction needed to be minimized, and choosing fastener types and sizes strong enough to survive vibration without over-engineering the whole frame into unnecessary weight.</p>
+<p>Good mechanical design follows a recognizable pattern, whether the mechanism is a StarterBot drivetrain or a custom part you design later in this course:</p>
+<ol>
+<li>Define the mechanical task precisely (move a wheel, lift an arm, roll an intake mechanism)</li>
+<li>Choose simple machines that provide the needed trade-off between force, speed, and direction</li>
+<li>Select structural materials that balance strength, stiffness, and weight</li>
+<li>Specify bearings and fasteners that control friction and resist vibration at every joint</li>
+<li>Verify the design—by calculation, simulation, or physical testing—before committing to a final build</li>
+</ol>
+<p>??? note "Check yourself: If a gear ratio increases from 2:1 to 4:1, what happens to output speed and torque? — Click to expand"
+    Output speed is cut in half again, and output torque doubles again, because both scale directly with the gear ratio: a 4:1 ratio delivers twice the speed reduction and twice the torque multiplication of a 2:1 ratio, assuming friction losses stay the same.</p>
+<p>With mechanical systems and simple machines now connected back to the hardware in your hands, the next chapter turns to a different way of transmitting force through a robot: fluid power, where pressurized air or liquid—rather than gears and shafts—does the work of moving a mechanism.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>3. Programming Fundamentals - My Docs</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../course-description/" class="nav-link">Course Description</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Chapters</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../" class="dropdown-item">List of Chapters</a>
+</li>
+                                    
+<li>
+    <a href="../01-identifying-kit-parts-building-starterbot/" class="dropdown-item">1. Identifying Kit Parts and Building Your StarterBot</a>
+</li>
+                                    
+<li>
+    <a href="../02-intro-robotics-systems/" class="dropdown-item">2. Introduction to Robotics and Systems</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">3. Programming Fundamentals</a>
+</li>
+                                    
+<li>
+    <a href="../04-programming-your-robot/" class="dropdown-item">4. Programming Your Robot</a>
+</li>
+                                    
+<li>
+    <a href="../05-designing-building-custom-parts/" class="dropdown-item">5. Designing and Building Custom Parts</a>
+</li>
+                                    
+<li>
+    <a href="../06-electrical-fundamentals/" class="dropdown-item">6. Electrical Fundamentals</a>
+</li>
+                                    
+<li>
+    <a href="../07-electronic-components-circuit-design/" class="dropdown-item">7. Electronic Components and Circuit Design</a>
+</li>
+                                    
+<li>
+    <a href="../08-sensors-and-measurement/" class="dropdown-item">8. Sensors and Measurement</a>
+</li>
+                                    
+<li>
+    <a href="../09-mechanical-systems-simple-machines/" class="dropdown-item">9. Mechanical Systems and Simple Machines</a>
+</li>
+                                    
+<li>
+    <a href="../10-fluid-power-hydraulics-pneumatics/" class="dropdown-item">10. Fluid Power: Hydraulics and Pneumatics</a>
+</li>
+                                    
+<li>
+    <a href="../11-control-systems-feedback-loops/" class="dropdown-item">11. Control Systems and Feedback Loops</a>
+</li>
+                                    
+<li>
+    <a href="../12-digital-logic-computing-fundamentals/" class="dropdown-item">12. Digital Logic and Computing Fundamentals</a>
+</li>
+                                    
+<li>
+    <a href="../13-advanced-robot-programming/" class="dropdown-item">13. Advanced Robot Programming</a>
+</li>
+                                    
+<li>
+    <a href="../14-integrating-testing-maintaining-robotic-system/" class="dropdown-item">14. Integrating, Testing, and Maintaining a Robotic System</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Learning Graph</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../learning-graph/" class="dropdown-item">Introduction</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/course-description-assessment/" class="dropdown-item">Course Description Assessment</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/concept-list/" class="dropdown-item">Concept Enumeration</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/quality-metrics/" class="dropdown-item">Graph Quality Analysis</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/concept-taxonomy/" class="dropdown-item">Concept Taxonomy</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/taxonomy-distribution/" class="dropdown-item">Taxonomy Distribution Report</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">MicroSims</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../sims/graph-viewer/" class="dropdown-item">Learning Graph Viewer</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../02-intro-robotics-systems/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../04-programming-your-robot/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#programming-fundamentals" class="nav-link">Programming Fundamentals</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#summary" class="nav-link">Summary</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#concepts-covered" class="nav-link">Concepts Covered</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#prerequisites" class="nav-link">Prerequisites</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#thinking-like-a-programmer-what-is-an-algorithm" class="nav-link">Thinking Like a Programmer: What Is an Algorithm?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#expressing-algorithms-before-writing-code-pseudocode-and-flowcharts" class="nav-link">Expressing Algorithms Before Writing Code: Pseudocode and Flowcharts</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#from-plan-to-code-programming-languages-and-syntax" class="nav-link">From Plan to Code: Programming Languages and Syntax</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#storing-information-variables-and-data-types" class="nav-link">Storing Information: Variables and Data Types</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#controlling-the-flow-conditional-statements-and-loop-structures" class="nav-link">Controlling the Flow: Conditional Statements and Loop Structures</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#organizing-code-functions" class="nav-link">Organizing Code: Functions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#where-you-write-code-programming-platforms-and-ides" class="nav-link">Where You Write Code: Programming Platforms and IDEs</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#making-sure-code-works-debugging-testing-and-security" class="nav-link">Making Sure Code Works: Debugging, Testing, and Security</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="programming-fundamentals">Programming Fundamentals</h1>
+<h2 id="summary">Summary</h2>
+<p>Before students write a single line of robot code, this chapter builds general-purpose programming skills: algorithms, pseudocode, flowcharts, variables, data types, conditional statements, loops, functions, and debugging. Program testing and program security are also introduced. These concepts are taught independent of any particular hardware, so students can focus purely on computational thinking before applying it to their robot in the next chapter.</p>
+<h2 id="concepts-covered">Concepts Covered</h2>
+<p>This chapter covers the following 15 concepts from the learning graph:</p>
+<ol>
+<li>Programming Language</li>
+<li>Algorithm</li>
+<li>Variable</li>
+<li>Data Type</li>
+<li>Conditional Statement</li>
+<li>Loop Structure</li>
+<li>Function</li>
+<li>Pseudocode</li>
+<li>Flowchart</li>
+<li>Debugging</li>
+<li>Programming Platform</li>
+<li>Programming IDE</li>
+<li>Code Syntax</li>
+<li>Program Testing</li>
+<li>Program Security</li>
+</ol>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>This chapter assumes only the prerequisites listed in the <a href="../../course-description/">course description</a>.</p>
+<hr />
+<h2 id="thinking-like-a-programmer-what-is-an-algorithm">Thinking Like a Programmer: What Is an Algorithm?</h2>
+<p>Before you write a single line of code, you need a plan. An <strong>algorithm</strong> is a finite, ordered sequence of precise steps that solves a problem or completes a task, taking some starting information as input and producing a predictable result as output. Notice that this definition does not mention computers at all, because algorithms exist everywhere in daily life, not just inside a program.</p>
+<p>Consider a recipe for making a peanut butter and jelly sandwich. It has a clear starting point (two slices of bread and a knife), a clear sequence of steps (open the jars, spread the peanut butter, spread the jelly, put the slices together), and a clear ending point (a finished sandwich). A computer program's algorithm works the same way, except the "ingredients" are data and the "steps" are instructions a computer can carry out.</p>
+<p>For a sequence of steps to count as a true algorithm, and not just a vague suggestion, it generally needs to satisfy several properties:</p>
+<ol>
+<li><strong>Finite</strong> — the algorithm must eventually stop; it cannot run forever</li>
+<li><strong>Ordered</strong> — the steps happen in a specific, defined sequence</li>
+<li><strong>Unambiguous</strong> — each step is precise enough that there is only one reasonable way to carry it out</li>
+<li><strong>Has input and output</strong> — the algorithm starts with some given information and produces a result</li>
+</ol>
+<p>Throughout the rest of this chapter, one running example will appear again and again: an algorithm that checks whether a whole number is even or odd. It is simple enough to hold in your head, yet rich enough to demonstrate every concept from pseudocode through functions. Keep it in mind as each new tool for expressing and organizing algorithms is introduced.</p>
+<h2 id="expressing-algorithms-before-writing-code-pseudocode-and-flowcharts">Expressing Algorithms Before Writing Code: Pseudocode and Flowcharts</h2>
+<p>Programmers rarely jump straight from an idea to finished code. Instead, they first sketch the algorithm in a form that is easy to think through and easy to change, before worrying about the strict rules of any particular programming language. Two of the most common tools for this planning stage are pseudocode and flowcharts.</p>
+<p><strong>Pseudocode</strong> is a way of describing an algorithm's steps using structured, plain language that resembles real code but does not follow the exact syntax rules of any specific programming language. Pseudocode lets you focus entirely on the logic of a solution, the order of decisions and repeated steps, without getting distracted by punctuation, spelling of commands, or which language you eventually plan to use.</p>
+<p>The pseudocode below describes the even-or-odd algorithm introduced earlier. Read it as a numbered set of plain-language instructions: it takes a number, divides it by 2, and checks whether anything is left over.</p>
+<pre><code>GET the number from the user
+CALCULATE the remainder when the number is divided by 2
+IF the remainder equals 0 THEN
+    DISPLAY &quot;The number is even&quot;
+ELSE
+    DISPLAY &quot;The number is odd&quot;
+END IF
+</code></pre>
+<p>Notice that this pseudocode reads almost like an ordinary sentence, yet it is precise enough that any programmer, regardless of which programming language they prefer, could translate it into working code. That translatability is exactly why pseudocode is such a valuable planning tool.</p>
+<p>A <strong>flowchart</strong> is a diagram that represents an algorithm visually, using a small set of standardized shapes connected by arrows to show the exact order in which operations occur. Flowcharts use ovals for start and end points, rectangles for process steps (an action the algorithm performs), diamonds for decision points (a yes/no or true/false question that branches the flow), and arrows to connect everything in sequence. Because a flowchart is visual, it often reveals the branching structure of an algorithm, especially one full of decisions, more clearly than a written list of steps can.</p>
+<p>Rather than only reading about what each flowchart shape means, explore the interactive diagram below, which lets you click each shape and each connecting arrow to see how it maps onto the even-or-odd algorithm you just read as pseudocode.</p>
+<h4 id="diagram-anatomy-of-a-flowchart">Diagram: Anatomy of a Flowchart</h4>
+<iframe src="../../sims/flowchart-anatomy/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+<details markdown="1">
+<summary>Anatomy of a Flowchart</summary>
+Type: diagram
+**sim-id:** flowchart-anatomy<br/>
+**Library:** Mermaid<br/>
+**Status:** Specified
+
+Purpose: Teach the four core flowchart shapes (start/end oval, process rectangle, decision diamond, connecting arrow) by mapping each one onto the even-or-odd algorithm introduced in this section's pseudocode.
+
+Bloom Taxonomy: Understand (L2)
+Bloom Taxonomy Verb: identify, explain, classify
+
+Learning objective: Given an unfamiliar flowchart, students will identify each shape by name, explain its purpose, and classify each step of the even-or-odd algorithm as a start/end, process, or decision shape.
+
+Visual style: Mermaid flowchart (`graph TD`) laid out top-to-bottom, mirroring the pseudocode's step order exactly.
+
+Nodes (each node clickable with a `click` directive opening an infobox):
+1. Start oval: "Start" — click text: "The oval shape marks where an algorithm begins. Every flowchart has exactly one start shape."
+2. Process rectangle: "Get the number from the user" — click text: "A rectangle represents a process step: an action the algorithm performs, with no decision involved."
+3. Process rectangle: "Calculate remainder (number divided by 2)" — click text: "Another process step. Process shapes can perform calculations, not just input/output actions."
+4. Decision diamond: "Remainder equals 0?" — click text: "A diamond represents a decision point: a yes/no question that sends the flow down one of two different paths."
+5. Process rectangle (Yes branch): "Display 'even'" — click text: "This process step only runs if the decision above was answered Yes."
+6. Process rectangle (No branch): "Display 'odd'" — click text: "This process step only runs if the decision above was answered No."
+7. End oval: "End" — click text: "The oval shape also marks where an algorithm finishes. Both branches lead back to a single end shape."
+
+Connections: Start to Get-Number to Calculate-Remainder to the Decision diamond, which splits into a Yes arrow (labeled "Yes") to Display-Even and a No arrow (labeled "No") to Display-Odd; both branches merge into the single End oval.
+
+Color coding: Green for the start/end ovals, blue for process rectangles, gold for the decision diamond, with the Yes arrow shown in green and the No arrow shown in orange.
+
+Implementation: Mermaid flowchart syntax with `click` directives bound to a JavaScript function that displays each shape's explanatory text in a styled infobox beneath the diagram.
+</details>
+
+<p>Pseudocode and flowcharts describe the exact same algorithm in two different formats, one written and one visual, and many programmers move back and forth between them while planning. Once the logic in either format feels solid, it is time to translate it into an actual programming language.</p>
+<h2 id="from-plan-to-code-programming-languages-and-syntax">From Plan to Code: Programming Languages and Syntax</h2>
+<p>A <strong>programming language</strong> is a formal language with a defined vocabulary and grammar that a person uses to write instructions a computer can eventually carry out. Unlike the flexible plain language used in pseudocode, a programming language must follow strict, exact rules, because a computer cannot guess what a programmer "probably meant" the way a human reader often can.</p>
+<p>Hundreds of programming languages exist, including Python, Java, C++, JavaScript, and block-based languages that let programmers snap together labeled puzzle pieces instead of typing text. Despite looking very different on the surface, most of these languages can express the exact same underlying algorithm, including the even-or-odd logic from the pseudocode above.</p>
+<p>The table below shows that one algorithm, expressed three different ways: as pseudocode you already read, as text-based code in a Python-like language, and as the equivalent idea in a block-based language. Comparing them side by side highlights that the underlying logic never changes, only its surface appearance does.</p>
+<table>
+<thead>
+<tr>
+<th>Representation</th>
+<th>How the "IF remainder = 0" step looks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pseudocode</td>
+<td><code>IF the remainder equals 0 THEN</code></td>
+</tr>
+<tr>
+<td>Text-based language (Python-like)</td>
+<td><code>if remainder == 0:</code></td>
+</tr>
+<tr>
+<td>Block-based language</td>
+<td>An "if" puzzle piece with an equals-comparison piece snapped inside it</td>
+</tr>
+</tbody>
+</table>
+<p>This strict set of rules that a language enforces, exactly how symbols, punctuation, spacing, and keywords must be arranged for a program to be considered valid, is called <strong>code syntax</strong>. Every programming language has its own syntax: Python requires a colon and consistent indentation after an <code>if</code>, while other languages require curly braces <code>{ }</code> instead. A program that violates its language's syntax will not run at all, regardless of how correct its underlying algorithm is.</p>
+<p>!!! tip
+    Almost every beginning programmer's first frustration is a syntax error, a missing colon, an extra parenthesis, a misspelled keyword. This is completely normal. Learning a programming language's syntax is a lot like learning the grammar rules of a new spoken language: frustrating at first, automatic with practice.</p>
+<h2 id="storing-information-variables-and-data-types">Storing Information: Variables and Data Types</h2>
+<p>Every useful program needs somewhere to keep track of information while it runs, whether that is a number a user typed in, a score, or a sensor reading you will meet in the next chapter. A <strong>variable</strong> is a named storage location in a program's memory that holds a value, and that value can change while the program runs, which is exactly why it is called "variable" rather than "constant."</p>
+<p>Returning to the even-or-odd example, the number a user provides needs somewhere to live while the program works with it. A programmer might create a variable named <code>number</code> to hold that value, and a second variable named <code>remainder</code> to hold the result of dividing by 2. Giving variables clear, descriptive names, <code>number</code> rather than a meaningless label like <code>x1</code>, makes code dramatically easier for other programmers, or your future self, to read and understand later.</p>
+<p>Not every variable can hold just any kind of value, however. A <strong>data type</strong> is a classification that tells the programming language what kind of value a variable holds and what operations can legally be performed on it. A variable storing a whole number behaves differently, and supports different operations, than a variable storing a sentence of text.</p>
+<p>The table below summarizes the four data types you will encounter most often, along with an example value for each, reinforcing the definition you just read rather than introducing anything new.</p>
+<table>
+<thead>
+<tr>
+<th>Data Type</th>
+<th>What It Stores</th>
+<th>Example Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Integer</td>
+<td>A whole number, positive or negative, with no decimal point</td>
+<td><code>7</code>, <code>-3</code>, <code>1000</code></td>
+</tr>
+<tr>
+<td>Float (decimal)</td>
+<td>A number that includes a fractional, decimal part</td>
+<td><code>3.14</code>, <code>-0.5</code></td>
+</tr>
+<tr>
+<td>String</td>
+<td>A sequence of text characters</td>
+<td><code>"even"</code>, <code>"StarterBot"</code></td>
+</tr>
+<tr>
+<td>Boolean</td>
+<td>Exactly one of two values: true or false</td>
+<td><code>True</code>, <code>False</code></td>
+</tr>
+</tbody>
+</table>
+<p>In the even-or-odd example, the variable <code>number</code> would typically use the integer data type, since the algorithm is only designed to work with whole numbers. If a data type mismatch occurs, for example trying to divide a piece of text by 2, the program will usually fail with an error, which is one reason data types matter even though they can feel like an invisible detail at first.</p>
+<p>A few practical guidelines make variables easier to use correctly:</p>
+<ul>
+<li>Choose a name that describes what the variable stores, such as <code>remainder</code> instead of <code>r</code></li>
+<li>Pick the data type that matches the kind of value the variable will actually hold</li>
+<li>Avoid reusing the same variable name for two unrelated purposes within one program</li>
+<li>Give a variable an initial value before using it in a calculation</li>
+</ul>
+<h2 id="controlling-the-flow-conditional-statements-and-loop-structures">Controlling the Flow: Conditional Statements and Loop Structures</h2>
+<p>So far, the even-or-odd algorithm has moved through its steps in a straight, single-file line. Most useful algorithms are not that simple; they need to make decisions and repeat work. Two structures make this possible: conditional statements and loop structures.</p>
+<p>A <strong>conditional statement</strong> is an instruction that tells a program to execute certain steps only if a specified condition is true, and optionally execute different steps if that condition is false. The even-or-odd pseudocode you read earlier already contains one: the <code>IF the remainder equals 0 THEN ... ELSE ...</code> structure is a conditional statement, branching the program down one of two paths depending on the result of a calculation.</p>
+<p>A <strong>loop structure</strong> is an instruction that repeats a set of steps multiple times, either a fixed number of times or for as long as a specified condition remains true. Suppose you wanted to check every number from 1 through 10 for even or odd, instead of just one number typed in by a user. Repeating the entire even-or-odd conditional ten separate times by hand would be tedious and error-prone; a loop structure lets the algorithm repeat the same logic automatically.</p>
+<p>The pseudocode below combines a loop structure and a conditional statement to check ten numbers in a row. Read it as: repeat the following steps once for each number from 1 to 10, and within each repetition, make the same even/odd decision as before.</p>
+<pre><code>FOR each number from 1 to 10
+    CALCULATE the remainder when the number is divided by 2
+    IF the remainder equals 0 THEN
+        DISPLAY number, &quot;is even&quot;
+    ELSE
+        DISPLAY number, &quot;is odd&quot;
+    END IF
+END FOR
+</code></pre>
+<p>Notice that the conditional statement inside this loop is identical to the one from the single-number version; the loop structure is simply what allows that same decision-making logic to run automatically ten times instead of once. This pattern, a loop that contains a conditional statement, is one of the most common building blocks in programming.</p>
+<p>Rather than only reading pseudocode, it helps to physically arrange these building blocks yourself and watch the resulting algorithm run step by step. The MicroSim below lets you drag conditional and loop blocks into a workspace, connect them in order, and press "Run" to see the resulting algorithm execute visually.</p>
+<h4 id="diagram-algorithm-block-builder">Diagram: Algorithm Block Builder</h4>
+<iframe src="../../sims/algorithm-block-builder/main.html" width="100%" height="600px" scrolling="no"></iframe>
+
+<details markdown="1">
+<summary>Algorithm Block Builder</summary>
+Type: microsim
+**sim-id:** algorithm-block-builder<br/>
+**Library:** p5.js<br/>
+**Status:** Specified
+
+Purpose: Let students construct a simple algorithm by dragging and connecting conditional and loop blocks, then watch the assembled algorithm execute step by step against a small list of numbers.
+
+Bloom Taxonomy: Create (L6) and Apply (L3)
+Bloom Taxonomy Verb: construct, arrange, execute, demonstrate
+
+Learning objective: Students will arrange loop and conditional blocks into a working sequence that correctly classifies a list of numbers as even or odd, and will trace execution to demonstrate how a loop structure repeats a conditional statement.
+
+Canvas layout:
+- Left side (60% width): a palette of draggable blocks: "Start Loop (repeat for each number in list)," "If remainder = 0," "Display 'even'," "Display 'odd'," "End If," "End Loop"
+- Right side (40% width): a workspace where dragged blocks snap into a vertical sequence, plus a "Run" button, a "Reset" button, and a small output console
+
+Interactive controls:
+- Drag-and-drop: blocks can be dragged from the palette into the workspace and reordered
+- Dropdown: choose the input list (default: the numbers 1 through 5)
+- Button: "Run" — executes the assembled block sequence one step at a time
+- Button: "Step" — advances execution by a single instruction, highlighting the active block
+- Button: "Reset" — clears the workspace back to an empty sequence
+
+Default parameters:
+- Input list: [1, 2, 3, 4, 5]
+- Palette blocks start unplaced; a "Load Example" button can populate a correct default sequence for first-time users
+
+Data Visibility Requirements:
+  Stage 1: Show the current number being processed from the input list, highlighted in the console
+  Stage 2: Show the calculated remainder for that number
+  Stage 3: Show which branch (even/odd display block) executed, with that block highlighted in the workspace
+  Stage 4: Show the accumulated output console listing every number processed so far and its classification
+  Final: Show the completed output list matching all numbers in the input list
+
+Behavior:
+- If blocks are assembled correctly (loop containing a complete if/else/end-if inside a start-loop/end-loop pair), "Run" animates through the list, highlighting the active block and updating the console after each step
+- If blocks are missing a required piece (for example, no "End If"), clicking "Run" displays an infobox explaining which structural piece is missing, without crashing
+- Correct assembly is confirmed with a green checkmark and a message: "Your loop successfully repeated the conditional check for every number in the list."
+
+Instructional Rationale: A Create-level objective requires students to actively construct a working sequence rather than passively view one. Drag-and-drop block assembly, paired with step-through execution showing concrete data at each stage, lets students build understanding of how a loop structure repeats a conditional statement without requiring them to know any language's exact code syntax yet.
+
+Implementation: p5.js for canvas rendering and drag-and-drop detection; blocks stored as an array of typed objects; a simple step-based interpreter executes the array against the input list and reports state after each step.
+</details>
+
+<p>Conditional statements and loop structures are two of the most powerful tools in any programmer's toolkit, precisely because so many real-world problems boil down to "make a decision" and "repeat something," combined in different arrangements.</p>
+<h2 id="organizing-code-functions">Organizing Code: Functions</h2>
+<p>As algorithms grow larger, repeating the same block of logic by copying and pasting it everywhere becomes messy and hard to maintain. A <strong>function</strong> is a named, reusable block of code that performs a specific task, can accept input values called parameters, and can return a result, and can be called from other parts of a program whenever that task needs to happen again.</p>
+<p>The even-or-odd logic used throughout this chapter is a perfect candidate to become a function, since it might be needed in many different places within a larger program. The pseudocode below wraps that logic inside a function named <code>checkEvenOdd</code>, which accepts one input (a number) and displays whether it is even or odd.</p>
+<pre><code>FUNCTION checkEvenOdd(number)
+    CALCULATE the remainder when number is divided by 2
+    IF the remainder equals 0 THEN
+        RETURN &quot;even&quot;
+    ELSE
+        RETURN &quot;odd&quot;
+    END IF
+END FUNCTION
+</code></pre>
+<p>Once defined, this function can be called, or invoked, from anywhere else in the program simply by name, for example <code>checkEvenOdd(7)</code>, without rewriting the underlying logic each time. Functions offer several concrete benefits to a program's design:</p>
+<ul>
+<li><strong>Reuse</strong> — the same logic can be called many times from different places without duplicating code</li>
+<li><strong>Organization</strong> — breaking a large algorithm into named functions makes the overall program easier to read</li>
+<li><strong>Easier testing</strong> — a small, isolated function is much simpler to test thoroughly than one giant block of code</li>
+<li><strong>Abstraction</strong> — a function lets other parts of a program use its result without needing to know exactly how it works internally</li>
+</ul>
+<p>You will use functions constantly once you begin writing real code, and in the next chapter, individual robot behaviors, like driving forward or checking a sensor, will often be organized as their own functions.</p>
+<h2 id="where-you-write-code-programming-platforms-and-ides">Where You Write Code: Programming Platforms and IDEs</h2>
+<p>Every program needs somewhere to actually be written, translated, and run. A <strong>programming platform</strong> is the combination of hardware and software environment where a program is written, is translated into a form the hardware understands, and ultimately runs. A programming platform might be an ordinary desktop computer, a web browser running JavaScript, or, as you will discover in the next chapter, a microcontroller platform built specifically to run inside a robot.</p>
+<p>Within a programming platform, most programmers do not simply type code into a bare text file. A <strong>programming IDE</strong>, short for Integrated Development Environment, is a software application that combines a code editor, tools that automatically highlight syntax errors, and a way to run or test the program, all within one convenient application. An IDE dramatically speeds up the process of writing, checking, and running code compared to switching between several separate, disconnected tools.</p>
+<p>The table below compares what a plain text editor offers against what a full programming IDE typically adds, since a table is well suited to comparing two options across a shared set of features.</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Plain Text Editor</th>
+<th>Programming IDE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Write code</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Highlight syntax errors automatically</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Suggest code as you type (autocomplete)</td>
+<td>No</td>
+<td>Usually</td>
+</tr>
+<tr>
+<td>Run or test the program with one click</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Built-in tools for finding bugs</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<p>Choosing to write code inside a proper IDE, rather than a plain text editor, is one of the simplest ways to reduce frustrating syntax errors before a program is ever run. The next chapter introduces the specific programming platform and IDE you will use to write real code for your StarterBot, building directly on the vocabulary from this section.</p>
+<h2 id="making-sure-code-works-debugging-testing-and-security">Making Sure Code Works: Debugging, Testing, and Security</h2>
+<p>Writing an algorithm and translating it into correctly formatted code is only the beginning; real programs almost never work perfectly on the first attempt. The remainder of this chapter covers three closely related practices that professional programmers rely on constantly: debugging, program testing, and program security.</p>
+<p><strong>Debugging</strong> is the process of finding and fixing errors, commonly called bugs, in a program's code so the program behaves as its algorithm intended. A bug can be a syntax error that stops the program from running at all, or something more subtle: a program that runs without crashing but produces the wrong answer, often because of a small mistake in a conditional statement or loop structure.</p>
+<p>Rather than only reading a description of debugging, it helps to practice spotting a real bug yourself. The interactive exercise below shows a broken version of the even-or-odd function from earlier in this chapter, with one line highlighted, and challenges you to identify the mistake before revealing the explanation.</p>
+<h4 id="diagram-spot-the-bug">Diagram: Spot the Bug</h4>
+<iframe src="../../sims/spot-the-bug-even-odd/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+<details markdown="1">
+<summary>Spot the Bug</summary>
+Type: infographic
+**sim-id:** spot-the-bug-even-odd<br/>
+**Library:** p5.js<br/>
+**Status:** Specified
+
+Purpose: Build debugging skill by presenting a broken version of the chapter's running even-or-odd function and letting students judge what is wrong before the fix is revealed.
+
+Bloom Taxonomy: Evaluate (L5)
+Bloom Taxonomy Verb: judge, critique, justify, assess
+
+Learning objective: Given a short block of pseudocode containing a single logic error, students will judge which line is incorrect, justify why it produces the wrong output, and assess the corrected version against the original algorithm's intent.
+
+Layout: A code panel on the left displaying the buggy pseudocode with line numbers; a control and infobox panel on the right.
+
+Buggy code shown (line 3 highlighted in red by default):
+
+<pre><code>FUNCTION checkEvenOdd(number)
+    CALCULATE the remainder when number is divided by 2
+    IF the remainder equals 1 THEN
+        RETURN &quot;even&quot;
+    ELSE
+        RETURN &quot;odd&quot;
+    END IF
+END FUNCTION
+</code></pre>
+
+
+Interactive elements:
+- Students click any line number to submit a guess for where the bug is located
+- Clicking the correct line (line 3) reveals an infobox: "Bug found: the condition checks 'remainder equals 1' but a remainder of 1 means the number is ODD, not even. The comparison value should be 0, matching the original algorithm's definition of an even number."
+- Clicking an incorrect line reveals an infobox explaining why that line is actually correct, reinforcing understanding of the surrounding code rather than only confirming wrong answers
+- A "Show Fixed Version" button reveals the corrected pseudocode side by side with the original for comparison
+- A "Test It" panel lets students enter a sample number and see what the buggy version outputs versus what the corrected version outputs, making the consequence of the bug concrete
+
+Data Visibility Requirements:
+  Stage 1: Show the buggy code as-is, with no annotations, so students form their own judgment first
+  Stage 2: After a guess, show the infobox explanation tied to the clicked line
+  Stage 3: Show the corrected code alongside the original for direct comparison
+  Stage 4: Show a worked test case, for example input 4, producing "odd" from the buggy version and "even" from the corrected version
+
+Instructional Rationale: An Evaluate-level objective requires students to critique and justify, not just passively observe a fix. Requiring a guess before any explanation is revealed forces active judgment, and showing feedback for both correct and incorrect line guesses reinforces understanding of the whole function rather than only the single bug.
+
+Implementation: p5.js for the code panel rendering and clickable line numbers; a small interpreter evaluates both the buggy and corrected pseudocode against a student-entered test number for the "Test It" panel.
+</details>
+
+<p>Finding and fixing one bug, however, does not guarantee a program is fully correct. <strong>Program testing</strong> is the practice of deliberately running a program with a variety of inputs, including unusual or extreme edge cases, to verify it produces the correct expected output before it is trusted or put into real use. A thorough tester of the even-or-odd function would not stop after trying the number 4; a complete test plan checks several different kinds of input:</p>
+<ul>
+<li><strong>Typical cases</strong> — ordinary numbers such as 4 or 7, to confirm the basic logic works</li>
+<li><strong>Edge cases</strong> — unusual boundary values such as 0 (which is even) or a negative number such as -2</li>
+<li><strong>Invalid input</strong> — values the algorithm was never designed to handle, such as text typed in instead of a number</li>
+</ul>
+<p>Skipping edge cases and invalid input is one of the most common reasons real programs fail unexpectedly once actual users, or in a future chapter, sensors and real-world conditions, start providing input the programmer never anticipated during initial testing.</p>
+<p>Beyond correctness, a finished program must also be trustworthy in a different sense. <strong>Program security</strong> refers to the practices and design choices that protect a program and its data from unintended misuse, unauthorized access, or malicious attack. Even a simple program that checks even or odd could be poorly secured if, for example, it crashed or behaved unpredictably whenever it received unexpected input, since predictable failure is itself a basic security concern.</p>
+<p>!!! warning
+    Two beginner-friendly security habits are worth building now, long before you work with any sensitive data: never assume input will arrive in the exact form you expect, and always double-check any input before your program acts on it. A program that carefully validates its inputs, confirming a value really is a number before dividing it, is already practicing a basic form of program security.</p>
+<p>Debugging, program testing, and program security are not separate, one-time chores performed after "real" programming is finished. They are ongoing habits woven throughout the entire process of building any algorithm, from its first pseudocode sketch through its final, working code.</p>
+<p>??? note "Quick check: A loop repeats a decision-making step ten times, but the program only ever prints 'even.' What kind of concept from this chapter is most likely broken? Click to reveal the answer."
+    Most likely a bug in the conditional statement, for example comparing the remainder to the wrong value or always following the same branch regardless of the calculated remainder. This is exactly the kind of mistake the "Spot the Bug" exercise in this chapter trained you to look for: a program that runs without crashing but still produces the wrong output.</p>
+<p>You now have a complete, hardware-independent toolkit for thinking like a programmer: algorithms, pseudocode, and flowcharts for planning; programming languages, syntax, variables, and data types for expressing a plan precisely; conditional statements, loop structures, and functions for controlling and organizing that logic; and programming platforms, IDEs, debugging, testing, and security for actually building and trusting real, working programs. In the next chapter, "Programming Your Robot," every one of these concepts returns, applied directly to the StarterBot sitting on your workbench.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

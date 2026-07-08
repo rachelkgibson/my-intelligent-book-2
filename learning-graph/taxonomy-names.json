@@ -1,0 +1,17 @@
+{
+  "KIT": "Identifying Kit Parts and Building Your StarterBot",
+  "FOUND": "Introduction to Robotics and Systems",
+  "PROG": "Programming Fundamentals",
+  "RBOT": "Programming Your Robot",
+  "EDP": "Designing and Building Custom Parts",
+  "ELEC": "Electrical Fundamentals",
+  "CIRC": "Electronic Components and Circuits",
+  "SENS": "Sensors and Measurement",
+  "MECH": "Mechanical Systems",
+  "FLUID": "Fluid Power Systems",
+  "CTRL": "Control Systems and Feedback",
+  "DIGI": "Digital Logic and Computing",
+  "RBTP": "Advanced Robot Programming",
+  "BUILD": "Integrating, Testing, and Maintaining a Complete Robotic System",
+  "MISC": "Miscellaneous Concepts"
+}

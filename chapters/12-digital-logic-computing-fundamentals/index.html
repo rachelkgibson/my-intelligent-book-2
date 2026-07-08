@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>12. Digital Logic and Computing Fundamentals - My Docs</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../course-description/" class="nav-link">Course Description</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Chapters</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../" class="dropdown-item">List of Chapters</a>
+</li>
+                                    
+<li>
+    <a href="../01-identifying-kit-parts-building-starterbot/" class="dropdown-item">1. Identifying Kit Parts and Building Your StarterBot</a>
+</li>
+                                    
+<li>
+    <a href="../02-intro-robotics-systems/" class="dropdown-item">2. Introduction to Robotics and Systems</a>
+</li>
+                                    
+<li>
+    <a href="../03-programming-fundamentals/" class="dropdown-item">3. Programming Fundamentals</a>
+</li>
+                                    
+<li>
+    <a href="../04-programming-your-robot/" class="dropdown-item">4. Programming Your Robot</a>
+</li>
+                                    
+<li>
+    <a href="../05-designing-building-custom-parts/" class="dropdown-item">5. Designing and Building Custom Parts</a>
+</li>
+                                    
+<li>
+    <a href="../06-electrical-fundamentals/" class="dropdown-item">6. Electrical Fundamentals</a>
+</li>
+                                    
+<li>
+    <a href="../07-electronic-components-circuit-design/" class="dropdown-item">7. Electronic Components and Circuit Design</a>
+</li>
+                                    
+<li>
+    <a href="../08-sensors-and-measurement/" class="dropdown-item">8. Sensors and Measurement</a>
+</li>
+                                    
+<li>
+    <a href="../09-mechanical-systems-simple-machines/" class="dropdown-item">9. Mechanical Systems and Simple Machines</a>
+</li>
+                                    
+<li>
+    <a href="../10-fluid-power-hydraulics-pneumatics/" class="dropdown-item">10. Fluid Power: Hydraulics and Pneumatics</a>
+</li>
+                                    
+<li>
+    <a href="../11-control-systems-feedback-loops/" class="dropdown-item">11. Control Systems and Feedback Loops</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">12. Digital Logic and Computing Fundamentals</a>
+</li>
+                                    
+<li>
+    <a href="../13-advanced-robot-programming/" class="dropdown-item">13. Advanced Robot Programming</a>
+</li>
+                                    
+<li>
+    <a href="../14-integrating-testing-maintaining-robotic-system/" class="dropdown-item">14. Integrating, Testing, and Maintaining a Robotic System</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Learning Graph</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../learning-graph/" class="dropdown-item">Introduction</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/course-description-assessment/" class="dropdown-item">Course Description Assessment</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/concept-list/" class="dropdown-item">Concept Enumeration</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/quality-metrics/" class="dropdown-item">Graph Quality Analysis</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/concept-taxonomy/" class="dropdown-item">Concept Taxonomy</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/taxonomy-distribution/" class="dropdown-item">Taxonomy Distribution Report</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">MicroSims</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../sims/graph-viewer/" class="dropdown-item">Learning Graph Viewer</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../11-control-systems-feedback-loops/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../13-advanced-robot-programming/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#digital-logic-and-computing-fundamentals" class="nav-link">Digital Logic and Computing Fundamentals</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#summary" class="nav-link">Summary</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#concepts-covered" class="nav-link">Concepts Covered</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#prerequisites" class="nav-link">Prerequisites</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#opening-the-hood-whats-inside-the-microcontroller" class="nav-link">Opening the Hood: What's Inside the Microcontroller?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#digital-electronics-and-analog-electronics-two-ways-to-represent-information" class="nav-link">Digital Electronics and Analog Electronics: Two Ways to Represent Information</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#the-binary-number-system-how-computers-count-with-only-two-digits" class="nav-link">The Binary Number System: How Computers Count with Only Two Digits</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#logic-gates-the-physical-circuits-that-perform-boolean-logic" class="nav-link">Logic Gates: The Physical Circuits That Perform Boolean Logic</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#logic-circuit-combining-gates-to-make-decisions" class="nav-link">Logic Circuit: Combining Gates to Make Decisions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#computing-system-the-big-picture" class="nav-link">Computing System: The Big Picture</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#central-processing-unit-and-memory-the-brain-and-the-notebook" class="nav-link">Central Processing Unit and Memory: The Brain and the Notebook</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#microprocessor-not-the-same-thing-as-a-microcontroller" class="nav-link">Microprocessor: Not the Same Thing as a Microcontroller</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#input-devices-and-output-devices-getting-information-in-and-out" class="nav-link">Input Devices and Output Devices: Getting Information In and Out</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#data-transmission-hardware-and-computer-interfaces-getting-signals-where-they-need-to-go" class="nav-link">Data Transmission Hardware and Computer Interfaces: Getting Signals Where They Need to Go</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#operating-system-the-software-layer-that-manages-it-all" class="nav-link">Operating System: The Software Layer That Manages It All</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="digital-logic-and-computing-fundamentals">Digital Logic and Computing Fundamentals</h1>
+<h2 id="summary">Summary</h2>
+<p>Students have been programming a microcontroller for several chapters — now they learn what's happening inside it. This chapter covers digital versus analog electronics, the binary number system, logic gates (AND, OR, NOT) and logic circuits, and Boolean logic. It then walks through the components of a computing system: operating systems, the CPU, memory, input/output devices, data transmission hardware, computer interfaces, and microprocessors.</p>
+<h2 id="concepts-covered">Concepts Covered</h2>
+<p>This chapter covers the following 18 concepts from the learning graph:</p>
+<ol>
+<li>Digital Electronics</li>
+<li>Analog Electronics</li>
+<li>Binary Number System</li>
+<li>Logic Gate</li>
+<li>AND Gate</li>
+<li>OR Gate</li>
+<li>NOT Gate</li>
+<li>Logic Circuit</li>
+<li>Boolean Logic</li>
+<li>Operating System</li>
+<li>Computing System</li>
+<li>Central Processing Unit</li>
+<li>Memory</li>
+<li>Input Device</li>
+<li>Output Device</li>
+<li>Data Transmission Hardware</li>
+<li>Computer Interface</li>
+<li>Microprocessor</li>
+</ol>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>This chapter builds on concepts from:</p>
+<ul>
+<li><a href="../06-electrical-fundamentals/">Chapter 6: Electrical Fundamentals</a></li>
+<li><a href="../08-sensors-and-measurement/">Chapter 8: Sensors and Measurement</a></li>
+</ul>
+<hr />
+<h2 id="opening-the-hood-whats-inside-the-microcontroller">Opening the Hood: What's Inside the Microcontroller?</h2>
+<p>You have been writing programs that run on a microcontroller since Chapter 4. You typed instructions in a programming language, uploaded them to your StarterBot, and watched motors turn, lights blink, and sensors report distances. But underneath every one of those instructions, something much smaller and much stranger has been doing the actual work: streams of electrical pulses being sorted, compared, and combined billions of times each second. This chapter opens the hood and shows you what is actually happening inside that microcontroller while your code runs.</p>
+<p>To understand a microcontroller, you first need to understand the electronics that make it possible, the number system it uses to represent everything from sensor readings to song lyrics, and the simple logical operations its circuits perform over and over. From there, you can build up to the full architecture of a computing system: the central processor, the memory, the devices that get information in and out, and the operating system that ties it all together.</p>
+<p>This chapter follows one continuous arc, building each idea on the one before it:</p>
+<ul>
+<li>Digital versus analog electronics — two different ways of representing signals</li>
+<li>The binary number system — how digital electronics represents every value with just 0s and 1s</li>
+<li>Boolean logic and logic gates (AND, OR, NOT) — the rules and circuits computers use to make decisions</li>
+<li>Logic circuits — combining gates to make more complex decisions</li>
+<li>Computing systems — the CPU, memory, input/output devices, data transmission hardware, and interfaces that make up a complete machine</li>
+<li>Microprocessors versus microcontrollers, and the operating system that manages it all</li>
+</ul>
+<h2 id="digital-electronics-and-analog-electronics-two-ways-to-represent-information">Digital Electronics and Analog Electronics: Two Ways to Represent Information</h2>
+<p>Every electronic circuit you have built so far, going back to <a href="../06-electrical-fundamentals/">Chapter 6: Electrical Fundamentals</a>, works by controlling voltage and current. But circuits can treat those voltages in two very different ways, and the distinction matters enormously once you start asking how a computer "thinks."</p>
+<p><strong>Analog electronics</strong> is the branch of electronics in which signals vary smoothly and continuously across a range of values, with no fixed steps between one value and the next. A microphone converts sound pressure into a voltage that rises and falls smoothly, matching the exact shape of a sound wave. A potentiometer, like the ones inside a StarterBot's servo motors, produces a voltage that can take on any value between its minimum and maximum as its shaft turns. In an analog signal, the exact voltage itself carries the meaning, so even tiny fluctuations matter.</p>
+<p><strong>Digital electronics</strong>, in contrast, is the branch of electronics in which signals are restricted to a small number of discrete, well-defined states, almost always just two: a "high" voltage state and a "low" voltage state. A digital circuit does not care whether a wire reads 4.8 volts or 5.0 volts; both count as the same "high" state, usually interpreted as the number 1. Anything below a low threshold, say 0.5 volts, counts as "low," or the number 0. This tolerance for small variations is exactly what makes digital circuits so reliable: a little electrical noise that would corrupt an analog signal gets absorbed harmlessly into digital electronics' wide margin between "high" and "low." Since digital and analog electronics differ across several dimensions at once, it helps to line those dimensions up side by side before moving further.</p>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Analog Electronics</th>
+<th>Digital Electronics</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Signal values</td>
+<td>Continuous range</td>
+<td>Discrete states (usually 2)</td>
+</tr>
+<tr>
+<td>Noise tolerance</td>
+<td>Low — small errors distort the signal</td>
+<td>High — small errors are absorbed</td>
+</tr>
+<tr>
+<td>Typical components</td>
+<td>Potentiometers, microphones, analog sensors</td>
+<td>Microcontrollers, logic gates, memory chips</td>
+</tr>
+<tr>
+<td>Example in this course</td>
+<td>A distance sensor's raw voltage output</td>
+<td>The 0s and 1s a microcontroller stores</td>
+</tr>
+<tr>
+<td>Precision limit</td>
+<td>Limited by noise and component tolerance</td>
+<td>Limited only by the number of bits used</td>
+</tr>
+</tbody>
+</table>
+<p>Nearly every sensor you connected to a StarterBot back in <a href="../08-sensors-and-measurement/">Chapter 8: Sensors and Measurement</a> actually starts out analog, since real-world quantities such as light, distance, and temperature vary continuously. The microcontroller's job is to convert those analog voltages into digital values it can store and compute with, which is exactly why the binary number system matters so much.</p>
+<h2 id="the-binary-number-system-how-computers-count-with-only-two-digits">The Binary Number System: How Computers Count with Only Two Digits</h2>
+<p>Digital electronics settles on two states, high and low, because two states are the easiest to build reliably and to tell apart from noise. But two states alone cannot represent much information on their own — you need a full number system built entirely out of just those two digits. That system is called binary.</p>
+<p>The <strong>binary number system</strong> is a number system that uses only two digits, 0 and 1, to represent every value, in contrast to the familiar decimal number system, which uses ten digits, 0 through 9. Just as each position in a decimal number represents a power of ten, each position in a binary number represents a power of two, doubling in value with each position moving from right to left. Before converting an actual binary number, it helps to see how those place values line up:</p>
+<ul>
+<li>Rightmost position: \(2^0 = 1\)</li>
+<li>Next position: \(2^1 = 2\)</li>
+<li>Next position: \(2^2 = 4\)</li>
+<li>Next position: \(2^3 = 8\)</li>
+<li>Continuing left: 16, 32, 64, 128, and so on, doubling each time</li>
+</ul>
+<p>A single binary digit is called a <strong>bit</strong>, short for "binary digit," and it is the smallest unit of information a digital computer can store: exactly one 0 or one 1. To find the decimal value of a binary number, multiply each bit by its place value and add the results together. For example, the 8-bit binary number 01011010 converts to decimal as follows:</p>
+<p>\[
+0(128) + 1(64) + 0(32) + 1(16) + 1(8) + 0(4) + 1(2) + 0(1) = 90
+\]</p>
+<p>Eight bits grouped together form a <strong>byte</strong>, the standard unit microcontrollers use to store a single character, a small number, or one channel of sensor data. A microcontroller's entire program, every variable, and every sensor reading you have worked with since Chapter 4 is ultimately stored as long sequences of these bits, grouped into bytes — which is worth experiencing directly rather than only reading about, using the interactive bit toggler below.</p>
+<h4 id="diagram-binary-to-decimal-bit-toggler">Diagram: Binary-to-Decimal Bit Toggler</h4>
+<iframe src="../../sims/binary-decimal-converter/main.html" width="100%" height="480px" scrolling="no"></iframe>
+
+<details markdown="1">
+<summary>Binary-to-Decimal Bit Toggler</summary>
+Type: microsim
+**sim-id:** binary-decimal-converter<br/>
+**Library:** p5.js<br/>
+**Status:** Specified
+
+Purpose: Let students toggle individual bits of an 8-bit binary number and see the resulting decimal value update live, connecting the abstract place-value formula to a concrete, manipulable representation.
+
+Bloom Taxonomy: Apply (L3)
+Bloom Taxonomy Verb: calculate, demonstrate, apply
+
+Learning objective: Given eight clickable bit toggles, students will apply the binary place-value method to calculate the decimal equivalent of any 8-bit binary number and verify their calculation against a live readout.
+
+Canvas layout:
+- Top (60% height): eight large clickable squares in a row, each representing one bit, labeled underneath with its place value (128, 64, 32, 16, 8, 4, 2, 1)
+- Bottom (40% height): a large readout showing the current binary string and its decimal equivalent, plus the running addition (e.g., "0 + 64 + 0 + 16 + 8 + 0 + 2 + 0 = 90")
+
+Visual elements:
+- Each bit square shows "1" (lit, bright color) or "0" (dim, gray) depending on its toggled state
+- Place-value labels below each square
+- A large decimal-value readout that recalculates instantly whenever a bit is toggled
+
+Interactive controls:
+- Click any bit square to flip it between 0 and 1
+- Button: "Randomize" — sets all eight bits to a random pattern
+- Button: "Reset to Zero" — clears all bits to 0
+
+Default parameters:
+- Initial pattern: 00000000 (decimal 0)
+
+Data Visibility Requirements:
+  Stage 1: Show all eight bit squares at 0, decimal value 0
+  Stage 2: When a bit is clicked, highlight that square and show its place value being added
+  Stage 3: Show the full running-sum expression update live
+  Final: Show the final decimal total large and clearly, matching the sum of lit place values
+
+Instructional Rationale: Apply-level objectives require students to practice the calculation themselves rather than watch it performed. Direct manipulation of bit toggles with an instantly recalculating readout lets students test predictions ("if I flip this bit, the value should go up by 16") and see immediate confirmation, which is more effective than a passive animation for a calculation skill.
+
+Implementation: p5.js for the clickable bit grid and live-updating text readout. Store the 8 bits as an array of 0/1 values; recompute the decimal sum on every click event.
+</details>
+
+<p>Binary numbers do more than store quantities — every instruction in the program you wrote for your StarterBot, and every letter of every word, is ultimately encoded as a pattern of bits. Before those patterns can drive any decision inside a computer, they need a system of logic to operate on them, which is exactly where Boolean logic comes in. <strong>Boolean logic</strong> is a branch of mathematics that deals with variables that can only take on one of two values, true or false, and defines operations for combining those values. It is named after the mathematician George Boole, who developed the system in the 1850s, more than a century before the first digital computer existed.</p>
+<p>Boolean logic maps perfectly onto binary electronics: "true" corresponds naturally to a digital high state (1), and "false" corresponds to a digital low state (0). A <strong>Boolean variable</strong> can only ever equal 1 or 0, true or false, on or off — there is no in-between state, which mirrors exactly the two discrete voltage states of digital electronics described earlier in this chapter. Boolean logic defines a small set of basic operations that combine one or more Boolean variables to produce a new Boolean result:</p>
+<ul>
+<li><strong>AND</strong> — combines two conditions so the result is true only when both are true</li>
+<li><strong>OR</strong> — combines two conditions so the result is true when at least one is true</li>
+<li><strong>NOT</strong> — reverses a single condition, turning true into false and false into true</li>
+</ul>
+<p>Every decision a microcontroller makes, no matter how complex the program logic looks in your code, ultimately reduces to combinations of these three basic Boolean operations performed on bits, physically carried out by circuits called logic gates.</p>
+<h2 id="logic-gates-the-physical-circuits-that-perform-boolean-logic">Logic Gates: The Physical Circuits That Perform Boolean Logic</h2>
+<p>A <strong>logic gate</strong> is a small electronic circuit that takes one or more digital input signals and produces a single digital output signal, based on a Boolean logic operation. Logic gates are built from transistors, the same tiny switching components introduced back in Chapter 6, wired together so that combinations of high and low inputs reliably produce a predictable high or low output. A single microcontroller chip may contain millions or even billions of logic gates, packed onto a piece of silicon smaller than a fingernail.</p>
+<p>Three logic gates form the foundation that nearly every other digital circuit is built from:</p>
+<ul>
+<li><strong>AND gate</strong> — the output is 1 only when <em>every</em> input is 1; if any input is 0, the output is 0</li>
+<li><strong>OR gate</strong> — the output is 1 when <em>at least one</em> input is 1; the output is 0 only when every input is 0</li>
+<li><strong>NOT gate</strong> — takes a single input and produces the opposite value; a 1 input produces a 0 output, and a 0 input produces a 1 output</li>
+</ul>
+<p>The <strong>AND gate</strong> behaves like a strict requirement: a StarterBot programmed to drive forward only when its "power switch is on" AND its "safety sensor is clear" needs both conditions true at the same time before the AND gate's output goes high. The <strong>OR gate</strong> behaves more permissively, like a security light that turns on when "motion is detected" OR "the manual override button is pressed," needing only one condition to be true. The <strong>NOT gate</strong>, sometimes called an inverter, simply flips whatever signal it receives, which is useful whenever a circuit needs to react to the absence of a condition rather than its presence. Rather than presenting three separate static truth tables, use the interactive explorer below to select a gate, toggle its inputs, and watch the output and matching table row respond immediately.</p>
+<h4 id="diagram-logic-gate-truth-table-explorer">Diagram: Logic Gate Truth Table Explorer</h4>
+<iframe src="../../sims/logic-gate-explorer/main.html" width="100%" height="520px" scrolling="no"></iframe>
+
+<details markdown="1">
+<summary>Logic Gate Truth Table Explorer</summary>
+Type: microsim
+**sim-id:** logic-gate-explorer<br/>
+**Library:** p5.js<br/>
+**Status:** Specified
+
+Purpose: Let students select AND, OR, or NOT gates, toggle each gate's inputs, and observe the resulting output and highlighted truth-table row update live, building a verified understanding of each gate's behavior.
+
+Bloom Taxonomy: Understand (L2)
+Bloom Taxonomy Verb: explain, classify, interpret, predict
+
+Learning objective: Given a selectable logic gate and toggleable input switches, students will predict the output of AND, OR, and NOT gates for any input combination and verify their prediction against the gate's true behavior and truth table.
+
+Canvas layout:
+- Left (55% width): a schematic gate symbol with one or two clickable input toggle switches (wired left) and a lit/unlit output lamp (wired right)
+- Right (45% width): the full truth table for the selected gate, with the row matching the current input combination highlighted
+
+Visual elements:
+- Standard gate shape (AND: D-shape; OR: curved-back shape; NOT: triangle with bubble) redrawn when the gate type changes
+- Input toggle switches shown as small circles that glow bright when set to 1, dim gray when 0
+- Output lamp glows bright when output is 1, dim gray when 0
+- Truth table with columns for each input and the Output, with the row tracking the current toggle state highlighted
+
+Interactive controls:
+- Dropdown: Select gate (AND, OR, NOT) — NOT gate automatically hides the second input toggle
+- Click each input toggle to flip between 0 and 1
+- Display: current Boolean expression, e.g., "1 AND 0 = 0"
+
+Default parameters:
+- Gate: AND
+- Inputs: both set to 0
+
+Data Visibility Requirements:
+  Stage 1: Show the gate symbol with both inputs at 0 and output at 0
+  Stage 2: When an input toggle is clicked, show the new input state and immediately recompute the output
+  Stage 3: Show the matching truth-table row highlighted in a contrasting color
+  Final: Show the Boolean expression readout matching the toggled inputs and computed output
+
+Instructional Rationale: Understand-level objectives call for concrete, inspectable data at each stage rather than continuous animation. Letting students toggle inputs directly and see the corresponding truth-table row highlight in real time supports prediction-then-verification, which is more effective for an explain/classify objective than a passive video or static table.
+
+Implementation: p5.js for gate symbol rendering and toggle interaction; store truth tables for AND, OR, and NOT as simple lookup arrays; redraw the gate symbol and highlighted table row on every toggle event.
+</details>
+
+<h2 id="logic-circuit-combining-gates-to-make-decisions">Logic Circuit: Combining Gates to Make Decisions</h2>
+<p>A single logic gate can only answer a very simple question, but real digital systems need to make much more complex decisions. A <strong>logic circuit</strong> is a network of two or more logic gates connected together, where the output of one gate feeds into the input of another, allowing simple Boolean operations to combine into more sophisticated logical behavior. Consider a StarterBot safety circuit that should only allow the drive motors to run when three conditions all hold: the main power switch is on, the emergency stop button has not been pressed, and the bumper sensor is not currently triggered. No single AND, OR, or NOT gate can evaluate all three conditions at once, but a small logic circuit can — a NOT gate first inverts the emergency-stop signal (so "not pressed" becomes a 1), and a three-input AND gate then combines that inverted signal with the power-switch and bumper-sensor signals, so only when all three conditions are satisfied does the final output go high and enable the motors.</p>
+<p>This same pattern — inverting some signals, combining others, and feeding gate outputs into further gates — scales up from a simple three-gate safety circuit all the way to the arithmetic circuits that add binary numbers together and the millions of gates packed into a modern processor. Every layer of complexity in a computing system, all the way up to the programs you write, is built from exactly this kind of gate-by-gate combination.</p>
+<h2 id="computing-system-the-big-picture">Computing System: The Big Picture</h2>
+<p>With digital electronics, binary numbers, Boolean logic, and logic circuits established as the foundation, it is time to zoom out and look at the whole machine. A <strong>computing system</strong> is the complete collection of hardware and software components that work together to accept input, process data according to instructions, store information, and produce output. A microcontroller-based robot, a laptop, and a smartphone are all computing systems, even though they look nothing alike on the outside, because each contains the same core functional components arranged around the same basic pattern. Every computing system, no matter its size, is organized around four essential functional roles:</p>
+<ol>
+<li><strong>Processing</strong> — carrying out instructions and performing calculations</li>
+<li><strong>Memory</strong> — storing instructions and data, both temporarily and permanently</li>
+<li><strong>Input</strong> — receiving information and commands from the outside world</li>
+<li><strong>Output</strong> — sending results and signals back out to the world</li>
+</ol>
+<p>The diagram below shows how these four roles map onto real physical components, and lets you click each component to reveal what it does and how it connects to the others.</p>
+<h4 id="diagram-computing-system-architecture-explorer">Diagram: Computing System Architecture Explorer</h4>
+<iframe src="../../sims/computing-system-architecture/main.html" width="100%" height="520px" scrolling="no"></iframe>
+
+<details markdown="1">
+<summary>Computing System Architecture Explorer</summary>
+Type: graph-model
+**sim-id:** computing-system-architecture<br/>
+**Library:** vis-network<br/>
+**Status:** Specified
+
+Purpose: Show how the Central Processing Unit, Memory, Input Devices, Output Devices, and Data Transmission Hardware connect within a computing system, and let students click each component to reveal its definition and role.
+
+Bloom Taxonomy: Analyze (L4)
+Bloom Taxonomy Verb: differentiate, organize, examine, distinguish
+
+Learning objective: Given an interactive node-and-edge diagram of a computing system, students will differentiate the roles of the CPU, memory, input devices, and output devices, and examine how data transmission hardware connects them.
+
+Node types:
+1. Central Processing Unit (orange square, center) — property: role "executes instructions"
+2. Memory (blue square, upper area) — property: role "stores instructions and data"
+3. Input Devices (green circles, left) — example nodes: "Ultrasonic Sensor", "Button"
+4. Output Devices (purple circles, right) — example nodes: "Motor", "LED", "Speaker"
+5. Data Transmission Hardware (gray diamond, connecting all nodes) — property: role "carries signals between components"
+
+Edge types:
+1. Solid bidirectional arrows: CPU to Memory ("reads/writes instructions and data")
+2. Solid arrows: Input Devices to Data Transmission Hardware to CPU ("sensor data flows in")
+3. Solid arrows: CPU to Data Transmission Hardware to Output Devices ("commands flow out")
+
+Sample data:
+- Central Processing Unit — connected to Memory (bidirectional) and to Data Transmission Hardware
+- Memory — connected only to CPU
+- Ultrasonic Sensor, Button (Input Devices) — connected to Data Transmission Hardware, arrow pointing toward it
+- Motor, LED, Speaker (Output Devices) — connected to Data Transmission Hardware, arrow pointing away from it
+- Data Transmission Hardware — central hub connected to CPU, all input devices, and all output devices
+
+Layout: Force-directed with CPU near the visual center
+
+Interactive features:
+- Hover node: show a one-sentence definition in a tooltip
+- Click node: highlight all directly connected nodes and open a side panel with the full definition and an example from the StarterBot
+- Zoom: mouse wheel
+- Pan: click and drag background
+
+Visual styling:
+- Node color coding by role (CPU orange, Memory blue, Input green, Output purple, Data Transmission Hardware gray)
+- Edge arrows show direction of data flow with small arrowheads
+- Selected node and its edges highlighted in yellow
+
+Legend:
+- Node shapes and colors explained
+- Arrow direction meaning ("data flows in the direction of the arrowhead")
+
+Implementation: vis-network JavaScript library
+Canvas size: responsive, minimum 600x450px
+</details>
+
+<p>The diagram highlights something important: no single component of a computing system does everything. The CPU cannot store large amounts of data by itself, memory cannot make decisions on its own, and neither input nor output devices can process information. A computing system's power comes from these specialized components working together, coordinated through data transmission hardware, which is why the next two sections look more closely at the two components at the very heart of that coordination: the CPU and memory.</p>
+<h2 id="central-processing-unit-and-memory-the-brain-and-the-notebook">Central Processing Unit and Memory: The Brain and the Notebook</h2>
+<p>The <strong>Central Processing Unit</strong>, almost always abbreviated CPU, is the component of a computing system that fetches program instructions, decodes what each instruction means, and executes it, one instruction after another, often billions of times per second. Every logic circuit described earlier in this chapter — every AND, OR, and NOT gate combination — is ultimately packed inside the CPU, which is why the CPU is often called the "brain" of a computing system: it is where the actual decision-making and calculation happen.</p>
+<p><strong>Memory</strong> is the component of a computing system that stores program instructions and data, either temporarily while a program runs or permanently between power cycles. If the CPU is the brain making decisions, memory is the notebook it reads from and writes to along the way. Not all memory behaves the same way, however, and the distinction between memory types affects everything from how fast a program runs to what happens when the power is switched off.</p>
+<table>
+<thead>
+<tr>
+<th>Memory Type</th>
+<th>Volatile? (loses data on power-off)</th>
+<th>Speed</th>
+<th>Typical Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RAM (Random-Access Memory)</td>
+<td>Yes</td>
+<td>Very fast</td>
+<td>Holds running program instructions and working data</td>
+</tr>
+<tr>
+<td>ROM (Read-Only Memory)</td>
+<td>No</td>
+<td>Slower to write, fast to read</td>
+<td>Stores permanent startup instructions</td>
+</tr>
+<tr>
+<td>Flash Memory</td>
+<td>No</td>
+<td>Moderate</td>
+<td>Stores the uploaded program on a microcontroller</td>
+</tr>
+</tbody>
+</table>
+<p>When you upload a program to your StarterBot's microcontroller, that program is written into flash memory, so it survives even after the robot is powered off. Once the microcontroller powers on, the CPU copies the instructions it needs into fast RAM to execute them, reading and writing working variables there as the program runs — which is precisely why unplugging a robot mid-upload can corrupt a program, since the write to flash memory gets interrupted partway through.</p>
+<h2 id="microprocessor-not-the-same-thing-as-a-microcontroller">Microprocessor: Not the Same Thing as a Microcontroller</h2>
+<p>Since Chapter 4, you have been calling the chip that runs your StarterBot's programs a "microcontroller." It is now worth being precise about a closely related but distinct term: the <strong>microprocessor</strong>. A <strong>microprocessor</strong> is an integrated circuit that contains a complete Central Processing Unit, and only the CPU, on a single chip, requiring separate external chips for memory, input, and output support. A <strong>microcontroller</strong>, the chip you have actually been programming, is a complete small computing system on a single chip: it bundles a CPU, memory, and input/output circuitry together in one package.</p>
+<p>In other words, every microcontroller contains a microprocessor-like CPU core inside it, but a bare microprocessor is not a complete computing system by itself — it needs surrounding chips to become one. The distinction matters practically, not just semantically:</p>
+<ul>
+<li>A <strong>microprocessor</strong>-based system, like a desktop computer's main chip, needs separate RAM chips, storage drives, and I/O controller chips wired around it on a circuit board to function</li>
+<li>A <strong>microcontroller</strong>, like the chip on your StarterBot, already includes its own memory and I/O circuitry on the same chip, which is exactly why it can run a robot with so few additional components</li>
+<li>Microcontrollers trade some raw processing power for this compactness, cost savings, and low power consumption, which is why they dominate embedded, single-purpose devices like robots and appliances, while microprocessors dominate general-purpose devices like laptops that need maximum processing power and flexible expansion</li>
+</ul>
+<p>!!! tip "Why This Distinction Matters for Robotics"
+    Robotics almost always uses microcontrollers rather than bare microprocessors, precisely because a robot needs a compact, low-power, self-contained chip that can read sensors and drive motors without a room full of supporting circuit boards. The next time you write code for your StarterBot, remember that the chip executing it is a complete miniature computing system, not just a bare processor.</p>
+<h2 id="input-devices-and-output-devices-getting-information-in-and-out">Input Devices and Output Devices: Getting Information In and Out</h2>
+<p>A computing system is only useful if it can sense the world and act on it. An <strong>input device</strong> is any hardware component that converts information from the outside world — light, sound, distance, pressure, or a human's button press — into a digital signal the CPU can process. An <strong>output device</strong> is any hardware component that converts a digital signal from the CPU into some effect in the outside world — motion, sound, light, or a visual display. You have already used several examples of each on your StarterBot, going back to Chapters 6 and 8:</p>
+<ul>
+<li><strong>Input devices:</strong> ultrasonic distance sensors, line-following sensors, push buttons, potentiometers</li>
+<li><strong>Output devices:</strong> DC motors, servo motors, LEDs, small speakers or buzzers</li>
+</ul>
+<p>Notice the pattern from earlier in the chapter reappearing here: input devices frequently start out producing analog signals, a continuously varying voltage, which must be converted to digital values before the CPU can use them, while output devices often need the reverse conversion to drive smooth, analog-like motion or sound from digital instructions. This conversion does not happen by magic — it depends on the data transmission hardware and computer interfaces described next.</p>
+<h2 id="data-transmission-hardware-and-computer-interfaces-getting-signals-where-they-need-to-go">Data Transmission Hardware and Computer Interfaces: Getting Signals Where They Need to Go</h2>
+<p>Even with a CPU, memory, and a full set of input and output devices, none of those components can work together without a way to physically move signals between them. <strong>Data transmission hardware</strong> is the collection of wires, buses, and supporting circuitry that carries digital signals between the CPU, memory, and input/output devices inside a computing system. Recall the computing system diagram earlier in this chapter: data transmission hardware was the hub connecting every other component together.</p>
+<p>A <strong>computer interface</strong> is a standardized set of rules and physical connections that governs how two components exchange data, so that devices built by different manufacturers can still communicate reliably. Interfaces specify things like which wire carries which signal, how fast data moves, and what pattern of bits marks the start and end of a message. Several standardized interfaces show up constantly in robotics and computing, each suited to a different situation.</p>
+<table>
+<thead>
+<tr>
+<th>Interface</th>
+<th>Typical Use</th>
+<th>Number of Wires</th>
+<th>Speed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UART (serial)</td>
+<td>Simple sensor-to-microcontroller communication</td>
+<td>2 (transmit, receive)</td>
+<td>Moderate</td>
+</tr>
+<tr>
+<td>I2C</td>
+<td>Connecting several sensors on a shared bus</td>
+<td>2 (clock, data)</td>
+<td>Moderate</td>
+</tr>
+<tr>
+<td>SPI</td>
+<td>High-speed sensors, displays, memory chips</td>
+<td>4</td>
+<td>Fast</td>
+</tr>
+<tr>
+<td>USB</td>
+<td>Connecting a computer to peripherals like keyboards or cameras</td>
+<td>Varies</td>
+<td>Fast</td>
+</tr>
+</tbody>
+</table>
+<p>If you have ever wired an ultrasonic sensor to a StarterBot's microcontroller using specific labeled pins, you were relying on one of these interfaces, most likely UART or I2C, to guarantee that the sensor's digital signal arrived at the CPU correctly formatted and correctly timed. Without a shared interface standard, every sensor manufacturer would need its own unique, incompatible wiring scheme, and connecting even a simple robot would become far more difficult.</p>
+<h2 id="operating-system-the-software-layer-that-manages-it-all">Operating System: The Software Layer That Manages It All</h2>
+<p>Every hardware component covered in this chapter — the CPU, memory, input and output devices, and the data transmission hardware and interfaces connecting them — needs some way to be coordinated so that programs and devices can share the same limited hardware without conflict. That coordination is the job of the operating system. An <strong>operating system</strong> is software that manages a computing system's hardware resources and provides a consistent set of services that other programs rely on, rather than requiring every program to control hardware directly.</p>
+<p>On a laptop or smartphone, the operating system, such as Windows, macOS, or Android, manages which program gets access to the CPU at any given moment, keeps different programs' memory separate so they cannot corrupt each other, and provides standard ways for programs to use input and output devices like keyboards, touchscreens, and speakers. Many small microcontrollers, including the one on your StarterBot, run either no operating system at all or an extremely minimal one, because a single dedicated robot program does not need to share the CPU with other competing programs the way a laptop does. Larger or more complex robotic systems, however, often do run a lightweight operating system to manage multiple sensors, motors, and communication interfaces simultaneously without one part of the program blocking another. The following list summarizes the core services an operating system provides, tying together nearly every hardware component introduced in this chapter:</p>
+<ul>
+<li><strong>Process management:</strong> deciding which program instructions the CPU executes and when</li>
+<li><strong>Memory management:</strong> allocating and protecting memory space for each running program</li>
+<li><strong>Device management:</strong> providing a consistent way for programs to use input and output devices through their interfaces</li>
+<li><strong>File and data management:</strong> organizing how data is stored and retrieved from permanent memory</li>
+</ul>
+<p>??? question "Quick Check: Microprocessor or Microcontroller? — Click to expand"
+    A chip that includes a CPU, memory, and I/O circuitry all on one piece of silicon, specifically designed to run a single embedded program for a robot, is best described as a <strong>microcontroller</strong>, not a bare microprocessor.</p>
+<p>You began this chapter by opening the hood on the microcontroller you have been programming since Chapter 4. You now know that inside that chip, digital electronics represent every value as combinations of high and low voltage states, those states are organized into binary numbers, Boolean logic and logic gates combine those states into decisions, and logic circuits, a CPU, memory, input and output devices, data transmission hardware, and an operating system all work together as a complete computing system. The next time you upload a program to your StarterBot, you will know exactly what happens after you click "Upload."</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

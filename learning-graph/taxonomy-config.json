@@ -1,0 +1,17 @@
+{
+  "_comment": "Range-based mapping no longer applies after the spiral-curriculum redesign (concepts were reassigned across categories). This file is kept for reference only; taxonomy assignments now live directly in learning-graph.csv's TaxonomyID column.",
+  "KIT": { "range": [195, 204], "keywords": [] },
+  "FOUND": { "range": [1, 17], "keywords": [] },
+  "PROG": { "range": [148, 162], "keywords": [] },
+  "RBOT": { "range": [0, 0], "keywords": [] },
+  "EDP": { "range": [18, 33], "keywords": [] },
+  "ELEC": { "range": [34, 50], "keywords": [] },
+  "CIRC": { "range": [51, 67], "keywords": [] },
+  "SENS": { "range": [70, 83], "keywords": [] },
+  "MECH": { "range": [84, 100], "keywords": [] },
+  "FLUID": { "range": [101, 112], "keywords": [] },
+  "CTRL": { "range": [117, 128], "keywords": [] },
+  "DIGI": { "range": [129, 145], "keywords": [] },
+  "RBTP": { "range": [168, 176], "keywords": [] },
+  "BUILD": { "range": [177, 194], "keywords": [] }
+}

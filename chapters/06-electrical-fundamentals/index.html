@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>6. Electrical Fundamentals - My Docs</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../course-description/" class="nav-link">Course Description</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Chapters</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../" class="dropdown-item">List of Chapters</a>
+</li>
+                                    
+<li>
+    <a href="../01-identifying-kit-parts-building-starterbot/" class="dropdown-item">1. Identifying Kit Parts and Building Your StarterBot</a>
+</li>
+                                    
+<li>
+    <a href="../02-intro-robotics-systems/" class="dropdown-item">2. Introduction to Robotics and Systems</a>
+</li>
+                                    
+<li>
+    <a href="../03-programming-fundamentals/" class="dropdown-item">3. Programming Fundamentals</a>
+</li>
+                                    
+<li>
+    <a href="../04-programming-your-robot/" class="dropdown-item">4. Programming Your Robot</a>
+</li>
+                                    
+<li>
+    <a href="../05-designing-building-custom-parts/" class="dropdown-item">5. Designing and Building Custom Parts</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">6. Electrical Fundamentals</a>
+</li>
+                                    
+<li>
+    <a href="../07-electronic-components-circuit-design/" class="dropdown-item">7. Electronic Components and Circuit Design</a>
+</li>
+                                    
+<li>
+    <a href="../08-sensors-and-measurement/" class="dropdown-item">8. Sensors and Measurement</a>
+</li>
+                                    
+<li>
+    <a href="../09-mechanical-systems-simple-machines/" class="dropdown-item">9. Mechanical Systems and Simple Machines</a>
+</li>
+                                    
+<li>
+    <a href="../10-fluid-power-hydraulics-pneumatics/" class="dropdown-item">10. Fluid Power: Hydraulics and Pneumatics</a>
+</li>
+                                    
+<li>
+    <a href="../11-control-systems-feedback-loops/" class="dropdown-item">11. Control Systems and Feedback Loops</a>
+</li>
+                                    
+<li>
+    <a href="../12-digital-logic-computing-fundamentals/" class="dropdown-item">12. Digital Logic and Computing Fundamentals</a>
+</li>
+                                    
+<li>
+    <a href="../13-advanced-robot-programming/" class="dropdown-item">13. Advanced Robot Programming</a>
+</li>
+                                    
+<li>
+    <a href="../14-integrating-testing-maintaining-robotic-system/" class="dropdown-item">14. Integrating, Testing, and Maintaining a Robotic System</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Learning Graph</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../learning-graph/" class="dropdown-item">Introduction</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/course-description-assessment/" class="dropdown-item">Course Description Assessment</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/concept-list/" class="dropdown-item">Concept Enumeration</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/quality-metrics/" class="dropdown-item">Graph Quality Analysis</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/concept-taxonomy/" class="dropdown-item">Concept Taxonomy</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/taxonomy-distribution/" class="dropdown-item">Taxonomy Distribution Report</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">MicroSims</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../sims/graph-viewer/" class="dropdown-item">Learning Graph Viewer</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../05-designing-building-custom-parts/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../07-electronic-components-circuit-design/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#electrical-fundamentals" class="nav-link">Electrical Fundamentals</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#summary" class="nav-link">Summary</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#concepts-covered" class="nav-link">Concepts Covered</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#prerequisites" class="nav-link">Prerequisites</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#stepping-back-to-ask-why" class="nav-link">Stepping Back to Ask "Why"</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#the-water-analogy-voltage-current-and-resistance" class="nav-link">The Water Analogy: Voltage, Current, and Resistance</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ohms-law-the-equation-that-ties-it-together" class="nav-link">Ohm's Law: The Equation That Ties It Together</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#direct-current-vs-alternating-current" class="nav-link">Direct Current vs. Alternating Current</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#electrical-circuits-series-and-parallel-paths" class="nav-link">Electrical Circuits: Series and Parallel Paths</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#electrical-power" class="nav-link">Electrical Power</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#conductors-and-insulators" class="nav-link">Conductors and Insulators</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#electrical-ground" class="nav-link">Electrical Ground</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#short-circuits-and-circuit-protection" class="nav-link">Short Circuits and Circuit Protection</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#electrical-safety" class="nav-link">Electrical Safety</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="electrical-fundamentals">Electrical Fundamentals</h1>
+<h2 id="summary">Summary</h2>
+<p>Having built, programmed, and modified a robot, students now dig into why its electrical system works. This chapter covers core electrical theory: voltage, current, resistance, and Ohm's Law; the difference between direct and alternating current; series and parallel circuits; electrical power; and essential electrical safety practices, including how to recognize and prevent short circuits.</p>
+<h2 id="concepts-covered">Concepts Covered</h2>
+<p>This chapter covers the following 17 concepts from the learning graph:</p>
+<ol>
+<li>Electricity</li>
+<li>Voltage</li>
+<li>Current</li>
+<li>Resistance</li>
+<li>Ohms Law</li>
+<li>Direct Current</li>
+<li>Alternating Current</li>
+<li>Electrical Circuit</li>
+<li>Series Circuit</li>
+<li>Parallel Circuit</li>
+<li>Electrical Power</li>
+<li>Electrical Safety</li>
+<li>Conductors</li>
+<li>Insulators</li>
+<li>Electrical Ground</li>
+<li>Short Circuit</li>
+<li>Circuit Protection</li>
+</ol>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>This chapter assumes only the prerequisites listed in the <a href="../../course-description/">course description</a>.</p>
+<hr />
+<h2 id="stepping-back-to-ask-why">Stepping Back to Ask "Why"</h2>
+<p>Over the last five chapters, you built the StarterBot, learned the vocabulary of robotic systems, wrote programs to control it, and even designed custom parts for it. At every step, you trusted that flipping a switch would send power to the Yellow Jacket motors and the servos would spin exactly when your code told them to. This chapter steps back from building and asks a more basic question: what is actually happening, invisibly, inside the wires that connect your robot's 12V battery to its motors?</p>
+<p><strong>Electricity</strong> is the flow of electric charge through a material, and it is the invisible force that powers every motor, sensor, and controller on your robot. You cannot see electricity directly the way you can see a gear turn or a chain move, but you can measure its effects, predict its behavior with a small set of equations, and design circuits that use it safely. This chapter builds the theoretical foundation you will lean on for the rest of the course, starting with the three quantities that describe electricity in any circuit and ending with the safety habits that keep you and your robot protected.</p>
+<p>Here is the arc this chapter will follow:</p>
+<ul>
+<li>The three core quantities that describe electricity: voltage, current, and resistance</li>
+<li>Ohm's Law, the single equation that ties those three quantities together</li>
+<li>Direct current versus alternating current, and why your robot's battery supplies one and not the other</li>
+<li>How circuits, series circuits, and parallel circuits organize the paths current can take</li>
+<li>Electrical power, the rate at which a circuit does useful work</li>
+<li>Conductors and insulators, the materials that either allow or block current</li>
+<li>Electrical ground, short circuits, circuit protection, and the safety habits that tie it all together</li>
+</ul>
+<h2 id="the-water-analogy-voltage-current-and-resistance">The Water Analogy: Voltage, Current, and Resistance</h2>
+<p>Electrical quantities are difficult to picture because charge itself is invisible, so engineers often compare a circuit to a system of water flowing through pipes. Water needs pressure to push it through a pipe, it flows at some measurable rate, and the pipe itself offers some resistance to that flow depending on its width and length. Electric circuits behave the same way, with three matching quantities that you will use constantly for the rest of this course.</p>
+<p><strong>Voltage</strong> is the electrical pressure that pushes charge through a circuit, measured in volts (V). Just as water pressure pushes water through a pipe even when the pipe is not flowing, voltage exists across a battery's terminals whether or not a circuit is connected to it. The StarterBot's battery is rated at 12 volts, meaning it maintains 12 volts of electrical pressure across its terminals, ready to push current through the robot's motors the moment a switch closes the circuit.</p>
+<p><strong>Current</strong> is the rate at which electric charge flows past a point in a circuit, measured in amperes, or amps (A). In the water analogy, current is like the rate of water flow through the pipe, measured in gallons per minute. A Yellow Jacket motor spinning under load draws a measurable current from the battery, and a stalled motor (one blocked from turning) can draw a much larger current, which is one reason motor stalls are dangerous to a robot's electrical system.</p>
+<p><strong>Resistance</strong> is a material's opposition to the flow of electric current, measured in ohms (Ω, the Greek letter omega). A narrow pipe resists water flow more than a wide one, and in the same way, a long thin wire resists current flow more than a short thick one. Resistance is not always unwanted: some components, called resistors, are built specifically to add a controlled amount of resistance to a circuit, protecting sensitive parts from too much current.</p>
+<p>Because these three quantities map so directly onto a water system, it helps to see them side by side before moving on to the equation that connects them.</p>
+<table>
+<thead>
+<tr>
+<th>Water System</th>
+<th>Electrical Circuit</th>
+<th>Unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Water pressure from a pump</td>
+<td>Voltage</td>
+<td>Volts (V)</td>
+</tr>
+<tr>
+<td>Rate of water flow through a pipe</td>
+<td>Current</td>
+<td>Amps (A)</td>
+</tr>
+<tr>
+<td>Narrowness of the pipe</td>
+<td>Resistance</td>
+<td>Ohms (Ω)</td>
+</tr>
+<tr>
+<td>Water flowing through the pipe</td>
+<td>Electric charge</td>
+<td>Coulombs (C)</td>
+</tr>
+</tbody>
+</table>
+<p>!!! tip "The analogy has limits"
+ Water is a physical substance that can pool or leak; electric charge in a simple circuit does not pool anywhere unless it is stored in a component like a capacitor or a battery. Use the water analogy to build intuition, but remember that current flows through a complete loop, not into empty space.</p>
+<h2 id="ohms-law-the-equation-that-ties-it-together">Ohm's Law: The Equation That Ties It Together</h2>
+<p>Voltage, current, and resistance are not independent of each other; they are locked together by one of the most useful equations in all of electronics. <strong>Ohm's Law</strong> states that the voltage across a circuit equals the current flowing through it multiplied by the resistance it encounters. Written as an equation, Ohm's Law is:</p>
+<p>\[ V = IR \]</p>
+<p>where \( V \) is voltage in volts, \( I \) is current in amps, and \( R \) is resistance in ohms. Because this equation relates three quantities, knowing any two lets you calculate the third. Rearranging the equation gives two more useful forms:</p>
+<p>\[ I = \frac{V}{R} \]</p>
+<p>\[ R = \frac{V}{I} \]</p>
+<p>Consider the StarterBot's 12V battery connected to a simple resistive load with 4 ohms of resistance. Using the first rearranged equation, the current flowing through that load would be \( I = 12 \div 4 = 3 \) amps. If a different component in the same circuit had a much higher resistance of 60 ohms, only \( I = 12 \div 60 = 0.2 \) amps would flow. Higher resistance always means less current for the same voltage, which is exactly what the water-pipe analogy predicts: a narrower pipe lets less water through at the same pressure.</p>
+<p>Before exploring the interactive tool below, notice that Ohm's Law describes a direct relationship between current and voltage, but an inverse relationship between current and resistance. The MicroSim lets you test both relationships by adjusting each value independently and watching the circuit respond.</p>
+<h4 id="diagram-ohms-law-explorer">Diagram: Ohm's Law Explorer</h4>
+<iframe src="../../sims/ohms-law-explorer/main.html" width="100%" height="550px" scrolling="no"></iframe>
+
+<details markdown="1">
+<summary>Ohm's Law Explorer</summary>
+Type: microsim
+**sim-id:** ohms-law-explorer<br/>
+**Library:** p5.js<br/>
+**Status:** Specified
+
+Purpose: Let students manipulate voltage and resistance independently and observe the resulting current, while watching an animated circuit that visually represents the flow.
+
+Bloom Taxonomy: Apply (L3)
+Bloom Taxonomy Verb: calculate, demonstrate, solve
+
+Learning objective: Given a voltage and resistance value, students will calculate the resulting current using Ohm's Law and verify their prediction against the simulation's animated circuit.
+
+Canvas layout:
+- Top (60% of height): A simple animated circuit diagram showing a battery, two wires forming a loop, and a resistor symbol (zigzag) in the loop
+- Bottom (40% of height): Two sliders and a numeric readout panel
+
+Visual elements:
+- Battery symbol labeled with its current voltage value
+- Resistor symbol labeled with its current resistance value
+- Small dots representing charge moving along the wire loop, with dot speed proportional to calculated current
+- Numeric readout box showing V, I, and R with units, updating live
+
+Interactive controls:
+- Slider: Voltage, range 0-24V, default 12V (matching the StarterBot's battery)
+- Slider: Resistance, range 1-100 ohms, default 4 ohms
+- Toggle: "Show equation" overlays the live calculation, e.g. "12V ÷ 4Ω = 3A"
+
+Default parameters:
+- Voltage: 12V (StarterBot battery)
+- Resistance: 4 ohms
+- Resulting current: 3A, shown with moderately fast dot animation
+
+Data Visibility Requirements:
+ Stage 1: Show the default circuit with V=12, R=4, and the calculated I=3A displayed numerically
+ Stage 2: When the learner drags the Voltage slider, show the new V value and the recalculated I value update in real time, with dot speed changing to match
+ Stage 3: When the learner drags the Resistance slider, show the new R value and the recalculated I value update in real time, with dot speed changing inversely
+ Final: Learner can set any V/R combination and see the exact calculated I with the full equation shown
+
+Behavior: Moving either slider immediately recalculates current using \\( I = V / R \\) and updates both the numeric readout and the animation speed of the charge dots. If current would exceed 10A, the wire flashes red and a warning label reads "Current this high would overheat a thin wire," connecting the simulation forward to the chapter's later discussion of short circuits and circuit protection.
+
+Instructional Rationale: Apply-level objectives call for parameter exploration and calculators rather than passive animation, so this MicroSim gives students direct control over two of the three Ohm's Law variables and requires them to predict the third before confirming it against the live readout.
+
+Implementation: p5.js canvas with two HTML range sliders bound to draw() via event listeners; charge dots implemented as an array of positions animated along a fixed bezier path at a speed proportional to calculated current.
+</details>
+
+<h2 id="direct-current-vs-alternating-current">Direct Current vs. Alternating Current</h2>
+<p>Ohm's Law works the same way regardless of which of two fundamentally different current types is flowing, but robots and household power rely on different ones. <strong>Direct current (DC)</strong> is electric current that flows in only one direction through a circuit, at a steady or slowly changing voltage. The StarterBot's 12V battery supplies direct current: electrons flow from the negative terminal, through the circuit, and back to the positive terminal, always in the same direction, which is exactly why the battery's voltage can be described with a single fixed number.</p>
+<p><strong>Alternating current (AC)</strong> is electric current that periodically reverses direction, cycling back and forth many times per second. The electricity that comes out of a wall outlet in the United States is AC, reversing direction 60 times per second. AC is efficient for transmitting power over long distances from power plants to homes, which is why household and industrial power grids use it, while battery-powered devices like the StarterBot almost always run on DC.</p>
+<p>The two current types are suited to very different jobs, so it helps to compare them directly.</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Direct Current (DC)</th>
+<th>Alternating Current (AC)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Direction of flow</td>
+<td>One direction only</td>
+<td>Reverses periodically</td>
+</tr>
+<tr>
+<td>Typical source</td>
+<td>Batteries, solar cells</td>
+<td>Power plants, wall outlets</td>
+</tr>
+<tr>
+<td>StarterBot example</td>
+<td>12V battery powering motors</td>
+<td>Not used on the robot itself</td>
+</tr>
+<tr>
+<td>Common use</td>
+<td>Portable electronics, robots</td>
+<td>Long-distance power transmission</td>
+</tr>
+</tbody>
+</table>
+<p>Because the StarterBot runs entirely on DC, every circuit concept for the rest of this chapter, and for the rest of this course, assumes current flowing steadily in one direction from the battery's positive terminal, through the robot's components, and back to its negative terminal.</p>
+<h2 id="electrical-circuits-series-and-parallel-paths">Electrical Circuits: Series and Parallel Paths</h2>
+<p>Voltage alone cannot power a motor; the charge it pushes needs a complete path to travel before it can do any work. An <strong>electrical circuit</strong> is a closed loop that provides a continuous path for current to flow from a power source, through one or more components, and back to that source. If the loop is broken anywhere, by an open switch, a disconnected wire, or a burned-out component, current stops flowing entirely, the same way water stops flowing the instant a pipe is cut.</p>
+<p>When a circuit contains more than one component, those components can be arranged in one of two basic patterns. A <strong>series circuit</strong> connects components one after another along a single path, so the same current flows through every component in turn, and the total voltage from the source is divided among them. A <strong>parallel circuit</strong> instead connects components across separate branches, so the full source voltage appears across each branch independently, while the total current from the source divides itself among the branches.</p>
+<p>Imagine the StarterBot's two Yellow Jacket motors wired as loads on the 12V battery. If they were wired in series, current would have to pass through the first motor before reaching the second, meaning both motors would share the same current but split the battery's 12 volts between them, likely starving both motors of the voltage they need to run at full speed. Wiring them in parallel instead gives each motor the full 12 volts across its own branch, letting both motors run at full power while the battery supplies the combined current both motors draw. This is why robot drivetrains almost always wire their motors in parallel rather than in series.</p>
+<p>Before comparing the two circuit types side by side in an interactive tool, notice the key trade-off: series circuits share current but divide voltage, while parallel circuits share voltage but divide current.</p>
+<h4 id="diagram-series-vs-parallel-circuit-comparison">Diagram: Series vs. Parallel Circuit Comparison</h4>
+<iframe src="../../sims/series-parallel-circuit-comparison/main.html" width="100%" height="560px" scrolling="no"></iframe>
+
+<details markdown="1">
+<summary>Series vs. Parallel Circuit Comparison</summary>
+Type: microsim
+**sim-id:** series-parallel-circuit-comparison<br/>
+**Library:** p5.js<br/>
+**Status:** Specified
+
+Purpose: Let students toggle between series and parallel wiring of two StarterBot Yellow Jacket motors on a 12V battery, and observe how voltage and current distribute differently in each configuration.
+
+Bloom Taxonomy: Analyze (L4)
+Bloom Taxonomy Verb: differentiate, compare, contrast, distinguish
+
+Learning objective: Given the same two motor loads wired first in series and then in parallel, students will distinguish how voltage divides in a series circuit but stays constant in a parallel circuit, and how current divides in parallel but stays constant in series.
+
+Canvas layout:
+- Top toggle bar: two buttons, "Series" and "Parallel"
+- Main drawing area (75% of height): circuit diagram that redraws based on selected mode
+- Bottom readout panel (25% of height): numeric table of voltage and current at each labeled point
+
+Visual elements:
+- 12V battery symbol on the left
+- Two motor symbols labeled "Motor A (Yellow Jacket)" and "Motor B (Yellow Jacket)", each with an assumed resistance of 4 ohms
+- Wires connecting battery to motors, redrawn as a single loop through both motors in Series mode, or as two separate branches in Parallel mode
+- Labeled measurement points (V1, V2, I-total) that update based on mode
+
+Interactive controls:
+- Toggle button: "Series" / "Parallel" switches the wiring diagram and recalculates all values
+- Hover over any wire segment or motor: infobox shows the voltage across and current through that specific segment
+- Slider: Motor resistance (2-8 ohms) applied equally to both motors, to let students see the pattern hold at different resistance values
+
+Default parameters:
+- Mode: Series
+- Battery voltage: 12V (fixed, matches StarterBot)
+- Motor resistance: 4 ohms each
+
+Data Visibility Requirements:
+ Stage 1 (Series, default): Show total resistance 8Ω, total current 1.5A (shared by both motors), and voltage split 6V across each motor
+ Stage 2 (toggle to Parallel): Show each motor receiving the full 12V, each drawing 3A independently, and total current from the battery of 6A
+ Stage 3: Learner adjusts the resistance slider and observes both modes recalculate consistently with Ohm's Law
+ Final: Learner can articulate, using the two side-by-side numeric readouts, that series divides voltage while parallel divides current
+
+Behavior: Clicking the mode toggle animates the wire redraw and immediately updates the readout panel and infoboxes with recalculated values using \\( V = IR \\) for each branch and combined resistance rules for series (\\( R_{total} = R_1 + R_2 \\)) and parallel (\\( 1/R_{total} = 1/R_1 + 1/R_2 \\)) circuits.
+
+Instructional Rationale: An Analyze-level objective requires students to identify a structural pattern and its consequences, so a side-by-side toggle with live numeric readouts is more effective than an animation alone, letting learners directly compare the two configurations rather than only watching one at a time.
+
+Implementation: p5.js canvas redrawing circuit topology based on a mode variable; resistance and current calculations performed each frame; hover detection using mouseX/mouseY against stored wire-segment bounding boxes.
+</details>
+
+<h2 id="electrical-power">Electrical Power</h2>
+<p>Every circuit does work by converting electrical energy into some other form, whether that is motion in a motor, light in an LED, or heat in a resistor. <strong>Electrical power</strong> is the rate at which a circuit converts electrical energy, measured in watts (W). Power depends on both voltage and current, according to the equation:</p>
+<p>\[ P = VI \]</p>
+<p>where \( P \) is power in watts, \( V \) is voltage in volts, and \( I \) is current in amps. A Yellow Jacket motor drawing 2 amps from the StarterBot's 12V battery under normal driving load is converting \( P = 12 \times 2 = 24 \) watts of electrical power into mechanical motion and a small amount of waste heat.</p>
+<p>Because power scales with both voltage and current, doubling either one doubles the power, and a motor stalled under load (drawing far more current than normal) can spike its power consumption dramatically, generating heat fast enough to damage the motor's windings if the current is not limited. Watching power in a circuit is one of the main reasons engineers care so much about current, since a fixed 12V battery means every increase in current is also an increase in power draw, and eventually in heat.</p>
+<ul>
+<li>A slow-moving Yellow Jacket motor under light load might draw 0.5A, consuming 6W</li>
+<li>A motor driving the robot at normal speed might draw 2A, consuming 24W</li>
+<li>A stalled motor blocked from turning might spike to 10A or more, consuming over 120W as heat</li>
+</ul>
+<h2 id="conductors-and-insulators">Conductors and Insulators</h2>
+<p>Not every material lets current flow equally well, and the StarterBot's parts were chosen with this difference in mind. A <strong>conductor</strong> is a material that allows electric current to flow through it easily, because its atomic structure holds some electrons loosely enough to move freely when voltage is applied. Metals are the most common conductors: the StarterBot's steel 8mm REX shafts, its aluminum U-channels, and the copper wires running from the battery to the motors all conduct current readily, which is exactly why bare wire must never be allowed to touch the aluminum frame accidentally.</p>
+<p>An <strong>insulator</strong> is a material that strongly resists the flow of electric current, holding its electrons tightly enough that they do not move freely even under voltage. Plastic, rubber, and most ceramics are common insulators. On the StarterBot, the plastic chain links, the rubber tread on the Gecko wheels, and the colored plastic jacket wrapped around every wire are all insulators, chosen specifically to keep current confined to the metal conductors inside them and away from a student's hands or the rest of the frame.</p>
+<p>Recognizing conductors and insulators at a glance is a practical safety skill, not just a vocabulary exercise, so the interactive diagram below lets you test your own classification against real StarterBot parts before checking the answer.</p>
+<h4 id="diagram-conductors-and-insulators-classifier">Diagram: Conductors and Insulators Classifier</h4>
+<iframe src="../../sims/conductors-insulators-classifier/main.html" width="100%" height="520px" scrolling="no"></iframe>
+
+<details markdown="1">
+<summary>Conductors and Insulators Classifier</summary>
+Type: infographic
+**sim-id:** conductors-insulators-classifier<br/>
+**Library:** p5.js<br/>
+**Status:** Specified
+
+Purpose: Help students classify familiar StarterBot materials as conductors or insulators and understand why each material was chosen for its role.
+
+Bloom Taxonomy: Understand (L2)
+Bloom Taxonomy Verb: classify, distinguish, exemplify
+
+Learning objective: Given an image of a StarterBot component, students will classify the material as a conductor or an insulator and explain why that classification matters for the part's function.
+
+Layout: A grid of 8 clickable tiles, each showing a labeled StarterBot part: "Steel 8mm REX Shaft," "Aluminum U-Channel," "Copper Motor Wire," "Yellow Jacket Motor Housing (metal)," "Plastic Chain Link," "Gecko Wheel Rubber Tread," "Wire Insulation Jacket," "Plastic ServoBlock Housing." Two labeled bins, "Conductor" and "Insulator," sit below the grid.
+
+Interactive elements:
+- Learner drags or clicks each tile to sort it into the Conductor or Insulator bin
+- On drop, the tile flashes green if correctly sorted or red if incorrect, and an infobox reveals: the correct classification, why the material behaves that way (loose vs. tightly bound electrons), and why the StarterBot uses that material in that role
+- A "Reveal All" button shows the completed sort with all 8 explanations visible at once for review
+- A running score counter tracks correct-on-first-try classifications
+
+Data to be displayed: 8 part names, their correct conductor/insulator classification, and a one-sentence rationale for each (for example, "Wire insulation jacket: Insulator. The plastic jacket keeps current confined to the copper wire inside, protecting students from shock and preventing the wire from shorting against the aluminum frame.")
+
+Color coding: Conductor tiles resolve to a copper/orange highlight; insulator tiles resolve to a blue highlight.
+
+Responsive behavior: Grid reflows from 4 columns to 2 columns on narrow screens, maintaining tile aspect ratio.
+
+Instructional Rationale: This is an Understand-level classification objective, so a sorting interaction with immediate feedback and a short rationale per item is appropriate; a continuous animation would not help students internalize the conductor/insulator distinction the way concrete, labeled examples do.
+
+Implementation: p5.js canvas with draggable tile objects, drop-zone bounding boxes for the two bins, and a data array pairing each tile with its classification and explanation text.
+</details>
+
+<h2 id="electrical-ground">Electrical Ground</h2>
+<p>Every circuit needs a shared reference point that all its voltages are measured against, and that point has a special name. <strong>Electrical ground</strong> is a common reference point in a circuit, typically connected to the negative terminal of the power source, against which all other voltages in the circuit are measured. On the StarterBot, the battery's negative terminal serves this role: every voltage measurement in the robot's electrical system, whether at a motor, a sensor, or a controller, is measured relative to that shared negative connection.</p>
+<p>Ground serves two related purposes. First, it gives every component in the circuit a consistent zero-volt reference, so that a "12V signal" and a "5V signal" both mean something specific relative to the same baseline. Second, in many electrical systems, ground provides a deliberate low-resistance path that safely carries away stray or fault current, rather than letting it build up somewhere unpredictable, such as inside a control board or through a person's body.</p>
+<h2 id="short-circuits-and-circuit-protection">Short Circuits and Circuit Protection</h2>
+<p>Grounding safely directs current along an intended path, but electrical faults can create unintended paths with almost no resistance at all. A <strong>short circuit</strong> occurs when current finds an unintended path of very low resistance, bypassing the intended load and allowing far more current to flow than the circuit was designed for. Recall from Ohm's Law that current equals voltage divided by resistance; when resistance drops close to zero, current spikes dramatically, generating heat fast enough to melt wire insulation, damage a battery, or start a fire.</p>
+<p>A short circuit on the StarterBot might happen if a bare, uninsulated wire touched the aluminum frame in two places, creating an unintended low-resistance loop that skips the motor entirely. Because the frame conducts electricity well (it is aluminum, after all), this kind of accidental contact is exactly the failure mode that wire insulation and careful cable routing are designed to prevent.</p>
+<p><strong>Circuit protection</strong> refers to devices and design practices that limit current automatically to prevent damage from short circuits and other electrical faults. The most common circuit protection device is a fuse, a component containing a thin metal strip that melts and breaks the circuit if current exceeds a safe threshold, sacrificing itself to protect the rest of the system. Circuit breakers perform a similar job but can be reset after they trip, rather than being replaced.</p>
+<table>
+<thead>
+<tr>
+<th>Protection Device</th>
+<th>How It Works</th>
+<th>Reusable?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fuse</td>
+<td>Thin metal strip melts and breaks the circuit above a set current</td>
+<td>No, must be replaced</td>
+</tr>
+<tr>
+<td>Circuit breaker</td>
+<td>Mechanical switch trips open above a set current</td>
+<td>Yes, can be reset</td>
+</tr>
+<tr>
+<td>Polyfuse (resettable)</td>
+<td>Resistance rises sharply when overheated, self-resets when cooled</td>
+<td>Yes, resets automatically</td>
+</tr>
+</tbody>
+</table>
+<h2 id="electrical-safety">Electrical Safety</h2>
+<p>Everything covered in this chapter, from Ohm's Law to circuit protection, comes together in a handful of practical safety habits every robotics student should follow around the StarterBot's electrical system. <strong>Electrical safety</strong> is the set of practices and precautions that prevent electrical shock, fire, and equipment damage while working with circuits.</p>
+<ul>
+<li>Disconnect the battery before working on any wiring, motor connection, or exposed terminal</li>
+<li>Inspect wire insulation regularly for cuts, fraying, or exposed conductor, especially near moving parts like sprockets and chain</li>
+<li>Never let bare wire touch the aluminum frame, since the frame is a conductor and can create an unintended short circuit</li>
+<li>Keep the battery's connections secure so vibration during driving cannot loosen a terminal and create arcing</li>
+<li>Respect fuses and circuit breakers as protection, not inconvenience; never bypass one with a piece of wire</li>
+</ul>
+<p>!!! danger "Never bypass circuit protection"
+ A fuse or breaker that trips repeatedly is telling you something is wrong somewhere in the circuit, likely a short circuit or an overloaded motor. Replacing a fuse with a higher-rated one, or with a plain wire, removes the one safeguard designed to stop a fire before it starts.</p>
+<p>With voltage, current, resistance, Ohm's Law, circuit types, power, materials, grounding, and protection all in place, you now have the theoretical toolkit to understand exactly what is happening every time the StarterBot's battery powers a motor. The next chapter builds directly on this foundation, moving from electrical theory into the specific electronic components, like resistors, capacitors, and diodes, that make up real circuit designs.</p>
+<p>??? note "Quick check: Why do the StarterBot's two drive motors share the battery's 12 volts equally instead of splitting it? - Click to expand"
+ Because they are wired in parallel, not in series. A parallel circuit gives each branch the full source voltage, while only the total current supplied by the battery divides among the branches, letting both motors run at full power simultaneously.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

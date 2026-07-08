@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Taxonomy Distribution Report - My Docs</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../course-description/" class="nav-link">Course Description</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Chapters</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../chapters/" class="dropdown-item">List of Chapters</a>
+</li>
+                                    
+<li>
+    <a href="../../chapters/01-identifying-kit-parts-building-starterbot/" class="dropdown-item">1. Identifying Kit Parts and Building Your StarterBot</a>
+</li>
+                                    
+<li>
+    <a href="../../chapters/02-intro-robotics-systems/" class="dropdown-item">2. Introduction to Robotics and Systems</a>
+</li>
+                                    
+<li>
+    <a href="../../chapters/03-programming-fundamentals/" class="dropdown-item">3. Programming Fundamentals</a>
+</li>
+                                    
+<li>
+    <a href="../../chapters/04-programming-your-robot/" class="dropdown-item">4. Programming Your Robot</a>
+</li>
+                                    
+<li>
+    <a href="../../chapters/05-designing-building-custom-parts/" class="dropdown-item">5. Designing and Building Custom Parts</a>
+</li>
+                                    
+<li>
+    <a href="../../chapters/06-electrical-fundamentals/" class="dropdown-item">6. Electrical Fundamentals</a>
+</li>
+                                    
+<li>
+    <a href="../../chapters/07-electronic-components-circuit-design/" class="dropdown-item">7. Electronic Components and Circuit Design</a>
+</li>
+                                    
+<li>
+    <a href="../../chapters/08-sensors-and-measurement/" class="dropdown-item">8. Sensors and Measurement</a>
+</li>
+                                    
+<li>
+    <a href="../../chapters/09-mechanical-systems-simple-machines/" class="dropdown-item">9. Mechanical Systems and Simple Machines</a>
+</li>
+                                    
+<li>
+    <a href="../../chapters/10-fluid-power-hydraulics-pneumatics/" class="dropdown-item">10. Fluid Power: Hydraulics and Pneumatics</a>
+</li>
+                                    
+<li>
+    <a href="../../chapters/11-control-systems-feedback-loops/" class="dropdown-item">11. Control Systems and Feedback Loops</a>
+</li>
+                                    
+<li>
+    <a href="../../chapters/12-digital-logic-computing-fundamentals/" class="dropdown-item">12. Digital Logic and Computing Fundamentals</a>
+</li>
+                                    
+<li>
+    <a href="../../chapters/13-advanced-robot-programming/" class="dropdown-item">13. Advanced Robot Programming</a>
+</li>
+                                    
+<li>
+    <a href="../../chapters/14-integrating-testing-maintaining-robotic-system/" class="dropdown-item">14. Integrating, Testing, and Maintaining a Robotic System</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Learning Graph</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../" class="dropdown-item">Introduction</a>
+</li>
+                                    
+<li>
+    <a href="../course-description-assessment/" class="dropdown-item">Course Description Assessment</a>
+</li>
+                                    
+<li>
+    <a href="../concept-list/" class="dropdown-item">Concept Enumeration</a>
+</li>
+                                    
+<li>
+    <a href="../quality-metrics/" class="dropdown-item">Graph Quality Analysis</a>
+</li>
+                                    
+<li>
+    <a href="../concept-taxonomy/" class="dropdown-item">Concept Taxonomy</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Taxonomy Distribution Report</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">MicroSims</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../sims/graph-viewer/" class="dropdown-item">Learning Graph Viewer</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../concept-taxonomy/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../sims/graph-viewer/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#taxonomy-distribution-report" class="nav-link">Taxonomy Distribution Report</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#overview" class="nav-link">Overview</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#distribution-summary" class="nav-link">Distribution Summary</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#visual-distribution" class="nav-link">Visual Distribution</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#balance-analysis" class="nav-link">Balance Analysis</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#category-details" class="nav-link">Category Details</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#recommendations" class="nav-link">Recommendations</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="taxonomy-distribution-report">Taxonomy Distribution Report</h1>
+<h2 id="overview">Overview</h2>
+<ul>
+<li><strong>Total Concepts</strong>: 204</li>
+<li><strong>Number of Taxonomies</strong>: 14</li>
+<li><strong>Average Concepts per Taxonomy</strong>: 14.6</li>
+</ul>
+<h2 id="distribution-summary">Distribution Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>TaxonomyID</th>
+<th>Count</th>
+<th>Percentage</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EDP</td>
+<td>EDP</td>
+<td>19</td>
+<td>9.3%</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>DIGI</td>
+<td>DIGI</td>
+<td>18</td>
+<td>8.8%</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Foundation Concepts - Prerequisites</td>
+<td>FOUND</td>
+<td>17</td>
+<td>8.3%</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>ELEC</td>
+<td>ELEC</td>
+<td>17</td>
+<td>8.3%</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>CIRC</td>
+<td>CIRC</td>
+<td>17</td>
+<td>8.3%</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>MECH</td>
+<td>MECH</td>
+<td>17</td>
+<td>8.3%</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>PROG</td>
+<td>PROG</td>
+<td>15</td>
+<td>7.4%</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>BUILD</td>
+<td>BUILD</td>
+<td>15</td>
+<td>7.4%</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>SENS</td>
+<td>SENS</td>
+<td>14</td>
+<td>6.9%</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>RBOT</td>
+<td>RBOT</td>
+<td>12</td>
+<td>5.9%</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>FLUID</td>
+<td>FLUID</td>
+<td>12</td>
+<td>5.9%</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>CTRL</td>
+<td>CTRL</td>
+<td>12</td>
+<td>5.9%</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>KIT</td>
+<td>KIT</td>
+<td>10</td>
+<td>4.9%</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>RBTP</td>
+<td>RBTP</td>
+<td>9</td>
+<td>4.4%</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<h2 id="visual-distribution">Visual Distribution</h2>
+<pre><code>EDP                       ████  19 (  9.3%)
+DIGI                      ████  18 (  8.8%)
+Foundation Concepts - Pre ████  17 (  8.3%)
+ELEC                      ████  17 (  8.3%)
+CIRC                      ████  17 (  8.3%)
+MECH                      ████  17 (  8.3%)
+PROG                      ███  15 (  7.4%)
+BUILD                     ███  15 (  7.4%)
+SENS                      ███  14 (  6.9%)
+RBOT                      ██  12 (  5.9%)
+FLUID                     ██  12 (  5.9%)
+CTRL                      ██  12 (  5.9%)
+KIT                       ██  10 (  4.9%)
+RBTP                      ██   9 (  4.4%)
+</code></pre>
+<h2 id="balance-analysis">Balance Analysis</h2>
+<h3 id="no-over-represented-categories">✅ No Over-Represented Categories</h3>
+<p>All categories are under the 30% threshold. Good balance!</p>
+<h2 id="category-details">Category Details</h2>
+<h3 id="edp-edp">EDP (EDP)</h3>
+<p><strong>Count</strong>: 19 concepts (9.3%)</p>
+<p><strong>Concepts</strong>:</p>
+<ul>
+<li>
+<ol>
+<li>Engineering Design Process</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Problem Definition</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Design Constraints</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Design Criteria</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Brainstorming</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Concept Sketching</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Prototyping</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Design Iteration</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Design Testing</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Design Documentation</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Trade-Off Analysis</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Reverse Engineering</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Design Specifications</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Bill Of Materials</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Engineering Notebook</li>
+</ol>
+</li>
+<li><em>...and 4 more</em></li>
+</ul>
+<h3 id="digi-digi">DIGI (DIGI)</h3>
+<p><strong>Count</strong>: 18 concepts (8.8%)</p>
+<p><strong>Concepts</strong>:</p>
+<ul>
+<li>
+<ol>
+<li>Digital Electronics</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Analog Electronics</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Binary Number System</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Logic Gate</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>AND Gate</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>OR Gate</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>NOT Gate</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Logic Circuit</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Boolean Logic</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Operating System</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Computing System</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Central Processing Unit</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Memory</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Input Device</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Output Device</li>
+</ol>
+</li>
+<li><em>...and 3 more</em></li>
+</ul>
+<h3 id="foundation-concepts-prerequisites-found">Foundation Concepts - Prerequisites (FOUND)</h3>
+<p><strong>Count</strong>: 17 concepts (8.3%)</p>
+<p><strong>Concepts</strong>:</p>
+<ul>
+<li>
+<ol>
+<li>Robotics</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Automation</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Control System</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Robotics History</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Robotics Careers</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Universal Systems Model</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>System Input</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>System Process</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>System Output</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>System Feedback</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Robot Definition</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Types Of Robots</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Industrial Robots</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Mobile Robots</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Humanoid Robots</li>
+</ol>
+</li>
+<li><em>...and 2 more</em></li>
+</ul>
+<h3 id="elec-elec">ELEC (ELEC)</h3>
+<p><strong>Count</strong>: 17 concepts (8.3%)</p>
+<p><strong>Concepts</strong>:</p>
+<ul>
+<li>
+<ol>
+<li>Electricity</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Voltage</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Current</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Resistance</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Ohms Law</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Direct Current</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Alternating Current</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Electrical Circuit</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Series Circuit</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Parallel Circuit</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Electrical Power</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Electrical Safety</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Conductors</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Insulators</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Electrical Ground</li>
+</ol>
+</li>
+<li><em>...and 2 more</em></li>
+</ul>
+<h3 id="circ-circ">CIRC (CIRC)</h3>
+<p><strong>Count</strong>: 17 concepts (8.3%)</p>
+<p><strong>Concepts</strong>:</p>
+<ul>
+<li>
+<ol>
+<li>Resistor</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Capacitor</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Diode</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Transistor</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>LED</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Breadboard</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Soldering</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Multimeter</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Circuit Diagram</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Printed Circuit Board</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Battery</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Power Supply</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Switch</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Relay</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Motor Driver</li>
+</ol>
+</li>
+<li><em>...and 2 more</em></li>
+</ul>
+<h3 id="mech-mech">MECH (MECH)</h3>
+<p><strong>Count</strong>: 17 concepts (8.3%)</p>
+<p><strong>Concepts</strong>:</p>
+<ul>
+<li>
+<ol>
+<li>Mechanical System</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Simple Machine</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Lever</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Pulley</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Gear</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Gear Ratio</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Wheel And Axle</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Inclined Plane</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Linkage</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Bearing</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Fastener</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Torque</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Friction</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Mechanical Advantage</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Chassis Design</li>
+</ol>
+</li>
+<li><em>...and 2 more</em></li>
+</ul>
+<h3 id="prog-prog">PROG (PROG)</h3>
+<p><strong>Count</strong>: 15 concepts (7.4%)</p>
+<p><strong>Concepts</strong>:</p>
+<ul>
+<li>
+<ol>
+<li>Programming Language</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Algorithm</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Variable</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Data Type</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Conditional Statement</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Loop Structure</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Function</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Pseudocode</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Flowchart</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Debugging</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Programming Platform</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Programming IDE</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Code Syntax</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Program Testing</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Program Security</li>
+</ol>
+</li>
+</ul>
+<h3 id="build-build">BUILD (BUILD)</h3>
+<p><strong>Count</strong>: 15 concepts (7.4%)</p>
+<p><strong>Concepts</strong>:</p>
+<ul>
+<li>
+<ol>
+<li>Robotic Components</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Robot Chassis</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Robot Power System</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Robot Actuator Selection</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Robot Sensor Selection</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Robotic Hardware Platform</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Robot Assembly</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Robot Wiring</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>System Integration</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Robot Testing</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Robot Reengineering</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Robot Documentation</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Robot Performance Evaluation</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Robot Maintenance</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Robotics Industry Trends</li>
+</ol>
+</li>
+</ul>
+<h3 id="sens-sens">SENS (SENS)</h3>
+<p><strong>Count</strong>: 14 concepts (6.9%)</p>
+<p><strong>Concepts</strong>:</p>
+<ul>
+<li>
+<ol>
+<li>Precision Measurement</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Direct Measurement</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Indirect Measurement</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Coordinate System</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Light Sensor</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Temperature Sensor</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Distance Sensor</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Touch Sensor</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Sound Sensor</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Encoder</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Potentiometer</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Sensor Calibration</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Data Transmission</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Signal Processing</li>
+</ol>
+</li>
+</ul>
+<h3 id="rbot-rbot">RBOT (RBOT)</h3>
+<p><strong>Count</strong>: 12 concepts (5.9%)</p>
+<p><strong>Concepts</strong>:</p>
+<ul>
+<li>
+<ol>
+<li>Sensor</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Actuator</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Open-Loop Control</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Closed-Loop Control</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Feedback Loop</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Control Loop</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Microcontroller</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Robot Programming</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Sensor Input Programming</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Actuator Output Programming</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Robot Control Loop</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Autonomous Behavior</li>
+</ol>
+</li>
+</ul>
+<h3 id="fluid-fluid">FLUID (FLUID)</h3>
+<p><strong>Count</strong>: 12 concepts (5.9%)</p>
+<p><strong>Concepts</strong>:</p>
+<ul>
+<li>
+<ol>
+<li>Fluid Power</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Hydraulics</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Pneumatics</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Fluid Pressure</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Cylinder</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Valve</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Pump</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Compressor</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Fluid Power Safety</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Fluid Power Applications</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Fluid Power Diagram</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Fluid Power System Design</li>
+</ol>
+</li>
+</ul>
+<h3 id="ctrl-ctrl">CTRL (CTRL)</h3>
+<p><strong>Count</strong>: 12 concepts (5.9%)</p>
+<p><strong>Concepts</strong>:</p>
+<ul>
+<li>
+<ol>
+<li>Setpoint</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Error Signal</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>PID Control Basics</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Automation System</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Control System Simulation</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Stability</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Analog Control</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Digital Control</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Control System Design</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Actuator Control</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Motion Control</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Servo Motor</li>
+</ol>
+</li>
+</ul>
+<h3 id="kit-kit">KIT (KIT)</h3>
+<p><strong>Count</strong>: 10 concepts (4.9%)</p>
+<p><strong>Concepts</strong>:</p>
+<ul>
+<li>
+<ol>
+<li>Robot Kit Overview</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Kit Parts Identification</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Structural Hardware</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Motion Hardware Components</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Power And Motor Components</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Fasteners And Hardware</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Assembly Instructions Reading</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Guided Robot Assembly</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Robot Subassembly Build</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Build Verification And Troubleshooting</li>
+</ol>
+</li>
+</ul>
+<h3 id="rbtp-rbtp">RBTP (RBTP)</h3>
+<p><strong>Count</strong>: 9 concepts (4.4%)</p>
+<p><strong>Concepts</strong>:</p>
+<ul>
+<li>
+<ol>
+<li>Teleoperation</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Robot Motion Programming</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Path Planning</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Robot Interface</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Robotic Arm Control</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Wheeled Robot Control</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Robot Calibration</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Robot Troubleshooting</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Robot Safety Programming</li>
+</ol>
+</li>
+</ul>
+<h2 id="recommendations">Recommendations</h2>
+<ul>
+<li>✅ <strong>Excellent balance</strong>: Categories are evenly distributed (spread: 4.9%)</li>
+<li>✅ <strong>MISC category minimal</strong>: Good categorization specificity</li>
+</ul>
+<h3 id="educational-use-recommendations">Educational Use Recommendations</h3>
+<ul>
+<li>Use taxonomy categories for color-coding in graph visualizations</li>
+<li>Design curriculum modules based on taxonomy groupings</li>
+<li>Create filtered views for focused learning paths</li>
+<li>Use categories for assessment organization</li>
+<li>Enable navigation by topic area in interactive tools</li>
+</ul>
+<hr />
+<p><em>Report generated by learning-graph-reports/taxonomy_distribution.py</em></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

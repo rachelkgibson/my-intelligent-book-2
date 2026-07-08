@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>14. Integrating, Testing, and Maintaining a Robotic System - My Docs</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../course-description/" class="nav-link">Course Description</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Chapters</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../" class="dropdown-item">List of Chapters</a>
+</li>
+                                    
+<li>
+    <a href="../01-identifying-kit-parts-building-starterbot/" class="dropdown-item">1. Identifying Kit Parts and Building Your StarterBot</a>
+</li>
+                                    
+<li>
+    <a href="../02-intro-robotics-systems/" class="dropdown-item">2. Introduction to Robotics and Systems</a>
+</li>
+                                    
+<li>
+    <a href="../03-programming-fundamentals/" class="dropdown-item">3. Programming Fundamentals</a>
+</li>
+                                    
+<li>
+    <a href="../04-programming-your-robot/" class="dropdown-item">4. Programming Your Robot</a>
+</li>
+                                    
+<li>
+    <a href="../05-designing-building-custom-parts/" class="dropdown-item">5. Designing and Building Custom Parts</a>
+</li>
+                                    
+<li>
+    <a href="../06-electrical-fundamentals/" class="dropdown-item">6. Electrical Fundamentals</a>
+</li>
+                                    
+<li>
+    <a href="../07-electronic-components-circuit-design/" class="dropdown-item">7. Electronic Components and Circuit Design</a>
+</li>
+                                    
+<li>
+    <a href="../08-sensors-and-measurement/" class="dropdown-item">8. Sensors and Measurement</a>
+</li>
+                                    
+<li>
+    <a href="../09-mechanical-systems-simple-machines/" class="dropdown-item">9. Mechanical Systems and Simple Machines</a>
+</li>
+                                    
+<li>
+    <a href="../10-fluid-power-hydraulics-pneumatics/" class="dropdown-item">10. Fluid Power: Hydraulics and Pneumatics</a>
+</li>
+                                    
+<li>
+    <a href="../11-control-systems-feedback-loops/" class="dropdown-item">11. Control Systems and Feedback Loops</a>
+</li>
+                                    
+<li>
+    <a href="../12-digital-logic-computing-fundamentals/" class="dropdown-item">12. Digital Logic and Computing Fundamentals</a>
+</li>
+                                    
+<li>
+    <a href="../13-advanced-robot-programming/" class="dropdown-item">13. Advanced Robot Programming</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">14. Integrating, Testing, and Maintaining a Robotic System</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Learning Graph</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../learning-graph/" class="dropdown-item">Introduction</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/course-description-assessment/" class="dropdown-item">Course Description Assessment</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/concept-list/" class="dropdown-item">Concept Enumeration</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/quality-metrics/" class="dropdown-item">Graph Quality Analysis</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/concept-taxonomy/" class="dropdown-item">Concept Taxonomy</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/taxonomy-distribution/" class="dropdown-item">Taxonomy Distribution Report</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">MicroSims</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../sims/graph-viewer/" class="dropdown-item">Learning Graph Viewer</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../13-advanced-robot-programming/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../learning-graph/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#integrating-testing-and-maintaining-a-complete-robotic-system" class="nav-link">Integrating, Testing, and Maintaining a Complete Robotic System</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#summary" class="nav-link">Summary</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#concepts-covered" class="nav-link">Concepts Covered</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#prerequisites" class="nav-link">Prerequisites</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#the-capstone-from-kit-to-original-design" class="nav-link">The Capstone: From Kit to Original Design</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#choosing-a-frame-robot-chassis-and-robotic-hardware-platform" class="nav-link">Choosing a Frame: Robot Chassis and Robotic Hardware Platform</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#powering-the-robot-the-power-system" class="nav-link">Powering the Robot: The Power System</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#selecting-actuators-and-sensors-for-the-job" class="nav-link">Selecting Actuators and Sensors for the Job</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#putting-it-together-robot-assembly-and-robot-wiring" class="nav-link">Putting It Together: Robot Assembly and Robot Wiring</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#system-integration-making-the-subsystems-act-as-one" class="nav-link">System Integration: Making the Subsystems Act as One</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#robot-testing-proving-it-works-before-it-counts" class="nav-link">Robot Testing: Proving It Works Before It Counts</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#when-testing-reveals-problems-reengineering-and-documentation" class="nav-link">When Testing Reveals Problems: Reengineering and Documentation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#judging-the-result-performance-evaluation-and-maintenance" class="nav-link">Judging the Result: Performance Evaluation and Maintenance</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#looking-ahead-robotics-industry-trends" class="nav-link">Looking Ahead: Robotics Industry Trends</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#you-are-ready-to-design" class="nav-link">You Are Ready to Design</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="integrating-testing-and-maintaining-a-complete-robotic-system">Integrating, Testing, and Maintaining a Complete Robotic System</h1>
+<h2 id="summary">Summary</h2>
+<p>The capstone chapter of the course, where every earlier skill comes together. Students learn to select components (sensors, actuators) and hardware platforms for a robotic design, then assemble, wire, and integrate a complete system. The chapter covers systematic testing, reverse-engineering and documentation practices, and finishes with robot performance evaluation, maintenance, and a look at current trends shaping the robotics industry.</p>
+<h2 id="concepts-covered">Concepts Covered</h2>
+<p>This chapter covers the following 15 concepts from the learning graph:</p>
+<ol>
+<li>Robotic Components</li>
+<li>Robot Chassis</li>
+<li>Robot Power System</li>
+<li>Robot Actuator Selection</li>
+<li>Robot Sensor Selection</li>
+<li>Robotic Hardware Platform</li>
+<li>Robot Assembly</li>
+<li>Robot Wiring</li>
+<li>System Integration</li>
+<li>Robot Testing</li>
+<li>Robot Reengineering</li>
+<li>Robot Documentation</li>
+<li>Robot Performance Evaluation</li>
+<li>Robot Maintenance</li>
+<li>Robotics Industry Trends</li>
+</ol>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>This chapter builds on concepts from:</p>
+<ul>
+<li><a href="../02-intro-robotics-systems/">Chapter 2: Introduction to Robotics and Systems</a></li>
+<li><a href="../03-programming-fundamentals/">Chapter 3: Programming Fundamentals</a></li>
+<li><a href="../04-programming-your-robot/">Chapter 4: Programming Your Robot</a></li>
+<li><a href="../05-designing-building-custom-parts/">Chapter 5: Designing and Building Custom Parts</a></li>
+<li><a href="../07-electronic-components-circuit-design/">Chapter 7: Electronic Components and Circuit Design</a></li>
+<li><a href="../09-mechanical-systems-simple-machines/">Chapter 9: Mechanical Systems and Simple Machines</a></li>
+<li><a href="../13-advanced-robot-programming/">Chapter 13: Advanced Robot Programming</a></li>
+</ul>
+<hr />
+<h2 id="the-capstone-from-kit-to-original-design">The Capstone: From Kit to Original Design</h2>
+<p>!!! abstract "Why This Chapter Is Different"
+    Every chapter before this one taught you one piece of the puzzle: building with a kit, writing code, designing custom parts, wiring circuits, choosing sensors, understanding mechanisms, controlling feedback loops, and programming advanced behaviors. This chapter does not teach a new piece. It teaches you how all the pieces fit together—the process professional engineers and competitive robotics teams use to go from a blank sheet of paper to a complete, tested, working robot.</p>
+<p>Throughout this chapter, follow a running example: a fictional FTC (FIRST Tech Challenge) team called Vertex Robotics, preparing for a new competition season called "Vertex Rising." In this game, robots must locate scattered rings on the field, pick them up, and stack them onto scoring poles at three different heights within a two-and-a-half-minute match. Vertex Robotics has outgrown the StarterBot-style kit robot from Chapter 1. This season, they are designing an original robot from scratch, and every decision they make will draw on a chapter you have already studied.</p>
+<p><strong>Robotic components</strong> are the categories of physical and electronic parts that combine to form any robot, regardless of its specific purpose. Before selecting a single part, a design team should inventory the categories of components their robot will need, because forgetting a category during planning is far more expensive to fix after assembly has begun.</p>
+<p>Every robot, from a simple line-following kit robot to a competition-grade FTC machine, is built from the same broad categories of components:</p>
+<ul>
+<li><strong>Structural components</strong> — the chassis, frame, brackets, and fasteners that hold everything in place (covered in this chapter and Chapter 5)</li>
+<li><strong>Power components</strong> — batteries, voltage regulators, and distribution wiring that supply energy to every other subsystem (Chapter 6)</li>
+<li><strong>Actuation components</strong> — motors, servos, and pneumatic or hydraulic cylinders that create motion (Chapters 9 and 10)</li>
+<li><strong>Sensing components</strong> — sensors that gather information about the robot and its environment (Chapter 8)</li>
+<li><strong>Control and computation components</strong> — the microcontroller or computer that runs the robot's program and makes decisions (Chapter 12)</li>
+<li><strong>Software</strong> — the code that ties sensing, decision-making, and actuation together (Chapters 3, 4, and 13)</li>
+</ul>
+<p>Vertex Robotics' first planning meeting is essentially this list, turned into a checklist. Before choosing any specific part, the team asks: what does each category need to accomplish for the Vertex Rising game task of finding, collecting, and stacking rings?</p>
+<h2 id="choosing-a-frame-robot-chassis-and-robotic-hardware-platform">Choosing a Frame: Robot Chassis and Robotic Hardware Platform</h2>
+<p>A <strong>robot chassis</strong> is the structural frame that physically supports and connects a robot's other components, much like a car's frame supports its engine, seats, and body panels. The chassis determines the robot's overall size, weight distribution, ground clearance, and how easily new parts can be added or removed later.</p>
+<p>Design teams rarely start a chassis from nothing. A <strong>robotic hardware platform</strong> is a baseline combination of chassis, drivetrain, and core electronics that a team either buys as a starting kit or designs from scratch to serve as the foundation for a specific robot. Choosing a platform is one of the first and most consequential decisions in the entire design process, because it constrains almost every choice that follows.</p>
+<p>Vertex Robotics has to decide between three broad platform strategies, each with real tradeoffs:</p>
+<table>
+<thead>
+<tr>
+<th>Platform Strategy</th>
+<th>Description</th>
+<th>Advantage</th>
+<th>Tradeoff</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kit-based platform</td>
+<td>Pre-manufactured chassis rails and drivetrain (e.g., a goBILDA or REV starter kit)</td>
+<td>Fast to assemble, proven reliability</td>
+<td>Less unique, may not fit unusual mechanisms</td>
+</tr>
+<tr>
+<td>Hybrid platform</td>
+<td>Kit drivetrain with custom-designed superstructure (from Chapter 5's fabrication skills)</td>
+<td>Balances speed and originality</td>
+<td>Requires integrating two design sources cleanly</td>
+</tr>
+<tr>
+<td>Fully custom platform</td>
+<td>Every structural part designed and fabricated by the team</td>
+<td>Maximum design freedom</td>
+<td>Highest time cost and risk of structural failure</td>
+</tr>
+</tbody>
+</table>
+<p>Vertex Robotics chooses the hybrid platform: a proven kit drivetrain for reliable driving, combined with a custom 3D-printed and laser-cut superstructure—designed using the same CAD and fabrication skills from Chapter 5—built specifically to collect and stack rings.</p>
+<p>Chassis material choice matters just as much as platform strategy. Common options include aluminum extrusion (strong, reusable, moderately heavy), polycarbonate sheet (lightweight, easy to cut, less rigid over long spans), 3D-printed plastic (highly customizable, limited by printer size and strength), and carbon fiber (very strong and light, but expensive and harder to modify). Most student teams mix materials: aluminum extrusion for the main frame, with 3D-printed or laser-cut brackets for custom mounting points.</p>
+<h2 id="powering-the-robot-the-power-system">Powering the Robot: The Power System</h2>
+<p>A <strong>robot power system</strong> is the complete set of components that stores, regulates, and distributes electrical energy to every powered part of the robot. Get the power system wrong, and nothing else in this chapter matters—a robot with a brilliant sensor layout and perfectly wired actuators is useless if its battery cannot deliver enough current or its wiring melts under load.</p>
+<p>Drawing on the electrical fundamentals from Chapter 6 and the circuit design skills from Chapter 7, a complete power system typically includes:</p>
+<ol>
+<li>A <strong>main battery</strong>, sized to supply enough voltage and current for the robot's motors and electronics for a full match or work session</li>
+<li>A <strong>main breaker or fuse</strong>, a safety device that interrupts current flow if a short circuit or overload occurs, protecting both the robot and the people near it</li>
+<li><strong>Voltage regulator modules</strong>, which step battery voltage down (or occasionally up) to the specific voltages different components require—a drive motor and a microcontroller rarely run on the same voltage</li>
+<li>A <strong>power distribution harness</strong>, the wiring that carries power from the battery, through the breaker and regulators, out to every actuator and sensor</li>
+<li>A <strong>battery indicator or monitoring circuit</strong>, which alerts the team when voltage drops too low to operate safely</li>
+</ol>
+<p>!!! warning
+    A power system is only as strong as its weakest connection. A loose battery connector or an undersized wire gauge can cause voltage to sag exactly when a robot needs maximum power—for example, when lifting a stack of rings. Always match wire gauge and connector type to the actual current the circuit will carry.</p>
+<h2 id="selecting-actuators-and-sensors-for-the-job">Selecting Actuators and Sensors for the Job</h2>
+<p>With a chassis and power system chosen, Vertex Robotics faces the question every design team faces next: which specific actuators and sensors actually accomplish the game task? <strong>Robot actuator selection</strong> is the process of matching a required motion—lifting, gripping, rotating, driving—to the actuator type, size, and specification best suited to produce it. <strong>Robot sensor selection</strong> is the parallel process of matching a required piece of information—distance, color, orientation, contact—to the sensor type best suited to measure it.</p>
+<p>Neither selection happens in isolation. Actuator selection depends on the mechanical advantage available from gears, levers, and linkages (Chapter 9), and on whether the motion needs the smooth continuous force of an electric motor or the fast linear push of a pneumatic cylinder (Chapter 10). Sensor selection depends on the coordinate systems and measurement concepts from Chapter 8, and every selected sensor and actuator ultimately reports to or is commanded by the control system and code covered in Chapters 11 through 13.</p>
+<p>For the Vertex Rising task, the team breaks their robot's job into sub-tasks and, for each one, asks what physical requirement must be met and which chapter's concepts help answer it:</p>
+<ul>
+<li><strong>Detecting a ring's location on the field</strong> — requires a sensor that reports distance and possibly color, drawing on Chapter 8's sensor tour</li>
+<li><strong>Driving toward and collecting a ring</strong> — requires drivetrain motors sized for torque and speed, drawing on Chapter 9's mechanical advantage concepts</li>
+<li><strong>Lifting rings to three different scoring heights</strong> — requires an actuator capable of controlled, repeatable vertical motion, potentially a motor with a lead screw or a pneumatic cylinder from Chapter 10</li>
+<li><strong>Confirming a ring is securely gripped before lifting</strong> — requires a contact or presence sensor, preventing wasted lift cycles</li>
+</ul>
+<p>The interactive tool below lets you practice this same matching process: pick a robot task requirement and explore which sensor or actuator options could satisfy it, along with the tradeoffs of each choice.</p>
+<h4 id="diagram-component-selection-decision-tool">Diagram: Component Selection Decision Tool</h4>
+<iframe src="../../sims/component-selection-decision-tool/main.html" width="100%" height="560px" scrolling="no"></iframe>
+
+<details markdown="1">
+<summary>Component Selection Decision Tool</summary>
+Type: infographic
+**sim-id:** component-selection-decision-tool<br/>
+**Library:** p5.js<br/>
+**Status:** Specified
+
+Bloom Taxonomy: Evaluate<br/>
+Bloom Taxonomy Verb: justify, recommend, prioritize
+
+Learning objective: Given a stated robot task requirement, students will recommend an appropriate sensor or actuator type and justify the choice by weighing at least two tradeoffs (cost, precision, speed, or complexity).
+
+Purpose: Let students practice the real engineering decision of matching a functional requirement to a specific component family, reinforcing sensor and actuator concepts from Chapters 8, 9, and 10 in the context of full-robot design.
+
+Layout: A left panel lists six clickable task requirement buttons: "Detect distance to an object," "Detect an object's color," "Confirm physical contact," "Lift a load to a precise height," "Rotate an arm through a wide angle," and "Drive and turn precisely." A right panel displays results after a button is clicked.
+
+Interactive elements:
+- Clicking a task requirement populates the right panel with 2-3 candidate component types (e.g., for "Detect distance to an object": ultrasonic sensor, infrared distance sensor, and time-of-flight sensor)
+- Each candidate appears as a small card showing its name, a one-line description, and a color-coded tradeoff badge (Low/Medium/High) for Cost, Precision, and Response Speed
+- Hovering a candidate card highlights the corresponding sensor or actuator type if it was covered in Chapter 8, 9, or 10, with a small citation tag (e.g., "See Ch. 8")
+- A "Compare" checkbox lets students select two candidates to view their tradeoff badges side by side
+
+Data to display (sample set):
+- Detect distance to an object: Ultrasonic sensor (Cost: Low, Precision: Medium, Speed: Medium); Infrared distance sensor (Cost: Low, Precision: Low, Speed: High); Time-of-flight sensor (Cost: Medium, Precision: High, Speed: High)
+- Lift a load to a precise height: Motor with lead screw (Cost: Medium, Precision: High, Speed: Low); Pneumatic cylinder (Cost: Medium, Precision: Low, Speed: High); Linear servo actuator (Cost: High, Precision: High, Speed: Medium)
+
+Instructional Rationale: An Evaluate-level objective requires students to weigh competing tradeoffs and defend a recommendation, so a decision-support card layout with explicit tradeoff badges is more appropriate than a passive diagram—students must actively compare options before a recommendation feels justified, rather than being told a single correct answer.
+
+Implementation: p5.js canvas with clickable button regions on the left and a dynamically redrawn card panel on the right; tradeoff data stored in a lookup object keyed by task requirement.
+</details>
+
+<h2 id="putting-it-together-robot-assembly-and-robot-wiring">Putting It Together: Robot Assembly and Robot Wiring</h2>
+<p>With components selected, the physical build begins. <strong>Robot assembly</strong> is the process of physically mounting, fastening, and connecting all selected components onto the chassis according to the design plan. Good assembly practice follows a deliberate order, not a random one:</p>
+<ol>
+<li>Mount the heaviest components (battery, main drive motors) low and near the chassis's center to keep the robot's center of gravity stable</li>
+<li>Install structural subassemblies (arms, lifts, grippers) before running any wiring through them</li>
+<li>Leave planned access points for batteries, fuses, and connectors that will need frequent attention during competition</li>
+<li>Fasten everything securely before wiring, since a part that shifts after wiring is run can stress or disconnect a wire</li>
+</ol>
+<p>Once the physical structure is assembled, <strong>robot wiring</strong> is the task of routing and connecting electrical conductors between the power system, the microcontroller, and every actuator and sensor, following a planned wiring diagram rather than improvising connections in the moment. Poor wiring is one of the most common causes of robot failure in competition, precisely because problems it causes—an intermittent connection, a pinched wire—can be difficult to diagnose once covers are back on.</p>
+<p>The workflow below walks through the decision points a team faces while wiring a robot, from the power system outward to each sensor and actuator.</p>
+<h4 id="diagram-robot-wiring-workflow">Diagram: Robot Wiring Workflow</h4>
+<iframe src="../../sims/robot-wiring-workflow/main.html" width="100%" height="540px" scrolling="no"></iframe>
+
+<details markdown="1">
+<summary>Robot Wiring Workflow</summary>
+Type: workflow
+**sim-id:** robot-wiring-workflow<br/>
+**Library:** Mermaid<br/>
+**Status:** Specified
+
+Bloom Taxonomy: Apply<br/>
+Bloom Taxonomy Verb: implement, execute, demonstrate
+
+Learning objective: Students will apply a systematic wiring order (power, then control, then actuators, then sensors) and correctly branch decisions for digital versus analog sensor connections.
+
+Purpose: Give students a repeatable mental checklist for wiring any robot safely and in the correct order, reducing the trial-and-error wiring mistakes that cause competition failures.
+
+Visual style: Mermaid flowchart with decision diamonds and process rectangles, rendered with click directives on every node
+
+Steps:
+1. Start: "Battery Connected to Main Breaker" — Hover text: "Always connect the main breaker first so power can be cut instantly if something shorts."
+2. Process: "Wire Power Distribution Harness" — Hover text: "Run main power lines to voltage regulator modules before connecting any individual device."
+3. Process: "Connect Microcontroller to Regulated Power" — Hover text: "The control board typically needs a different, lower voltage than the drive motors."
+4. Process: "Wire Actuators to Motor/Servo Controllers" — Hover text: "Motor controllers sit between the microcontroller's signal and the actuator's power draw."
+5. Decision: "Digital or Analog Sensor?" — Hover text: "Digital sensors send discrete on/off or coded signals; analog sensors send a continuously varying voltage."
+6a. Process: "Wire to Digital Input Pin" (if Digital) — Hover text: "Digital signals connect directly to digital-labeled pins on the microcontroller."
+6b. Process: "Wire to Analog Input Pin" (if Analog) — Hover text: "Analog signals require a pin capable of reading a range of voltages, not just on/off."
+7. Process: "Label Every Connector" — Hover text: "Unlabeled wires are the number one cause of lost time during competition repairs."
+8. End: "Continuity Check Before Power-On" — Hover text: "Verify no wire touches another that it should not, before the first power-on test."
+
+Interactive features: Every node and arrow includes a Mermaid `click` directive that opens an infobox with its hover text; nodes are color-coded (blue for power steps, yellow for the decision diamond, green for the two branch outcomes, orange for the final safety check)
+
+Color coding:
+- Blue: power and control wiring steps
+- Yellow: decision point
+- Green: branch outcomes
+- Orange: safety verification step
+
+Implementation: Mermaid flowchart syntax with `click NodeId call showInfo("nodeId")` directives for every node, paired with a small JavaScript infobox panel beneath the diagram.
+</details>
+
+<h2 id="system-integration-making-the-subsystems-act-as-one">System Integration: Making the Subsystems Act as One</h2>
+<p><strong>System integration</strong> is the process of combining a robot's chassis, power system, actuators, sensors, and control software so that they operate together as a single coherent machine rather than as a collection of independently functioning parts. Integration is where a robot's individual subsystems either prove they can cooperate—or reveal conflicts that assembly and wiring alone could not expose.</p>
+<p>Integration problems are often subtle. A sensor might work perfectly on a test bench but report unreliable readings once mounted near a motor that generates electrical noise. A lift mechanism might move correctly by itself but stall when the drivetrain draws current at the same moment, starving the lift motor of voltage. Recognizing these interactions is exactly why system integration is treated as its own concept, distinct from assembly and wiring.</p>
+<p>The diagram below shows how Vertex Robotics' subsystems connect, and lets you click each one to review its role and which earlier chapter covered it.</p>
+<h4 id="diagram-robot-system-integration-map">Diagram: Robot System Integration Map</h4>
+<iframe src="../../sims/robot-system-integration-map/main.html" width="100%" height="580px" scrolling="no"></iframe>
+
+<details markdown="1">
+<summary>Robot System Integration Map</summary>
+Type: graph-model
+**sim-id:** robot-system-integration-map<br/>
+**Library:** vis-network<br/>
+**Status:** Specified
+
+Bloom Taxonomy: Analyze<br/>
+Bloom Taxonomy Verb: examine, differentiate, organize
+
+Learning objective: Students will examine how a robot's subsystems depend on one another and organize each subsystem by which earlier course chapter provides its underlying concepts.
+
+Purpose: Reinforce that a complete robot is a network of interdependent subsystems, and connect each subsystem back to the specific chapter where students learned its underlying theory.
+
+Node types:
+1. Chassis / Hardware Platform (gray square) — Properties: material, platform type; Example: "Hybrid aluminum + 3D-printed superstructure"
+2. Power System (yellow circle) — Properties: voltage, battery capacity; Example: "12V battery with two regulator modules"
+3. Microcontroller / Control System (blue diamond) — Properties: processing role; Example: "Runs main control loop"
+4. Actuators (orange circle) — Properties: motion type; Example: "Lift motor, gripper servo, drive motors"
+5. Sensors (green circle) — Properties: measured quantity; Example: "Distance sensor, color sensor, touch sensor"
+6. Software / Code (purple square) — Properties: behavior logic; Example: "Autonomous and driver-controlled routines"
+
+Edge types:
+1. SUPPLIES_POWER_TO (solid yellow arrows) — Power System → Microcontroller, Actuators, Sensors
+2. MOUNTED_ON (solid gray arrows) — all component nodes → Chassis / Hardware Platform
+3. SENDS_DATA_TO (dotted green arrows) — Sensors → Microcontroller
+4. SENDS_COMMANDS_TO (dashed blue arrows) — Microcontroller → Actuators
+5. RUNS_ON (solid purple arrows) — Software → Microcontroller
+
+Layout: Force-directed, with Chassis positioned centrally as the node most other nodes connect to via MOUNTED_ON edges
+
+Interactive features:
+- Hover a node: show its properties and a "See Chapter ___" tag (Chassis/Platform → Ch. 5 and this chapter; Power System → Ch. 6; Microcontroller → Ch. 12; Actuators → Ch. 9 and 10; Sensors → Ch. 8; Software → Ch. 3, 4, 13)
+- Click a node: highlight all directly connected nodes and dim the rest, and open a side panel with a one-sentence definition of that subsystem's role
+- Zoom: mouse wheel; Pan: click and drag background
+- A "Trace a Failure" button lets students click any two nodes to highlight the shortest path between them, illustrating how a problem in one subsystem can propagate to another
+
+Legend: Node shapes/colors explained above; edge line styles explained above
+
+Implementation: vis-network JavaScript library with a small fixed dataset (6 nodes, 8-10 edges); click and hover event listeners open a shared infobox panel; shortest-path highlighting implemented with vis-network's built-in graph traversal utilities.
+</details>
+
+<h2 id="robot-testing-proving-it-works-before-it-counts">Robot Testing: Proving It Works Before It Counts</h2>
+<p><strong>Robot testing</strong> is the systematic process of verifying that a robot's subsystems—and the robot as a whole—function correctly, performed in stages of increasing complexity rather than all at once. Testing everything simultaneously on a fully assembled robot makes it nearly impossible to isolate the source of a problem, so experienced teams test in a deliberate sequence:</p>
+<ol>
+<li><strong>Power-on test</strong> — verify the power system delivers correct voltage to every subsystem before anything else is checked</li>
+<li><strong>Subsystem test</strong> — verify each actuator and sensor works correctly in isolation, disconnected from the rest of the robot's behavior</li>
+<li><strong>Integration test</strong> — verify subsystems work correctly together, running actual control code that combines sensor input and actuator output</li>
+<li><strong>Field test</strong> — verify the fully integrated robot performs its intended task under realistic, competition-like conditions</li>
+</ol>
+<p>Each stage tends to expose a different category of problem, and catching an issue early—during a power-on test rather than a field test—saves enormous time. The interactive checklist below simulates this four-stage process, letting you click through each stage to see the kinds of issues commonly discovered there.</p>
+<h4 id="diagram-robot-testing-stage-simulator">Diagram: Robot Testing Stage Simulator</h4>
+<iframe src="../../sims/robot-testing-stage-simulator/main.html" width="100%" height="560px" scrolling="no"></iframe>
+
+<details markdown="1">
+<summary>Robot Testing Stage Simulator</summary>
+Type: microsim
+**sim-id:** robot-testing-stage-simulator<br/>
+**Library:** p5.js<br/>
+**Status:** Specified
+
+Bloom Taxonomy: Analyze<br/>
+Bloom Taxonomy Verb: examine, distinguish, organize
+
+Learning objective: Given a description of a robot malfunction, students will identify which of the four testing stages should have caught the problem and distinguish that stage's typical issues from the other three stages.
+
+Canvas layout:
+- Top (100px): Four clickable stage tabs in sequence — "Power-On Test," "Subsystem Test," "Integration Test," "Field Test"
+- Main area (400px): Content panel showing the selected stage's checklist and common issues
+- Bottom (60px): "Next Stage" and "Previous Stage" buttons
+
+Visual elements:
+- Each stage tab shown as a rectangle; the active stage is highlighted in blue, completed stages shown in green, upcoming stages shown in gray
+- Main panel lists 3-4 example issues for the active stage as cards with icons (a battery icon, a wrench icon, a circuit icon, a flag icon for field conditions)
+
+Data Visibility Requirements:
+  Stage 1 (Power-On Test): Show issues such as "Battery voltage reads 0V (loose connector)," "Breaker trips immediately (short circuit)," "Microcontroller does not power on (wrong regulator voltage)"
+  Stage 2 (Subsystem Test): Show issues such as "Servo moves in the wrong direction (wiring reversed)," "Sensor reports constant value (sensor not receiving power)," "Motor runs slower than expected (undersized wire gauge)"
+  Stage 3 (Integration Test): Show issues such as "Lift stalls when drivetrain runs (shared power draw)," "Sensor reading becomes unreliable near running motor (electrical noise)," "Code reads old sensor value (timing/loop issue from Chapter 13)"
+  Stage 4 (Field Test): Show issues such as "Robot performs well on smooth floor but slips on competition mat (traction mismatch)," "Battery voltage sags after ten minutes of match-length operation (undersized battery)," "Mechanism jams under match-speed operation but not slow bench testing (fit and tolerance issue)"
+
+Interactive controls:
+- Click any of the four stage tabs to jump directly to that stage's content
+- "Next Stage" / "Previous Stage" buttons move sequentially through stages
+- Clicking an individual issue card flips it to reveal a one-sentence recommended fix
+
+Instructional Rationale: An Analyze-level objective requires students to distinguish categories of failure by testing stage, so a step-through card-reveal pattern is appropriate—it lets students examine each stage's concrete issues before comparing across stages, rather than watching a continuous animation that would obscure which issue belongs to which stage.
+
+Implementation: p5.js canvas with clickable tab regions and card objects; issue and fix data stored in an array of objects keyed by stage name; card flip implemented as a simple state toggle redrawn each frame.
+</details>
+
+<h2 id="when-testing-reveals-problems-reengineering-and-documentation">When Testing Reveals Problems: Reengineering and Documentation</h2>
+<p>Testing rarely goes perfectly on the first attempt, and that is expected, not a failure of the design process. <strong>Robot reengineering</strong> is the practice of revising a robot's design—its components, wiring, or software—in direct response to problems discovered during testing, rather than treating the original design as final. When Vertex Robotics' integration test reveals that their lift motor stalls whenever the drivetrain accelerates, reengineering might mean adding a dedicated power regulator for the lift, upgrading wire gauge, or reconsidering the gear ratio from Chapter 9 to reduce the current the lift motor demands.</p>
+<p>Reengineering only works well when a team can remember what they tried before and why. <strong>Robot documentation</strong> is the ongoing written and visual record of a robot's design decisions, wiring diagrams, code versions, and test results, kept throughout the design process rather than reconstructed from memory afterward. Good documentation turns "I think we tried that already" into a quick, confident answer.</p>
+<p>Strong robot documentation typically includes several distinct artifacts, each serving a different purpose:</p>
+<table>
+<thead>
+<tr>
+<th>Documentation Artifact</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Engineering notebook</td>
+<td>Chronological record of design decisions, sketches, and reasoning (often required for FTC judging)</td>
+</tr>
+<tr>
+<td>Wiring diagram</td>
+<td>Visual reference showing every electrical connection, prevents guesswork during repairs</td>
+</tr>
+<tr>
+<td>CAD files</td>
+<td>Digital models of custom parts, enabling reprinting or redesign (from Chapter 5)</td>
+</tr>
+<tr>
+<td>Code repository</td>
+<td>Version history of all programs, allowing the team to revert a change that broke something</td>
+</tr>
+<tr>
+<td>Test logs</td>
+<td>Dated records of what was tested, what failed, and what fix was applied</td>
+</tr>
+</tbody>
+</table>
+<p>!!! tip
+    In FTC competitions, judges often weight the engineering notebook as heavily as the robot's on-field performance. A well-documented reengineering decision—showing the problem, the reasoning, and the result—demonstrates the engineering process itself, which is exactly what the notebook is meant to capture.</p>
+<h2 id="judging-the-result-performance-evaluation-and-maintenance">Judging the Result: Performance Evaluation and Maintenance</h2>
+<p>Once a robot is built, tested, and refined, a team needs an honest answer to a deceptively simple question: how good is it? <strong>Robot performance evaluation</strong> is the process of measuring a robot's behavior against specific, ideally quantitative, criteria—rather than relying on a general impression of "it seems to work."</p>
+<p>For Vertex Robotics, meaningful performance criteria for the ring-stacking task might include:</p>
+<ul>
+<li><strong>Cycle time</strong> — average seconds to collect one ring and stack it, measured across multiple attempts</li>
+<li><strong>Accuracy</strong> — percentage of scoring attempts that successfully land a ring on the intended pole</li>
+<li><strong>Reliability</strong> — number of matches completed without an unplanned mechanical or electrical failure</li>
+<li><strong>Consistency</strong> — how much cycle time and accuracy vary from attempt to attempt, not just their average</li>
+</ul>
+<p>Performance evaluation only has value if it happens repeatedly, because a robot's performance changes over time even without redesign—parts wear, connectors loosen, and batteries age. <strong>Robot maintenance</strong> is the ongoing practice of scheduled and preventive upkeep tasks that keep a robot performing reliably over its working life, rather than waiting for a failure to force a repair.</p>
+<p>A practical robot maintenance checklist, drawn from the power, wiring, and mechanical concepts covered throughout this course, includes:</p>
+<ol>
+<li>Fully charge and inspect batteries before each use, checking for swelling or damage</li>
+<li>Check all connectors and fasteners for looseness after transport or heavy use</li>
+<li>Inspect drivetrain components (from Chapter 9) for wear, especially gears, belts, and wheels</li>
+<li>Re-verify sensor calibration periodically, since drift accumulates over time (Chapter 8)</li>
+<li>Back up code and documentation after every significant change</li>
+<li>Replace consumable or high-wear parts proactively, before they fail during a match</li>
+</ol>
+<h2 id="looking-ahead-robotics-industry-trends">Looking Ahead: Robotics Industry Trends</h2>
+<p>This course began with a kit robot and formal vocabulary in Chapter 2, including a first look at robotics careers. It is fitting to close by looking outward again—at where the field of robotics is actually heading, and how the skills built across this entire course connect to it. <strong>Robotics industry trends</strong> are the current directions of change and growth shaping the robotics field, reflecting new technologies, new applications, and new demands from industries adopting robots.</p>
+<p>Several trends are reshaping robotics right now, and each one builds directly on concepts from this course:</p>
+<ul>
+<li><strong>AI-powered perception</strong> — robots increasingly use machine learning to interpret sensor data (building on Chapter 8's sensors and Chapter 13's advanced programming), enabling them to recognize objects rather than just measure simple quantities</li>
+<li><strong>Collaborative robots (cobots)</strong> — robots designed to work safely alongside humans in shared spaces, requiring careful control system design (Chapter 11) to guarantee safe, predictable behavior</li>
+<li><strong>Autonomous mobile robots</strong> — robots that navigate and make decisions without constant human control, combining every layer of this course from sensing to control to software</li>
+<li><strong>Soft and flexible robotics</strong> — actuators and structures made from compliant materials rather than rigid parts, expanding the actuator selection choices covered earlier in this chapter</li>
+<li><strong>Swarm and multi-robot systems</strong> — many simple robots coordinating to accomplish a task no single robot could do alone</li>
+</ul>
+<p>The timeline below traces how these trends have emerged and connects each one back to the robotics career pathways introduced in Chapter 2.</p>
+<h4 id="diagram-robotics-industry-trends-timeline">Diagram: Robotics Industry Trends Timeline</h4>
+<iframe src="../../sims/robotics-industry-trends-timeline/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+<details markdown="1">
+<summary>Robotics Industry Trends Timeline</summary>
+Type: timeline
+**sim-id:** robotics-industry-trends-timeline<br/>
+**Library:** vis-timeline<br/>
+**Status:** Specified
+
+Bloom Taxonomy: Understand<br/>
+Bloom Taxonomy Verb: summarize, exemplify, interpret
+
+Learning objective: Students will summarize how major robotics industry trends have emerged over time and exemplify how each trend connects to a robotics career pathway.
+
+Purpose: Situate the technical skills built throughout the course within the broader, evolving robotics industry, and connect trends back to the career pathways introduced in Chapter 2.
+
+Time period: 2000-2026, with a forward-looking "What's Next" marker beyond 2026
+
+Orientation: Horizontal
+
+Events:
+- 2000s: Industrial robots become standard in manufacturing, largely fixed and caged from humans
+- 2011: First widely-adopted collaborative robot (cobot) designs allow robots to work near humans safely
+- 2015: Autonomous mobile robots begin widespread warehouse and logistics use
+- 2018: Machine learning-based perception becomes practical for real-time robotic vision
+- 2020s: Soft robotics and flexible actuators expand into medical and agricultural applications
+- 2023-2026: Multi-robot swarm coordination matures for search, agriculture, and exploration tasks
+- What's Next: Robots that combine AI perception, safe human collaboration, and adaptable soft actuation into single systems
+
+Visual style: Horizontal timeline with alternating above/below event placement, "What's Next" marker visually distinct (dashed border, question-mark icon) at the far right
+
+Color coding:
+- Gray: Early fixed industrial robotics (2000s)
+- Blue: Human-collaborative and mobile robotics (2011-2018)
+- Green: AI-perception and adaptive robotics (2018-2023)
+- Gold: Emerging and future trends (2023-2026 and beyond)
+
+Interactive features:
+- Hover an event to see a one-sentence description of the trend
+- Click an event to expand a panel showing which robotics career pathway it connects to (e.g., "Autonomous mobile robots" links to careers in robotics software engineering and field robotics), referencing the Robotics Careers concept from Chapter 2
+- Click the "What's Next" marker to reveal a prompt encouraging students to consider which trend they find most interesting as a possible career direction
+
+Implementation: vis-timeline JavaScript library with a small fixed dataset of 6-7 timeline items; click event listeners open a shared infobox panel below the timeline.
+</details>
+
+<h2 id="you-are-ready-to-design">You Are Ready to Design</h2>
+<p>Look back at everything this chapter has asked you to bring together: an inventory of robotic components, a chosen chassis and hardware platform, a working power system, deliberately selected actuators and sensors, careful assembly and wiring, verified system integration, staged testing, honest reengineering, real documentation, measured performance evaluation, and ongoing maintenance. None of that was new theory—it was the deliberate combination of everything you built and learned in Chapters 1 through 13, applied to a single, original machine of your own design.</p>
+<p>That is the actual meaning of "capstone." You did not just learn about robotics one topic at a time. You now hold a complete, repeatable process for taking a robot from an idea to a competition-ready machine, the same process used by professional robotics engineers and FTC teams around the world. Whatever comes next—a new FTC season, a FIRST Robotics Competition build, a personal project, or a first step toward a robotics career—you are ready to design it yourself.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

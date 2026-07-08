@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>2. Introduction to Robotics and Systems - My Docs</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../course-description/" class="nav-link">Course Description</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Chapters</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../" class="dropdown-item">List of Chapters</a>
+</li>
+                                    
+<li>
+    <a href="../01-identifying-kit-parts-building-starterbot/" class="dropdown-item">1. Identifying Kit Parts and Building Your StarterBot</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">2. Introduction to Robotics and Systems</a>
+</li>
+                                    
+<li>
+    <a href="../03-programming-fundamentals/" class="dropdown-item">3. Programming Fundamentals</a>
+</li>
+                                    
+<li>
+    <a href="../04-programming-your-robot/" class="dropdown-item">4. Programming Your Robot</a>
+</li>
+                                    
+<li>
+    <a href="../05-designing-building-custom-parts/" class="dropdown-item">5. Designing and Building Custom Parts</a>
+</li>
+                                    
+<li>
+    <a href="../06-electrical-fundamentals/" class="dropdown-item">6. Electrical Fundamentals</a>
+</li>
+                                    
+<li>
+    <a href="../07-electronic-components-circuit-design/" class="dropdown-item">7. Electronic Components and Circuit Design</a>
+</li>
+                                    
+<li>
+    <a href="../08-sensors-and-measurement/" class="dropdown-item">8. Sensors and Measurement</a>
+</li>
+                                    
+<li>
+    <a href="../09-mechanical-systems-simple-machines/" class="dropdown-item">9. Mechanical Systems and Simple Machines</a>
+</li>
+                                    
+<li>
+    <a href="../10-fluid-power-hydraulics-pneumatics/" class="dropdown-item">10. Fluid Power: Hydraulics and Pneumatics</a>
+</li>
+                                    
+<li>
+    <a href="../11-control-systems-feedback-loops/" class="dropdown-item">11. Control Systems and Feedback Loops</a>
+</li>
+                                    
+<li>
+    <a href="../12-digital-logic-computing-fundamentals/" class="dropdown-item">12. Digital Logic and Computing Fundamentals</a>
+</li>
+                                    
+<li>
+    <a href="../13-advanced-robot-programming/" class="dropdown-item">13. Advanced Robot Programming</a>
+</li>
+                                    
+<li>
+    <a href="../14-integrating-testing-maintaining-robotic-system/" class="dropdown-item">14. Integrating, Testing, and Maintaining a Robotic System</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Learning Graph</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../learning-graph/" class="dropdown-item">Introduction</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/course-description-assessment/" class="dropdown-item">Course Description Assessment</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/concept-list/" class="dropdown-item">Concept Enumeration</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/quality-metrics/" class="dropdown-item">Graph Quality Analysis</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/concept-taxonomy/" class="dropdown-item">Concept Taxonomy</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/taxonomy-distribution/" class="dropdown-item">Taxonomy Distribution Report</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">MicroSims</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../sims/graph-viewer/" class="dropdown-item">Learning Graph Viewer</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../01-identifying-kit-parts-building-starterbot/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../03-programming-fundamentals/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#introduction-to-robotics-and-systems" class="nav-link">Introduction to Robotics and Systems</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#summary" class="nav-link">Summary</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#concepts-covered" class="nav-link">Concepts Covered</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#prerequisites" class="nav-link">Prerequisites</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#what-is-robotics" class="nav-link">What Is Robotics?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#the-universal-systems-model" class="nav-link">The Universal Systems Model</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#defining-robot-and-sorting-robots-by-type" class="nav-link">Defining "Robot" and Sorting Robots by Type</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#robotics-applications" class="nav-link">Robotics Applications</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#robotics-careers" class="nav-link">Robotics Careers</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#robotics-history" class="nav-link">Robotics History</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#robotics-ethics" class="nav-link">Robotics Ethics</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="introduction-to-robotics-and-systems">Introduction to Robotics and Systems</h1>
+<h2 id="summary">Summary</h2>
+<p>Now that students have physically built a robot, this chapter puts formal vocabulary to the experience: what robotics and automation actually mean, how the universal systems model (input, process, output, feedback) describes any robotic system, and how robots are categorized (industrial, mobile, humanoid) and applied across industries. Students will be able to describe their own StarterBot in terms of these formal concepts and explain robotics as a field, its history, and its career pathways.</p>
+<h2 id="concepts-covered">Concepts Covered</h2>
+<p>This chapter covers the following 17 concepts from the learning graph:</p>
+<ol>
+<li>Robotics</li>
+<li>Automation</li>
+<li>Control System</li>
+<li>Robotics History</li>
+<li>Robotics Careers</li>
+<li>Universal Systems Model</li>
+<li>System Input</li>
+<li>System Process</li>
+<li>System Output</li>
+<li>System Feedback</li>
+<li>Robot Definition</li>
+<li>Types Of Robots</li>
+<li>Industrial Robots</li>
+<li>Mobile Robots</li>
+<li>Humanoid Robots</li>
+<li>Robotics Applications</li>
+<li>Robotics Ethics</li>
+</ol>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>This chapter builds on concepts from:</p>
+<ul>
+<li><a href="../01-identifying-kit-parts-building-starterbot/">Chapter 1: Identifying Kit Parts and Building Your StarterBot</a></li>
+</ul>
+<hr />
+<h2 id="what-is-robotics">What Is Robotics?</h2>
+<p>You already built a robot before anyone told you what "robotics" means. That order was intentional. Now that a chain-and-sprocket drivetrain, a pair of Yellow Jacket motors, and a set of Gecko wheels sit on your workbench, the formal definitions in this chapter have something real to attach to.</p>
+<p><strong>Robotics</strong> is the branch of engineering and computer science concerned with designing, building, programming, and operating machines that sense their environment, make decisions, and act on the physical world. Notice that this definition has three parts, and your StarterBot already satisfies all three: it has a physical body (the U-channel frame and drivetrain you assembled), it can be given commands (through programming you will meet in the next chapter), and it acts on the world (spinning wheels, moving an intake roller). A machine that is missing any one of these three parts, sensing, deciding, or acting, is not usually considered a robot in the formal sense.</p>
+<p>Robotics is closely related to, but distinct from, <strong>automation</strong>, the use of technology to perform tasks with reduced human intervention. Automation is a broader idea than robotics: a thermostat that turns a furnace on and off is automation, but nobody would call a thermostat a robot. Robotics is a specific way of achieving automation, one that usually involves a movable, physical machine rather than a fixed control box. Every robot performs automation, but not every automated system is a robot.</p>
+<p>The following table clarifies this relationship using examples your class has already encountered, since a table works well here to reinforce a distinction rather than introduce a brand-new idea.</p>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>Automated?</th>
+<th>Is It a Robot?</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Home thermostat</td>
+<td>Yes</td>
+<td>No</td>
+<td>Fixed in place, no moving body, only switches a furnace on/off</td>
+</tr>
+<tr>
+<td>Automatic sliding door</td>
+<td>Yes</td>
+<td>Debatable</td>
+<td>Senses motion and acts, but has no broader decision-making or mobility</td>
+</tr>
+<tr>
+<td>Dishwasher</td>
+<td>Yes</td>
+<td>No</td>
+<td>Follows a fixed timed cycle, does not sense or adapt to its environment</td>
+</tr>
+<tr>
+<td>StarterBot chassis</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Senses (once sensors are added), decides via program, and physically moves through space</td>
+</tr>
+<tr>
+<td>Industrial welding arm</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Senses part position, follows a programmed decision path, and physically manipulates a tool</td>
+</tr>
+</tbody>
+</table>
+<p>At the heart of both automation and robotics is a <strong>control system</strong>, the combination of hardware and logic that governs how a machine responds to conditions in order to reach a desired outcome. Your StarterBot's chain-and-sprocket drivetrain is a mechanical result, but a control system is what will eventually decide when and how fast those wheels turn. Control systems can be as simple as a thermostat's switch or as complex as the balance-correcting software inside a walking humanoid robot; the rest of this chapter, and an entire later chapter of this course, builds directly on this idea.</p>
+<h2 id="the-universal-systems-model">The Universal Systems Model</h2>
+<p>Every robot, no matter how simple or advanced, can be described using the same four-part framework: the <strong>universal systems model</strong>. This model states that any system, robotic or otherwise, transforms something it receives into something it produces, and that a well-designed system checks its own results and adjusts accordingly. Learning to see this pattern is more valuable than memorizing any single robot's parts list, because the same four-part lens applies to a thermostat, a StarterBot, a spacecraft, and a national power grid alike.</p>
+<p>The four parts of the universal systems model are:</p>
+<ol>
+<li><strong>System input</strong> — information or material that enters a system from the outside, such as a sensor reading, a button press, or a command from a program</li>
+<li><strong>System process</strong> — the internal logic, calculation, or mechanism that transforms input into a planned action</li>
+<li><strong>System output</strong> — the result the system produces and delivers to the world, such as a motor turning or a message displayed</li>
+<li><strong>System feedback</strong> — information about the output that is returned to the system so it can check and adjust its own future behavior</li>
+</ol>
+<p>Rather than memorize this list in the abstract, it helps to map each term onto a robot you already understand from the inside out. Explore the interactive model below, which uses your own StarterBot as the running example for each of the four stages.</p>
+<h4 id="diagram-universal-systems-model-on-the-starterbot">Diagram: Universal Systems Model on the StarterBot</h4>
+<iframe src="../../sims/universal-systems-model/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+<details markdown="1">
+<summary>Universal Systems Model on the StarterBot</summary>
+Type: diagram
+**sim-id:** universal-systems-model<br/>
+**Library:** vis-network<br/>
+**Status:** Specified
+
+Purpose: Teach the four components of the universal systems model (input, process, output, feedback) by mapping each stage onto the real StarterBot the students built in Chapter 1.
+
+Bloom Taxonomy: Understand (L2)
+Bloom Taxonomy Verb: classify, exemplify, explain
+
+Learning objective: Given a description of a robotic behavior, students will correctly classify each described event as system input, process, output, or feedback, and explain how the four stages connect in a continuous loop.
+
+Components to show:
+- Four large clickable nodes arranged left to right in a loop: "Input," "Process," "Output," "Feedback"
+- A curved arrow returning from "Feedback" back to "Input," visually closing the loop
+- Each node is color-coded and labeled with its formal name
+
+Connections: Input to Process to Output to Feedback to Input, forming a continuous cycle rather than a one-way line.
+
+Interactive elements:
+- Clicking "Input" opens an infobox: "Input — information entering the system. StarterBot example: a driver's joystick command, or a future distance-sensor reading."
+- Clicking "Process" opens an infobox: "Process — internal logic that decides what to do. StarterBot example: the onboard program deciding how fast to spin each drive motor based on the joystick value."
+- Clicking "Output" opens an infobox: "Output — the result delivered to the world. StarterBot example: the Yellow Jacket motors turning, driving the chain-and-sprocket drivetrain, moving the wheels."
+- Clicking "Feedback" opens an infobox: "Feedback — information about the output sent back into the system. StarterBot example: a future encoder reporting how far the wheel actually turned, so the program can correct its next command."
+- A "Play Example" button animates a token traveling around the loop once, pausing briefly at each node.
+
+Visual style: Circular/looped network diagram, force-directed layout locked to a left-to-right circular arrangement.
+
+Color scheme: Blue for Input, gold for Process, green for Output, orange for Feedback, with the loop-back arrow in orange to match Feedback.
+
+Implementation: vis-network with a fixed circular layout (not force-directed, to keep the loop shape stable), click event listeners on each node opening a shared infobox panel, and a simple animated marker for the "Play Example" button.
+</details>
+
+<p>Feedback deserves special attention because it is what separates a genuinely adaptive system from one that simply follows a script. A system with no feedback, like a wind-up toy car, runs exactly the same way every time regardless of what happens around it. A system with feedback, like a modern robot with encoders and sensors, can detect when its output did not match its intended result and correct course. You built the mechanical hardware for feedback (motors, and eventually sensors) in Chapter 1; the programming chapters ahead will show you how to write the logic that actually closes the loop.</p>
+<p>!!! tip
+    A useful habit for the rest of this course: whenever you read about a new robot subsystem, ask "what is its input, what is its process, what is its output, and does it have feedback?" That single question will make almost every future control-system topic easier to understand.</p>
+<h2 id="defining-robot-and-sorting-robots-by-type">Defining "Robot" and Sorting Robots by Type</h2>
+<p>With the systems model as a foundation, it is time to settle a question this chapter has been circling: what exactly counts as a <strong>robot</strong>? A workable definition, and the one this course uses, is that a robot is a programmable, physical machine that senses its environment (or at least receives input), processes that input according to a set of instructions, and acts on the physical world through some form of movement or manipulation. This definition intentionally lines up with the universal systems model: if a machine cannot be described in terms of input, process, and output, it probably is not a robot.</p>
+<p>Not every robot looks or works the same way, however. Robots are typically sorted into <strong>types of robots</strong> based on where they operate and what physical form they take. This course focuses on three major categories:</p>
+<ul>
+<li><strong>Industrial robots</strong> — robots fixed in one location, typically a factory floor, that repeatedly perform a precise physical task such as welding, painting, or assembling parts</li>
+<li><strong>Mobile robots</strong> — robots designed to move through an environment, on wheels, tracks, legs, or propellers, to reach different locations rather than staying fixed in place</li>
+<li><strong>Humanoid robots</strong> — robots built with a body plan that resembles a human's, typically including a torso, two arms, and often two legs, designed to operate in spaces and use tools built for people</li>
+</ul>
+<p>Your own StarterBot is a clear example of a <strong>mobile robot</strong>: its chain-and-sprocket drivetrain and Gecko/Omni/Hogback wheel combination exist specifically so it can travel across a competition field, not stay bolted to one spot. Contrast that with the welding arm mentioned earlier in this chapter, which is bolted to a factory floor and never relocates itself: that is an industrial robot. A robot with a humanlike torso, arms, and legs designed to walk through spaces built for people falls into the third category.</p>
+<p>Because these three categories differ along several dimensions at once, mobility, typical environment, and typical task, the diagram below lets you explore each category and compare real-world examples side by side rather than trying to hold all three definitions in your head simultaneously.</p>
+<h4 id="diagram-robot-type-classifier">Diagram: Robot Type Classifier</h4>
+<iframe src="../../sims/robot-type-classifier/main.html" width="100%" height="550px" scrolling="no"></iframe>
+
+<details markdown="1">
+<summary>Robot Type Classifier</summary>
+Type: workflow
+**sim-id:** robot-type-classifier<br/>
+**Library:** Mermaid<br/>
+**Status:** Specified
+
+Purpose: Help students distinguish industrial, mobile, and humanoid robots by exploring clickable real-world examples of each category, including where the StarterBot fits.
+
+Bloom Taxonomy: Analyze (L4)
+Bloom Taxonomy Verb: differentiate, classify, compare, contrast
+
+Learning objective: Given a description or image of an unfamiliar robot, students will classify it as industrial, mobile, or humanoid, and justify the classification using the robot's mobility, environment, and task.
+
+Visual style: Mermaid flowchart styled as a three-branch classification tree, with a root node "Robot" branching into three category nodes, each of which branches further into 2-3 real-world example nodes.
+
+Steps (each node is clickable with a `click` directive opening an infobox):
+1. Root node: "Robot" — click text: "A programmable machine that senses, processes, and acts on the physical world."
+2. Branch: "Industrial Robots" — click text: "Fixed in place, perform a repeated precise task, common in factories."
+3. Example under Industrial: "Welding Arm" — click text: "Bolted to a factory floor; repeats the same weld path thousands of times per shift."
+4. Example under Industrial: "Pick-and-Place Arm" — click text: "Picks parts from a conveyor and places them precisely into packaging or assembly."
+5. Branch: "Mobile Robots" — click text: "Designed to travel through an environment using wheels, tracks, legs, or propellers."
+6. Example under Mobile: "Your StarterBot" — click text: "Uses a chain-and-sprocket drivetrain and Gecko/Omni/Hogback wheels to travel across a competition field."
+7. Example under Mobile: "Warehouse Delivery Robot" — click text: "Navigates warehouse aisles autonomously to move inventory between shelves and packing stations."
+8. Example under Mobile: "Mars Rover" — click text: "Drives across uneven planetary terrain using specialized wheels, operating far from any human operator."
+9. Branch: "Humanoid Robots" — click text: "Built with a body plan resembling a human, often with a torso, arms, and legs."
+10. Example under Humanoid: "Warehouse Humanoid Assistant" — click text: "Designed to walk through aisles and use shelves and tools built for human workers."
+11. Example under Humanoid: "Research/Disaster-Response Humanoid" — click text: "Designed to operate stairs, ladders, and doors originally built for people during search-and-rescue tasks."
+
+Connections: Root branches to the three category nodes; each category node branches to its own example nodes. No cross-links between categories.
+
+Color coding: Gray for the root node, orange for Industrial and its examples, blue for Mobile and its examples (with the StarterBot example highlighted in a distinct gold outline), purple for Humanoid and its examples.
+
+Implementation: Mermaid flowchart syntax (`graph TD`) with `click` directives bound to a JavaScript function displaying each node's text in a styled infobox beneath the diagram.
+</details>
+
+<p>It is worth noting that these three categories are not the only way to sort robots, and some robots blend categories, for example a mobile robot with two arms bolted on for manipulation. For this course, however, industrial, mobile, and humanoid cover the vast majority of robots you will encounter in industry, research, and competition, and they give you a shared vocabulary for describing any new robot you meet.</p>
+<h2 id="robotics-applications">Robotics Applications</h2>
+<p>Robots show up far beyond factories and competition fields. <strong>Robotics applications</strong> refers to the wide range of industries and tasks where robots are put to practical use, and recognizing this breadth helps explain why robotics careers, covered later in this chapter, span so many different fields.</p>
+<p>Consider how differently the three robot types you just learned show up across industries:</p>
+<ul>
+<li><strong>Manufacturing</strong> — industrial robotic arms weld car frames, place electronic components on circuit boards, and package finished products at speeds and precision no human could sustain for an entire shift</li>
+<li><strong>Agriculture</strong> — mobile robots and automated harvesters drive through fields to plant seeds, apply fertilizer precisely, and pick fruit without bruising it</li>
+<li><strong>Healthcare</strong> — surgical robots give surgeons finer control and steadier hands during delicate procedures, while mobile robots deliver medications and supplies through hospital hallways</li>
+<li><strong>Logistics and warehousing</strong> — fleets of mobile robots move shelves and packages through massive distribution centers, coordinating with each other to avoid collisions</li>
+<li><strong>Space exploration</strong> — mobile rovers and robotic arms operate in environments too distant, radioactive, or otherwise dangerous for a human crew</li>
+<li><strong>Disaster response</strong> — mobile and humanoid robots search collapsed buildings, inspect damaged nuclear facilities, and handle suspected explosives from a safe distance</li>
+</ul>
+<p>Every one of these applications, no matter the industry, is still built from the same universal systems model you learned earlier in this chapter: something senses or receives input, something processes that input, something acts as output, and increasingly, something checks that output through feedback.</p>
+<h2 id="robotics-careers">Robotics Careers</h2>
+<p>The breadth of robotics applications you just read about translates directly into breadth of <strong>robotics careers</strong>, the range of jobs available to people who design, build, program, maintain, and manage robotic systems. It is a common misconception that "robotics" means only writing code; in reality, the field draws on mechanical, electrical, and software skills in roughly equal measure, along with several career paths that do not involve hands-on building at all.</p>
+<p>The table below organizes common robotics career paths by the primary skill set each one relies on, since a table is well suited to comparing several distinct roles along a shared set of categories.</p>
+<table>
+<thead>
+<tr>
+<th>Career Path</th>
+<th>Primary Focus</th>
+<th>Example Task</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Robotics/mechanical engineer</td>
+<td>Physical design and mechanisms</td>
+<td>Designing a new drivetrain or gripper mechanism</td>
+</tr>
+<tr>
+<td>Robotics software/controls engineer</td>
+<td>Programming and control systems</td>
+<td>Writing the code that closes a feedback loop for stable movement</td>
+</tr>
+<tr>
+<td>Electrical/electronics engineer</td>
+<td>Circuits, sensors, and power systems</td>
+<td>Designing sensor wiring and power distribution for a robot</td>
+</tr>
+<tr>
+<td>Robotics technician</td>
+<td>Assembly, maintenance, and troubleshooting</td>
+<td>Diagnosing and fixing a robot that has stopped functioning correctly on a production line</td>
+</tr>
+<tr>
+<td>Robotics field service specialist</td>
+<td>On-site installation and repair</td>
+<td>Traveling to a factory to install and calibrate a new industrial robot</td>
+</tr>
+<tr>
+<td>Robotics project manager</td>
+<td>Planning and coordinating teams</td>
+<td>Scheduling a multi-discipline team building a new mobile robot product</td>
+</tr>
+</tbody>
+</table>
+<p>Every skill you practiced in Chapter 1, reading a Bill of Materials, following an assembly manual, verifying a finished build, maps directly onto entry-level work as a robotics technician. The formal vocabulary in this chapter maps onto the engineering roles above it in the table.</p>
+<h2 id="robotics-history">Robotics History</h2>
+<p>Robotics did not appear all at once; it grew out of decades of automation and control system research, each era building the foundation the next era relied on. Understanding <strong>robotics history</strong> helps explain why today's robots look and work the way they do, and it shows that the field is still changing quickly, meaning the robots you build in this course sit on a continuum rather than at some final, finished endpoint.</p>
+<p>Rather than reading a static list of dates, explore the interactive timeline below, which highlights the milestones most relevant to the industrial, mobile, and humanoid robot categories you just learned.</p>
+<h4 id="diagram-milestones-in-robotics-history">Diagram: Milestones in Robotics History</h4>
+<iframe src="../../sims/robotics-history-timeline/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+<details markdown="1">
+<summary>Milestones in Robotics History</summary>
+Type: timeline
+**sim-id:** robotics-history-timeline<br/>
+**Library:** vis-timeline<br/>
+**Status:** Specified
+
+Purpose: Give students historical context for how robotics grew from early automation and control theory into today's industrial, mobile, and humanoid robots.
+
+Bloom Taxonomy: Remember (L1) and Understand (L2)
+Bloom Taxonomy Verb: recall, identify, summarize
+
+Learning objective: Students will recall key milestones in robotics history and summarize how each milestone connects to a robot type or concept introduced earlier in this chapter.
+
+Time period covered: 1950s-present
+
+Orientation: Horizontal
+
+Events:
+- 1954: George Devol patents Unimate, the first programmable industrial robotic arm concept, later installed on a General Motors assembly line in 1961
+- 1961: Unimate begins working on a GM factory floor, marking the first true industrial robot in commercial use
+- 1969: The Stanford Cart, an early mobile robot, navigates obstacles using a camera and remote computer processing
+- 1973: WABOT-1, developed in Japan, becomes one of the first full-scale humanoid robots able to walk and manipulate objects
+- 1997: Sojourner, a small mobile rover, becomes the first wheeled robot to explore the surface of Mars
+- 2000: Honda unveils ASIMO, a humanoid robot capable of walking, running, and climbing stairs, advancing humanoid robotics research significantly
+- 2011-2012: Curiosity rover lands on Mars, an advanced mobile robot carrying a full science laboratory
+- 2010s: Warehouse mobile robot fleets (such as those used by major online retailers) become widespread in logistics
+- 2020s: Advanced humanoid robots begin pilot deployments in warehouses and factories alongside industrial robotic arms
+- Today: FIRST Tech Challenge teams, including this class, build mobile robots like the StarterBot using the same core concepts (motors, drivetrains, control systems, feedback) as commercial and research robots
+
+Visual style: Horizontal timeline with alternating above/below event placement to avoid crowding.
+
+Color coding: Orange for industrial robot milestones, blue for mobile robot milestones, purple for humanoid robot milestones, gold for the final "Today" event connecting history to the student's own build.
+
+Interactive features:
+- Clicking or hovering any event opens an infobox with the full description above
+- A "Filter" control lets students show only industrial, only mobile, only humanoid milestones, or all of them together
+- Zooming and panning are enabled so students can spread out densely packed decades
+
+Implementation: vis-timeline JavaScript library with a DataSet of the above events, group filtering tied to a color/category field, and a click event handler opening a shared infobox panel.
+</details>
+
+<p>Notice how each type of robot you learned earlier in this chapter, industrial, mobile, and humanoid, has its own distinct historical thread, and that all three threads continue to advance today, often influencing each other as engineers borrow ideas across categories.</p>
+<h2 id="robotics-ethics">Robotics Ethics</h2>
+<p>As robots take on more tasks once done only by people, questions of <strong>robotics ethics</strong> become impossible to ignore: the study of the moral and social responsibilities that come with designing, deploying, and using robots. This is not an abstract concern reserved for advanced researchers; it is directly relevant to the applications and careers covered earlier in this chapter.</p>
+<p>A few of the central questions in robotics ethics include:</p>
+<ul>
+<li><strong>Job displacement</strong> — when an industrial robot replaces a task once done by a human worker, what responsibility do companies and engineers have toward the people affected?</li>
+<li><strong>Safety</strong> — how much testing and how many safeguards are required before a mobile or humanoid robot works safely alongside people?</li>
+<li><strong>Privacy</strong> — mobile robots often carry cameras and sensors; who has access to the data they collect, and how long should it be kept?</li>
+<li><strong>Accountability</strong> — when an autonomous robot's decision causes harm, who is responsible: the programmer, the manufacturer, or the operator?</li>
+<li><strong>Access and fairness</strong> — as robotics transforms industries and creates new careers, who has access to the education and training needed to participate in those careers?</li>
+</ul>
+<p>!!! question
+    Suppose a mobile warehouse robot and a human worker occupy the same aisle at the same time, and the robot must choose to either stop suddenly (risking the goods it carries) or continue on its current path (risking the worker). Who should decide the rule the robot follows in that moment, and what values should that rule prioritize?</p>
+<p>These questions do not have a single correct answer, but engineers who understand the universal systems model from earlier in this chapter are better equipped to reason about them: every ethical question above can be traced to a specific input, process, output, or feedback decision that a human designer had to make somewhere in the system. Robotics ethics, in other words, is what happens when you ask "and what should this system's process actually decide?"</p>
+<p>??? note "Quick check: Is a home thermostat a robot? Click to reveal the answer."
+    No. A thermostat is automation, technology performing a task with reduced human intervention, but it lacks the physical mobility and manipulation typically required to call it a robot. It also does not fit the three robot type categories (industrial, mobile, humanoid) covered in this chapter, since it never moves or acts on objects in the world beyond switching a furnace on or off.</p>
+<p>You now have the formal vocabulary to describe the robot sitting on your workbench: it is a <strong>mobile robot</strong>, built from real hardware, that will eventually take <strong>input</strong> from sensors and drivers, run that input through a <strong>process</strong> you will program, produce <strong>output</strong> through its motors and drivetrain, and improve over time through <strong>feedback</strong>. The chapters ahead return to this same StarterBot again and again, first to teach you the programming that drives its process, and later to add the sensors and control logic that close its feedback loop.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

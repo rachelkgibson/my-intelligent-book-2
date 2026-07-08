@@ -1,0 +1,205 @@
+ConceptID,ConceptLabel,Dependencies,TaxonomyID
+1,Robotics,204,FOUND
+2,Automation,,FOUND
+3,Control System,,FOUND
+4,Robotics History,1,FOUND
+5,Robotics Careers,1,FOUND
+6,Universal Systems Model,3,FOUND
+7,System Input,6,FOUND
+8,System Process,6,FOUND
+9,System Output,6,FOUND
+10,System Feedback,7|9,FOUND
+11,Robot Definition,1,FOUND
+12,Types Of Robots,11,FOUND
+13,Industrial Robots,12,FOUND
+14,Mobile Robots,12,FOUND
+15,Humanoid Robots,12,FOUND
+16,Robotics Applications,11|5,FOUND
+17,Robotics Ethics,16,FOUND
+18,Engineering Design Process,,EDP
+19,Problem Definition,18,EDP
+20,Design Constraints,19,EDP
+21,Design Criteria,19,EDP
+22,Brainstorming,19,EDP
+23,Concept Sketching,22,EDP
+24,Prototyping,23,EDP
+25,Design Iteration,24,EDP
+26,Design Testing,24,EDP
+27,Design Documentation,18,EDP
+28,Trade-Off Analysis,20|21,EDP
+29,Reverse Engineering,18,EDP
+30,Design Specifications,21,EDP
+31,Bill Of Materials,30,EDP
+32,Engineering Notebook,18,EDP
+33,Team-Based Design,18,EDP
+34,Electricity,,ELEC
+35,Voltage,34,ELEC
+36,Current,34,ELEC
+37,Resistance,34,ELEC
+38,Ohms Law,35|36|37,ELEC
+39,Direct Current,36,ELEC
+40,Alternating Current,36,ELEC
+41,Electrical Circuit,38,ELEC
+42,Series Circuit,41,ELEC
+43,Parallel Circuit,41,ELEC
+44,Electrical Power,35|36,ELEC
+45,Electrical Safety,34,ELEC
+46,Conductors,34,ELEC
+47,Insulators,34,ELEC
+48,Electrical Ground,41,ELEC
+49,Short Circuit,41|45,ELEC
+50,Circuit Protection,49,ELEC
+51,Resistor,37,CIRC
+52,Capacitor,41,CIRC
+53,Diode,39,CIRC
+54,Transistor,53,CIRC
+55,LED,53,CIRC
+56,Breadboard,41,CIRC
+57,Soldering,45,CIRC
+58,Multimeter,35|36|37,CIRC
+59,Circuit Diagram,41,CIRC
+60,Printed Circuit Board,59,CIRC
+61,Battery,39,CIRC
+62,Power Supply,35,CIRC
+63,Switch,41,CIRC
+64,Relay,63,CIRC
+65,Motor Driver,54,CIRC
+66,Circuit Simulation,59,CIRC
+67,Circuit Design,59|51|52,CIRC
+68,Sensor,7,RBOT
+69,Actuator,9,RBOT
+70,Precision Measurement,68,SENS
+71,Direct Measurement,70,SENS
+72,Indirect Measurement,70,SENS
+73,Coordinate System,70,SENS
+74,Light Sensor,68,SENS
+75,Temperature Sensor,68,SENS
+76,Distance Sensor,68,SENS
+77,Touch Sensor,68,SENS
+78,Sound Sensor,68,SENS
+79,Encoder,68,SENS
+80,Potentiometer,51|68,SENS
+81,Sensor Calibration,70|68,SENS
+82,Data Transmission,68|69,SENS
+83,Signal Processing,82,SENS
+84,Mechanical System,,MECH
+85,Simple Machine,84,MECH
+86,Lever,85,MECH
+87,Pulley,85,MECH
+88,Gear,85,MECH
+89,Gear Ratio,88,MECH
+90,Wheel And Axle,85,MECH
+91,Inclined Plane,85,MECH
+92,Linkage,86,MECH
+93,Bearing,84,MECH
+94,Fastener,84,MECH
+95,Torque,86|88,MECH
+96,Friction,84,MECH
+97,Mechanical Advantage,85|95,MECH
+98,Chassis Design,84|94,MECH
+99,Structural Materials,84,MECH
+100,Mechanical Design,97|98|99,MECH
+101,Fluid Power,84,FLUID
+102,Hydraulics,101,FLUID
+103,Pneumatics,101,FLUID
+104,Fluid Pressure,101,FLUID
+105,Cylinder,104,FLUID
+106,Valve,104,FLUID
+107,Pump,104|102,FLUID
+108,Compressor,103|104,FLUID
+109,Fluid Power Safety,101,FLUID
+110,Fluid Power Applications,102|103,FLUID
+111,Fluid Power Diagram,110,FLUID
+112,Fluid Power System Design,111|105|106,FLUID
+113,Open-Loop Control,3,RBOT
+114,Closed-Loop Control,10|113,RBOT
+115,Feedback Loop,10,RBOT
+116,Control Loop,114|115,RBOT
+117,Setpoint,116,CTRL
+118,Error Signal,117|115,CTRL
+119,PID Control Basics,118,CTRL
+120,Automation System,116|2,CTRL
+121,Control System Simulation,116,CTRL
+122,Stability,116,CTRL
+123,Analog Control,114,CTRL
+124,Digital Control,114,CTRL
+125,Control System Design,119|122,CTRL
+126,Actuator Control,69|116,CTRL
+127,Motion Control,126,CTRL
+128,Servo Motor,127|65,CTRL
+129,Digital Electronics,41,DIGI
+130,Analog Electronics,41,DIGI
+131,Binary Number System,129,DIGI
+132,Logic Gate,131,DIGI
+133,AND Gate,132,DIGI
+134,OR Gate,132,DIGI
+135,NOT Gate,132,DIGI
+136,Logic Circuit,133|134|135,DIGI
+137,Boolean Logic,132,DIGI
+138,Operating System,139,DIGI
+139,Computing System,129,DIGI
+140,Central Processing Unit,139,DIGI
+141,Memory,139,DIGI
+142,Input Device,139,DIGI
+143,Output Device,139,DIGI
+144,Data Transmission Hardware,139|82,DIGI
+145,Computer Interface,142|143,DIGI
+146,Microcontroller,11,RBOT
+147,Microprocessor,140,DIGI
+148,Programming Language,149,PROG
+149,Algorithm,,PROG
+150,Variable,148,PROG
+151,Data Type,150,PROG
+152,Conditional Statement,148,PROG
+153,Loop Structure,148,PROG
+154,Function,148,PROG
+155,Pseudocode,149,PROG
+156,Flowchart,149,PROG
+157,Debugging,148,PROG
+158,Programming Platform,148,PROG
+159,Programming IDE,158,PROG
+160,Code Syntax,148,PROG
+161,Program Testing,157,PROG
+162,Program Security,161,PROG
+163,Robot Programming,148|146,RBOT
+164,Sensor Input Programming,163|68,RBOT
+165,Actuator Output Programming,163|69,RBOT
+166,Robot Control Loop,164|165|116,RBOT
+167,Autonomous Behavior,166,RBOT
+168,Teleoperation,163|145,RBTP
+169,Robot Motion Programming,165|127,RBTP
+170,Path Planning,169,RBTP
+171,Robot Interface,145|163,RBTP
+172,Robotic Arm Control,169,RBTP
+173,Wheeled Robot Control,169,RBTP
+174,Robot Calibration,81|166,RBTP
+175,Robot Troubleshooting,157|166,RBTP
+176,Robot Safety Programming,166|45,RBTP
+177,Robotic Components,11|68|69,BUILD
+178,Robot Chassis,98|177,BUILD
+179,Robot Power System,62|177,BUILD
+180,Robot Actuator Selection,69|177,BUILD
+181,Robot Sensor Selection,68|177,BUILD
+182,Robotic Hardware Platform,178|146,BUILD
+183,Additive Manufacturing,185,EDP
+184,3D Printing,183,EDP
+185,Manufacturing Process,24,EDP
+186,Robot Assembly,178|94|182,BUILD
+187,Robot Wiring,186|67|179,BUILD
+188,System Integration,187|166,BUILD
+189,Robot Testing,188|161,BUILD
+190,Robot Reengineering,29|189,BUILD
+191,Robot Documentation,32|188,BUILD
+192,Robot Performance Evaluation,189,BUILD
+193,Robot Maintenance,175|192,BUILD
+194,Robotics Industry Trends,5|16,BUILD
+195,Robot Kit Overview,,KIT
+196,Kit Parts Identification,195,KIT
+197,Structural Hardware,196,KIT
+198,Motion Hardware Components,196,KIT
+199,Power And Motor Components,196,KIT
+200,Fasteners And Hardware,196,KIT
+201,Assembly Instructions Reading,196,KIT
+202,Guided Robot Assembly,197|198|199|200|201,KIT
+203,Robot Subassembly Build,202,KIT
+204,Build Verification And Troubleshooting,202|203,KIT

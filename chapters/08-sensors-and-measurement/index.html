@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>8. Sensors and Measurement - My Docs</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../course-description/" class="nav-link">Course Description</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Chapters</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../" class="dropdown-item">List of Chapters</a>
+</li>
+                                    
+<li>
+    <a href="../01-identifying-kit-parts-building-starterbot/" class="dropdown-item">1. Identifying Kit Parts and Building Your StarterBot</a>
+</li>
+                                    
+<li>
+    <a href="../02-intro-robotics-systems/" class="dropdown-item">2. Introduction to Robotics and Systems</a>
+</li>
+                                    
+<li>
+    <a href="../03-programming-fundamentals/" class="dropdown-item">3. Programming Fundamentals</a>
+</li>
+                                    
+<li>
+    <a href="../04-programming-your-robot/" class="dropdown-item">4. Programming Your Robot</a>
+</li>
+                                    
+<li>
+    <a href="../05-designing-building-custom-parts/" class="dropdown-item">5. Designing and Building Custom Parts</a>
+</li>
+                                    
+<li>
+    <a href="../06-electrical-fundamentals/" class="dropdown-item">6. Electrical Fundamentals</a>
+</li>
+                                    
+<li>
+    <a href="../07-electronic-components-circuit-design/" class="dropdown-item">7. Electronic Components and Circuit Design</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">8. Sensors and Measurement</a>
+</li>
+                                    
+<li>
+    <a href="../09-mechanical-systems-simple-machines/" class="dropdown-item">9. Mechanical Systems and Simple Machines</a>
+</li>
+                                    
+<li>
+    <a href="../10-fluid-power-hydraulics-pneumatics/" class="dropdown-item">10. Fluid Power: Hydraulics and Pneumatics</a>
+</li>
+                                    
+<li>
+    <a href="../11-control-systems-feedback-loops/" class="dropdown-item">11. Control Systems and Feedback Loops</a>
+</li>
+                                    
+<li>
+    <a href="../12-digital-logic-computing-fundamentals/" class="dropdown-item">12. Digital Logic and Computing Fundamentals</a>
+</li>
+                                    
+<li>
+    <a href="../13-advanced-robot-programming/" class="dropdown-item">13. Advanced Robot Programming</a>
+</li>
+                                    
+<li>
+    <a href="../14-integrating-testing-maintaining-robotic-system/" class="dropdown-item">14. Integrating, Testing, and Maintaining a Robotic System</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Learning Graph</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../learning-graph/" class="dropdown-item">Introduction</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/course-description-assessment/" class="dropdown-item">Course Description Assessment</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/concept-list/" class="dropdown-item">Concept Enumeration</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/quality-metrics/" class="dropdown-item">Graph Quality Analysis</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/concept-taxonomy/" class="dropdown-item">Concept Taxonomy</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/taxonomy-distribution/" class="dropdown-item">Taxonomy Distribution Report</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">MicroSims</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../sims/graph-viewer/" class="dropdown-item">Learning Graph Viewer</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../07-electronic-components-circuit-design/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../09-mechanical-systems-simple-machines/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#sensors-and-measurement" class="nav-link">Sensors and Measurement</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#summary" class="nav-link">Summary</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#concepts-covered" class="nav-link">Concepts Covered</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#prerequisites" class="nav-link">Prerequisites</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#from-it-has-a-sensor-to-it-knows-the-distance" class="nav-link">From "It Has a Sensor" to "It Knows the Distance"</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#precision-measurement-why-good-enough-isnt-always-good-enough" class="nav-link">Precision Measurement: Why "Good Enough" Isn't Always Good Enough</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#direct-measurement-vs-indirect-measurement" class="nav-link">Direct Measurement vs. Indirect Measurement</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#coordinate-systems-giving-the-robot-a-sense-of-space" class="nav-link">Coordinate Systems: Giving the Robot a Sense of Space</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#a-tour-of-sensor-types" class="nav-link">A Tour of Sensor Types</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#sensor-calibration-making-readings-trustworthy" class="nav-link">Sensor Calibration: Making Readings Trustworthy</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#from-sensor-to-microcontroller-data-transmission-and-signal-processing" class="nav-link">From Sensor to Microcontroller: Data Transmission and Signal Processing</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#chapter-summary" class="nav-link">Chapter Summary</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="sensors-and-measurement">Sensors and Measurement</h1>
+<h2 id="summary">Summary</h2>
+<p>Students already know what a sensor and an actuator are from programming their robot. This chapter goes much deeper: precision measurement, direct and indirect measurement techniques, coordinate systems, and a tour of specific sensor types (light, temperature, distance, touch, sound, encoders, potentiometers). The chapter closes with sensor calibration, data transmission, and signal processing, preparing students to select and tune the right sensor for any task.</p>
+<h2 id="concepts-covered">Concepts Covered</h2>
+<p>This chapter covers the following 14 concepts from the learning graph:</p>
+<ol>
+<li>Precision Measurement</li>
+<li>Direct Measurement</li>
+<li>Indirect Measurement</li>
+<li>Coordinate System</li>
+<li>Light Sensor</li>
+<li>Temperature Sensor</li>
+<li>Distance Sensor</li>
+<li>Touch Sensor</li>
+<li>Sound Sensor</li>
+<li>Encoder</li>
+<li>Potentiometer</li>
+<li>Sensor Calibration</li>
+<li>Data Transmission</li>
+<li>Signal Processing</li>
+</ol>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>This chapter builds on concepts from:</p>
+<ul>
+<li><a href="../04-programming-your-robot/">Chapter 4: Programming Your Robot</a></li>
+<li><a href="../07-electronic-components-circuit-design/">Chapter 7: Electronic Components and Circuit Design</a></li>
+</ul>
+<hr />
+<h2 id="from-it-has-a-sensor-to-it-knows-the-distance">From "It Has a Sensor" to "It Knows the Distance"</h2>
+<p>Back in Chapter 4, you defined a <strong>sensor</strong> as any component that converts a physical quantity—light, distance, temperature, sound—into an electrical signal your microcontroller can read. You wrote a few lines of code to read a sensor value and use it to command an <strong>actuator</strong>, the component that turns an electrical signal back into motion or another physical effect. That was enough to make a robot react to the world.</p>
+<p>This chapter asks a harder question: how good is that reaction? A robot that merely knows "something is nearby" behaves very differently from one that knows "the wall is 14.2 centimeters away, and that reading is accurate to within 2 millimeters." The gap between those two robots is the entire subject of this chapter. You will learn how to measure precisely, how to locate objects in space using a coordinate system, how to choose among the specific sensor types your kit provides, how to calibrate a sensor so its numbers can be trusted, and how to move that data cleanly from the sensor to the microcontroller's brain.</p>
+<p>By the end of the chapter, you will stop thinking of a sensor as a single component and start thinking of it as the first link in a measurement pipeline—one that can introduce error at every stage, and one you now have the tools to control.</p>
+<h2 id="precision-measurement-why-good-enough-isnt-always-good-enough">Precision Measurement: Why "Good Enough" Isn't Always Good Enough</h2>
+<p>Every measurement a sensor produces is an estimate, not a perfect fact. <strong>Precision measurement</strong> is the practice of obtaining sensor readings that are consistent, fine-grained, and trustworthy enough to support the decision the robot must make. Precision is not the same thing as accuracy: a sensor can report the same distance reading five times in a row (high precision) while still being wrong every time (low accuracy), because it was never calibrated against a known value.</p>
+<p>Consider two robots approaching the same wall:</p>
+<ul>
+<li>Robot A's distance sensor reports "close" or "far"—a coarse, two-state reading good enough to stop before a wall.</li>
+<li>Robot B's distance sensor reports a number in millimeters, refreshed 20 times per second, accurate to within 1% of the true distance.</li>
+</ul>
+<p>Robot A can avoid a collision. Robot B can park itself exactly 5 centimeters from a wall, follow a wall at a constant offset, or dock precisely with a charging station. The difference is not the sensor hardware alone—it is how precisely the robot is willing to measure, process, and trust the data that sensor produces.</p>
+<p>Precision matters more as tasks get harder. A line-following robot needs enough precision to distinguish the edge of a black line from ordinary floor noise. A robotic arm stacking blocks needs enough precision to place a block within a few millimeters of its target, or the stack topples. Whenever you design a sensing system, ask what level of precision the task actually requires—overspending on precision wastes processing time and money, but underspending causes failures that are hard to diagnose later.</p>
+<h2 id="direct-measurement-vs-indirect-measurement">Direct Measurement vs. Indirect Measurement</h2>
+<p>Sensors do not all obtain their readings the same way. <strong>Direct measurement</strong> occurs when a sensor's output corresponds straightforwardly to the physical quantity being measured, with little or no calculation required. <strong>Indirect measurement</strong> occurs when the physical quantity of interest cannot be sensed directly, so the robot measures a related quantity and calculates the value it actually needs.</p>
+<p>A touch sensor is a clean example of direct measurement: pressing the switch closes a circuit, and the microcontroller reads a simple "pressed" or "not pressed" signal that directly represents the physical event. A distance sensor that uses sound, by contrast, is a classic case of indirect measurement: the sensor cannot detect "distance" as a raw physical quantity. Instead, it measures the time an ultrasonic pulse takes to travel to an object and echo back, and the robot calculates distance using the known speed of sound.</p>
+<p>This distinction matters because indirect measurements inherit every error in the calculation used to produce them. If the speed-of-sound constant used in a distance calculation is wrong for the current air temperature, every distance reading will be off by the same proportional amount, even though the raw timing measurement was fine. The following table reinforces the distinction with sensors covered later in this chapter.</p>
+<table>
+<thead>
+<tr>
+<th>Sensor</th>
+<th>What it directly senses</th>
+<th>What is reported</th>
+<th>Direct or indirect?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Touch sensor</td>
+<td>Circuit open/closed</td>
+<td>Pressed / not pressed</td>
+<td>Direct</td>
+</tr>
+<tr>
+<td>Potentiometer</td>
+<td>Wiper position (resistance)</td>
+<td>Angle or position value</td>
+<td>Direct</td>
+</tr>
+<tr>
+<td>Encoder</td>
+<td>Light or magnetic pulses per rotation</td>
+<td>Rotation count, speed</td>
+<td>Indirect (pulses converted to angle/speed)</td>
+</tr>
+<tr>
+<td>Ultrasonic distance sensor</td>
+<td>Echo travel time</td>
+<td>Distance in cm</td>
+<td>Indirect (time converted using speed of sound)</td>
+</tr>
+<tr>
+<td>Temperature sensor (thermistor)</td>
+<td>Resistance change</td>
+<td>Temperature in °C</td>
+<td>Indirect (resistance converted using a formula)</td>
+</tr>
+</tbody>
+</table>
+<p>Notice that several of the sensors your robot already relies on for "simple" jobs are secretly performing a calculation behind the scenes. Keeping that calculation in mind will help you understand later, in the section on sensor calibration, why some sensors drift out of accuracy more easily than others.</p>
+<h2 id="coordinate-systems-giving-the-robot-a-sense-of-space">Coordinate Systems: Giving the Robot a Sense of Space</h2>
+<p>Knowing a distance or an angle is only useful if the robot also knows what point in space that number is measured from and in what direction. A <strong>coordinate system</strong> is a framework of reference axes and an origin point that lets a robot describe the position and orientation of itself or of objects around it using numbers. Without a coordinate system, "10 centimeters" is a meaningless fraction—10 centimeters from where, and in which direction?</p>
+<p>Robots commonly use more than one coordinate system at the same time, and part of good sensor design is keeping straight which one a given reading belongs to:</p>
+<ul>
+<li>A <strong>robot-centered (egocentric) coordinate system</strong> places the origin at the robot itself, usually at its center or its front sensor mount. Distances and angles are measured relative to the robot's own body—"the wall is 30 cm ahead and 10 degrees to the left."</li>
+<li>A <strong>world (global) coordinate system</strong> places the origin at a fixed point in the environment, such as the corner of a room or a competition field. Positions are measured relative to that fixed point, so the robot's location changes as it moves, but the origin never does.</li>
+<li>A <strong>polar coordinate system</strong> describes a point using a distance and an angle from an origin, which is a natural match for many rotating sensors, such as a distance sensor mounted on a spinning turret.</li>
+<li>A <strong>Cartesian coordinate system</strong> describes a point using perpendicular axes (x, y, and sometimes z), which is a natural match for grid-based navigation and mapping.</li>
+</ul>
+<p>A signpost worth remembering: every sensor reading is meaningless until you know which coordinate system it belongs to, and converting between systems (for example, from a sensor's egocentric polar reading to the robot's position on a global Cartesian map) is one of the core calculations in robot navigation, revisited in later chapters on control systems.</p>
+<h4 id="diagram-robot-coordinate-systems-explorer">Diagram: Robot Coordinate Systems Explorer</h4>
+<iframe src="../../sims/robot-coordinate-systems-explorer/main.html" width="100%" height="520px" scrolling="no"></iframe>
+
+<details markdown="1">
+<summary>Robot Coordinate Systems Explorer</summary>
+Type: diagram
+**sim-id:** robot-coordinate-systems-explorer<br/>
+**Library:** p5.js<br/>
+**Status:** Specified
+
+Bloom Taxonomy: Understand<br/>
+Bloom Taxonomy Verb: interpret, differentiate
+
+Learning objective: Given a top-down view of a robot in a room with an obstacle, students will differentiate between egocentric, world, polar, and Cartesian descriptions of the same obstacle's location.
+
+Components to show: A top-down floor plan with a robot icon (with a clear "front" arrow) placed off-center, and a single obstacle (a box icon) elsewhere on the floor. A small origin marker in the corner of the room represents the world coordinate system's origin.
+
+Interactive controls:
+- Four toggle buttons: "Egocentric," "World (Cartesian)," "World (Polar)," and "All"
+- Clicking a toggle overlays the corresponding measurement on the diagram: egocentric shows a dashed line from the robot to the obstacle labeled with distance and angle relative to the robot's forward direction; world (Cartesian) shows dashed lines from the room origin to both robot and obstacle labeled with (x, y) values; world (polar) shows a dashed line from the room origin to the obstacle labeled with distance and angle from a fixed reference direction
+- A "Move Robot" slider or drag handle lets the learner reposition the robot, and all active overlays recalculate live
+
+Data Visibility Requirements:
+  Stage 1: Show the floor plan with robot and obstacle only, no measurements
+  Stage 2 (Egocentric selected): Show "Obstacle is 42 cm ahead, 15° left of robot heading"
+  Stage 3 (World Cartesian selected): Show "Robot at (120, 60) cm, Obstacle at (155, 95) cm"
+  Stage 4 (World Polar selected): Show "Obstacle is 210 cm from origin at 38° from reference axis"
+  Final: With "All" selected, show all three descriptions simultaneously in a side panel so students can see they describe the same physical relationship
+
+Instructional Rationale: A step-through, click-to-reveal pattern is appropriate because the Understand-level objective (differentiate coordinate systems) requires students to see the same real-world relationship expressed three different ways with concrete numbers, rather than watching an abstract animation. Comparing static, labeled overlays side by side makes the equivalence between systems concrete.
+
+Implementation: p5.js canvas with a draggable robot icon; overlay text panels computed from the robot and obstacle (x, y) positions using trigonometry for the polar and egocentric conversions.
+</details>
+
+<h2 id="a-tour-of-sensor-types">A Tour of Sensor Types</h2>
+<p>With precision, measurement type, and coordinate systems established as the underlying concepts, the rest of this chapter surveys the specific sensors most robotics kits provide. Each sensor converts a different physical quantity into an electrical signal, and each is suited to a different job.</p>
+<h3 id="light-sensor">Light Sensor</h3>
+<p>A <strong>light sensor</strong> detects the intensity of visible or infrared light striking it and reports that intensity as a voltage or digital value. The most common type in educational robotics kits is a photoresistor or phototransistor, whose electrical resistance changes depending on how much light reaches it. Robots use light sensors to follow a line printed on the floor (the line reflects less light than the surrounding surface), to detect whether a room is dark or bright, or to find a light source by comparing readings from two sensors mounted apart.</p>
+<h3 id="temperature-sensor">Temperature Sensor</h3>
+<p>A <strong>temperature sensor</strong> converts ambient or contact temperature into an electrical signal, typically by using a thermistor (a resistor whose resistance changes predictably with temperature) or an integrated circuit sensor that outputs a voltage proportional to temperature. This is a textbook example of indirect measurement: the sensor measures resistance or voltage, and the microcontroller applies a formula to convert that value into degrees Celsius or Fahrenheit. Robots use temperature sensors to monitor motor overheating, check whether a room is safe for entry, or trigger a cooling fan.</p>
+<h3 id="distance-sensor">Distance Sensor</h3>
+<p>A <strong>distance sensor</strong> measures the space between the sensor and the nearest object in its detection path. The two most common technologies in educational kits are ultrasonic sensors, which time an echoing sound pulse, and infrared sensors, which measure the angle or intensity of reflected infrared light. Distance sensors are central to obstacle avoidance, wall-following, and parking behaviors, and—because most types rely on indirect measurement—they are especially sensitive to calibration error, a topic covered later in this chapter.</p>
+<h3 id="touch-sensor">Touch Sensor</h3>
+<p>A <strong>touch sensor</strong> (also called a bump or contact sensor) detects physical contact by closing or opening an electrical circuit when pressed. It is the simplest sensor in this tour and a direct-measurement device: no calculation converts its reading into a physical quantity, because "pressed" is the physical quantity. Robots use touch sensors as bump switches on a chassis edge, as limit switches that stop an arm at the end of its range of motion, and as simple user input buttons.</p>
+<h3 id="sound-sensor">Sound Sensor</h3>
+<p>A <strong>sound sensor</strong> converts air pressure vibrations (sound waves) into an electrical signal, usually using a small microphone element followed by an amplifier circuit. Simple sound sensors report only volume (loudness), while more advanced versions can detect specific frequencies or claps. Robots use sound sensors to respond to a clap or whistle command, to detect an alarm, or to react to the volume of ambient noise.</p>
+<h3 id="encoder">Encoder</h3>
+<p>An <strong>encoder</strong> measures the rotation of a shaft, most often a motor shaft or wheel axle, by counting pulses generated as the shaft turns, using slotted disks and light sensors or magnets and magnetic sensors. Encoders answer the question "how far, or how fast, has this wheel turned?"—information a robot needs to drive a precise distance, maintain a target speed, or estimate its own position by counting wheel rotations. This is another indirect measurement: the raw signal is a stream of pulses, and software converts pulse count into rotation angle or distance traveled using the known pulses-per-revolution of the encoder disk.</p>
+<h3 id="potentiometer">Potentiometer</h3>
+<p>A <strong>potentiometer</strong> is a variable resistor whose resistance changes as a knob, dial, or lever attached to it is rotated or slid, producing an output voltage that directly represents its physical position. Because the output voltage corresponds straightforwardly to position, a potentiometer is a direct-measurement sensor. Robots use potentiometers to sense the angle of a steering mechanism, the position of a joint on a robotic arm, or as a simple manual input control for adjusting a setting like speed or volume.</p>
+<p>The following interactive element lets you explore all seven sensor types side by side before moving on to how their readings are made trustworthy.</p>
+<h4 id="diagram-sensor-type-explorer">Diagram: Sensor Type Explorer</h4>
+<iframe src="../../sims/sensor-type-explorer/main.html" width="100%" height="550px" scrolling="no"></iframe>
+
+<details markdown="1">
+<summary>Sensor Type Explorer</summary>
+Type: infographic
+**sim-id:** sensor-type-explorer<br/>
+**Library:** p5.js<br/>
+**Status:** Specified
+
+Bloom Taxonomy: Understand<br/>
+Bloom Taxonomy Verb: classify, exemplify, compare
+
+Learning objective: Given an icon representing each of the seven sensor types covered in this chapter, students will classify each sensor by what physical quantity it senses, whether it is a direct or indirect measurement device, and identify a real-world robotics use case.
+
+Purpose: Provide a single-screen reference that lets students click any sensor icon to review its function, its measurement type, and a concrete use case, reinforcing the sensor tour above.
+
+Layout: A horizontal row of seven labeled icons (light bulb for Light Sensor, thermometer for Temperature Sensor, sound-wave arcs for Distance Sensor, a pressed-button icon for Touch Sensor, a speaker/soundwave icon for Sound Sensor, a slotted wheel icon for Encoder, and a dial/knob icon for Potentiometer), arranged left to right in the same order they were introduced in the text, above an information panel that starts empty.
+
+Interactive elements:
+- Clicking or tapping any icon populates the info panel below with: the sensor's one-sentence definition, a "Direct" or "Indirect measurement" badge in a distinct color, and one real-world robotics use case
+- Hovering an icon (without clicking) shows just the sensor's name as a tooltip
+- A "Compare Two" mode lets students click two icons to see their info panels side by side, encouraging comparison between, for example, a Touch Sensor (direct) and a Distance Sensor (indirect)
+
+Data to display per sensor:
+- Light Sensor: senses light intensity; Direct; use case: line-following
+- Temperature Sensor: senses temperature via resistance change; Indirect; use case: motor overheating alert
+- Distance Sensor: senses distance via echo time or reflected IR; Indirect; use case: obstacle avoidance
+- Touch Sensor: senses contact via circuit state; Direct; use case: bump switch on chassis edge
+- Sound Sensor: senses volume via microphone vibration; Direct (for volume) or Indirect (for frequency detection); use case: clap-to-start command
+- Encoder: senses rotation via pulse counting; Indirect; use case: measuring distance traveled by counting wheel turns
+- Potentiometer: senses position via variable resistance; Direct; use case: steering angle sensing
+
+Color coding: Green badge for "Direct measurement," orange badge for "Indirect measurement"
+
+Responsive behavior: Icons wrap to two rows on narrow screens; info panel remains below the icon row at all widths
+
+Implementation: p5.js canvas with clickable icon regions; info panel drawn as a text block within the same canvas, updated on click/hover events.
+</details>
+
+<h2 id="sensor-calibration-making-readings-trustworthy">Sensor Calibration: Making Readings Trustworthy</h2>
+<p>A sensor fresh out of the box rarely reports a physical quantity with perfect accuracy. <strong>Sensor calibration</strong> is the process of comparing a sensor's raw output against a known, trusted reference value and adjusting the sensor's readings (or the formula that converts them) so that its output matches reality as closely as possible. Calibration is what turns "the sensor reads 480" into "the sensor reads 30 centimeters," and what corrects for the fact that no two sensors of the same model behave identically.</p>
+<p>Calibration matters for a specific, practical reason: manufacturing variation. Two distance sensors of the exact same model, purchased at the same time, may report slightly different raw values for the exact same distance, because of tiny differences introduced during manufacturing. Environmental conditions add a second layer of drift—temperature, humidity, and even battery voltage can shift a sensor's baseline reading over the course of a single class period.</p>
+<p>A typical calibration procedure for a distance sensor follows these steps:</p>
+<ol>
+<li>Place a known object at a precisely measured distance from the sensor (for example, exactly 20 cm, using a ruler).</li>
+<li>Record the sensor's raw output value at that known distance.</li>
+<li>Repeat at several other known distances (for example, 10 cm, 30 cm, and 50 cm) to capture how the raw value changes across the sensor's range.</li>
+<li>Use the recorded pairs of (raw value, true distance) to build a conversion formula or lookup table.</li>
+<li>Apply that formula in code so future raw readings are automatically converted into accurate distance values.</li>
+<li>Re-calibrate periodically, especially after changing batteries or operating in a new environment.</li>
+</ol>
+<p>!!! tip
+    A sensor that is precise but never calibrated will confidently report the wrong answer every single time. Precision without calibration is a trap—always calibrate against a known reference before trusting a sensor's absolute value.</p>
+<p>The MicroSim below lets you see calibration in action by simulating a noisy distance sensor and comparing raw versus filtered, calibrated readings.</p>
+<h4 id="diagram-sensor-noise-and-calibration-microsim">Diagram: Sensor Noise and Calibration MicroSim</h4>
+<iframe src="../../sims/sensor-noise-calibration-microsim/main.html" width="100%" height="560px" scrolling="no"></iframe>
+
+<details markdown="1">
+<summary>Sensor Noise and Calibration MicroSim</summary>
+Type: microsim
+**sim-id:** sensor-noise-calibration-microsim<br/>
+**Library:** p5.js<br/>
+**Status:** Specified
+
+Bloom Taxonomy: Apply<br/>
+Bloom Taxonomy Verb: demonstrate, calculate, apply
+
+Learning objective: Students will apply averaging and filtering techniques to a simulated noisy distance sensor and calculate how signal averaging reduces the effect of random noise on a calibrated reading.
+
+Canvas layout:
+- Top (300px): A live-updating line chart plotting the last 100 simulated sensor readings against time, with the true distance shown as a flat reference line
+- Bottom (200px): Control panel with sliders and numeric readouts
+
+Visual elements:
+- A simulated "true" object distance, shown as a solid horizontal reference line (default 30 cm)
+- A jagged "raw reading" line overlaid on the chart, generated by adding random noise to the true distance each frame
+- A smoother "filtered reading" line overlaid on the same chart, computed as a moving average of the raw readings
+- A numeric readout showing the current raw value and current filtered value in centimeters
+
+Interactive controls:
+- Slider: "Noise Level" (0 to 10 cm standard deviation, default 2 cm)
+- Slider: "Averaging Window Size" (1 to 30 samples, default 1, meaning no averaging)
+- Slider: "True Distance" (5 to 100 cm, default 30 cm) to let students move the simulated object
+- Button: "Reset Chart"
+- Display: Root-mean-square error of the raw signal vs. true distance, and RMS error of the filtered signal vs. true distance, updated live
+
+Default parameters:
+- Noise level: 2 cm
+- Averaging window: 1 (no filtering)
+- True distance: 30 cm
+
+Behavior: As "Averaging Window Size" increases, the filtered line visibly smooths and its displayed RMS error drops toward zero, while the raw line's RMS error stays roughly constant, demonstrating that averaging reduces the effect of random noise without changing the sensor's underlying calibration.
+
+Data Visibility Requirements:
+  Stage 1: Show raw noisy readings with high RMS error and window size 1
+  Stage 2: Show the same noise level with window size increased to 5, filtered RMS error visibly lower
+  Stage 3: Show window size increased to 20, filtered RMS error near zero but responding more slowly to sudden changes in "True Distance"
+  Final: Show a side-by-side numeric comparison of raw RMS error vs. filtered RMS error at the student's chosen settings
+
+Instructional Rationale: Parameter exploration with live numeric feedback is appropriate for this Apply-level objective because students must manipulate the averaging window and directly observe (not just be told) the resulting drop in error, connecting the abstract idea of "filtering" to a concrete, calculable improvement in signal quality.
+
+Implementation: p5.js for the canvas and line chart; noise generated using a Gaussian random function; moving average computed over a circular buffer sized by the "Averaging Window Size" slider; RMS error computed each frame over the visible 100-sample window.
+</details>
+
+<h2 id="from-sensor-to-microcontroller-data-transmission-and-signal-processing">From Sensor to Microcontroller: Data Transmission and Signal Processing</h2>
+<p>A calibrated sensor reading is not automatically useful the instant it is captured—it must travel from the sensor to the microcontroller and be cleaned up along the way. <strong>Data transmission</strong> is the process of moving a sensor's signal from the sensor itself to the microcontroller that will interpret it, using an electrical connection and an agreed-upon signaling method. <strong>Signal processing</strong> is the set of techniques used to clean, filter, or transform a raw signal so that noise, drift, and irrelevant variation are reduced before the microcontroller acts on the data.</p>
+<p>Data transmission can take several forms, and the choice affects how much signal processing is needed downstream:</p>
+<ul>
+<li><strong>Analog transmission</strong> sends a continuously varying voltage (for example, 0 to 5 volts) that the microcontroller must convert into a digital number using an analog-to-digital converter. Potentiometers and many light sensors use analog transmission.</li>
+<li><strong>Digital transmission</strong> sends discrete on/off pulses or structured digital messages (using protocols such as I2C or SPI) that the microcontroller reads directly as numbers, with no conversion step. Many modern distance sensors and encoders use digital transmission.</li>
+<li><strong>Pulse-based transmission</strong> sends information encoded as the timing or count of pulses, as with an ultrasonic sensor's echo pulse or an encoder's rotation pulses; the microcontroller must measure pulse timing or count pulses to extract the value.</li>
+</ul>
+<p>Once a signal arrives at the microcontroller, signal processing techniques are commonly applied before the value is trusted:</p>
+<ul>
+<li><strong>Averaging (smoothing)</strong> combines several recent readings into one value, reducing the effect of random noise, as explored in the calibration MicroSim above.</li>
+<li><strong>Filtering</strong> removes specific unwanted patterns from a signal, such as a low-pass filter that suppresses rapid flickers while preserving slower, meaningful changes.</li>
+<li><strong>Thresholding</strong> converts a continuous value into a simple decision, such as treating any light-sensor reading below a set value as "dark."</li>
+<li><strong>Debouncing</strong> prevents a single physical event—like pressing a touch sensor—from being misread as several rapid presses due to mechanical vibration when the switch contacts touch.</li>
+</ul>
+<p>The final interactive element in this chapter traces the complete path a piece of sensor data takes, from the physical world to a decision made in your robot's code.</p>
+<h4 id="diagram-sensor-to-microcontroller-signal-path">Diagram: Sensor-to-Microcontroller Signal Path</h4>
+<iframe src="../../sims/sensor-to-microcontroller-signal-path/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+<details markdown="1">
+<summary>Sensor-to-Microcontroller Signal Path</summary>
+Type: workflow
+**sim-id:** sensor-to-microcontroller-signal-path<br/>
+**Library:** Mermaid<br/>
+**Status:** Specified
+
+Bloom Taxonomy: Analyze<br/>
+Bloom Taxonomy Verb: examine, distinguish, deconstruct
+
+Learning objective: Students will deconstruct the full path a sensor reading takes from the physical world to a robot decision, distinguishing the role of data transmission from the role of signal processing at each stage.
+
+Purpose: Show that a sensor reading is not a single instantaneous event but a multi-stage pipeline, each stage capable of introducing or removing error.
+
+Visual style: Left-to-right flowchart with four main nodes and one decision-style final node
+
+Steps:
+1. Node: "Physical Quantity"
+   Hover/click text: "The real-world property being measured, such as distance to a wall, light intensity, or temperature. This is the ground truth the sensor is trying to capture."
+
+2. Node: "Sensor"
+   Hover/click text: "Converts the physical quantity into a raw electrical signal (voltage, resistance, or pulses). Introduces its own manufacturing variation, which is why calibration is required."
+
+3. Node: "Data Transmission"
+   Hover/click text: "Moves the raw signal from the sensor to the microcontroller, as an analog voltage, a digital message, or a stream of timed pulses. The transmission method determines what conversion the microcontroller must perform."
+
+4. Node: "Signal Processing"
+   Hover/click text: "Cleans the raw value using averaging, filtering, thresholding, or debouncing, reducing the effect of noise before the value is trusted."
+
+5. Node: "Microcontroller Decision"
+   Hover/click text: "The processed, calibrated value is compared against a threshold or used in a calculation, and the microcontroller commands an actuator in response."
+
+Connections: Straight arrows from Physical Quantity to Sensor to Data Transmission to Signal Processing to Microcontroller Decision, all left to right, no branching.
+
+Color coding: Gray for Physical Quantity (outside the electronic system), blue for Sensor and Data Transmission (hardware stages), orange for Signal Processing (software stage), green for Microcontroller Decision (outcome stage)
+
+Interactive features: Every node is clickable (Mermaid `click` directive) and opens an infobox with the hover/click text above; clicking two nodes in sequence highlights the arrow between them and displays a short note on what could go wrong at that link (for example, clicking Sensor then Data Transmission highlights that an analog signal traveling a long wire can pick up electrical interference before it reaches the microcontroller).
+
+Implementation: Mermaid flowchart syntax (`graph LR`) with a `click NodeId call showInfo("nodeId")` directive on every node, paired with a JavaScript `showInfo()` function that populates a small infobox panel below the diagram with the corresponding hover/click text.
+</details>
+
+<h2 id="chapter-summary">Chapter Summary</h2>
+<p>Precision measurement, direct and indirect measurement, and coordinate systems form the conceptual foundation for everything a sensor reports. The seven sensor types toured in this chapter—light, temperature, distance, touch, sound, encoder, and potentiometer—cover the great majority of sensing tasks in educational robotics, and each fits somewhere on the direct-versus-indirect spectrum you now know how to identify. Sensor calibration turns a raw, sensor-specific number into a trustworthy physical measurement, and understanding data transmission and signal processing explains what happens to that measurement on its short but important journey to the microcontroller. The next time you write <code>read_sensor()</code> in your robot's code, you will know exactly what has to go right before that single number can be trusted.</p>
+<p>??? note "Quick check: Is a photoresistor-based light sensor a direct or indirect measurement device? Click to expand"
+    Indirect. The sensor directly measures a change in electrical resistance caused by light, and the microcontroller converts that resistance value into a light-intensity reading using a known relationship—so a calculation stands between the raw signal and the reported quantity.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

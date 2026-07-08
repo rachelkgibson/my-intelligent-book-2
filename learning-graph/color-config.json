@@ -1,0 +1,17 @@
+{
+  "KIT": "SteelBlue",
+  "FOUND": "DarkSlateBlue",
+  "PROG": "DarkGreen",
+  "RBOT": "LimeGreen",
+  "EDP": "Gold",
+  "ELEC": "DarkGoldenrod",
+  "CIRC": "Khaki",
+  "SENS": "Teal",
+  "MECH": "DodgerBlue",
+  "FLUID": "LightSkyBlue",
+  "CTRL": "MediumPurple",
+  "DIGI": "Indigo",
+  "RBTP": "DarkOrchid",
+  "BUILD": "Crimson",
+  "MISC": "DimGray"
+}

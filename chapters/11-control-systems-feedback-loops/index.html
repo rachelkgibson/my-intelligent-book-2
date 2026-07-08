@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>11. Control Systems and Feedback Loops - My Docs</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../course-description/" class="nav-link">Course Description</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Chapters</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../" class="dropdown-item">List of Chapters</a>
+</li>
+                                    
+<li>
+    <a href="../01-identifying-kit-parts-building-starterbot/" class="dropdown-item">1. Identifying Kit Parts and Building Your StarterBot</a>
+</li>
+                                    
+<li>
+    <a href="../02-intro-robotics-systems/" class="dropdown-item">2. Introduction to Robotics and Systems</a>
+</li>
+                                    
+<li>
+    <a href="../03-programming-fundamentals/" class="dropdown-item">3. Programming Fundamentals</a>
+</li>
+                                    
+<li>
+    <a href="../04-programming-your-robot/" class="dropdown-item">4. Programming Your Robot</a>
+</li>
+                                    
+<li>
+    <a href="../05-designing-building-custom-parts/" class="dropdown-item">5. Designing and Building Custom Parts</a>
+</li>
+                                    
+<li>
+    <a href="../06-electrical-fundamentals/" class="dropdown-item">6. Electrical Fundamentals</a>
+</li>
+                                    
+<li>
+    <a href="../07-electronic-components-circuit-design/" class="dropdown-item">7. Electronic Components and Circuit Design</a>
+</li>
+                                    
+<li>
+    <a href="../08-sensors-and-measurement/" class="dropdown-item">8. Sensors and Measurement</a>
+</li>
+                                    
+<li>
+    <a href="../09-mechanical-systems-simple-machines/" class="dropdown-item">9. Mechanical Systems and Simple Machines</a>
+</li>
+                                    
+<li>
+    <a href="../10-fluid-power-hydraulics-pneumatics/" class="dropdown-item">10. Fluid Power: Hydraulics and Pneumatics</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">11. Control Systems and Feedback Loops</a>
+</li>
+                                    
+<li>
+    <a href="../12-digital-logic-computing-fundamentals/" class="dropdown-item">12. Digital Logic and Computing Fundamentals</a>
+</li>
+                                    
+<li>
+    <a href="../13-advanced-robot-programming/" class="dropdown-item">13. Advanced Robot Programming</a>
+</li>
+                                    
+<li>
+    <a href="../14-integrating-testing-maintaining-robotic-system/" class="dropdown-item">14. Integrating, Testing, and Maintaining a Robotic System</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Learning Graph</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../learning-graph/" class="dropdown-item">Introduction</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/course-description-assessment/" class="dropdown-item">Course Description Assessment</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/concept-list/" class="dropdown-item">Concept Enumeration</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/quality-metrics/" class="dropdown-item">Graph Quality Analysis</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/concept-taxonomy/" class="dropdown-item">Concept Taxonomy</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/taxonomy-distribution/" class="dropdown-item">Taxonomy Distribution Report</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">MicroSims</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../sims/graph-viewer/" class="dropdown-item">Learning Graph Viewer</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../10-fluid-power-hydraulics-pneumatics/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../12-digital-logic-computing-fundamentals/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#control-systems-and-feedback-loops" class="nav-link">Control Systems and Feedback Loops</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#summary" class="nav-link">Summary</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#concepts-covered" class="nav-link">Concepts Covered</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#prerequisites" class="nav-link">Prerequisites</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#from-basic-loops-to-real-control-engineering" class="nav-link">From Basic Loops to Real Control Engineering</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#setpoint-the-target-a-control-system-is-chasing" class="nav-link">Setpoint: The Target a Control System Is Chasing</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#error-signal-measuring-the-gap" class="nav-link">Error Signal: Measuring the Gap</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#pid-control-basics-correcting-error-smoothly" class="nav-link">PID Control Basics: Correcting Error Smoothly</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#stability-what-happens-when-control-goes-right-or-wrong" class="nav-link">Stability: What Happens When Control Goes Right, or Wrong</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#analog-control-and-digital-control" class="nav-link">Analog Control and Digital Control</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#automation-system-control-loops-working-without-a-human" class="nav-link">Automation System: Control Loops Working Without a Human</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#control-system-simulation-testing-before-trusting-real-hardware" class="nav-link">Control System Simulation: Testing Before Trusting Real Hardware</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#actuator-control-and-motion-control" class="nav-link">Actuator Control and Motion Control</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#servo-motor-a-closed-loop-controller-you-already-own" class="nav-link">Servo Motor: A Closed-Loop Controller You Already Own</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#control-system-design-putting-it-all-together" class="nav-link">Control System Design: Putting It All Together</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="control-systems-and-feedback-loops">Control Systems and Feedback Loops</h1>
+<h2 id="summary">Summary</h2>
+<p>This chapter returns to the control loop concept first introduced in Programming Your Robot and goes much deeper: setpoints, error signals, and the basics of PID control. Students explore automation systems, control system simulation, stability, and the difference between analog and digital control, then apply these ideas to actuator control, motion control, and servo motors, culminating in a full control system design.</p>
+<h2 id="concepts-covered">Concepts Covered</h2>
+<p>This chapter covers the following 12 concepts from the learning graph:</p>
+<ol>
+<li>Setpoint</li>
+<li>Error Signal</li>
+<li>PID Control Basics</li>
+<li>Automation System</li>
+<li>Control System Simulation</li>
+<li>Stability</li>
+<li>Analog Control</li>
+<li>Digital Control</li>
+<li>Control System Design</li>
+<li>Actuator Control</li>
+<li>Motion Control</li>
+<li>Servo Motor</li>
+</ol>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>This chapter builds on concepts from:</p>
+<ul>
+<li><a href="../02-intro-robotics-systems/">Chapter 2: Introduction to Robotics and Systems</a></li>
+<li><a href="../04-programming-your-robot/">Chapter 4: Programming Your Robot</a></li>
+<li><a href="../07-electronic-components-circuit-design/">Chapter 7: Electronic Components and Circuit Design</a></li>
+</ul>
+<hr />
+<h2 id="from-basic-loops-to-real-control-engineering">From Basic Loops to Real Control Engineering</h2>
+<p>Back in <a href="../04-programming-your-robot/">Chapter 4: Programming Your Robot</a>, you learned the core idea behind closed-loop control: a program reads a sensor, decides what to do, and acts, repeating that sense-decide-act cycle over and over. That was enough to write a robot control loop that stopped a StarterBot a fixed distance from a wall. It was not, however, enough to explain how a real servo motor holds a precise angle, how an industrial robot arm moves smoothly to a target without shaking itself apart, or why some control loops overshoot their goal and oscillate back and forth instead of settling down.</p>
+<p>This chapter refines the basic open-loop-versus-closed-loop idea into the actual engineering practice used to design control systems: precise numeric targets called setpoints, the error signals that measure how far a system is from those targets, and the PID control strategy that most real feedback controllers use to correct that error smoothly. You will also study stability, the difference between analog and digital control, and how individual control loops combine into full automation systems, actuator control, motion control, and complete control system designs. By the end of the chapter, you will understand the same closed-loop principle that runs inside the StarterBot's own Speed Servos.</p>
+<h2 id="setpoint-the-target-a-control-system-is-chasing">Setpoint: The Target a Control System Is Chasing</h2>
+<p>A <strong>setpoint</strong> is the specific, desired value that a control system is trying to reach and hold, expressed in whatever unit the system measures. A thermostat's setpoint might be 68 degrees Fahrenheit. A servo motor's setpoint might be a shaft angle of 90 degrees. A drone's altitude-hold setpoint might be 10 meters above the ground. In every case, the setpoint is not the system's current state; it is the target that a controller compares the current state against, over and over, for as long as the control loop keeps running.</p>
+<p>Notice how this refines the closed-loop control idea from Chapter 4. In that chapter, the StarterBot's stopping condition was a single threshold value, <code>stop_threshold</code>, that the program compared a distance reading against. A setpoint is the same basic idea generalized: instead of one fixed value used once to trigger a stop, a setpoint is a continuously held target that a controller works to maintain, often while outside disturbances keep pushing the system away from it.</p>
+<h2 id="error-signal-measuring-the-gap">Error Signal: Measuring the Gap</h2>
+<p>A <strong>error signal</strong>, usually just called error, is the difference between a system's setpoint and its actual current measured value, calculated fresh on every pass through the control loop. The formula is simple: error equals setpoint minus actual value. If a servo's setpoint is 90 degrees and its potentiometer currently reads 75 degrees, the error signal is 15 degrees, and the controller's entire job is to drive that error toward zero.</p>
+<p>The error signal is the single most important number in any closed-loop controller, because every later decision the controller makes is based on it, not on the setpoint or the measured value alone. A large positive error means the system is far below its target and needs a strong corrective push. A small error means the system is close and only needs a gentle nudge. A negative error means the system has overshot its target and needs to be pulled back the other way.</p>
+<p>The following list summarizes how a controller typically interprets different error signal conditions:</p>
+<ul>
+<li><strong>Large error (either sign):</strong> the system is far from its setpoint; a strong correction is usually appropriate</li>
+<li><strong>Small error (either sign):</strong> the system is close to its setpoint; only a gentle correction is needed</li>
+<li><strong>Error near zero:</strong> the system has essentially reached its setpoint; correction should taper off</li>
+<li><strong>Error changing sign repeatedly:</strong> the system may be overshooting back and forth around its setpoint, a warning sign explored later in this chapter under stability</li>
+</ul>
+<h2 id="pid-control-basics-correcting-error-smoothly">PID Control Basics: Correcting Error Smoothly</h2>
+<p><strong>PID control</strong> is a widely used control strategy that calculates a corrective output by combining three separate terms based on the error signal: a Proportional term, an Integral term, and a Derivative term. Each of the three letters in "PID" refers to a different way of looking at the error signal over time, and combining all three produces a smoother, more accurate correction than any single term could achieve alone.</p>
+<p>Before elaborating on each term, it helps to see all three named together in one place:</p>
+<ul>
+<li><strong>Proportional (P):</strong> reacts to how large the error is right now</li>
+<li><strong>Integral (I):</strong> reacts to how long the error has been building up over time</li>
+<li><strong>Derivative (D):</strong> reacts to how quickly the error is currently changing</li>
+</ul>
+<p>The <strong>Proportional term</strong> produces a correction sized directly to the current error: a bigger error produces a bigger corrective push, right now, with no memory of the past and no attempt to predict the future. On its own, a purely proportional controller has a well-known weakness: it typically settles with a small leftover error, called steady-state error, because as the error shrinks, the corrective push shrinks along with it, sometimes leaving the system just short of its setpoint.</p>
+<p>The <strong>Integral term</strong> corrects that weakness by adding up, or accumulating, the error over time, and increasing the corrective output as long as any error remains, even a small one. Think of the integral term as the controller's memory of past error: if a small error has lingered for a while, the integral term keeps growing until it finally pushes the system the rest of the way to its setpoint, eliminating the steady-state error a Proportional-only controller would leave behind.</p>
+<p>The <strong>Derivative term</strong> looks instead at how quickly the error is changing right now, and produces a correction that opposes fast changes, acting like a brake on sudden motion. If a system is racing toward its setpoint very quickly, the derivative term reduces the corrective push in advance, helping prevent the system from overshooting past the target and having to correct back the other way. The table below reinforces these three roles side by side, using the vocabulary just introduced rather than new terms.</p>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Reacts To</th>
+<th>Main Benefit</th>
+<th>Main Risk If Overused</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proportional (P)</td>
+<td>Current error size</td>
+<td>Fast, direct correction</td>
+<td>Leftover steady-state error</td>
+</tr>
+<tr>
+<td>Integral (I)</td>
+<td>Accumulated past error</td>
+<td>Eliminates steady-state error</td>
+<td>Can cause overshoot or slow oscillation</td>
+</tr>
+<tr>
+<td>Derivative (D)</td>
+<td>Rate of error change</td>
+<td>Smooths approach, resists overshoot</td>
+<td>Amplifies sensor noise</td>
+</tr>
+</tbody>
+</table>
+<p>Because each of the three PID terms is scaled by its own tunable number, called a gain, engineers rarely rely on intuition alone to understand how changing a gain affects a system's response. Instead, they experiment, often in simulation first, to see how a response curve changes as each gain is adjusted. The MicroSim below lets you do exactly that.</p>
+<h4 id="diagram-pid-controller-response-explorer">Diagram: PID Controller Response Explorer</h4>
+<iframe src="../../sims/pid-controller-response/main.html" width="100%" height="560px" scrolling="no"></iframe>
+
+<details markdown="1">
+<summary>PID Controller Response Explorer</summary>
+Type: microsim
+**sim-id:** pid-controller-response<br/>
+**Library:** p5.js<br/>
+**Status:** Specified
+
+Purpose: Let students manipulate the P, I, and D gains of a simulated controller and observe how the resulting response curve changes shape, connecting the abstract Proportional/Integral/Derivative definitions to a concrete, visible outcome.
+
+Bloom Taxonomy: Apply (L3)
+Bloom Taxonomy Verb: demonstrate, calculate, apply, practice
+
+Learning objective: Given adjustable P, I, and D gain sliders, students will apply their understanding of each term's role to predict and produce underdamped, overdamped, and critically damped response curves for a simulated system reaching a setpoint.
+
+Canvas layout:
+- Top (70% height): a line graph plotting the simulated system's measured value over time, with a horizontal dashed line marking the setpoint
+- Bottom (30% height): three labeled sliders (P gain, I gain, D gain) plus a "Step Setpoint" button and a "Reset" button
+
+Visual elements:
+- X-axis: time (seconds), Y-axis: system output value
+- A dashed horizontal setpoint line
+- A solid response curve that redraws as gains change
+- A small readout showing current error signal value, updating live
+
+Interactive controls:
+- Slider: P gain (0 to 5, default 1.0)
+- Slider: I gain (0 to 2, default 0.0)
+- Slider: D gain (0 to 2, default 0.0)
+- Button: "Step Setpoint" — instantly changes the setpoint (simulating a sudden new target) so students can watch the response
+- Button: "Reset" — returns the simulated system to its starting state
+
+Default parameters: P = 1.0, I = 0.0, D = 0.0, setpoint starts at 0 and steps to 10 when triggered
+
+Behavior:
+- With only P gain raised, the curve approaches the setpoint but settles with a small visible steady-state offset
+- Adding I gain removes that offset over time but, if set too high, causes the curve to overshoot and oscillate before settling
+- Adding D gain smooths a fast-rising curve, reducing overshoot without adding steady-state error
+- Labeled example presets (buttons): "Underdamped (oscillates)", "Overdamped (slow, no overshoot)", "Critically Damped (fast, no overshoot)" load specific gain combinations so students can compare named response types directly
+
+Instructional Rationale: An Apply-level objective calling for prediction and production of specific response shapes is best served by direct parameter exploration with an immediately redrawn curve, rather than a passive animation, because students must connect a numeric gain change to a visible consequence to build real intuition about each term's role.
+
+Implementation: p5.js canvas simulating a simple second-order system response numerically each frame using the current P, I, and D gain values and the accumulated error history; graph redrawn every frame using stored (time, value) pairs.
+</details>
+
+<p>!!! tip
+    You do not need to master the math behind PID control to use it well in this course. What matters most is the intuition: P reacts to how wrong you are right now, I reacts to how long you have been wrong, and D reacts to how fast you are becoming more or less wrong.</p>
+<h2 id="stability-what-happens-when-control-goes-right-or-wrong">Stability: What Happens When Control Goes Right, or Wrong</h2>
+<p><strong>Stability</strong> describes whether a control system's response to a disturbance or a setpoint change settles down to a steady value over time, rather than growing without bound or oscillating forever. A stable system might overshoot its setpoint briefly before settling, but it does settle. An unstable system's error signal instead grows larger and larger with each pass through the control loop, often ending in a mechanical failure, such as a servo straining against its own gears or a drone flipping out of the sky.</p>
+<p>Between fully stable and fully unstable lies a range of response behaviors that control engineers describe with specific vocabulary, much of it visible directly on a response curve like the one in the PID MicroSim above:</p>
+<ol>
+<li><strong>Overdamped response:</strong> the system approaches its setpoint slowly and smoothly, without ever overshooting past it</li>
+<li><strong>Critically damped response:</strong> the system approaches its setpoint as quickly as possible without any overshoot, generally the fastest "clean" response available</li>
+<li><strong>Underdamped response:</strong> the system overshoots its setpoint, oscillates back and forth with shrinking swings, and eventually settles</li>
+<li><strong>Unstable response:</strong> the system's oscillations grow larger with each swing instead of shrinking, and the system never settles at all</li>
+</ol>
+<p>Because these four response types are much easier to recognize by comparing example curves side by side than by reading definitions alone, use the interactive chart below to switch between them and see how each one's error signal behaves over time.</p>
+<h4 id="diagram-stability-explorer-comparing-system-responses">Diagram: Stability Explorer: Comparing System Responses</h4>
+<iframe src="../../sims/stability-explorer/main.html" width="100%" height="520px" scrolling="no"></iframe>
+
+<details markdown="1">
+<summary>Stability Explorer: Comparing System Responses</summary>
+Type: chart
+**sim-id:** stability-explorer<br/>
+**Library:** Chart.js<br/>
+**Status:** Specified
+
+Purpose: Help students distinguish overdamped, critically damped, underdamped, and unstable responses by comparing labeled example curves directly rather than reading definitions in isolation.
+
+Bloom Taxonomy: Analyze (L4)
+Bloom Taxonomy Verb: differentiate, compare, contrast, examine
+
+Learning objective: Given four labeled response curves, students will differentiate stable from unstable behavior and classify a given curve as overdamped, critically damped, underdamped, or unstable.
+
+Chart type: Line chart with a scenario selector
+
+X-axis: Time (seconds), 0 to 10
+Y-axis: System output value, with a dashed horizontal setpoint reference line at value 10
+
+Data series (one shown at a time, selected by button):
+1. Overdamped: rises slowly from 0, approaches 10 asymptotically, never exceeds 10
+2. Critically Damped: rises quickly from 0, reaches 10 at approximately t=2, no overshoot
+3. Underdamped: rises quickly, overshoots to about 13 at t=1.5, dips to about 8.5 at t=3, oscillates with shrinking swings, settles near 10 by t=8
+4. Unstable: rises quickly, overshoots to 13 at t=1.5, dips to 5 at t=3, swings to 16 at t=4.5, with each swing larger than the last
+
+Interactive elements:
+- Four buttons: "Overdamped", "Critically Damped", "Underdamped", "Unstable" — clicking swaps the plotted series and updates a caption describing that response's real-world consequence
+- Hovering any point on the curve shows a tooltip with the exact time and output value at that point
+- A persistent caption box updates per scenario, e.g., for Unstable: "This system's corrections are too aggressive for its own feedback delay. In a real servo, this could strip gears or trigger a safety cutoff."
+
+Title: "How Does a Control System Respond? Four Outcomes Compared"
+Legend: Shows the currently selected scenario name and color
+
+Color scheme: Green for Overdamped and Critically Damped (safe/acceptable), gold for Underdamped (acceptable but imprecise), red for Unstable (failure condition)
+
+Implementation: Chart.js line chart with four pre-computed data arrays swapped on button click; native Chart.js tooltip plugin enabled for hover feedback.
+</details>
+
+<p>An unstable system is rarely caused by a single mistake. It usually results from gains, especially the Proportional or Integral gain, set too high for how quickly the system can physically respond, combined with unavoidable delays in reading sensors and driving actuators. Recognizing the warning signs of instability, error signals that keep growing rather than shrinking, is a skill every control system designer needs before deploying a controller on real hardware.</p>
+<h2 id="analog-control-and-digital-control">Analog Control and Digital Control</h2>
+<p>Control systems can be built in two fundamentally different ways depending on how they represent and process signals. <strong>Analog control</strong> is a control approach in which signals are continuous physical quantities, such as a smoothly varying voltage, and the controller's behavior is built directly into physical circuit components, like resistors and capacitors, rather than software instructions. <strong>Digital control</strong> is a control approach in which the setpoint, error signal, and corrective output are represented as numbers processed by a microcontroller's software, sampling the sensor at discrete moments in time rather than continuously.</p>
+<p>Almost every control system you will build in this course, including your robot's programmed control loops, is a digital control system, because a microcontroller reads sensor values as discrete numbers, runs code to calculate an error signal and a PID correction, and writes a discrete command back out, all repeated at some fixed sampling rate, such as fifty times per second. Analog control still appears in some real-world devices, particularly older or very simple ones, such as a purely mechanical thermostat that uses a bending bimetallic strip to open and close a circuit with no software involved at all.</p>
+<p>The comparison below highlights the practical tradeoffs between the two approaches, now that both terms have been defined.</p>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Analog Control</th>
+<th>Digital Control</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Signal representation</td>
+<td>Continuous physical voltage or current</td>
+<td>Discrete numeric samples</td>
+</tr>
+<tr>
+<td>Where behavior lives</td>
+<td>Physical circuit components</td>
+<td>Software running on a microcontroller</td>
+</tr>
+<tr>
+<td>Ease of changing behavior</td>
+<td>Requires rewiring or new components</td>
+<td>Requires only a code change</td>
+</tr>
+<tr>
+<td>Precision limits</td>
+<td>Component tolerances, drift, noise</td>
+<td>Sampling rate and numeric precision</td>
+</tr>
+<tr>
+<td>Common in this course</td>
+<td>Rare (some sensors output analog voltage)</td>
+<td>Nearly universal (PID code, robot control loops)</td>
+</tr>
+</tbody>
+</table>
+<p>Notice the row about sampling rate: a digital controller only checks its sensor at fixed intervals, called the sampling rate, rather than continuously. Choosing too slow a sampling rate is one common cause of the sluggish or unstable behavior discussed in the previous section, since the controller may miss how quickly conditions are actually changing between samples.</p>
+<h2 id="automation-system-control-loops-working-without-a-human">Automation System: Control Loops Working Without a Human</h2>
+<p>An <strong>automation system</strong> is a system that carries out a task using one or more control loops running continuously, without requiring a human operator to make moment-to-moment decisions. A home thermostat is a simple, single-loop automation system: it holds a temperature setpoint entirely on its own. An industrial robot arm on an assembly line is a far more complex automation system, running dozens of control loops simultaneously, one for each joint's servo motor, coordinated together to trace a precise welding path.</p>
+<p>This directly extends the autonomous behavior concept from Chapter 4. There, a single StarterBot control loop produced simple autonomous behavior, stopping the robot near a wall. An automation system is what results when many such control loops, each managing its own setpoint and error signal, are combined and coordinated to accomplish a larger, more useful task with no driver input at all.</p>
+<p>Automation systems appear across many industries, not only robotics, and recognizing the pattern helps connect control theory to the wider world:</p>
+<ul>
+<li><strong>Manufacturing:</strong> robotic welding arms holding precise joint-angle setpoints across a full assembly cycle</li>
+<li><strong>Agriculture:</strong> automated irrigation systems holding soil-moisture setpoints across a field</li>
+<li><strong>Aerospace:</strong> autopilot systems holding altitude, heading, and airspeed setpoints simultaneously</li>
+<li><strong>Home appliances:</strong> a washing machine's water-level and spin-speed control loops running one after another</li>
+<li><strong>HVAC:</strong> building climate-control systems holding temperature and humidity setpoints across many rooms</li>
+</ul>
+<h2 id="control-system-simulation-testing-before-trusting-real-hardware">Control System Simulation: Testing Before Trusting Real Hardware</h2>
+<p><strong>Control system simulation</strong> is the practice of testing a control system's design, including its setpoint, gains, and expected disturbances, in software before ever running it on real hardware. Every PID gain combination you have already tried in the MicroSim earlier in this chapter was itself an example of control system simulation: adjusting numbers and watching a predicted response curve, with no motor, gear, or robot arm at risk of damage.</p>
+<p>Simulation matters because testing bad control gains directly on real hardware can be expensive or dangerous. A drone with wildly unstable altitude gains might crash. An industrial arm with overshooting position gains might collide with a fixture or injure a nearby worker. Running the same gains through a simulation first lets an engineer see an unstable, oscillating response on a screen and fix it in software, long before any real actuator ever moves.</p>
+<p>A useful simulation typically models three things realistically enough to be trustworthy: the physical system's expected behavior (how quickly a real motor can actually accelerate, for instance), the sensor's expected noise or delay, and any outside disturbances the real system will face, such as an added load or a gust of wind. A simulation that ignores these realistic limits can mislead a designer into trusting gains that fail once real hardware, real sensor noise, and real delays are introduced.</p>
+<h2 id="actuator-control-and-motion-control">Actuator Control and Motion Control</h2>
+<p><strong>Actuator control</strong> is the specific application of closed-loop control techniques, such as PID, to precisely commanding an actuator's output, whether that output is a position, a speed, or a force, rather than simply turning the actuator fully on or off. Recall from Chapter 4 that an actuator converts a program's command into real motion; actuator control is what makes that conversion precise and adaptive rather than a single blind command.</p>
+<p><strong>Motion control</strong> is a broader term for actuator control applied specifically to producing accurate, often coordinated, physical movement, such as a precise position, velocity, or an entire trajectory traced smoothly over time. Where actuator control might refer to any single actuator holding any target value, motion control usually implies movement itself is the goal, frequently involving multiple actuators whose movements must be coordinated together, such as a robot arm's several joints all reaching their target angles at the same moment so the arm's hand arrives exactly on schedule.</p>
+<p>Three concrete examples make the distinction between these closely related terms less abstract:</p>
+<ol>
+<li>A single Speed Servo holding a commanded angle against a light resisting force is an example of actuator control</li>
+<li>A robot arm's three joints moving together so the gripper follows a smooth straight-line path is an example of motion control coordinating several actuators</li>
+<li>A drone's four motors continuously adjusted to hold a stable hover is an example of motion control operating in three-dimensional space rather than along a single joint</li>
+</ol>
+<h2 id="servo-motor-a-closed-loop-controller-you-already-own">Servo Motor: A Closed-Loop Controller You Already Own</h2>
+<p>Everything in this chapter comes together inside a single, familiar piece of hardware. A <strong>servo motor</strong> is a motor built with its own internal closed-loop position controller, combining a motor, a position sensor, and comparison circuitry inside one compact housing, so that commanding it a target angle causes it to move to and hold that angle on its own. You have already met this exact part: the StarterBot's <strong>Speed Servos</strong>, mounted inside Compact ServoBlocks, driving the Gecko wheels by rotating to a commanded angle rather than spinning continuously.</p>
+<p>Chapter 4 described commanding a Speed Servo with a target angle in degrees and treated that command as a simple, direct instruction. This chapter reveals what actually happens inside the servo the instant that command arrives: the commanded angle becomes the servo's setpoint, a small potentiometer inside the servo continuously measures the shaft's actual angle, and the servo's internal circuitry calculates the error signal between setpoint and actual angle many times per second, driving its tiny internal motor exactly as long as error remains and stopping once the shaft reaches the commanded angle.</p>
+<p>This means every Speed Servo on your StarterBot is a complete, self-contained closed-loop control system, running its own miniature control loop entirely independent of the robot's main microcontroller. Explore the diagram below to trace that internal loop step by step, from an incoming command all the way to a corrected shaft position.</p>
+<h4 id="diagram-inside-a-servo-motor-the-internal-closed-loop-path">Diagram: Inside a Servo Motor: The Internal Closed-Loop Path</h4>
+<iframe src="../../sims/servo-motor-closed-loop/main.html" width="100%" height="540px" scrolling="no"></iframe>
+
+<details markdown="1">
+<summary>Inside a Servo Motor: The Internal Closed-Loop Path</summary>
+Type: diagram
+**sim-id:** servo-motor-closed-loop<br/>
+**Library:** p5.js<br/>
+**Status:** Specified
+
+Purpose: Reveal the internal closed-loop control path hidden inside a Speed Servo, connecting the setpoint, error signal, and PID vocabulary from earlier in this chapter to the exact hardware students already used in Chapter 1 and Chapter 4.
+
+Bloom Taxonomy: Analyze (L4)
+Bloom Taxonomy Verb: examine, deconstruct, distinguish, differentiate
+
+Learning objective: Given a labeled block diagram of a servo motor's internal components, students will trace the closed-loop signal path from commanded angle to corrected shaft position and identify where the setpoint, error signal, and corrective drive signal each occur.
+
+Components to show (as a looping block diagram):
+- "Commanded Angle (Setpoint)" input box, arriving from outside the servo (representing the robot program's command)
+- "Comparator" block that calculates error
+- "Motor Drive Circuit" block
+- "DC Motor + Gear Train" block
+- "Output Shaft" (connects to the Gecko wheel)
+- "Potentiometer" block, mechanically linked to the output shaft, feeding a measured-angle signal back to the Comparator
+- A labeled "Error Signal" arrow from the Comparator to the Motor Drive Circuit
+
+Connections (drawn as a directed loop):
+- Commanded Angle → Comparator
+- Potentiometer (measured angle) → Comparator (second input)
+- Comparator → Error Signal → Motor Drive Circuit
+- Motor Drive Circuit → DC Motor + Gear Train
+- DC Motor + Gear Train → Output Shaft
+- Output Shaft → Potentiometer (mechanical linkage, closing the loop)
+
+Style: Circular/looping block diagram emphasizing that the Potentiometer arrow closes the loop back to the Comparator, visually matching the general feedback loop shape from Chapter 4's Sense-Decide-Act diagram
+
+Interactive elements:
+- Clicking any block opens an infobox with that block's name, its role, and one plain-language sentence connecting it to a term already defined in this chapter (for example, clicking "Comparator" shows: "Calculates the Error Signal by subtracting the Potentiometer's measured angle from the Commanded Angle setpoint, many times per second.")
+- A "Command 90°" button animates a token traveling once around the full loop, pausing briefly at each block, so students can watch the sequence rather than only reading static labels
+- After the animation completes, a summary line reads: "This entire loop runs inside the servo itself, faster than the robot's own control loop, which is why a single COMMAND instruction in your Chapter 4 pseudocode was enough to produce precise, held motion."
+
+Color scheme: Blue for the incoming command and setpoint, orange for the mechanical output path (matches actuator color from Chapter 4 diagrams), green for the feedback path from Potentiometer back to Comparator (matches sensor/feedback color from Chapter 4)
+
+Implementation: p5.js canvas rendering a fixed circular block layout; each block is a clickable region with hover highlight; an animated token (small circle) moves along the connecting arrows in sequence when "Command 90°" is pressed, using a step counter to control token position each frame.
+</details>
+
+<p>!!! note
+    A Speed Servo's internal loop is a complete example of PID-style closed-loop control shrunk down into a single part. Most simple hobby servos use mostly Proportional control internally, which is exactly why an unloaded servo can sometimes be seen to briefly overshoot a large angle change before settling, an underdamped response you can now recognize by name.</p>
+<h2 id="control-system-design-putting-it-all-together">Control System Design: Putting It All Together</h2>
+<p><strong>Control system design</strong> is the overall engineering process of choosing a setpoint strategy, selecting sensors and actuators, choosing between analog and digital implementation, tuning PID gains, and verifying stability, typically through control system simulation, before deploying a controller on real hardware. Every concept introduced in this chapter is a piece of this larger design process, not a separate, unrelated topic.</p>
+<p>A control system designer working on a real project, whether it is a StarterBot upgrade or an industrial robot arm, typically works through a recognizable sequence of design decisions. Reviewing that sequence one more time, now using every term this chapter has defined, ties the whole chapter together:</p>
+<ol>
+<li>Define the <strong>setpoint</strong> the system must reach and hold</li>
+<li>Choose sensors capable of measuring the actual value needed to compute the <strong>error signal</strong></li>
+<li>Decide whether <strong>analog control</strong> or <strong>digital control</strong> best fits the sensors, actuators, and required precision</li>
+<li>Select an initial control strategy, typically <strong>PID control</strong>, and choose starting gains for the Proportional, Integral, and Derivative terms</li>
+<li>Run a <strong>control system simulation</strong> to check the predicted response for <strong>stability</strong>, watching for overdamped, critically damped, underdamped, or unstable behavior</li>
+<li>Adjust gains and retest in simulation until the response is acceptably fast without overshooting into instability</li>
+<li>Apply the tuned controller to real <strong>actuator control</strong> or <strong>motion control</strong> hardware, such as a <strong>servo motor</strong>, and validate its behavior under real-world disturbances</li>
+<li>Combine multiple tuned control loops, if needed, into a complete <strong>automation system</strong></li>
+</ol>
+<p>Notice that this sequence loops back on itself in practice, much like the control loops it produces: real controllers are rarely tuned perfectly on the first attempt, and steps 5 and 6 are typically repeated several times before a design moves to real hardware. Good control system design treats simulation, testing, and retesting as a normal, expected part of the process, not as a sign something went wrong.</p>
+<p>??? note "Quick check: A drone's altitude controller overshoots its target height, dips below it, overshoots again with a slightly bigger swing, and never settles. Which stability category does this describe, and which PID term would a designer most likely reduce first? Click to reveal the answer."
+    This describes an unstable response, since the oscillations are growing larger with each swing rather than shrinking toward the setpoint. A designer would most likely reduce the Proportional gain first, since an overly aggressive Proportional term is the most common cause of this kind of runaway oscillation, and would also check whether the Integral term has been set too high, since excess Integral gain can produce a similar growing-oscillation pattern.</p>
+<p>You now have the deeper control-theory vocabulary that the basic open-loop and closed-loop ideas from Chapter 4 were always building toward: setpoints and error signals as the numeric foundation of any closed loop, PID control as the standard strategy for turning that error into a smooth correction, stability as the measure of whether a design actually works, and the analog-versus-digital, automation-system, simulation, actuator-control, motion-control, servo-motor, and control-system-design vocabulary that describes how these pieces come together in real robots. The next time you command a Speed Servo to a target angle, you will know exactly what is happening inside it.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

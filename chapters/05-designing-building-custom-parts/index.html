@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>5. Designing and Building Custom Parts - My Docs</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../course-description/" class="nav-link">Course Description</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Chapters</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../" class="dropdown-item">List of Chapters</a>
+</li>
+                                    
+<li>
+    <a href="../01-identifying-kit-parts-building-starterbot/" class="dropdown-item">1. Identifying Kit Parts and Building Your StarterBot</a>
+</li>
+                                    
+<li>
+    <a href="../02-intro-robotics-systems/" class="dropdown-item">2. Introduction to Robotics and Systems</a>
+</li>
+                                    
+<li>
+    <a href="../03-programming-fundamentals/" class="dropdown-item">3. Programming Fundamentals</a>
+</li>
+                                    
+<li>
+    <a href="../04-programming-your-robot/" class="dropdown-item">4. Programming Your Robot</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">5. Designing and Building Custom Parts</a>
+</li>
+                                    
+<li>
+    <a href="../06-electrical-fundamentals/" class="dropdown-item">6. Electrical Fundamentals</a>
+</li>
+                                    
+<li>
+    <a href="../07-electronic-components-circuit-design/" class="dropdown-item">7. Electronic Components and Circuit Design</a>
+</li>
+                                    
+<li>
+    <a href="../08-sensors-and-measurement/" class="dropdown-item">8. Sensors and Measurement</a>
+</li>
+                                    
+<li>
+    <a href="../09-mechanical-systems-simple-machines/" class="dropdown-item">9. Mechanical Systems and Simple Machines</a>
+</li>
+                                    
+<li>
+    <a href="../10-fluid-power-hydraulics-pneumatics/" class="dropdown-item">10. Fluid Power: Hydraulics and Pneumatics</a>
+</li>
+                                    
+<li>
+    <a href="../11-control-systems-feedback-loops/" class="dropdown-item">11. Control Systems and Feedback Loops</a>
+</li>
+                                    
+<li>
+    <a href="../12-digital-logic-computing-fundamentals/" class="dropdown-item">12. Digital Logic and Computing Fundamentals</a>
+</li>
+                                    
+<li>
+    <a href="../13-advanced-robot-programming/" class="dropdown-item">13. Advanced Robot Programming</a>
+</li>
+                                    
+<li>
+    <a href="../14-integrating-testing-maintaining-robotic-system/" class="dropdown-item">14. Integrating, Testing, and Maintaining a Robotic System</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Learning Graph</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../learning-graph/" class="dropdown-item">Introduction</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/course-description-assessment/" class="dropdown-item">Course Description Assessment</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/concept-list/" class="dropdown-item">Concept Enumeration</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/quality-metrics/" class="dropdown-item">Graph Quality Analysis</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/concept-taxonomy/" class="dropdown-item">Concept Taxonomy</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/taxonomy-distribution/" class="dropdown-item">Taxonomy Distribution Report</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">MicroSims</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../sims/graph-viewer/" class="dropdown-item">Learning Graph Viewer</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../04-programming-your-robot/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../06-electrical-fundamentals/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#designing-and-building-custom-parts" class="nav-link">Designing and Building Custom Parts</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#summary" class="nav-link">Summary</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#concepts-covered" class="nav-link">Concepts Covered</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#prerequisites" class="nav-link">Prerequisites</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#the-engineering-design-process" class="nav-link">The Engineering Design Process</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#problem-definition" class="nav-link">Problem Definition</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#design-constraints-and-design-criteria" class="nav-link">Design Constraints and Design Criteria</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#brainstorming-and-concept-sketching" class="nav-link">Brainstorming and Concept Sketching</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#prototyping" class="nav-link">Prototyping</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#design-iteration-and-design-testing" class="nav-link">Design Iteration and Design Testing</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#trade-off-analysis-and-reverse-engineering" class="nav-link">Trade-Off Analysis and Reverse Engineering</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#design-specifications-and-bill-of-materials" class="nav-link">Design Specifications and Bill of Materials</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#design-documentation-and-the-engineering-notebook" class="nav-link">Design Documentation and the Engineering Notebook</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#team-based-design" class="nav-link">Team-Based Design</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#manufacturing-process" class="nav-link">Manufacturing Process</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#additive-manufacturing-and-3d-printing" class="nav-link">Additive Manufacturing and 3D Printing</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="designing-and-building-custom-parts">Designing and Building Custom Parts</h1>
+<h2 id="summary">Summary</h2>
+<p>With a working, programmable robot in hand, students now learn how to improve and extend it. This chapter covers the full engineering design process: defining problems, setting design constraints and criteria, brainstorming, sketching, prototyping, iterating, testing, and documenting a design, including trade-off analysis and reverse engineering. Students then apply this process to manufacture custom parts for their robot using additive manufacturing and 3D printing, and practice team-based design and engineering notebook documentation along the way.</p>
+<h2 id="concepts-covered">Concepts Covered</h2>
+<p>This chapter covers the following 19 concepts from the learning graph:</p>
+<ol>
+<li>Engineering Design Process</li>
+<li>Problem Definition</li>
+<li>Design Constraints</li>
+<li>Design Criteria</li>
+<li>Brainstorming</li>
+<li>Concept Sketching</li>
+<li>Prototyping</li>
+<li>Design Iteration</li>
+<li>Design Testing</li>
+<li>Design Documentation</li>
+<li>Trade-Off Analysis</li>
+<li>Reverse Engineering</li>
+<li>Design Specifications</li>
+<li>Bill Of Materials</li>
+<li>Engineering Notebook</li>
+<li>Team-Based Design</li>
+<li>Additive Manufacturing</li>
+<li>3D Printing</li>
+<li>Manufacturing Process</li>
+</ol>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>This chapter assumes only the prerequisites listed in the <a href="../../course-description/">course description</a>.</p>
+<hr />
+<h2 id="the-engineering-design-process">The Engineering Design Process</h2>
+<p>Every custom part on a competition robot starts as a problem, not a drawing. The <strong>engineering design process</strong> is a repeatable, structured cycle that engineers use to move from a problem statement to a working solution, then loop back around as they learn more. Unlike a single flash of inspiration, the process is deliberately iterative: it expects you to revisit earlier steps as new information appears, instead of marching through a fixed sequence one time and declaring victory.</p>
+<p>Picture a real problem that will run through this entire chapter. Your FTC team has been driving the goBILDA StarterBot you assembled in Chapter 1 and programmed in Chapter 4, and two things keep going wrong during practice matches. Game pieces bounce off the front of the intake instead of feeding into the rollers, and the distance sensor your team zip-tied near the intake keeps twisting out of alignment after every match. Nothing in the stock StarterBot kit solves either problem, so your team decides to design and 3D print a custom part: a combined intake guide and sensor mount you will call the <strong>Guide-Mount</strong> for the rest of this chapter.</p>
+<p>The engineering design process typically includes the following stages, though real teams move back and forth between them rather than only moving forward:</p>
+<ol>
+<li>Define the problem</li>
+<li>Establish design constraints and criteria</li>
+<li>Brainstorm possible solutions</li>
+<li>Create concept sketches</li>
+<li>Build a prototype</li>
+<li>Test the prototype</li>
+<li>Iterate on the design</li>
+<li>Document the final design and specifications</li>
+</ol>
+<p>Notice that testing and iteration point back toward brainstorming and sketching rather than toward some final finish line. A prototype that fails a test does not mean starting over from nothing; it means the team learned something and cycles through the relevant earlier steps again with better information. Before diving into each stage in detail, explore the interactive cycle below to see how the Guide-Mount project will move through every stage.</p>
+<h4 id="diagram-engineering-design-process-cycle-explorer">Diagram: Engineering Design Process Cycle Explorer</h4>
+<iframe src="../../sims/engineering-design-cycle-explorer/main.html" width="100%" height="550px" scrolling="no"></iframe>
+
+<details markdown="1">
+<summary>Engineering Design Process Cycle Explorer</summary>
+Type: workflow
+**sim-id:** engineering-design-cycle-explorer<br/>
+**Library:** p5.js<br/>
+**Status:** Specified
+
+Purpose: Give students a big-picture mental map of the engineering design process before each stage is studied in depth, using the running Guide-Mount bracket example.
+
+Bloom Taxonomy: Understand (L2)
+Bloom Taxonomy Verb: explain, summarize, interpret
+
+Learning objective: Given the eight stages of the engineering design process arranged in a circular workflow, students will explain what happens at each stage and identify which stages loop back to earlier ones.
+
+Layout: Eight labeled nodes arranged in a circle in the order Define Problem, Set Constraints/Criteria, Brainstorm, Sketch, Prototype, Test, Iterate, Document. Curved arrows connect each node to the next going clockwise. Two additional curved "return" arrows, drawn in a different color, loop from Iterate back to Brainstorm and from Test back to Prototype, visually showing that the process is not strictly linear.
+
+Interactive elements:
+- Clicking any node opens an infobox describing what the team does at that stage, written using the Guide-Mount bracket example (for example, clicking "Test" shows: "The team mounts the printed Guide-Mount prototype on the StarterBot and runs ten practice intake cycles, recording how many game pieces feed cleanly into the rollers.")
+- Hovering a return arrow displays a short tooltip explaining why the loop exists (for example, hovering the Test-to-Prototype arrow shows "A failed test sends the team back to revise and reprint the prototype, not back to square one.")
+- A "Play Walkthrough" button auto-advances through all eight nodes in order, pausing two seconds on each with its infobox open, so students can watch one full pass of the cycle
+- A "Reset" button closes all infoboxes and returns to the unclicked state
+
+Data to be displayed: Eight stage names, one Guide-Mount-specific description per stage, and two loop-back explanations.
+
+Color scheme: Forward-progress arrows in blue, return/loop arrows in orange, active node highlighted in gold when its infobox is open.
+
+Responsive behavior: Circular layout recalculates node positions and radius based on the iframe's current width so labels remain legible on narrow screens.
+
+Implementation: p5.js canvas with node positions computed from a fixed angular step, arrow curves drawn with bezier control points, and a text infobox drawn below the circle that updates based on which node was last clicked.
+</details>
+
+<h2 id="problem-definition">Problem Definition</h2>
+<p>The first stage of the process, <strong>problem definition</strong>, means writing a clear, specific statement of exactly what needs to be solved before anyone sketches a single idea. A vague complaint like "the intake doesn't work very well" is not a problem definition; it describes a symptom, not the actual problem an engineer can design against. A strong problem definition names the specific failure, the conditions under which it happens, and why it matters.</p>
+<p>Your team's problem definition for this chapter might read: "During competition matches, roughly one in three game pieces that touch the front bumper bounce away instead of entering the intake rollers, and the zip-tied distance sensor loses its aim after contact, causing missed detections." Notice how specific this is compared to "the intake needs work." A precise problem definition keeps the whole team focused on the same target and prevents wasted effort brainstorming solutions to the wrong problem.</p>
+<p>Good problem definitions generally answer four questions:</p>
+<ul>
+<li>What exactly is going wrong, in observable, measurable terms?</li>
+<li>Under what conditions does it happen (every match, only at certain angles, only after several cycles)?</li>
+<li>Who or what is affected by the problem?</li>
+<li>Why does solving it matter to the team's goals?</li>
+</ul>
+<h2 id="design-constraints-and-design-criteria">Design Constraints and Design Criteria</h2>
+<p>Once a team agrees on the problem, it needs rules for judging any solution before brainstorming begins. <strong>Design constraints</strong> are fixed limits that any acceptable solution absolutely must satisfy; a design that violates a constraint is disqualified, no matter how clever it is otherwise. <strong>Design criteria</strong>, by contrast, are the qualities used to judge and rank solutions that already meet every constraint, so a team can decide which acceptable design is actually the best one.</p>
+<p>For the Guide-Mount, a constraint might be "must bolt to existing StarterBot channel holes without drilling new holes in the chassis," because FTC competition rules and the team's limited tools make redrilling impractical, not just undesirable. A criterion, on the other hand, might be "should be as lightweight as possible," because a lighter bracket is preferred, but a slightly heavier one that still fits and functions is not automatically disqualified.</p>
+<p>The table below reinforces this distinction with concrete Guide-Mount examples, so the difference between an absolute limit and a preference is grounded in the running project rather than left abstract.</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Question it answers</th>
+<th>Guide-Mount example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Design constraint</td>
+<td>What MUST the design satisfy to be acceptable at all?</td>
+<td>Must mount using existing goBILDA U-channel hole spacing</td>
+</tr>
+<tr>
+<td>Design constraint</td>
+<td>What MUST the design satisfy to be acceptable at all?</td>
+<td>Must not block the intake roller's rotation</td>
+</tr>
+<tr>
+<td>Design criterion</td>
+<td>What makes one acceptable design BETTER than another?</td>
+<td>Should minimize total mass added to the robot</td>
+</tr>
+<tr>
+<td>Design criterion</td>
+<td>What makes one acceptable design BETTER than another?</td>
+<td>Should be quick to remove for maintenance</td>
+</tr>
+</tbody>
+</table>
+<h2 id="brainstorming-and-concept-sketching">Brainstorming and Concept Sketching</h2>
+<p>With constraints and criteria in hand, the team moves to <strong>brainstorming</strong>, a divergent-thinking activity where the goal is generating as many possible solution ideas as possible without judging or eliminating any of them yet. Brainstorming works best when teams defer criticism until later; judging ideas too early tends to shut down the unusual suggestions that sometimes turn out to be the best ones.</p>
+<p>Effective brainstorming sessions generally follow a few shared rules:</p>
+<ul>
+<li>Defer judgment: no idea gets criticized during the session itself</li>
+<li>Go for quantity: more ideas increase the odds that a strong one appears</li>
+<li>Build on others' ideas rather than only proposing your own</li>
+<li>Encourage wild ideas, since a rough idea can often be refined later</li>
+</ul>
+<p>For the Guide-Mount, a fifteen-minute brainstorm might produce ideas ranging from a simple angled ramp, to a curved funnel wall, to a two-piece clamp that grips the existing channel and cradles the sensor in a rigid pocket. Once the list is long enough, the team moves to <strong>concept sketching</strong>: quickly drawing rough, low-detail pictures of the most promising ideas so they can be compared side by side. A concept sketch is not a technical drawing; it is a fast, approximate picture meant to communicate the basic shape and function of an idea in a minute or two, not to specify exact dimensions.</p>
+<h2 id="prototyping">Prototyping</h2>
+<p>A concept sketch shows what an idea might look like, but it cannot tell you whether the idea actually works on the real robot. <strong>Prototyping</strong> closes that gap by building a physical, working (or partially working) model of a design so the team can test it quickly and cheaply before committing to a final version. Prototypes exist on a spectrum from rough to refined, and skipping straight to a refined prototype often wastes time on ideas that fail for simple, avoidable reasons.</p>
+<p>Teams typically move through prototype fidelity in stages:</p>
+<ol>
+<li>Low-fidelity prototype: cardboard, tape, and hot glue mocked up in minutes, testing rough shape and fit only</li>
+<li>Medium-fidelity prototype: a 3D-printed part in a fast, low-detail print setting, testing real fit and basic function</li>
+<li>High-fidelity prototype: a carefully printed, dimensionally accurate part, close to or identical to the final design</li>
+</ol>
+<p>For the Guide-Mount, the team's first prototype is a piece of cardboard taped to the chassis in the shape of the angled ramp idea, just to confirm the geometry does not collide with the intake rollers before spending any filament. Only after the cardboard mock-up survives a few test cycles does the team move on to an actual 3D-printed version.</p>
+<h2 id="design-iteration-and-design-testing">Design Iteration and Design Testing</h2>
+<p><strong>Design testing</strong> means evaluating a prototype against the constraints and criteria established earlier, using a real robot and real conditions rather than guesswork. For the Guide-Mount, testing means mounting each printed prototype on the StarterBot and running repeated intake cycles with practice game pieces, recording how many pieces feed cleanly into the rollers and whether the sensor holds its aim after contact.</p>
+<p><strong>Design iteration</strong> is what happens next: using the test results to revise the design, then testing the revised version again. Iteration is not a sign that the first attempt failed completely; it is the expected, normal way a design improves. The table below shows how the Guide-Mount actually improved across two rounds of testing and iteration.</p>
+<table>
+<thead>
+<tr>
+<th>Test round</th>
+<th>Result</th>
+<th>Iteration made</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Round 1 (angled ramp)</td>
+<td>6 of 10 pieces fed cleanly; sensor still shifted slightly on hard contact</td>
+<td>Added a rigid pocket around the sensor and steepened the ramp angle</td>
+</tr>
+<tr>
+<td>Round 2 (ramp + sensor pocket)</td>
+<td>9 of 10 pieces fed cleanly; sensor held aim through all 10 cycles</td>
+<td>Design accepted; minor edge rounded to reduce piece bounce further</td>
+</tr>
+</tbody>
+</table>
+<p>Iteration can loop a design through testing several times before it is considered finished, and a team should budget time for at least one full iteration cycle rather than assuming the first printed version will be the last.</p>
+<h2 id="trade-off-analysis-and-reverse-engineering">Trade-Off Analysis and Reverse Engineering</h2>
+<p>Sometimes two candidate designs each satisfy every constraint, yet one scores higher on some criteria and lower on others; a thinner bracket might be lighter but less durable, while a thicker one might be stronger but heavier and slower to print. <strong>Trade-off analysis</strong> is the structured comparison engineers use to decide between such options by scoring each candidate against weighted criteria, rather than choosing by gut feeling alone.</p>
+<p>A simple trade-off analysis assigns each criterion a weight based on importance, scores each design option, and multiplies weight by score to get a total. The weighted decision matrix below compares three Guide-Mount shapes the team actually considered, using a 1-5 scale where higher is better.</p>
+<table>
+<thead>
+<tr>
+<th>Criterion (weight)</th>
+<th>Angled ramp</th>
+<th>Curved funnel</th>
+<th>Two-piece clamp</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Print time (x2)</td>
+<td>5 (fast)</td>
+<td>3 (medium)</td>
+<td>2 (slow)</td>
+</tr>
+<tr>
+<td>Feed reliability (x3)</td>
+<td>4</td>
+<td>5</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Ease of removal (x1)</td>
+<td>4</td>
+<td>3</td>
+<td>5</td>
+</tr>
+<tr>
+<td><strong>Weighted total</strong></td>
+<td><strong>34</strong></td>
+<td><strong>34</strong></td>
+<td><strong>24</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Notice that the angled ramp and curved funnel tie overall, even though they score differently on individual criteria; a trade-off analysis often narrows a field to a couple of strong finalists rather than a single obvious winner, leaving room for the team to break the tie using practical factors like available print time before competition.</p>
+<p>Before finalizing a shape, many teams also practice <strong>reverse engineering</strong>: studying an existing part or design closely to understand how and why it works, in order to inform a new design. Your team reverse engineers the stock goBILDA U-channel by measuring its hole spacing and pattern rather than guessing, so the Guide-Mount's mounting tabs align perfectly with existing holes instead of requiring new ones drilled into the chassis. Reverse engineering an existing, proven part is often faster and more reliable than designing mounting geometry from scratch.</p>
+<h2 id="design-specifications-and-bill-of-materials">Design Specifications and Bill of Materials</h2>
+<p>Once trade-off analysis and reverse engineering point to a final shape, that shape needs to become a precise, buildable description. <strong>Design specifications</strong> are the exact, measurable technical details a finished design must meet, translated directly from the team's constraints and criteria into numbers: overall dimensions, hole spacing, wall thickness, maximum mass, and required material.</p>
+<p>A specification for the Guide-Mount might state: overall length 65mm, mounting tab spacing matching the standard goBILDA hole pitch, minimum wall thickness 2mm for strength, maximum mass 12 grams, and clearance of at least 3mm around the intake roller shaft. Specifications like these give both the CAD designer and the 3D printer operator an unambiguous target, rather than leaving details open to interpretation late in the project.</p>
+<p>Alongside specifications, a finished design also needs a <strong>Bill of Materials</strong>, the complete list of every item required to actually produce the part, including quantities. A 3D-printed part's BOM looks different from the kit BOM you read in Chapter 1, since it must account for filament and print time rather than pre-made components.</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Quantity</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PLA filament</td>
+<td>18 grams</td>
+<td>Estimated from sliced model</td>
+</tr>
+<tr>
+<td>M3 heat-set insert</td>
+<td>2</td>
+<td>For sensor mounting screws</td>
+</tr>
+<tr>
+<td>M3 x 8mm screw</td>
+<td>2</td>
+<td>Secures distance sensor to bracket</td>
+</tr>
+<tr>
+<td>Print time</td>
+<td>55 minutes</td>
+<td>At chosen layer height and infill</td>
+</tr>
+</tbody>
+</table>
+<h2 id="design-documentation-and-the-engineering-notebook">Design Documentation and the Engineering Notebook</h2>
+<p>Every decision made across problem definition, brainstorming, trade-off analysis, and testing is only useful to the team later if someone wrote it down. <strong>Design documentation</strong> is the complete record of a project: sketches, test data, specifications, the Bill of Materials, and the reasoning behind key decisions, kept together so the process can be reviewed, defended, or repeated. Many FTC competitions specifically judge teams on design documentation as part of an Engineering Design or Innovate award.</p>
+<p>The primary tool for design documentation is the <strong>engineering notebook</strong>, a dated, chronological journal, physical or digital, where a team records its work as it happens rather than reconstructing it from memory afterward. A strong engineering notebook entry for a single work session typically includes:</p>
+<ul>
+<li>The date and names of team members present</li>
+<li>The problem or task worked on that session</li>
+<li>Sketches, photos, or screenshots created during the session</li>
+<li>Data collected, such as test results or measurements</li>
+<li>Decisions made and the reasoning behind them</li>
+</ul>
+<p>!!! tip
+    Record failed prototypes and rejected ideas in the notebook too, not only successes. Judges reviewing an FTC engineering notebook are often more interested in how a team responded to a failed test than in a design that worked perfectly on the first try.</p>
+<h2 id="team-based-design">Team-Based Design</h2>
+<p>None of the stages above happen in isolation on a real FTC team; they happen through <strong>team-based design</strong>, where multiple students share responsibility across roles, communicate constantly, and reach decisions together rather than leaving every choice to a single member. Brainstorming benefits from a range of perspectives, trade-off analysis benefits from multiple people scoring options independently before comparing notes, and documentation benefits from someone specifically responsible for keeping the notebook current.</p>
+<p>A team working on the Guide-Mount might divide responsibilities roughly as follows:</p>
+<ul>
+<li>A mechanical lead who owns the CAD model and print settings</li>
+<li>A testing lead who runs intake cycles and records results</li>
+<li>A notebook keeper who documents each session's decisions and data</li>
+<li>A build lead who installs prototypes on the robot and checks for interference</li>
+</ul>
+<p>Dividing roles does not mean working separately; it means each stage of the engineering design process has a clear owner making sure that step actually gets done, while decisions like which shape to prototype next are still made as a group. Communication matters as much as any single role: a mechanical lead who changes a dimension without telling the testing lead can waste an entire test session on an outdated prototype, and a notebook keeper who is not included in trade-off discussions cannot document the reasoning behind them accurately.</p>
+<h2 id="manufacturing-process">Manufacturing Process</h2>
+<p>Once the Guide-Mount's specifications are locked in, the team faces one final question: how do you actually turn a digital design into a physical part? A <strong>manufacturing process</strong> is the sequence of steps that transforms raw material into a finished physical object matching a design's specifications. Manufacturing processes fall into two broad families, and understanding both helps explain why FTC teams so often choose the one covered in the next section.</p>
+<p><strong>Subtractive manufacturing</strong> starts with a solid block of material and removes material, using tools like drills, mills, or saws, until only the desired shape remains, the same way a sculptor carves a statue from a block of stone. <strong>Additive manufacturing</strong>, covered in detail next, instead builds an object up from nothing, adding material only where the design calls for it. Neither family is universally better: subtractive processes like CNC milling can produce very strong metal parts but struggle with hollow internal shapes and waste the material that gets cut away, while additive processes handle complex internal geometry easily and waste very little material, but usually in weaker plastics rather than machined metal. The clickable diagram below contrasts these two families directly, using the Guide-Mount bracket as the example part in both cases.</p>
+<h4 id="diagram-additive-vs-subtractive-manufacturing">Diagram: Additive vs. Subtractive Manufacturing</h4>
+<iframe src="../../sims/additive-vs-subtractive-manufacturing/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+<details markdown="1">
+<summary>Additive vs. Subtractive Manufacturing</summary>
+Type: workflow
+**sim-id:** additive-vs-subtractive-manufacturing<br/>
+**Library:** Mermaid<br/>
+**Status:** Specified
+
+Purpose: Help students distinguish additive from subtractive manufacturing by contrasting how each family of processes would produce the same Guide-Mount bracket.
+
+Bloom Taxonomy: Analyze (L4)
+Bloom Taxonomy Verb: differentiate, compare, contrast
+
+Learning objective: Given the same target part, students will differentiate the additive and subtractive manufacturing workflows and explain why additive manufacturing is well suited to a one-off custom bracket like the Guide-Mount.
+
+Diagram type: Mermaid flowchart with two parallel swimlane-style branches from a shared starting node
+
+Nodes (all nodes must be clickable, each opening an infobox with the listed text):
+- Start node: "Digital Design File" — infobox: "The 3D CAD model of the Guide-Mount, created after specifications were finalized."
+- Subtractive branch node 1: "Solid PLA/Aluminum Block" — infobox: "Manufacturing starts with more material than the final part needs."
+- Subtractive branch node 2: "CNC Mill Removes Material" — infobox: "A rotating cutting tool removes material path by path until the bracket shape remains."
+- Subtractive branch node 3: "Finished Bracket + Scrap Material" — infobox: "Leftover material is waste; complex internal shapes may be impossible to reach with a cutting tool."
+- Additive branch node 1: "Sliced Layer Data" — infobox: "Slicing software divides the 3D model into thin horizontal layers, typically 0.1-0.3mm thick."
+- Additive branch node 2: "3D Printer Deposits Material Layer by Layer" — infobox: "Material is added only where the design calls for it, one thin layer at a time, from the bottom up."
+- Additive branch node 3: "Finished Bracket, Minimal Waste" — infobox: "Complex internal shapes, like the sensor pocket, print in one piece with very little wasted material."
+
+Edges: Start node branches into both the subtractive chain and the additive chain; each chain flows through its three nodes in order. Click directives required on every node per the interactivity rule (`click NodeId call showInfo("...")` style handlers).
+
+Color coding: Subtractive branch nodes shaded gray/silver (evoking metal removal), additive branch nodes shaded blue/teal (evoking printed plastic layers).
+
+Implementation: Mermaid flowchart syntax rendered client-side, with JavaScript click handlers registered on each node id to open a shared infobox panel below the diagram.
+</details>
+
+<h2 id="additive-manufacturing-and-3d-printing">Additive Manufacturing and 3D Printing</h2>
+<p><strong>Additive manufacturing</strong> is the broad family of manufacturing processes that build a physical object by adding material layer by layer from a digital 3D model, rather than removing it from a larger block. Several distinct technologies fall under this umbrella. Stereolithography (SLA) cures liquid resin with a laser, and Selective Laser Sintering (SLS) fuses powdered material layer by layer, both common in industrial and professional settings. The version most accessible to FTC teams, schools, and hobbyists is <strong>3D printing</strong>, specifically a process called Fused Deposition Modeling (FDM), which melts a plastic filament and extrudes it through a heated nozzle, tracing each layer before moving up to print the next one directly on top of it.</p>
+<p>Turning the Guide-Mount's finished CAD model into a physical part requires slicing software, a program that converts the 3D model into a set of printer instructions (G-code) and lets the team choose print settings that affect the final part's strength, weight, and print time. Two of the most important settings are <strong>layer height</strong>, the thickness of each printed layer, and <strong>infill percentage</strong>, how solid or hollow the interior of the part is filled with a repeating support pattern. Thinner layers and higher infill generally produce stronger, heavier, slower-to-print parts, while thicker layers and lower infill print faster and lighter but weaker. Explore how these two settings trade off against each other in the interactive tool below before your own team chooses settings for its first Guide-Mount print.</p>
+<h4 id="diagram-3d-print-settings-explorer">Diagram: 3D Print Settings Explorer</h4>
+<iframe src="../../sims/print-settings-explorer/main.html" width="100%" height="520px" scrolling="no"></iframe>
+
+<details markdown="1">
+<summary>3D Print Settings Explorer</summary>
+Type: microsim
+**sim-id:** print-settings-explorer<br/>
+**Library:** p5.js<br/>
+**Status:** Specified
+
+Purpose: Let students explore how layer height and infill percentage affect estimated part strength, weight, and print time for a 3D-printed bracket like the Guide-Mount.
+
+Bloom Taxonomy: Apply (L3)
+Bloom Taxonomy Verb: apply, predict, calculate
+
+Learning objective: Given target values for print time, weight, and strength, students will adjust layer height and infill percentage sliders to produce a print setting combination that satisfies a stated design constraint, applying the relationship between print settings and outcomes.
+
+Canvas layout:
+- Left side (60% width): A simplified cross-section illustration of the Guide-Mount bracket showing visible print layers (thicker or thinner based on the layer height slider) and an internal lattice pattern (denser or sparser based on the infill slider)
+- Right side (40% width): Two sliders and three live-updating output readouts
+
+Interactive controls:
+- Slider: Layer height, range 0.1mm to 0.3mm, step 0.05mm
+- Slider: Infill percentage, range 10% to 100%, step 5%
+- Button: "Try Guide-Mount Preset" loads the team's final chosen settings (0.2mm layer height, 35% infill)
+- Button: "Reset to Default"
+
+Default parameters: Layer height 0.2mm, infill 20%
+
+Data Visibility Requirements:
+  Stage 1 (defaults): Show estimated print time ("52 minutes"), estimated part weight ("14 grams"), and a qualitative strength rating bar ("Moderate") for the default settings
+  Stage 2 (learner moves infill slider up): Recalculate and display new print time, weight, and strength rating live, e.g. moving infill from 20% to 60% increases weight from 14g to roughly 24g, increases print time from 52 to roughly 75 minutes, and raises the strength bar from "Moderate" to "High"
+  Stage 3 (learner moves layer height slider up): Recalculate live, e.g. increasing layer height from 0.2mm to 0.3mm at fixed infill decreases print time by roughly 30% but lowers the strength rating one notch and visibly reduces the number of drawn layer lines in the cross-section
+  Final: Learner is challenged with a target readout ("Match: under 60 minutes print time AND at least 'High' strength") and must find a slider combination that satisfies both
+
+Interaction: Direct manipulation via sliders with immediate, continuous readout updates (no animation/particle effects); this is a parameter-exploration tool, not a step-through narrative
+
+Instructional Rationale: An Apply-level objective calling for students to find settings meeting a constraint is best served by direct parameter manipulation with instant, concrete numeric feedback, rather than animation, so students can form and test their own hypotheses about the relationship between print settings and outcomes.
+
+Implementation: p5.js canvas with two slider UI elements, a cross-section drawn as a stack of rectangles whose count and thickness respond to the layer height value, a dot-grid lattice pattern whose density responds to the infill value, and a simple formula-based estimate (not a physics simulation) driving the three output readouts.
+</details>
+
+<p>With print settings chosen, the team slices the final Guide-Mount model, sends the resulting file to the school's 3D printer, and roughly an hour later removes a finished bracket that bolts directly onto the StarterBot's existing channel holes. The distance sensor sits in its rigid pocket instead of a zip tie, and the ramp guides game pieces into the intake rollers instead of letting them bounce away. The part exists because the team walked the entire engineering design process end to end: a defined problem, clear constraints and criteria, a wide brainstorm narrowed by sketching, a cardboard prototype that became a printed one, two rounds of testing and iteration, a trade-off analysis that settled the final shape, and a notebook documenting every step along the way. The same cycle you just walked through for one bracket is exactly what real FTC teams repeat, part after part, all season long.</p>
+<p>??? note "Quick check: The Guide-Mount's Round 1 prototype only fed 6 of 10 game pieces cleanly into the rollers. Was this a wasted attempt, and which two concepts from this chapter describe what the team did next? Click to reveal the answer."
+    No, it was not wasted. Round 1 supplied the data needed for <strong>design testing</strong> to succeed, and the team used that data to perform <strong>design iteration</strong>, revising the ramp angle and adding a sensor pocket before testing again. A "failed" prototype that produces useful test data is a normal, expected part of the engineering design process, not a sign to abandon the project.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

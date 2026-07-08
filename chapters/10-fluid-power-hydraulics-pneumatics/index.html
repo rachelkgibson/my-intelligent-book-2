@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>10. Fluid Power: Hydraulics and Pneumatics - My Docs</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../course-description/" class="nav-link">Course Description</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Chapters</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../" class="dropdown-item">List of Chapters</a>
+</li>
+                                    
+<li>
+    <a href="../01-identifying-kit-parts-building-starterbot/" class="dropdown-item">1. Identifying Kit Parts and Building Your StarterBot</a>
+</li>
+                                    
+<li>
+    <a href="../02-intro-robotics-systems/" class="dropdown-item">2. Introduction to Robotics and Systems</a>
+</li>
+                                    
+<li>
+    <a href="../03-programming-fundamentals/" class="dropdown-item">3. Programming Fundamentals</a>
+</li>
+                                    
+<li>
+    <a href="../04-programming-your-robot/" class="dropdown-item">4. Programming Your Robot</a>
+</li>
+                                    
+<li>
+    <a href="../05-designing-building-custom-parts/" class="dropdown-item">5. Designing and Building Custom Parts</a>
+</li>
+                                    
+<li>
+    <a href="../06-electrical-fundamentals/" class="dropdown-item">6. Electrical Fundamentals</a>
+</li>
+                                    
+<li>
+    <a href="../07-electronic-components-circuit-design/" class="dropdown-item">7. Electronic Components and Circuit Design</a>
+</li>
+                                    
+<li>
+    <a href="../08-sensors-and-measurement/" class="dropdown-item">8. Sensors and Measurement</a>
+</li>
+                                    
+<li>
+    <a href="../09-mechanical-systems-simple-machines/" class="dropdown-item">9. Mechanical Systems and Simple Machines</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">10. Fluid Power: Hydraulics and Pneumatics</a>
+</li>
+                                    
+<li>
+    <a href="../11-control-systems-feedback-loops/" class="dropdown-item">11. Control Systems and Feedback Loops</a>
+</li>
+                                    
+<li>
+    <a href="../12-digital-logic-computing-fundamentals/" class="dropdown-item">12. Digital Logic and Computing Fundamentals</a>
+</li>
+                                    
+<li>
+    <a href="../13-advanced-robot-programming/" class="dropdown-item">13. Advanced Robot Programming</a>
+</li>
+                                    
+<li>
+    <a href="../14-integrating-testing-maintaining-robotic-system/" class="dropdown-item">14. Integrating, Testing, and Maintaining a Robotic System</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Learning Graph</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../learning-graph/" class="dropdown-item">Introduction</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/course-description-assessment/" class="dropdown-item">Course Description Assessment</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/concept-list/" class="dropdown-item">Concept Enumeration</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/quality-metrics/" class="dropdown-item">Graph Quality Analysis</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/concept-taxonomy/" class="dropdown-item">Concept Taxonomy</a>
+</li>
+                                    
+<li>
+    <a href="../../learning-graph/taxonomy-distribution/" class="dropdown-item">Taxonomy Distribution Report</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">MicroSims</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../sims/graph-viewer/" class="dropdown-item">Learning Graph Viewer</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../09-mechanical-systems-simple-machines/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../11-control-systems-feedback-loops/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#fluid-power-hydraulics-and-pneumatics" class="nav-link">Fluid Power: Hydraulics and Pneumatics</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#summary" class="nav-link">Summary</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#concepts-covered" class="nav-link">Concepts Covered</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#prerequisites" class="nav-link">Prerequisites</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#beyond-gears-and-chains-what-is-fluid-power" class="nav-link">Beyond Gears and Chains: What Is Fluid Power?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#two-kinds-of-fluid-power-hydraulics-and-pneumatics" class="nav-link">Two Kinds of Fluid Power: Hydraulics and Pneumatics</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#fluid-pressure-the-physics-behind-the-push" class="nav-link">Fluid Pressure: The Physics Behind the Push</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#the-core-components-of-a-fluid-power-system" class="nav-link">The Core Components of a Fluid Power System</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#reading-a-fluid-power-diagram" class="nav-link">Reading a Fluid Power Diagram</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#fluid-power-safety" class="nav-link">Fluid Power Safety</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#fluid-power-applications" class="nav-link">Fluid Power Applications</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#fluid-power-system-design" class="nav-link">Fluid Power System Design</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="fluid-power-hydraulics-and-pneumatics">Fluid Power: Hydraulics and Pneumatics</h1>
+<h2 id="summary">Summary</h2>
+<p>Beyond gears and motors, some robotic systems use fluid power. This chapter introduces hydraulics and pneumatics, fluid pressure, cylinders, valves, pumps, and compressors, along with fluid power safety and how to read a fluid power diagram. Students finish by designing a simple fluid power system for a given application.</p>
+<h2 id="concepts-covered">Concepts Covered</h2>
+<p>This chapter covers the following 12 concepts from the learning graph:</p>
+<ol>
+<li>Fluid Power</li>
+<li>Hydraulics</li>
+<li>Pneumatics</li>
+<li>Fluid Pressure</li>
+<li>Cylinder</li>
+<li>Valve</li>
+<li>Pump</li>
+<li>Compressor</li>
+<li>Fluid Power Safety</li>
+<li>Fluid Power Applications</li>
+<li>Fluid Power Diagram</li>
+<li>Fluid Power System Design</li>
+</ol>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>This chapter builds on concepts from:</p>
+<ul>
+<li><a href="../09-mechanical-systems-simple-machines/">Chapter 9: Mechanical Systems and Simple Machines</a></li>
+</ul>
+<hr />
+<h2 id="beyond-gears-and-chains-what-is-fluid-power">Beyond Gears and Chains: What Is Fluid Power?</h2>
+<p>When you assembled the StarterBot in Chapter 1, you built a drivetrain that transmits force through solid parts: a motor shaft, sprockets, a chain loop, and gears, each part passing motion mechanically to the next one in line. Chapter 9 explained the physics behind that transmission—torque, gear ratio, mechanical advantage—all of it built on rigid components pushing or pulling directly against each other. But your StarterBot's gears and chains are not the only way a machine can move. An excavator digs with an arm far stronger than any chain drive could survive without breaking. A factory robot welds car frames with force delivered not by a spinning motor shaft, but by a sealed tube of pressurized liquid. Beyond your StarterBot's gears and chains, some robots and machines use a completely different way to move: fluid power.</p>
+<p><strong>Fluid power</strong> is the transmission and control of force and motion through a pressurized fluid—either a liquid or a gas—confined within pipes, hoses, and cylinders, rather than through solid mechanical parts like gears, shafts, and chains. Instead of one rigid part pushing directly on another, fluid power uses a fluid as the "middleman": a pump or compressor pressurizes the fluid at one end of a system, and that pressure travels through hoses to do useful work—lifting, gripping, pushing, or clamping—at the other end. This chapter takes fluid power apart the same way Chapter 9 took apart mechanical systems: piece by piece, starting with the big idea and ending with a complete system you design yourself.</p>
+<p>Fluid power shows up across a huge range of machines and industries, often doing jobs that gears and chains alone cannot handle:</p>
+<ul>
+<li>Hydraulic excavator arms that lift several tons of soil and rock</li>
+<li>Aircraft landing gear that must lift and lower reliably under extreme loads</li>
+<li>Pneumatic nail guns and assembly-line actuators that fire with a quick burst of compressed air</li>
+<li>Robotic grippers on a factory floor that must open and close with carefully controlled, gentle force</li>
+<li>Vehicle lifts in an auto repair shop that raise an entire car on a single cylinder</li>
+</ul>
+<h2 id="two-kinds-of-fluid-power-hydraulics-and-pneumatics">Two Kinds of Fluid Power: Hydraulics and Pneumatics</h2>
+<p>Fluid power splits into two branches, distinguished by which kind of fluid actually does the work. <strong>Hydraulics</strong> is the branch of fluid power that uses a liquid—almost always a specially formulated oil—as the working fluid. Because liquids are essentially incompressible (they strongly resist being squeezed into a smaller volume), a hydraulic system can transmit very large forces with very little wasted motion, which is why hydraulics dominates in heavy equipment like excavators, log splitters, and industrial presses.</p>
+<p><strong>Pneumatics</strong> is the branch of fluid power that uses a gas—almost always ordinary compressed air—as the working fluid. Because gases are compressible, pneumatic systems respond faster and move with a springier, less rigid feel than hydraulics, but they cannot match hydraulics for raw force. Pneumatics is the usual choice for factory automation, pick-and-place robot arms, and pneumatic tools, where speed, cleanliness (no oil to leak), and lower cost matter more than maximum force.</p>
+<p>The two branches part ways on several concrete traits, not just "liquid versus gas":</p>
+<ul>
+<li><strong>Compressibility</strong> — hydraulic oil resists compression, so motion is precise and rigid; compressed air springs slightly, so motion is less rigid</li>
+<li><strong>Force</strong> — hydraulics reaches far higher forces for a given cylinder size</li>
+<li><strong>Response speed</strong> — pneumatics reacts and moves faster, since compressed air is already stored under pressure and ready to release</li>
+<li><strong>Mess and maintenance</strong> — a hydraulic leak stains and contaminates; a pneumatic leak just hisses harmlessly into the air</li>
+</ul>
+<p>Choosing between hydraulics and pneumatics is one of the first decisions an engineer makes when designing a fluid power system, and the right choice depends on trade-offs that go beyond just "liquid versus gas." The interactive comparison below lets you explore those trade-offs directly by sorting real applications into the correct category.</p>
+<h4 id="diagram-hydraulics-vs-pneumatics-application-explorer">Diagram: Hydraulics vs. Pneumatics Application Explorer</h4>
+<iframe src="../../sims/hydraulics-vs-pneumatics-explorer/main.html" width="100%" height="540px" scrolling="no"></iframe>
+
+<details markdown="1">
+<summary>Hydraulics vs. Pneumatics Application Explorer</summary>
+Type: infographic
+**sim-id:** hydraulics-vs-pneumatics-explorer<br/>
+**Library:** p5.js<br/>
+**Status:** Specified
+
+Bloom Taxonomy: Understand<br/>
+Bloom Taxonomy Verb: compare, contrast, classify
+
+Learning objective: Given a real-world machine, students will classify it as hydraulic or pneumatic and explain the trade-off (force, speed, cleanliness, cost) that drove the engineering choice.
+
+Purpose: Reinforce the hydraulics-versus-pneumatics distinction from the text by letting students click through real-world examples and see, side by side, why one machine uses liquid and another uses gas.
+
+Layout: A left/right split screen. The left panel is labeled "Hydraulics" with an oil-drop icon; the right panel is labeled "Pneumatics" with an air-bubble icon. Below the split, a row of five clickable application icons: excavator, car lift, pneumatic nail gun, factory pick-and-place arm, log splitter.
+
+Interactive elements:
+- Clicking an application icon slides it into the correct panel (hydraulics or pneumatics) and reveals a short caption explaining which fluid it uses and why
+- A toggle switch at the top lets students flip between "Force," "Speed," "Cleanliness," and "Cost" comparison views, each of which relabels the two panels with a simple low/medium/high indicator instead of captions
+- Hovering any application icon, without clicking, shows just its name as a tooltip
+
+Data to display per application:
+- Excavator: Hydraulics; high force needed to move tons of soil and rock; oil's incompressibility transmits that force efficiently
+- Car lift: Hydraulics; must hold a heavy, stationary load safely with no drift over time
+- Pneumatic nail gun: Pneumatics; needs a very fast burst of force rather than sustained heavy force; compressed air responds quickly
+- Factory pick-and-place arm: Pneumatics; needs fast, repeatable, clean motion with no oil leaks near products
+- Log splitter: Hydraulics; needs sustained high force delivered over a slow, controlled stroke
+
+Comparison view data (low/medium/high indicators):
+- Force capability: Hydraulics = high, Pneumatics = medium
+- Speed of response: Hydraulics = medium, Pneumatics = high
+- Cleanliness (leak risk): Hydraulics = lower (leaked oil stains and contaminates), Pneumatics = higher (leaked air is harmless)
+- System cost/complexity: Hydraulics = higher (pumps, seals, reservoirs, oil disposal), Pneumatics = lower (simpler components, air is free)
+
+Color coding: Hydraulics panel in amber/gold (suggesting oil), Pneumatics panel in sky blue (suggesting air), consistent with later diagrams in this chapter.
+
+Responsive behavior: Split panels stack vertically on narrow screens; the application icon row wraps to two rows below 500px width.
+
+Implementation: p5.js canvas with two panel regions and five clickable icon sprites; the comparison-view toggle re-renders panel content from a small internal data table on each state change.
+</details>
+
+<h2 id="fluid-pressure-the-physics-behind-the-push">Fluid Pressure: The Physics Behind the Push</h2>
+<p>Every fluid power system, hydraulic or pneumatic, works because of a single physical quantity that connects force to the fluid carrying it.</p>
+<p><strong>Fluid pressure</strong> is the force a fluid exerts per unit of area on the walls of its container or on any surface it contacts, calculated as:</p>
+<p>\[ P = \frac{F}{A} \]</p>
+<p>where \( P \) is pressure, \( F \) is force, and \( A \) is the area over which that force is spread. Pressure is commonly measured in pounds per square inch (psi) or pascals (Pa), and the formula explains why a small area under a given force—like the tip of a syringe—produces very high pressure, while the same force spread over a large area produces much less.</p>
+<p>Fluid power systems exploit a principle first described by the 17th-century physicist Blaise Pascal. <strong>Pascal's principle</strong> states that pressure applied anywhere to a confined, incompressible fluid is transmitted equally, undiminished, in every direction throughout that fluid. This single idea explains how hydraulics multiplies force: if a small piston pushes on a confined fluid at a certain pressure, and that same pressure pushes back against a much larger piston elsewhere in the system, the larger piston experiences a much larger force—because force equals pressure multiplied by area, and the pressure stays the same while the area grows.</p>
+<p>\[ F_2 = P \times A_2 = \frac{F_1}{A_1} \times A_2 \]</p>
+<p>This is the same trade-off Chapter 9 introduced for simple machines: nothing is created for free. The large piston gains force, but it moves a shorter distance than the small piston travels, since the work done (force multiplied by distance) stays constant apart from losses to friction. A hydraulic jack that lets one person lift a car is not creating energy out of nothing; it is trading a long push on a small handle for a short, powerful lift under the vehicle.</p>
+<p>The MicroSim below lets you test that force-distance trade-off directly by adjusting piston sizes yourself.</p>
+<h4 id="diagram-pascals-principle-force-multiplier">Diagram: Pascal's Principle Force Multiplier</h4>
+<iframe src="../../sims/pascal-principle-force-multiplier/main.html" width="100%" height="560px" scrolling="no"></iframe>
+
+<details markdown="1">
+<summary>Pascal's Principle Force Multiplier</summary>
+Type: microsim
+**sim-id:** pascal-principle-force-multiplier<br/>
+**Library:** p5.js<br/>
+**Status:** Specified
+
+Bloom Taxonomy: Apply<br/>
+Bloom Taxonomy Verb: calculate, demonstrate, apply
+
+Learning objective: Given an input piston area, an output piston area, and an input force, students will calculate the resulting output force and output distance, and observe the force-distance trade-off predicted by Pascal's principle.
+
+Canvas layout:
+- Left side (450px): drawing of two connected cylinders of different diameters, joined by a fluid-filled pipe
+- Right side (250px): control panel and numeric readout panel
+
+Visual elements:
+- A small input piston with a downward force arrow, labeled with its area
+- A large output piston with an upward force arrow, labeled with its area
+- Fluid shown as a blue-filled pipe and both cylinder chambers
+- A pressure readout showing the same pressure value at both pistons
+- Distance markers showing how far each piston travels when the input piston is pushed
+
+Interactive controls:
+- Slider: Input piston area A1 (1-10 square inches)
+- Slider: Output piston area A2 (1-50 square inches)
+- Slider: Input force F1 (10-200 lb)
+- Button: "Push" animates the input piston moving down a fixed distance while the output piston rises proportionally less
+- Button: "Reset"
+
+Default parameters:
+- A1 = 2 sq in
+- A2 = 20 sq in
+- F1 = 50 lb (a 10:1 area ratio)
+
+Data Visibility Requirements:
+  Stage 1: Show the pressure calculation \\( P = F_1 / A_1 \\) with the actual numbers substituted
+  Stage 2: Show the output force calculation \\( F_2 = P \\times A_2 \\) with the actual numbers substituted
+  Stage 3: Show the output distance as input distance multiplied by \\( A_1 / A_2 \\)
+  Final: Show a side-by-side readout comparing input force/distance to output force/distance, highlighting that output force is larger while output distance is smaller
+
+Instructional Rationale: An Apply-level parameter-exploration pattern is appropriate because the learning objective requires students to calculate results for different area ratios and predict outcomes, not merely watch one fixed demonstration. Letting students set their own piston areas ties the abstract Pascal's-principle formula directly to a concrete, adjustable machine.
+
+Implementation: p5.js canvas with two piston shapes whose radii scale with the selected areas; piston travel computed from the area ratio each frame; pressure, force, and distance readouts recalculated whenever a slider changes.
+</details>
+
+<h2 id="the-core-components-of-a-fluid-power-system">The Core Components of a Fluid Power System</h2>
+<p>Four kinds of hardware appear in almost every fluid power system, hydraulic or pneumatic: the cylinder, the valve, and either a pump or a compressor to supply pressure.</p>
+<h3 id="cylinder">Cylinder</h3>
+<p>A <strong>cylinder</strong> is the fluid power component that converts fluid pressure back into a straight-line mechanical force and motion, using a piston that slides inside a sealed tube as pressurized fluid pushes against it. Cylinders come in two main types:</p>
+<ul>
+<li>A <strong>single-acting cylinder</strong> receives pressurized fluid on only one side of the piston, extending under fluid pressure and retracting under a spring or the load's own weight</li>
+<li>A <strong>double-acting cylinder</strong> receives pressurized fluid on either side of the piston, giving it powered extension and powered retraction</li>
+</ul>
+<p>An excavator's arm and bucket cylinders are double-acting, since the machine must push soil forward and pull the bucket back with equal control in both directions.</p>
+<h3 id="valve">Valve</h3>
+<p>A <strong>valve</strong> is the fluid power component that controls the direction, flow rate, or pressure of the fluid moving through a system, acting as the traffic control for every hydraulic or pneumatic circuit. Three valve types cover most fluid power systems:</p>
+<ol>
+<li>A <strong>directional control valve</strong> routes fluid to one side of a cylinder or the other, determining whether it extends or retracts</li>
+<li>A <strong>flow control valve</strong> restricts how quickly fluid can pass, controlling the speed of a cylinder's motion</li>
+<li>A <strong>pressure relief valve</strong> opens automatically once pressure exceeds a safe limit, protecting the rest of the system from damage</li>
+</ol>
+<p>Without a directional control valve, a cylinder could only move in whichever direction its plumbing happened to favor. Without a pressure relief valve, a blocked or overloaded system could rupture a hose or burst a seal instead of simply stopping.</p>
+<h3 id="pump">Pump</h3>
+<p>A <strong>pump</strong> is the component that supplies a hydraulic system with pressurized fluid, converting the mechanical energy of a spinning motor shaft into fluid flow. A pump does not, by itself, create pressure—pressure only builds once that flow meets resistance, such as a valve holding fluid back or a cylinder pushing against a load.</p>
+<p>!!! tip
+    Remember the pump as the source of <em>motion</em>, not the source of <em>pressure</em>. Pressure only appears once flow meets resistance somewhere downstream—the same way water only builds pressure in a garden hose once you pinch the nozzle closed.</p>
+<h3 id="compressor">Compressor</h3>
+<p>A <strong>compressor</strong> is the pneumatic equivalent of a pump: it supplies a pneumatic system with pressurized gas, typically by mechanically squeezing air into a smaller volume and storing it in a tank until needed. Because a compressor must physically shrink the volume of a gas rather than simply move an already-incompressible liquid, compressors generally require more energy per unit of pressure than an equivalent hydraulic pump—one more trade-off behind the hydraulics-versus-pneumatics comparison covered earlier in this chapter.</p>
+<p>The table below reinforces how a pump and a compressor differ, now that both have been defined.</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Fluid Moved</th>
+<th>Energy Source</th>
+<th>Typical Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pump</td>
+<td>Liquid (hydraulic oil)</td>
+<td>Electric motor or engine-driven shaft</td>
+<td>Continuous fluid flow at system pressure</td>
+</tr>
+<tr>
+<td>Compressor</td>
+<td>Gas (compressed air)</td>
+<td>Electric motor or engine-driven shaft</td>
+<td>Compressed air stored in a tank at a set pressure</td>
+</tr>
+</tbody>
+</table>
+<h2 id="reading-a-fluid-power-diagram">Reading a Fluid Power Diagram</h2>
+<p>Engineers rarely describe a hydraulic or pneumatic system in prose; instead, they draw it using a standardized shorthand that any trained reader can interpret at a glance.</p>
+<p>A <strong>fluid power diagram</strong> is a schematic drawing that represents a hydraulic or pneumatic circuit using standardized symbols for each component—pumps, compressors, valves, cylinders, and reservoirs—connected by lines representing the hoses or pipes that carry pressurized fluid between them. Just as an electrical schematic uses standard symbols instead of realistic pictures of wires and resistors, a fluid power diagram uses simplified symbols so that any trained engineer, anywhere, can read the circuit correctly without seeing the physical machine.</p>
+<p>Being able to read one of these diagrams is the fastest way to see how the components covered so far actually connect into a working system. The interactive circuit below lets you click each symbol to reveal what it represents and trace how fluid flows through it.</p>
+<h4 id="diagram-basic-hydraulic-circuit-diagram">Diagram: Basic Hydraulic Circuit Diagram</h4>
+<iframe src="../../sims/basic-hydraulic-circuit-diagram/main.html" width="100%" height="520px" scrolling="no"></iframe>
+
+<details markdown="1">
+<summary>Basic Hydraulic Circuit Diagram</summary>
+Type: diagram
+**sim-id:** basic-hydraulic-circuit-diagram<br/>
+**Library:** vis-network<br/>
+**Status:** Specified
+
+Bloom Taxonomy: Understand<br/>
+Bloom Taxonomy Verb: explain, interpret, summarize
+
+Learning objective: Given a labeled hydraulic circuit diagram, students will explain the function of the pump, valve, cylinder, and reservoir, and trace the path fluid takes as the cylinder extends and retracts.
+
+Purpose: Reinforce the vocabulary from this chapter (pump, valve, cylinder, fluid pressure) by letting students click each symbol in a real circuit and see its definition and role, rather than memorizing symbols in isolation.
+
+Node types to show:
+- Reservoir (tank symbol) — holds unpressurized fluid, gray
+- Pump (circle with drive-shaft symbol) — pressurizes fluid drawn from the reservoir, gold
+- Directional control valve (rectangle with sliding sections) — routes flow to either side of the cylinder, blue
+- Pressure relief valve (small spring-loaded symbol) — diverts flow back to the reservoir if pressure exceeds a set limit, red
+- Cylinder (piston inside a rectangle) — converts fluid pressure into a pushing or pulling motion, green
+
+Edges (directed, with arrowheads showing flow direction):
+- Reservoir → Pump: fluid drawn in
+- Pump → Directional Control Valve: pressurized fluid supply line
+- Directional Control Valve → Cylinder (extend side): fluid pushes piston out
+- Cylinder (retract side) → Directional Control Valve → Reservoir: return line
+- Pump supply line → Pressure Relief Valve → Reservoir: safety bypass line, shown as a dashed edge
+
+Interactive features:
+- Clicking any node opens an infobox with the component's name, its definition from this chapter, and its function in this specific circuit
+- Clicking any edge opens an infobox describing what is flowing through that line and in which direction
+- Hovering a node highlights every edge connected to it, showing the full flow path at a glance
+- A "Toggle Valve Position" button switches the directional control valve between "Extend" and "Retract," which re-highlights the active flow path (extend line lit, retract line dimmed, or vice versa) and animates small moving dots along the active path to represent flowing fluid
+- Standard vis-network zoom (mouse wheel) and pan (click-and-drag background) are enabled
+
+Layout: Hierarchical, left to right, following the physical flow order: Reservoir, Pump, Directional Control Valve, Cylinder, with the Pressure Relief Valve branching off between the Pump and the Directional Control Valve.
+
+Legend: A fixed key in the corner explaining node colors (gray = reservoir, gold = pump, blue = directional control valve, red = pressure relief valve, green = cylinder) and edge styles (solid = active supply/return line, dashed = safety bypass line).
+
+Implementation: vis-network with a small fixed dataset of five nodes and five edges; click and hover event listeners attached to nodes and edges; animated dots along the active edge implemented by updating edge dash offsets or overlay markers on a timer while "Extend" or "Retract" is active.
+</details>
+
+<h2 id="fluid-power-safety">Fluid Power Safety</h2>
+<p>Fluid power systems store enormous energy in a small, pressurized space, and that stored energy makes them uniquely dangerous when handled carelessly.</p>
+<p><strong>Fluid power safety</strong> is the set of practices and precautions required to work safely around pressurized hydraulic and pneumatic systems, addressing hazards that are easy to underestimate because the danger is invisible until something fails. Every rule below exists because someone, at some point, learned the hazard the hard way.</p>
+<ul>
+<li>Never check for a hydraulic leak with a bare hand—a pinhole leak can inject fluid under the skin at pressures high enough to cause serious injury, even though the leak itself may look like a harmless mist</li>
+<li>Always relieve stored pressure before disconnecting any hydraulic or pneumatic line, since a pressurized line can whip violently or spray fluid when opened</li>
+<li>Wear eye and hearing protection around pneumatic systems, since compressed air release is loud enough to damage hearing and any escaping debris moves fast enough to injure eyes</li>
+<li>Inspect hoses and fittings regularly for wear or bulging, since a hose that fails under pressure can fail suddenly and violently</li>
+<li>Never exceed a component's rated pressure, and never bypass or disable a pressure relief valve to "get more force" out of a system</li>
+</ul>
+<p>!!! danger
+    A high-pressure fluid leak that is invisible or barely visible to the eye can inject hydraulic oil under the skin in a fraction of a second. This is a genuine medical emergency requiring immediate surgery, even when the injury looks minor from the outside. Treat every pressurized hydraulic line as if it could cause this kind of injury, and never search for a leak with your bare hand.</p>
+<h2 id="fluid-power-applications">Fluid Power Applications</h2>
+<p><strong>Fluid power applications</strong> are the real-world tasks and industries where hydraulic or pneumatic systems are chosen over a purely mechanical, gear-and-shaft solution—usually because the task demands more force, more precise control, or a lighter and more compact actuator than gears alone can provide.</p>
+<p>The table below gathers several applications introduced earlier in this chapter alongside a few new ones, connecting each back to the fluid power type and reasoning behind the engineering choice.</p>
+<table>
+<thead>
+<tr>
+<th>Application</th>
+<th>Fluid Power Type</th>
+<th>Why Fluid Power</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Excavator arm and bucket</td>
+<td>Hydraulics</td>
+<td>Extremely high force delivered through a compact, weight-efficient cylinder</td>
+</tr>
+<tr>
+<td>Aircraft landing gear and flight control surfaces</td>
+<td>Hydraulics</td>
+<td>Reliable, high-force actuation with fast response, tolerant of extreme conditions</td>
+</tr>
+<tr>
+<td>Automotive lift or hydraulic jack</td>
+<td>Hydraulics</td>
+<td>Safely holds a heavy, stationary load with minimal drift over time</td>
+</tr>
+<tr>
+<td>Factory pick-and-place robot arm</td>
+<td>Pneumatics</td>
+<td>Fast, clean, repeatable motion without oil-contamination risk near products</td>
+</tr>
+<tr>
+<td>Pneumatic nail gun or impact tool</td>
+<td>Pneumatics</td>
+<td>Rapid burst of force delivered from a lightweight, portable tool</td>
+</tr>
+<tr>
+<td>Dump truck bed lift</td>
+<td>Hydraulics</td>
+<td>High force delivered through a simple, few-part cylinder system</td>
+</tr>
+</tbody>
+</table>
+<h2 id="fluid-power-system-design">Fluid Power System Design</h2>
+<p><strong>Fluid power system design</strong> is the engineering process of selecting, sizing, and arranging a pump or compressor, valves, and cylinders into a complete system that reliably performs a specific task, while respecting the safety practices described above. It is the capstone concept of this chapter because, like mechanical design in Chapter 9, it is not a single component you can point to—it is the process that ties every other concept in this chapter together into one working machine.</p>
+<p>Good fluid power system design follows a recognizable pattern, whether the task is a small classroom project or a full-scale industrial machine:</p>
+<ol>
+<li>Define the task precisely (what needs to move, how far, how fast, and against how much resistance)</li>
+<li>Choose hydraulics or pneumatics based on the force, speed, cleanliness, and cost trade-offs covered earlier in this chapter</li>
+<li>Calculate the required cylinder force and select a piston area and system pressure that deliver it, using \( F = P \times A \)</li>
+<li>Select a pump or compressor capable of supplying the needed pressure and flow rate</li>
+<li>Choose directional control, flow control, and pressure relief valves appropriate to the task</li>
+<li>Draw the complete circuit as a fluid power diagram and trace the flow path before building anything</li>
+<li>Apply fluid power safety practices throughout the build: rated components, a working relief valve, and appropriate protective equipment</li>
+</ol>
+<p>Consider a simple worked example: designing a pneumatic system to raise a lightweight parking-lot gate arm that requires 40 lb of force to lift. If the shop's compressed air supply provides 80 psi, the required piston area follows directly from \( A = F / P \), giving \( 40 \div 80 = 0.5 \) square inches—a small, single-acting cylinder would be more than sufficient, since gravity alone can lower such a lightweight arm once the air pressure is released through the directional control valve. A hydraulic system would work too, but it would be needless complexity and cost for a task this light, which is exactly the kind of judgment call step 2 above is meant to force every time.</p>
+<p>??? note "Check yourself: A cylinder must produce 200 lb of force, and the available system pressure is 100 psi. What minimum piston area is required, and would hydraulics or pneumatics more likely supply that pressure? — Click to expand"
+    Using \( A = F / P \), the required area is \( 200 \div 100 = 2 \) square inches. A system pressure of 100 psi is well within the normal working range for pneumatics, but 200 lb of force from only a 2-square-inch piston is also easily within reach of hydraulics—so either could work at this pressure and force level, and the final choice would depend on other factors like required speed, cleanliness, and cost, exactly as the Hydraulics vs. Pneumatics Application Explorer illustrated earlier in this chapter.</p>
+<p>With fluid power now understood as a complete alternative to the gears and chains covered in Chapter 9, you have two fundamentally different toolkits for transmitting force in a robot: rigid mechanical parts, and pressurized fluid confined in cylinders, valves, pumps, and compressors. Every future mechanism you design will start with the same first question this chapter raised: should this motion be produced mechanically, or with fluid power?</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

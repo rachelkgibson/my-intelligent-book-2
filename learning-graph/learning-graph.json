@@ -1,0 +1,2203 @@
+{
+  "metadata": {
+    "title": "Technology of Robotic Design",
+    "description": "A high school course on robotic systems and their applications, covering the engineering design process, programming, electrical and mechanical concepts, and control systems through hands-on design, build, and program activities.",
+    "creator": "Rachel Gibson",
+    "date": "2026-07-07",
+    "version": "1.0",
+    "format": "Learning Graph JSON v1.0",
+    "schema": "https://raw.githubusercontent.com/dmccreary/learning-graphs/refs/heads/main/src/schema/learning-graph-schema.json",
+    "license": "CC BY-NC-SA 4.0 DEED"
+  },
+  "groups": {
+    "KIT": {
+      "classifierName": "Identifying Kit Parts and Building Your StarterBot",
+      "color": "SteelBlue",
+      "font": {
+        "color": "white"
+      }
+    },
+    "FOUND": {
+      "classifierName": "Introduction to Robotics and Systems",
+      "color": "DarkSlateBlue",
+      "font": {
+        "color": "white"
+      }
+    },
+    "PROG": {
+      "classifierName": "Programming Fundamentals",
+      "color": "DarkGreen",
+      "font": {
+        "color": "white"
+      }
+    },
+    "RBOT": {
+      "classifierName": "Programming Your Robot",
+      "color": "LimeGreen",
+      "font": {
+        "color": "black"
+      }
+    },
+    "EDP": {
+      "classifierName": "Designing and Building Custom Parts",
+      "color": "Gold",
+      "font": {
+        "color": "black"
+      }
+    },
+    "ELEC": {
+      "classifierName": "Electrical Fundamentals",
+      "color": "DarkGoldenrod",
+      "font": {
+        "color": "white"
+      }
+    },
+    "CIRC": {
+      "classifierName": "Electronic Components and Circuits",
+      "color": "Khaki",
+      "font": {
+        "color": "black"
+      }
+    },
+    "SENS": {
+      "classifierName": "Sensors and Measurement",
+      "color": "Teal",
+      "font": {
+        "color": "white"
+      }
+    },
+    "MECH": {
+      "classifierName": "Mechanical Systems",
+      "color": "DodgerBlue",
+      "font": {
+        "color": "white"
+      }
+    },
+    "FLUID": {
+      "classifierName": "Fluid Power Systems",
+      "color": "LightSkyBlue",
+      "font": {
+        "color": "black"
+      }
+    },
+    "CTRL": {
+      "classifierName": "Control Systems and Feedback",
+      "color": "MediumPurple",
+      "font": {
+        "color": "white"
+      }
+    },
+    "DIGI": {
+      "classifierName": "Digital Logic and Computing",
+      "color": "Indigo",
+      "font": {
+        "color": "white"
+      }
+    },
+    "RBTP": {
+      "classifierName": "Advanced Robot Programming",
+      "color": "DarkOrchid",
+      "font": {
+        "color": "white"
+      }
+    },
+    "BUILD": {
+      "classifierName": "Integrating, Testing, and Maintaining a Complete Robotic System",
+      "color": "Crimson",
+      "font": {
+        "color": "white"
+      }
+    }
+  },
+  "nodes": [
+    {
+      "id": 1,
+      "label": "Robotics",
+      "group": "FOUND"
+    },
+    {
+      "id": 2,
+      "label": "Automation",
+      "group": "FOUND",
+      "shape": "box"
+    },
+    {
+      "id": 3,
+      "label": "Control System",
+      "group": "FOUND",
+      "shape": "box"
+    },
+    {
+      "id": 4,
+      "label": "Robotics History",
+      "group": "FOUND"
+    },
+    {
+      "id": 5,
+      "label": "Robotics Careers",
+      "group": "FOUND"
+    },
+    {
+      "id": 6,
+      "label": "Universal Systems Model",
+      "group": "FOUND"
+    },
+    {
+      "id": 7,
+      "label": "System Input",
+      "group": "FOUND"
+    },
+    {
+      "id": 8,
+      "label": "System Process",
+      "group": "FOUND"
+    },
+    {
+      "id": 9,
+      "label": "System Output",
+      "group": "FOUND"
+    },
+    {
+      "id": 10,
+      "label": "System Feedback",
+      "group": "FOUND"
+    },
+    {
+      "id": 11,
+      "label": "Robot Definition",
+      "group": "FOUND"
+    },
+    {
+      "id": 12,
+      "label": "Types Of Robots",
+      "group": "FOUND"
+    },
+    {
+      "id": 13,
+      "label": "Industrial Robots",
+      "group": "FOUND"
+    },
+    {
+      "id": 14,
+      "label": "Mobile Robots",
+      "group": "FOUND"
+    },
+    {
+      "id": 15,
+      "label": "Humanoid Robots",
+      "group": "FOUND"
+    },
+    {
+      "id": 16,
+      "label": "Robotics Applications",
+      "group": "FOUND"
+    },
+    {
+      "id": 17,
+      "label": "Robotics Ethics",
+      "group": "FOUND"
+    },
+    {
+      "id": 18,
+      "label": "Engineering Design Process",
+      "group": "EDP",
+      "shape": "box"
+    },
+    {
+      "id": 19,
+      "label": "Problem Definition",
+      "group": "EDP"
+    },
+    {
+      "id": 20,
+      "label": "Design Constraints",
+      "group": "EDP"
+    },
+    {
+      "id": 21,
+      "label": "Design Criteria",
+      "group": "EDP"
+    },
+    {
+      "id": 22,
+      "label": "Brainstorming",
+      "group": "EDP"
+    },
+    {
+      "id": 23,
+      "label": "Concept Sketching",
+      "group": "EDP"
+    },
+    {
+      "id": 24,
+      "label": "Prototyping",
+      "group": "EDP"
+    },
+    {
+      "id": 25,
+      "label": "Design Iteration",
+      "group": "EDP"
+    },
+    {
+      "id": 26,
+      "label": "Design Testing",
+      "group": "EDP"
+    },
+    {
+      "id": 27,
+      "label": "Design Documentation",
+      "group": "EDP"
+    },
+    {
+      "id": 28,
+      "label": "Trade-Off Analysis",
+      "group": "EDP"
+    },
+    {
+      "id": 29,
+      "label": "Reverse Engineering",
+      "group": "EDP"
+    },
+    {
+      "id": 30,
+      "label": "Design Specifications",
+      "group": "EDP"
+    },
+    {
+      "id": 31,
+      "label": "Bill Of Materials",
+      "group": "EDP"
+    },
+    {
+      "id": 32,
+      "label": "Engineering Notebook",
+      "group": "EDP"
+    },
+    {
+      "id": 33,
+      "label": "Team-Based Design",
+      "group": "EDP"
+    },
+    {
+      "id": 34,
+      "label": "Electricity",
+      "group": "ELEC",
+      "shape": "box"
+    },
+    {
+      "id": 35,
+      "label": "Voltage",
+      "group": "ELEC"
+    },
+    {
+      "id": 36,
+      "label": "Current",
+      "group": "ELEC"
+    },
+    {
+      "id": 37,
+      "label": "Resistance",
+      "group": "ELEC"
+    },
+    {
+      "id": 38,
+      "label": "Ohms Law",
+      "group": "ELEC"
+    },
+    {
+      "id": 39,
+      "label": "Direct Current",
+      "group": "ELEC"
+    },
+    {
+      "id": 40,
+      "label": "Alternating Current",
+      "group": "ELEC"
+    },
+    {
+      "id": 41,
+      "label": "Electrical Circuit",
+      "group": "ELEC"
+    },
+    {
+      "id": 42,
+      "label": "Series Circuit",
+      "group": "ELEC"
+    },
+    {
+      "id": 43,
+      "label": "Parallel Circuit",
+      "group": "ELEC"
+    },
+    {
+      "id": 44,
+      "label": "Electrical Power",
+      "group": "ELEC"
+    },
+    {
+      "id": 45,
+      "label": "Electrical Safety",
+      "group": "ELEC"
+    },
+    {
+      "id": 46,
+      "label": "Conductors",
+      "group": "ELEC"
+    },
+    {
+      "id": 47,
+      "label": "Insulators",
+      "group": "ELEC"
+    },
+    {
+      "id": 48,
+      "label": "Electrical Ground",
+      "group": "ELEC"
+    },
+    {
+      "id": 49,
+      "label": "Short Circuit",
+      "group": "ELEC"
+    },
+    {
+      "id": 50,
+      "label": "Circuit Protection",
+      "group": "ELEC"
+    },
+    {
+      "id": 51,
+      "label": "Resistor",
+      "group": "CIRC"
+    },
+    {
+      "id": 52,
+      "label": "Capacitor",
+      "group": "CIRC"
+    },
+    {
+      "id": 53,
+      "label": "Diode",
+      "group": "CIRC"
+    },
+    {
+      "id": 54,
+      "label": "Transistor",
+      "group": "CIRC"
+    },
+    {
+      "id": 55,
+      "label": "LED",
+      "group": "CIRC"
+    },
+    {
+      "id": 56,
+      "label": "Breadboard",
+      "group": "CIRC"
+    },
+    {
+      "id": 57,
+      "label": "Soldering",
+      "group": "CIRC"
+    },
+    {
+      "id": 58,
+      "label": "Multimeter",
+      "group": "CIRC"
+    },
+    {
+      "id": 59,
+      "label": "Circuit Diagram",
+      "group": "CIRC"
+    },
+    {
+      "id": 60,
+      "label": "Printed Circuit Board",
+      "group": "CIRC"
+    },
+    {
+      "id": 61,
+      "label": "Battery",
+      "group": "CIRC"
+    },
+    {
+      "id": 62,
+      "label": "Power Supply",
+      "group": "CIRC"
+    },
+    {
+      "id": 63,
+      "label": "Switch",
+      "group": "CIRC"
+    },
+    {
+      "id": 64,
+      "label": "Relay",
+      "group": "CIRC"
+    },
+    {
+      "id": 65,
+      "label": "Motor Driver",
+      "group": "CIRC"
+    },
+    {
+      "id": 66,
+      "label": "Circuit Simulation",
+      "group": "CIRC"
+    },
+    {
+      "id": 67,
+      "label": "Circuit Design",
+      "group": "CIRC"
+    },
+    {
+      "id": 68,
+      "label": "Sensor",
+      "group": "RBOT"
+    },
+    {
+      "id": 69,
+      "label": "Actuator",
+      "group": "RBOT"
+    },
+    {
+      "id": 70,
+      "label": "Precision Measurement",
+      "group": "SENS"
+    },
+    {
+      "id": 71,
+      "label": "Direct Measurement",
+      "group": "SENS"
+    },
+    {
+      "id": 72,
+      "label": "Indirect Measurement",
+      "group": "SENS"
+    },
+    {
+      "id": 73,
+      "label": "Coordinate System",
+      "group": "SENS"
+    },
+    {
+      "id": 74,
+      "label": "Light Sensor",
+      "group": "SENS"
+    },
+    {
+      "id": 75,
+      "label": "Temperature Sensor",
+      "group": "SENS"
+    },
+    {
+      "id": 76,
+      "label": "Distance Sensor",
+      "group": "SENS"
+    },
+    {
+      "id": 77,
+      "label": "Touch Sensor",
+      "group": "SENS"
+    },
+    {
+      "id": 78,
+      "label": "Sound Sensor",
+      "group": "SENS"
+    },
+    {
+      "id": 79,
+      "label": "Encoder",
+      "group": "SENS"
+    },
+    {
+      "id": 80,
+      "label": "Potentiometer",
+      "group": "SENS"
+    },
+    {
+      "id": 81,
+      "label": "Sensor Calibration",
+      "group": "SENS"
+    },
+    {
+      "id": 82,
+      "label": "Data Transmission",
+      "group": "SENS"
+    },
+    {
+      "id": 83,
+      "label": "Signal Processing",
+      "group": "SENS"
+    },
+    {
+      "id": 84,
+      "label": "Mechanical System",
+      "group": "MECH",
+      "shape": "box"
+    },
+    {
+      "id": 85,
+      "label": "Simple Machine",
+      "group": "MECH"
+    },
+    {
+      "id": 86,
+      "label": "Lever",
+      "group": "MECH"
+    },
+    {
+      "id": 87,
+      "label": "Pulley",
+      "group": "MECH"
+    },
+    {
+      "id": 88,
+      "label": "Gear",
+      "group": "MECH"
+    },
+    {
+      "id": 89,
+      "label": "Gear Ratio",
+      "group": "MECH"
+    },
+    {
+      "id": 90,
+      "label": "Wheel And Axle",
+      "group": "MECH"
+    },
+    {
+      "id": 91,
+      "label": "Inclined Plane",
+      "group": "MECH"
+    },
+    {
+      "id": 92,
+      "label": "Linkage",
+      "group": "MECH"
+    },
+    {
+      "id": 93,
+      "label": "Bearing",
+      "group": "MECH"
+    },
+    {
+      "id": 94,
+      "label": "Fastener",
+      "group": "MECH"
+    },
+    {
+      "id": 95,
+      "label": "Torque",
+      "group": "MECH"
+    },
+    {
+      "id": 96,
+      "label": "Friction",
+      "group": "MECH"
+    },
+    {
+      "id": 97,
+      "label": "Mechanical Advantage",
+      "group": "MECH"
+    },
+    {
+      "id": 98,
+      "label": "Chassis Design",
+      "group": "MECH"
+    },
+    {
+      "id": 99,
+      "label": "Structural Materials",
+      "group": "MECH"
+    },
+    {
+      "id": 100,
+      "label": "Mechanical Design",
+      "group": "MECH"
+    },
+    {
+      "id": 101,
+      "label": "Fluid Power",
+      "group": "FLUID"
+    },
+    {
+      "id": 102,
+      "label": "Hydraulics",
+      "group": "FLUID"
+    },
+    {
+      "id": 103,
+      "label": "Pneumatics",
+      "group": "FLUID"
+    },
+    {
+      "id": 104,
+      "label": "Fluid Pressure",
+      "group": "FLUID"
+    },
+    {
+      "id": 105,
+      "label": "Cylinder",
+      "group": "FLUID"
+    },
+    {
+      "id": 106,
+      "label": "Valve",
+      "group": "FLUID"
+    },
+    {
+      "id": 107,
+      "label": "Pump",
+      "group": "FLUID"
+    },
+    {
+      "id": 108,
+      "label": "Compressor",
+      "group": "FLUID"
+    },
+    {
+      "id": 109,
+      "label": "Fluid Power Safety",
+      "group": "FLUID"
+    },
+    {
+      "id": 110,
+      "label": "Fluid Power Applications",
+      "group": "FLUID"
+    },
+    {
+      "id": 111,
+      "label": "Fluid Power Diagram",
+      "group": "FLUID"
+    },
+    {
+      "id": 112,
+      "label": "Fluid Power System Design",
+      "group": "FLUID"
+    },
+    {
+      "id": 113,
+      "label": "Open-Loop Control",
+      "group": "RBOT"
+    },
+    {
+      "id": 114,
+      "label": "Closed-Loop Control",
+      "group": "RBOT"
+    },
+    {
+      "id": 115,
+      "label": "Feedback Loop",
+      "group": "RBOT"
+    },
+    {
+      "id": 116,
+      "label": "Control Loop",
+      "group": "RBOT"
+    },
+    {
+      "id": 117,
+      "label": "Setpoint",
+      "group": "CTRL"
+    },
+    {
+      "id": 118,
+      "label": "Error Signal",
+      "group": "CTRL"
+    },
+    {
+      "id": 119,
+      "label": "PID Control Basics",
+      "group": "CTRL"
+    },
+    {
+      "id": 120,
+      "label": "Automation System",
+      "group": "CTRL"
+    },
+    {
+      "id": 121,
+      "label": "Control System Simulation",
+      "group": "CTRL"
+    },
+    {
+      "id": 122,
+      "label": "Stability",
+      "group": "CTRL"
+    },
+    {
+      "id": 123,
+      "label": "Analog Control",
+      "group": "CTRL"
+    },
+    {
+      "id": 124,
+      "label": "Digital Control",
+      "group": "CTRL"
+    },
+    {
+      "id": 125,
+      "label": "Control System Design",
+      "group": "CTRL"
+    },
+    {
+      "id": 126,
+      "label": "Actuator Control",
+      "group": "CTRL"
+    },
+    {
+      "id": 127,
+      "label": "Motion Control",
+      "group": "CTRL"
+    },
+    {
+      "id": 128,
+      "label": "Servo Motor",
+      "group": "CTRL"
+    },
+    {
+      "id": 129,
+      "label": "Digital Electronics",
+      "group": "DIGI"
+    },
+    {
+      "id": 130,
+      "label": "Analog Electronics",
+      "group": "DIGI"
+    },
+    {
+      "id": 131,
+      "label": "Binary Number System",
+      "group": "DIGI"
+    },
+    {
+      "id": 132,
+      "label": "Logic Gate",
+      "group": "DIGI"
+    },
+    {
+      "id": 133,
+      "label": "AND Gate",
+      "group": "DIGI"
+    },
+    {
+      "id": 134,
+      "label": "OR Gate",
+      "group": "DIGI"
+    },
+    {
+      "id": 135,
+      "label": "NOT Gate",
+      "group": "DIGI"
+    },
+    {
+      "id": 136,
+      "label": "Logic Circuit",
+      "group": "DIGI"
+    },
+    {
+      "id": 137,
+      "label": "Boolean Logic",
+      "group": "DIGI"
+    },
+    {
+      "id": 138,
+      "label": "Operating System",
+      "group": "DIGI"
+    },
+    {
+      "id": 139,
+      "label": "Computing System",
+      "group": "DIGI"
+    },
+    {
+      "id": 140,
+      "label": "Central Processing Unit",
+      "group": "DIGI"
+    },
+    {
+      "id": 141,
+      "label": "Memory",
+      "group": "DIGI"
+    },
+    {
+      "id": 142,
+      "label": "Input Device",
+      "group": "DIGI"
+    },
+    {
+      "id": 143,
+      "label": "Output Device",
+      "group": "DIGI"
+    },
+    {
+      "id": 144,
+      "label": "Data Transmission Hardware",
+      "group": "DIGI"
+    },
+    {
+      "id": 145,
+      "label": "Computer Interface",
+      "group": "DIGI"
+    },
+    {
+      "id": 146,
+      "label": "Microcontroller",
+      "group": "RBOT"
+    },
+    {
+      "id": 147,
+      "label": "Microprocessor",
+      "group": "DIGI"
+    },
+    {
+      "id": 148,
+      "label": "Programming Language",
+      "group": "PROG"
+    },
+    {
+      "id": 149,
+      "label": "Algorithm",
+      "group": "PROG",
+      "shape": "box"
+    },
+    {
+      "id": 150,
+      "label": "Variable",
+      "group": "PROG"
+    },
+    {
+      "id": 151,
+      "label": "Data Type",
+      "group": "PROG"
+    },
+    {
+      "id": 152,
+      "label": "Conditional Statement",
+      "group": "PROG"
+    },
+    {
+      "id": 153,
+      "label": "Loop Structure",
+      "group": "PROG"
+    },
+    {
+      "id": 154,
+      "label": "Function",
+      "group": "PROG"
+    },
+    {
+      "id": 155,
+      "label": "Pseudocode",
+      "group": "PROG"
+    },
+    {
+      "id": 156,
+      "label": "Flowchart",
+      "group": "PROG"
+    },
+    {
+      "id": 157,
+      "label": "Debugging",
+      "group": "PROG"
+    },
+    {
+      "id": 158,
+      "label": "Programming Platform",
+      "group": "PROG"
+    },
+    {
+      "id": 159,
+      "label": "Programming IDE",
+      "group": "PROG"
+    },
+    {
+      "id": 160,
+      "label": "Code Syntax",
+      "group": "PROG"
+    },
+    {
+      "id": 161,
+      "label": "Program Testing",
+      "group": "PROG"
+    },
+    {
+      "id": 162,
+      "label": "Program Security",
+      "group": "PROG"
+    },
+    {
+      "id": 163,
+      "label": "Robot Programming",
+      "group": "RBOT"
+    },
+    {
+      "id": 164,
+      "label": "Sensor Input Programming",
+      "group": "RBOT"
+    },
+    {
+      "id": 165,
+      "label": "Actuator Output Programming",
+      "group": "RBOT"
+    },
+    {
+      "id": 166,
+      "label": "Robot Control Loop",
+      "group": "RBOT"
+    },
+    {
+      "id": 167,
+      "label": "Autonomous Behavior",
+      "group": "RBOT"
+    },
+    {
+      "id": 168,
+      "label": "Teleoperation",
+      "group": "RBTP"
+    },
+    {
+      "id": 169,
+      "label": "Robot Motion Programming",
+      "group": "RBTP"
+    },
+    {
+      "id": 170,
+      "label": "Path Planning",
+      "group": "RBTP"
+    },
+    {
+      "id": 171,
+      "label": "Robot Interface",
+      "group": "RBTP"
+    },
+    {
+      "id": 172,
+      "label": "Robotic Arm Control",
+      "group": "RBTP"
+    },
+    {
+      "id": 173,
+      "label": "Wheeled Robot Control",
+      "group": "RBTP"
+    },
+    {
+      "id": 174,
+      "label": "Robot Calibration",
+      "group": "RBTP"
+    },
+    {
+      "id": 175,
+      "label": "Robot Troubleshooting",
+      "group": "RBTP"
+    },
+    {
+      "id": 176,
+      "label": "Robot Safety Programming",
+      "group": "RBTP"
+    },
+    {
+      "id": 177,
+      "label": "Robotic Components",
+      "group": "BUILD"
+    },
+    {
+      "id": 178,
+      "label": "Robot Chassis",
+      "group": "BUILD"
+    },
+    {
+      "id": 179,
+      "label": "Robot Power System",
+      "group": "BUILD"
+    },
+    {
+      "id": 180,
+      "label": "Robot Actuator Selection",
+      "group": "BUILD"
+    },
+    {
+      "id": 181,
+      "label": "Robot Sensor Selection",
+      "group": "BUILD"
+    },
+    {
+      "id": 182,
+      "label": "Robotic Hardware Platform",
+      "group": "BUILD"
+    },
+    {
+      "id": 183,
+      "label": "Additive Manufacturing",
+      "group": "EDP"
+    },
+    {
+      "id": 184,
+      "label": "3D Printing",
+      "group": "EDP"
+    },
+    {
+      "id": 185,
+      "label": "Manufacturing Process",
+      "group": "EDP"
+    },
+    {
+      "id": 186,
+      "label": "Robot Assembly",
+      "group": "BUILD"
+    },
+    {
+      "id": 187,
+      "label": "Robot Wiring",
+      "group": "BUILD"
+    },
+    {
+      "id": 188,
+      "label": "System Integration",
+      "group": "BUILD"
+    },
+    {
+      "id": 189,
+      "label": "Robot Testing",
+      "group": "BUILD"
+    },
+    {
+      "id": 190,
+      "label": "Robot Reengineering",
+      "group": "BUILD"
+    },
+    {
+      "id": 191,
+      "label": "Robot Documentation",
+      "group": "BUILD"
+    },
+    {
+      "id": 192,
+      "label": "Robot Performance Evaluation",
+      "group": "BUILD"
+    },
+    {
+      "id": 193,
+      "label": "Robot Maintenance",
+      "group": "BUILD"
+    },
+    {
+      "id": 194,
+      "label": "Robotics Industry Trends",
+      "group": "BUILD"
+    },
+    {
+      "id": 195,
+      "label": "Robot Kit Overview",
+      "group": "KIT",
+      "shape": "box"
+    },
+    {
+      "id": 196,
+      "label": "Kit Parts Identification",
+      "group": "KIT"
+    },
+    {
+      "id": 197,
+      "label": "Structural Hardware",
+      "group": "KIT"
+    },
+    {
+      "id": 198,
+      "label": "Motion Hardware Components",
+      "group": "KIT"
+    },
+    {
+      "id": 199,
+      "label": "Power And Motor Components",
+      "group": "KIT"
+    },
+    {
+      "id": 200,
+      "label": "Fasteners And Hardware",
+      "group": "KIT"
+    },
+    {
+      "id": 201,
+      "label": "Assembly Instructions Reading",
+      "group": "KIT"
+    },
+    {
+      "id": 202,
+      "label": "Guided Robot Assembly",
+      "group": "KIT"
+    },
+    {
+      "id": 203,
+      "label": "Robot Subassembly Build",
+      "group": "KIT"
+    },
+    {
+      "id": 204,
+      "label": "Build Verification And Troubleshooting",
+      "group": "KIT"
+    }
+  ],
+  "edges": [
+    {
+      "from": 1,
+      "to": 204
+    },
+    {
+      "from": 4,
+      "to": 1
+    },
+    {
+      "from": 5,
+      "to": 1
+    },
+    {
+      "from": 6,
+      "to": 3
+    },
+    {
+      "from": 7,
+      "to": 6
+    },
+    {
+      "from": 8,
+      "to": 6
+    },
+    {
+      "from": 9,
+      "to": 6
+    },
+    {
+      "from": 10,
+      "to": 7
+    },
+    {
+      "from": 10,
+      "to": 9
+    },
+    {
+      "from": 11,
+      "to": 1
+    },
+    {
+      "from": 12,
+      "to": 11
+    },
+    {
+      "from": 13,
+      "to": 12
+    },
+    {
+      "from": 14,
+      "to": 12
+    },
+    {
+      "from": 15,
+      "to": 12
+    },
+    {
+      "from": 16,
+      "to": 11
+    },
+    {
+      "from": 16,
+      "to": 5
+    },
+    {
+      "from": 17,
+      "to": 16
+    },
+    {
+      "from": 19,
+      "to": 18
+    },
+    {
+      "from": 20,
+      "to": 19
+    },
+    {
+      "from": 21,
+      "to": 19
+    },
+    {
+      "from": 22,
+      "to": 19
+    },
+    {
+      "from": 23,
+      "to": 22
+    },
+    {
+      "from": 24,
+      "to": 23
+    },
+    {
+      "from": 25,
+      "to": 24
+    },
+    {
+      "from": 26,
+      "to": 24
+    },
+    {
+      "from": 27,
+      "to": 18
+    },
+    {
+      "from": 28,
+      "to": 20
+    },
+    {
+      "from": 28,
+      "to": 21
+    },
+    {
+      "from": 29,
+      "to": 18
+    },
+    {
+      "from": 30,
+      "to": 21
+    },
+    {
+      "from": 31,
+      "to": 30
+    },
+    {
+      "from": 32,
+      "to": 18
+    },
+    {
+      "from": 33,
+      "to": 18
+    },
+    {
+      "from": 35,
+      "to": 34
+    },
+    {
+      "from": 36,
+      "to": 34
+    },
+    {
+      "from": 37,
+      "to": 34
+    },
+    {
+      "from": 38,
+      "to": 35
+    },
+    {
+      "from": 38,
+      "to": 36
+    },
+    {
+      "from": 38,
+      "to": 37
+    },
+    {
+      "from": 39,
+      "to": 36
+    },
+    {
+      "from": 40,
+      "to": 36
+    },
+    {
+      "from": 41,
+      "to": 38
+    },
+    {
+      "from": 42,
+      "to": 41
+    },
+    {
+      "from": 43,
+      "to": 41
+    },
+    {
+      "from": 44,
+      "to": 35
+    },
+    {
+      "from": 44,
+      "to": 36
+    },
+    {
+      "from": 45,
+      "to": 34
+    },
+    {
+      "from": 46,
+      "to": 34
+    },
+    {
+      "from": 47,
+      "to": 34
+    },
+    {
+      "from": 48,
+      "to": 41
+    },
+    {
+      "from": 49,
+      "to": 41
+    },
+    {
+      "from": 49,
+      "to": 45
+    },
+    {
+      "from": 50,
+      "to": 49
+    },
+    {
+      "from": 51,
+      "to": 37
+    },
+    {
+      "from": 52,
+      "to": 41
+    },
+    {
+      "from": 53,
+      "to": 39
+    },
+    {
+      "from": 54,
+      "to": 53
+    },
+    {
+      "from": 55,
+      "to": 53
+    },
+    {
+      "from": 56,
+      "to": 41
+    },
+    {
+      "from": 57,
+      "to": 45
+    },
+    {
+      "from": 58,
+      "to": 35
+    },
+    {
+      "from": 58,
+      "to": 36
+    },
+    {
+      "from": 58,
+      "to": 37
+    },
+    {
+      "from": 59,
+      "to": 41
+    },
+    {
+      "from": 60,
+      "to": 59
+    },
+    {
+      "from": 61,
+      "to": 39
+    },
+    {
+      "from": 62,
+      "to": 35
+    },
+    {
+      "from": 63,
+      "to": 41
+    },
+    {
+      "from": 64,
+      "to": 63
+    },
+    {
+      "from": 65,
+      "to": 54
+    },
+    {
+      "from": 66,
+      "to": 59
+    },
+    {
+      "from": 67,
+      "to": 59
+    },
+    {
+      "from": 67,
+      "to": 51
+    },
+    {
+      "from": 67,
+      "to": 52
+    },
+    {
+      "from": 68,
+      "to": 7
+    },
+    {
+      "from": 69,
+      "to": 9
+    },
+    {
+      "from": 70,
+      "to": 68
+    },
+    {
+      "from": 71,
+      "to": 70
+    },
+    {
+      "from": 72,
+      "to": 70
+    },
+    {
+      "from": 73,
+      "to": 70
+    },
+    {
+      "from": 74,
+      "to": 68
+    },
+    {
+      "from": 75,
+      "to": 68
+    },
+    {
+      "from": 76,
+      "to": 68
+    },
+    {
+      "from": 77,
+      "to": 68
+    },
+    {
+      "from": 78,
+      "to": 68
+    },
+    {
+      "from": 79,
+      "to": 68
+    },
+    {
+      "from": 80,
+      "to": 51
+    },
+    {
+      "from": 80,
+      "to": 68
+    },
+    {
+      "from": 81,
+      "to": 70
+    },
+    {
+      "from": 81,
+      "to": 68
+    },
+    {
+      "from": 82,
+      "to": 68
+    },
+    {
+      "from": 82,
+      "to": 69
+    },
+    {
+      "from": 83,
+      "to": 82
+    },
+    {
+      "from": 85,
+      "to": 84
+    },
+    {
+      "from": 86,
+      "to": 85
+    },
+    {
+      "from": 87,
+      "to": 85
+    },
+    {
+      "from": 88,
+      "to": 85
+    },
+    {
+      "from": 89,
+      "to": 88
+    },
+    {
+      "from": 90,
+      "to": 85
+    },
+    {
+      "from": 91,
+      "to": 85
+    },
+    {
+      "from": 92,
+      "to": 86
+    },
+    {
+      "from": 93,
+      "to": 84
+    },
+    {
+      "from": 94,
+      "to": 84
+    },
+    {
+      "from": 95,
+      "to": 86
+    },
+    {
+      "from": 95,
+      "to": 88
+    },
+    {
+      "from": 96,
+      "to": 84
+    },
+    {
+      "from": 97,
+      "to": 85
+    },
+    {
+      "from": 97,
+      "to": 95
+    },
+    {
+      "from": 98,
+      "to": 84
+    },
+    {
+      "from": 98,
+      "to": 94
+    },
+    {
+      "from": 99,
+      "to": 84
+    },
+    {
+      "from": 100,
+      "to": 97
+    },
+    {
+      "from": 100,
+      "to": 98
+    },
+    {
+      "from": 100,
+      "to": 99
+    },
+    {
+      "from": 101,
+      "to": 84
+    },
+    {
+      "from": 102,
+      "to": 101
+    },
+    {
+      "from": 103,
+      "to": 101
+    },
+    {
+      "from": 104,
+      "to": 101
+    },
+    {
+      "from": 105,
+      "to": 104
+    },
+    {
+      "from": 106,
+      "to": 104
+    },
+    {
+      "from": 107,
+      "to": 104
+    },
+    {
+      "from": 107,
+      "to": 102
+    },
+    {
+      "from": 108,
+      "to": 103
+    },
+    {
+      "from": 108,
+      "to": 104
+    },
+    {
+      "from": 109,
+      "to": 101
+    },
+    {
+      "from": 110,
+      "to": 102
+    },
+    {
+      "from": 110,
+      "to": 103
+    },
+    {
+      "from": 111,
+      "to": 110
+    },
+    {
+      "from": 112,
+      "to": 111
+    },
+    {
+      "from": 112,
+      "to": 105
+    },
+    {
+      "from": 112,
+      "to": 106
+    },
+    {
+      "from": 113,
+      "to": 3
+    },
+    {
+      "from": 114,
+      "to": 10
+    },
+    {
+      "from": 114,
+      "to": 113
+    },
+    {
+      "from": 115,
+      "to": 10
+    },
+    {
+      "from": 116,
+      "to": 114
+    },
+    {
+      "from": 116,
+      "to": 115
+    },
+    {
+      "from": 117,
+      "to": 116
+    },
+    {
+      "from": 118,
+      "to": 117
+    },
+    {
+      "from": 118,
+      "to": 115
+    },
+    {
+      "from": 119,
+      "to": 118
+    },
+    {
+      "from": 120,
+      "to": 116
+    },
+    {
+      "from": 120,
+      "to": 2
+    },
+    {
+      "from": 121,
+      "to": 116
+    },
+    {
+      "from": 122,
+      "to": 116
+    },
+    {
+      "from": 123,
+      "to": 114
+    },
+    {
+      "from": 124,
+      "to": 114
+    },
+    {
+      "from": 125,
+      "to": 119
+    },
+    {
+      "from": 125,
+      "to": 122
+    },
+    {
+      "from": 126,
+      "to": 69
+    },
+    {
+      "from": 126,
+      "to": 116
+    },
+    {
+      "from": 127,
+      "to": 126
+    },
+    {
+      "from": 128,
+      "to": 127
+    },
+    {
+      "from": 128,
+      "to": 65
+    },
+    {
+      "from": 129,
+      "to": 41
+    },
+    {
+      "from": 130,
+      "to": 41
+    },
+    {
+      "from": 131,
+      "to": 129
+    },
+    {
+      "from": 132,
+      "to": 131
+    },
+    {
+      "from": 133,
+      "to": 132
+    },
+    {
+      "from": 134,
+      "to": 132
+    },
+    {
+      "from": 135,
+      "to": 132
+    },
+    {
+      "from": 136,
+      "to": 133
+    },
+    {
+      "from": 136,
+      "to": 134
+    },
+    {
+      "from": 136,
+      "to": 135
+    },
+    {
+      "from": 137,
+      "to": 132
+    },
+    {
+      "from": 138,
+      "to": 139
+    },
+    {
+      "from": 139,
+      "to": 129
+    },
+    {
+      "from": 140,
+      "to": 139
+    },
+    {
+      "from": 141,
+      "to": 139
+    },
+    {
+      "from": 142,
+      "to": 139
+    },
+    {
+      "from": 143,
+      "to": 139
+    },
+    {
+      "from": 144,
+      "to": 139
+    },
+    {
+      "from": 144,
+      "to": 82
+    },
+    {
+      "from": 145,
+      "to": 142
+    },
+    {
+      "from": 145,
+      "to": 143
+    },
+    {
+      "from": 146,
+      "to": 11
+    },
+    {
+      "from": 147,
+      "to": 140
+    },
+    {
+      "from": 148,
+      "to": 149
+    },
+    {
+      "from": 150,
+      "to": 148
+    },
+    {
+      "from": 151,
+      "to": 150
+    },
+    {
+      "from": 152,
+      "to": 148
+    },
+    {
+      "from": 153,
+      "to": 148
+    },
+    {
+      "from": 154,
+      "to": 148
+    },
+    {
+      "from": 155,
+      "to": 149
+    },
+    {
+      "from": 156,
+      "to": 149
+    },
+    {
+      "from": 157,
+      "to": 148
+    },
+    {
+      "from": 158,
+      "to": 148
+    },
+    {
+      "from": 159,
+      "to": 158
+    },
+    {
+      "from": 160,
+      "to": 148
+    },
+    {
+      "from": 161,
+      "to": 157
+    },
+    {
+      "from": 162,
+      "to": 161
+    },
+    {
+      "from": 163,
+      "to": 148
+    },
+    {
+      "from": 163,
+      "to": 146
+    },
+    {
+      "from": 164,
+      "to": 163
+    },
+    {
+      "from": 164,
+      "to": 68
+    },
+    {
+      "from": 165,
+      "to": 163
+    },
+    {
+      "from": 165,
+      "to": 69
+    },
+    {
+      "from": 166,
+      "to": 164
+    },
+    {
+      "from": 166,
+      "to": 165
+    },
+    {
+      "from": 166,
+      "to": 116
+    },
+    {
+      "from": 167,
+      "to": 166
+    },
+    {
+      "from": 168,
+      "to": 163
+    },
+    {
+      "from": 168,
+      "to": 145
+    },
+    {
+      "from": 169,
+      "to": 165
+    },
+    {
+      "from": 169,
+      "to": 127
+    },
+    {
+      "from": 170,
+      "to": 169
+    },
+    {
+      "from": 171,
+      "to": 145
+    },
+    {
+      "from": 171,
+      "to": 163
+    },
+    {
+      "from": 172,
+      "to": 169
+    },
+    {
+      "from": 173,
+      "to": 169
+    },
+    {
+      "from": 174,
+      "to": 81
+    },
+    {
+      "from": 174,
+      "to": 166
+    },
+    {
+      "from": 175,
+      "to": 157
+    },
+    {
+      "from": 175,
+      "to": 166
+    },
+    {
+      "from": 176,
+      "to": 166
+    },
+    {
+      "from": 176,
+      "to": 45
+    },
+    {
+      "from": 177,
+      "to": 11
+    },
+    {
+      "from": 177,
+      "to": 68
+    },
+    {
+      "from": 177,
+      "to": 69
+    },
+    {
+      "from": 178,
+      "to": 98
+    },
+    {
+      "from": 178,
+      "to": 177
+    },
+    {
+      "from": 179,
+      "to": 62
+    },
+    {
+      "from": 179,
+      "to": 177
+    },
+    {
+      "from": 180,
+      "to": 69
+    },
+    {
+      "from": 180,
+      "to": 177
+    },
+    {
+      "from": 181,
+      "to": 68
+    },
+    {
+      "from": 181,
+      "to": 177
+    },
+    {
+      "from": 182,
+      "to": 178
+    },
+    {
+      "from": 182,
+      "to": 146
+    },
+    {
+      "from": 183,
+      "to": 185
+    },
+    {
+      "from": 184,
+      "to": 183
+    },
+    {
+      "from": 185,
+      "to": 24
+    },
+    {
+      "from": 186,
+      "to": 178
+    },
+    {
+      "from": 186,
+      "to": 94
+    },
+    {
+      "from": 186,
+      "to": 182
+    },
+    {
+      "from": 187,
+      "to": 186
+    },
+    {
+      "from": 187,
+      "to": 67
+    },
+    {
+      "from": 187,
+      "to": 179
+    },
+    {
+      "from": 188,
+      "to": 187
+    },
+    {
+      "from": 188,
+      "to": 166
+    },
+    {
+      "from": 189,
+      "to": 188
+    },
+    {
+      "from": 189,
+      "to": 161
+    },
+    {
+      "from": 190,
+      "to": 29
+    },
+    {
+      "from": 190,
+      "to": 189
+    },
+    {
+      "from": 191,
+      "to": 32
+    },
+    {
+      "from": 191,
+      "to": 188
+    },
+    {
+      "from": 192,
+      "to": 189
+    },
+    {
+      "from": 193,
+      "to": 175
+    },
+    {
+      "from": 193,
+      "to": 192
+    },
+    {
+      "from": 194,
+      "to": 5
+    },
+    {
+      "from": 194,
+      "to": 16
+    },
+    {
+      "from": 196,
+      "to": 195
+    },
+    {
+      "from": 197,
+      "to": 196
+    },
+    {
+      "from": 198,
+      "to": 196
+    },
+    {
+      "from": 199,
+      "to": 196
+    },
+    {
+      "from": 200,
+      "to": 196
+    },
+    {
+      "from": 201,
+      "to": 196
+    },
+    {
+      "from": 202,
+      "to": 197
+    },
+    {
+      "from": 202,
+      "to": 198
+    },
+    {
+      "from": 202,
+      "to": 199
+    },
+    {
+      "from": 202,
+      "to": 200
+    },
+    {
+      "from": 202,
+      "to": 201
+    },
+    {
+      "from": 203,
+      "to": 202
+    },
+    {
+      "from": 204,
+      "to": 202
+    },
+    {
+      "from": 204,
+      "to": 203
+    }
+  ]
+}
